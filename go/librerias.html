@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Librería Estandar &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Concurrencia" href="concurrencia.html" />
+    <link rel="prev" title="Funciones predefinidas" href="funciones.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Librería Estandar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-del-sistema">Manipulación del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#averiguar-el-sistema-operativo-runtime">Averiguar el Sistema operativo (runtime)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#averiguar-la-arquitectura">Averiguar la arquitectura</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#entrada-y-salida">Entrada y salida</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#impresion-y-recibir-datos-por-consola">Impresión y recibir datos por consola</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calculos-y-numeros">Cálculos y números</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#numeros-aleatorios-math-rand">Números aleatorios (math/rand)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-datos">Manipulación de datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trabajar-con-strings-strings">Trabajar con strings (strings)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trabajar-con-numeros-strconv">Trabajar con Números (strconv)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trabajar-con-errores-errors">Trabajar con errores (errors)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-archivos">Manipulación de archivos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#leer-archivo-os">Leer archivo (os)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gestion-del-tiempo">Gestión del Tiempo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Librería Estandar</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/go/librerias.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="libreria-estandar">
+<h1><a class="toc-backref" href="#id1">Librería Estandar</a><a class="headerlink" href="#libreria-estandar" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-go.png"><img alt="Logo GO" class="align-center" src="../_images/logo-go.png" style="width: 360.0px; height: 135.29999999999998px;" /></a>
+<p>Paquetes más usados en GO</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#libreria-estandar" id="id1">Librería Estandar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#manipulacion-del-sistema" id="id2">Manipulación del Sistema</a></p>
+<ul>
+<li><p><a class="reference internal" href="#averiguar-el-sistema-operativo-runtime" id="id3">Averiguar el Sistema operativo (runtime)</a></p></li>
+<li><p><a class="reference internal" href="#averiguar-la-arquitectura" id="id4">Averiguar la arquitectura</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#entrada-y-salida" id="id5">Entrada y salida</a></p>
+<ul>
+<li><p><a class="reference internal" href="#impresion-y-recibir-datos-por-consola" id="id6">Impresión y recibir datos por consola</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#calculos-y-numeros" id="id7">Cálculos y números</a></p>
+<ul>
+<li><p><a class="reference internal" href="#numeros-aleatorios-math-rand" id="id8">Números aleatorios (math/rand)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-datos" id="id9">Manipulación de datos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#trabajar-con-strings-strings" id="id10">Trabajar con strings (strings)</a></p></li>
+<li><p><a class="reference internal" href="#trabajar-con-numeros-strconv" id="id11">Trabajar con Números (strconv)</a></p></li>
+<li><p><a class="reference internal" href="#trabajar-con-errores-errors" id="id12">Trabajar con errores (errors)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-archivos" id="id13">Manipulación de archivos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#leer-archivo-os" id="id14">Leer archivo (os)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gestion-del-tiempo" id="id15">Gestión del Tiempo</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="manipulacion-del-sistema">
+<h2><a class="toc-backref" href="#id2">Manipulación del Sistema</a><a class="headerlink" href="#manipulacion-del-sistema" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="averiguar-el-sistema-operativo-runtime">
+<h3><a class="toc-backref" href="#id3">Averiguar el Sistema operativo (runtime)</a><a class="headerlink" href="#averiguar-el-sistema-operativo-runtime" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// cargamos la librería runtime:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;runtime&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// se averigua usando la variable runtime:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Sistema operativo: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">runtime</span><span class="p">.</span><span class="nx">GOOS</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="averiguar-la-arquitectura">
+<h3><a class="toc-backref" href="#id4">Averiguar la arquitectura</a><a class="headerlink" href="#averiguar-la-arquitectura" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// cargamos la librería runtime:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;runtime&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// se averigua usando la variable runtime:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Arquitectura: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">runtime</span><span class="p">.</span><span class="nx">GOARCH</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="entrada-y-salida">
+<h2><a class="toc-backref" href="#id5">Entrada y salida</a><a class="headerlink" href="#entrada-y-salida" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="impresion-y-recibir-datos-por-consola">
+<h3><a class="toc-backref" href="#id6">Impresión y recibir datos por consola</a><a class="headerlink" href="#impresion-y-recibir-datos-por-consola" title="Enlazar permanentemente con este título">¶</a></h3>
+<dl>
+<dt>..code-block:: GO</dt><dd><dl class="field-list simple">
+<dt class="field-odd">linenos</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>package main</p>
+<dl class="simple">
+<dt>import (</dt><dd><p>«fmt» // importar fmt</p>
+</dd>
+</dl>
+<p>)</p>
+<dl>
+<dt>func main() {</dt><dd><p>// imprimir con fmt:
+fmt.Print(«Hola persona.»)
+// imprimir con fmt y salto de línea:
+fmt.Println(«Hola persona y salto de línea.»)</p>
+<p>nombre := «Guillermo»
+edad := 34</p>
+<p>// Formatear información al imprimir:
+fmt.Printf(«Hola %s, tienes %v años.    n», nombre, edad) // con s se imprime variable string, con v se imprime algo que no sabemos su formato.</p>
+<p>// Averiguar el tipo de dato de una variable:
+fmt.Printf(«%T  n», edad)</p>
+<p>// recibir un dato:
+fmt.Print(»¿Cuál es tu nombre? &gt;&gt;&gt; «)
+fmt.Scanln(&amp;nombre)</p>
+<p>fmt.Println(«Te llamas:», nombre)</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Al igual que print scan tiene las alternativas Scanln y Scanf que funcionan igual.</p>
+</div>
+</section>
+</section>
+<section id="calculos-y-numeros">
+<h2><a class="toc-backref" href="#id7">Cálculos y números</a><a class="headerlink" href="#calculos-y-numeros" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="numeros-aleatorios-math-rand">
+<h3><a class="toc-backref" href="#id8">Números aleatorios (math/rand)</a><a class="headerlink" href="#numeros-aleatorios-math-rand" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// importar la librería rand:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;math/rand&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// se establece el rango en la variable:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">aleatorio</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rand</span><span class="p">.</span><span class="nx">Int</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;El número aleatorio es: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">aleatorio</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-datos">
+<h2><a class="toc-backref" href="#id9">Manipulación de datos</a><a class="headerlink" href="#manipulacion-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="trabajar-con-strings-strings">
+<h3><a class="toc-backref" href="#id10">Trabajar con strings (strings)</a><a class="headerlink" href="#trabajar-con-strings-strings" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">package</span> <span class="n">main</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 4</span>    <span class="s2">&quot;fmt&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;strings&quot;</span> <span class="o">//</span> <span class="n">importar</span> <span class="n">librería</span> <span class="n">strings</span>
+<span class="linenos"> 6</span><span class="p">)</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="o">//</span> <span class="n">cargar</span> <span class="n">la</span> <span class="n">librería</span> <span class="n">strings</span><span class="p">:</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos">11</span>    <span class="n">nombre</span> <span class="o">:=</span> <span class="s2">&quot;Guillermo&quot;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="o">//</span> <span class="n">conversión</span> <span class="n">a</span> <span class="n">mayúsculas</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">strings</span><span class="o">.</span><span class="n">ToUpper</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="o">//</span> <span class="n">conversión</span> <span class="n">a</span> <span class="n">minúsculas</span><span class="p">:</span>
+<span class="linenos">17</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">strings</span><span class="o">.</span><span class="n">ToLower</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="o">//</span> <span class="n">reemplazar</span> <span class="mi">1</span> <span class="n">o</span> <span class="n">varios</span> <span class="n">caracteres</span> <span class="n">que</span> <span class="n">encuentre</span><span class="p">:</span>
+<span class="linenos">20</span>    <span class="n">nombre</span> <span class="o">=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Replace</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;ll&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="linenos">21</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>    <span class="o">//</span> <span class="n">reemplazar</span> <span class="n">todos</span> <span class="n">los</span> <span class="n">caracteres</span><span class="p">:</span>
+<span class="linenos">24</span>    <span class="n">frase</span> <span class="o">:=</span> <span class="s2">&quot;Mi-nombre-es-Guillermo&quot;</span>
+<span class="linenos">25</span>    <span class="n">frase</span> <span class="o">=</span> <span class="n">strings</span><span class="o">.</span><span class="n">ReplaceAll</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="linenos">26</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>    <span class="n">nombres</span> <span class="o">:=</span> <span class="s2">&quot;Antonio, Luis, Alfredo, Pepa&quot;</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span>    <span class="o">//</span> <span class="n">Convertir</span> <span class="n">a</span> <span class="n">array</span><span class="p">,</span> <span class="n">se</span> <span class="n">crea</span> <span class="n">una</span> <span class="n">nueva</span> <span class="n">variable</span> <span class="n">para</span> <span class="n">que</span> <span class="n">cambie</span> <span class="n">el</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">dato</span> <span class="n">a</span> <span class="n">array</span><span class="p">:</span>
+<span class="linenos">31</span>    <span class="n">listado</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Split</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="linenos">32</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">listado</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span>    <span class="o">//</span> <span class="n">Unir</span> <span class="n">array</span> <span class="n">en</span> <span class="n">una</span> <span class="n">cadena</span><span class="p">:</span>
+<span class="linenos">35</span>    <span class="n">lista_cadena</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Join</span><span class="p">(</span><span class="n">listado</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="linenos">36</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">lista_cadena</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="trabajar-con-numeros-strconv">
+<h3><a class="toc-backref" href="#id11">Trabajar con Números (strconv)</a><a class="headerlink" href="#trabajar-con-numeros-strconv" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">package</span> <span class="n">main</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 4</span>    <span class="s2">&quot;fmt&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;strconv&quot;</span> <span class="o">//</span> <span class="n">importar</span> <span class="n">librería</span> <span class="n">strings</span>
+<span class="linenos"> 6</span><span class="p">)</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 9</span>    <span class="n">a</span> <span class="o">:=</span> <span class="s2">&quot;20&quot;</span>
+<span class="linenos">10</span>    <span class="n">b</span> <span class="o">:=</span> <span class="s2">&quot;30&quot;</span>
+<span class="linenos">11</span>    <span class="o">//</span> <span class="n">convertir</span> <span class="n">a</span> <span class="n">entero</span> <span class="n">sin</span> <span class="n">variable</span> <span class="n">de</span> <span class="n">error</span><span class="p">:</span>
+<span class="linenos">12</span>    <span class="n">a2</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">Atoi</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="o">//</span> <span class="n">convertir</span> <span class="n">con</span> <span class="n">variable</span> <span class="n">de</span> <span class="n">error</span><span class="p">:</span>
+<span class="linenos">15</span>    <span class="n">b2</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">Atoi</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos">16</span>    <span class="o">//</span> <span class="n">en</span> <span class="n">este</span> <span class="n">caso</span> <span class="n">manejamos</span> <span class="n">el</span> <span class="n">error</span><span class="p">:</span>
+<span class="linenos">17</span>    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+<span class="linenos">18</span>        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="linenos">19</span>        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;No se puede convertir el valor&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>    <span class="p">}</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>    <span class="n">total</span> <span class="o">:=</span> <span class="n">a2</span> <span class="o">+</span> <span class="n">b2</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="o">//</span> <span class="n">Otros</span> <span class="n">tipos</span> <span class="n">de</span> <span class="n">conversión</span> <span class="p">(</span><span class="n">manual</span> <span class="n">de</span> <span class="n">GO</span><span class="p">):</span>
+<span class="linenos">27</span>    <span class="n">booleano</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseBool</span><span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="linenos">28</span>    <span class="nb">float</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseFloat</span><span class="p">(</span><span class="s2">&quot;3.1415&quot;</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+<span class="linenos">29</span>    <span class="n">integer</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseInt</span><span class="p">(</span><span class="s2">&quot;-42&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+<span class="linenos">30</span>    <span class="n">uinteger</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseUint</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">booleano</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">integer</span><span class="p">,</span> <span class="n">uinteger</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede convertir de entero a cadena usando la función <strong>Itoa()</strong> en lugar de <strong>Atoi()</strong></p>
+</div>
+</section>
+<section id="trabajar-con-errores-errors">
+<h3><a class="toc-backref" href="#id12">Trabajar con errores (errors)</a><a class="headerlink" href="#trabajar-con-errores-errors" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;errors&quot;</span><span class="w"> </span><span class="c1">// cargamos librería de errores</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1">// la función retornará dos valores, un entero y un error:</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">calcular</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="c1">// es posible generar errores:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;No se aceptan valores negativos&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="c1">// hay que retornar dos cosas, si no ya error retornamos nil:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">// recuperamos el resultado de la función en dos variables:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">calcular</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Total:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">total</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-archivos">
+<h2><a class="toc-backref" href="#id13">Manipulación de archivos</a><a class="headerlink" href="#manipulacion-de-archivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="leer-archivo-os">
+<h3><a class="toc-backref" href="#id14">Leer archivo (os)</a><a class="headerlink" href="#leer-archivo-os" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// abrir un archivo nuevo:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="s">&quot;archivo.txt&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1">// comprobar si existen errores:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no es posible abrir el archivo&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="c1">// imprimir convirtiendo el contenido a string:</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">file</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="gestion-del-tiempo">
+<h2><a class="toc-backref" href="#id15">Gestión del Tiempo</a><a class="headerlink" href="#gestion-del-tiempo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Librería (time):</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// recuperar el momento actual:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">inicio</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="c1">// mostrar tiempo pasado:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nx">pasado</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">inicio</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Tiempo pasado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pasado</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="concurrencia.html" class="btn btn-neutral float-right" title="Concurrencia" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="funciones.html" class="btn btn-neutral float-left" title="Funciones predefinidas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

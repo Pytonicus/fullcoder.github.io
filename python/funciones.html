@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Funciones predefinidas &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Librería Estandar" href="librerias.html" />
+    <link rel="prev" title="Sintaxis Python" href="sintaxis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Funciones predefinidas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-variables">Manipulación de variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#averiguar-tipo-de-dato">Averiguar tipo de dato</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-strings">Manipulación de Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#longitud-de-un-string">Longitud de un String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-numero-a-string">Conversión número a String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-string-a-lista">Conversión String a Lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reemplazar-palabras">Reemplazar palabras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-a-mayusculas">Conversión a mayúsculas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-a-minusculas">Conversión a minúsculas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eliminar-espacios-en-blanco-a-los-lados">Eliminar espacios en blanco a los lados</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#localizar-posicion-de-caracteres-en-cadena">Localizar posición de caracteres en cadena</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comprobar-que-no-existe-un-valor">Comprobar que no existe un valor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formatear-contenido-de-una-variable-con-otras">Formatear contenido de una variable con otras</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-numeros">Manipulación de Números</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-string-a-integer">Conversión String a Integer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-string-a-float">Conversión String a Float</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#redondeo-de-decimales">Redondeo de decimales</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-listas">Manipulación de Listas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comprobar-tamano">Comprobar tamaño</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imprimir-contenido">Imprimir contenido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imprimir-ultimo-valor-de-la-lista">Imprimir ultimo valor de la lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anadir-elemento-a-la-lista">Añadir elemento a la lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#borra-el-ultimo-elemento">Borra el último elemento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#borrar-elemento-por-su-posicion">Borrar elemento por su posición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combinar-elementos-de-la-lista-en-un-string">Combinar elementos de la lista en un string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#convertir-a-lista-una-serie-de-valores">Convertir a lista una serie de valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rango-de-numeros">Rango de números</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-valor-maximo">Recuperar valor máximo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-valor-minimo">Recuperar valor mínimo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suma-total-de-todos-los-valores">Suma total de todos los valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ordenar-elementos">Ordenar elementos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filtrar-elementos-con-funcion-filter">Filtrar elementos con función filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapear-elementos-de-un-iterable-con-map">Mapear elementos de un iterable con map</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-diccionarios">Manipulación de Diccionarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#convertir-a-tupla">Convertir a tupla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copiar-un-diccionario">Copiar un diccionario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-solo-las-claves-del-diccionarios">Recuperar solo las claves del diccionarios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-solo-los-valores-del-diccionario">Recuperar solo los valores del diccionario</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tratamiento-de-archivos">Tratamiento de archivos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manipulacion-de-archivos">Manipulación de archivos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Funciones predefinidas</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python/funciones.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="funciones-predefinidas">
+<h1><a class="toc-backref" href="#id1">Funciones predefinidas</a><a class="headerlink" href="#funciones-predefinidas" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-python.png"><img alt="Logo Python" class="align-center" src="../_images/logo-python.png" style="width: 256.0px; height: 256.0px;" /></a>
+<p>Funciones básicas de Python 3.8</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#funciones-predefinidas" id="id1">Funciones predefinidas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#manipulacion-de-variables" id="id2">Manipulación de variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#averiguar-tipo-de-dato" id="id3">Averiguar tipo de dato</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-strings" id="id4">Manipulación de Strings</a></p>
+<ul>
+<li><p><a class="reference internal" href="#longitud-de-un-string" id="id5">Longitud de un String</a></p></li>
+<li><p><a class="reference internal" href="#conversion-numero-a-string" id="id6">Conversión número a String</a></p></li>
+<li><p><a class="reference internal" href="#conversion-string-a-lista" id="id7">Conversión String a Lista</a></p></li>
+<li><p><a class="reference internal" href="#reemplazar-palabras" id="id8">Reemplazar palabras</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-mayusculas" id="id9">Conversión a mayúsculas</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-minusculas" id="id10">Conversión a minúsculas</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-espacios-en-blanco-a-los-lados" id="id11">Eliminar espacios en blanco a los lados</a></p></li>
+<li><p><a class="reference internal" href="#localizar-posicion-de-caracteres-en-cadena" id="id12">Localizar posición de caracteres en cadena</a></p></li>
+<li><p><a class="reference internal" href="#comprobar-que-no-existe-un-valor" id="id13">Comprobar que no existe un valor</a></p></li>
+<li><p><a class="reference internal" href="#formatear-contenido-de-una-variable-con-otras" id="id14">Formatear contenido de una variable con otras</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-numeros" id="id15">Manipulación de Números</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conversion-string-a-integer" id="id16">Conversión String a Integer</a></p></li>
+<li><p><a class="reference internal" href="#conversion-string-a-float" id="id17">Conversión String a Float</a></p></li>
+<li><p><a class="reference internal" href="#redondeo-de-decimales" id="id18">Redondeo de decimales</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-listas" id="id19">Manipulación de Listas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comprobar-tamano" id="id20">Comprobar tamaño</a></p></li>
+<li><p><a class="reference internal" href="#imprimir-contenido" id="id21">Imprimir contenido</a></p></li>
+<li><p><a class="reference internal" href="#imprimir-ultimo-valor-de-la-lista" id="id22">Imprimir ultimo valor de la lista</a></p></li>
+<li><p><a class="reference internal" href="#anadir-elemento-a-la-lista" id="id23">Añadir elemento a la lista</a></p></li>
+<li><p><a class="reference internal" href="#borra-el-ultimo-elemento" id="id24">Borra el último elemento</a></p></li>
+<li><p><a class="reference internal" href="#borrar-elemento-por-su-posicion" id="id25">Borrar elemento por su posición</a></p></li>
+<li><p><a class="reference internal" href="#combinar-elementos-de-la-lista-en-un-string" id="id26">Combinar elementos de la lista en un string</a></p></li>
+<li><p><a class="reference internal" href="#convertir-a-lista-una-serie-de-valores" id="id27">Convertir a lista una serie de valores</a></p></li>
+<li><p><a class="reference internal" href="#rango-de-numeros" id="id28">Rango de números</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-valor-maximo" id="id29">Recuperar valor máximo</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-valor-minimo" id="id30">Recuperar valor mínimo</a></p></li>
+<li><p><a class="reference internal" href="#suma-total-de-todos-los-valores" id="id31">Suma total de todos los valores</a></p></li>
+<li><p><a class="reference internal" href="#ordenar-elementos" id="id32">Ordenar elementos</a></p></li>
+<li><p><a class="reference internal" href="#filtrar-elementos-con-funcion-filter" id="id33">Filtrar elementos con función filter</a></p></li>
+<li><p><a class="reference internal" href="#mapear-elementos-de-un-iterable-con-map" id="id34">Mapear elementos de un iterable con map</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-diccionarios" id="id35">Manipulación de Diccionarios</a></p>
+<ul>
+<li><p><a class="reference internal" href="#convertir-a-tupla" id="id36">Convertir a tupla</a></p></li>
+<li><p><a class="reference internal" href="#copiar-un-diccionario" id="id37">Copiar un diccionario</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-solo-las-claves-del-diccionarios" id="id38">Recuperar solo las claves del diccionarios</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-solo-los-valores-del-diccionario" id="id39">Recuperar solo los valores del diccionario</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tratamiento-de-archivos" id="id40">Tratamiento de archivos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#manipulacion-de-archivos" id="id41">Manipulación de archivos</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="manipulacion-de-variables">
+<h2><a class="toc-backref" href="#id2">Manipulación de variables</a><a class="headerlink" href="#manipulacion-de-variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="averiguar-tipo-de-dato">
+<h3><a class="toc-backref" href="#id3">Averiguar tipo de dato</a><a class="headerlink" href="#averiguar-tipo-de-dato" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;soy un texto&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cadena</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-strings">
+<h2><a class="toc-backref" href="#id4">Manipulación de Strings</a><a class="headerlink" href="#manipulacion-de-strings" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="longitud-de-un-string">
+<h3><a class="toc-backref" href="#id5">Longitud de un String</a><a class="headerlink" href="#longitud-de-un-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Guillermo&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-numero-a-string">
+<h3><a class="toc-backref" href="#id6">Conversión número a String</a><a class="headerlink" href="#conversion-numero-a-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># Aquí tendríamos un error si no convertimos:</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tienes &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; años.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-string-a-lista">
+<h3><a class="toc-backref" href="#id7">Conversión String a Lista</a><a class="headerlink" href="#conversion-string-a-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">compra</span> <span class="o">=</span> <span class="s2">&quot;tomates, lechugas, peras, patatas&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">lista_compra</span> <span class="o">=</span> <span class="n">compra</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">lista_compra</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="reemplazar-palabras">
+<h3><a class="toc-backref" href="#id8">Reemplazar palabras</a><a class="headerlink" href="#reemplazar-palabras" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Soy la persona mas afortunada&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Soy&#39;</span><span class="p">,</span> <span class="s1">&#39;Era&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-mayusculas">
+<h3><a class="toc-backref" href="#id9">Conversión a mayúsculas</a><a class="headerlink" href="#conversion-a-mayusculas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Hace buen día&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-minusculas">
+<h3><a class="toc-backref" href="#id10">Conversión a minúsculas</a><a class="headerlink" href="#conversion-a-minusculas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;MI nombre Es Alfredo&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">frase</span> <span class="o">=</span> <span class="n">frase</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-espacios-en-blanco-a-los-lados">
+<h3><a class="toc-backref" href="#id11">Eliminar espacios en blanco a los lados</a><a class="headerlink" href="#eliminar-espacios-en-blanco-a-los-lados" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;   Soy la persona mas afortunada         &quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="localizar-posicion-de-caracteres-en-cadena">
+<h3><a class="toc-backref" href="#id12">Localizar posición de caracteres en cadena</a><a class="headerlink" href="#localizar-posicion-de-caracteres-en-cadena" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">secreto</span> <span class="o">=</span> <span class="s2">&quot;La palabra secreta es Gato&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># Esto vale para cualquier tipo en Python:</span>
+<span class="linenos">4</span><span class="k">if</span> <span class="s2">&quot;Gato&quot;</span> <span class="ow">in</span> <span class="n">secreto</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descifrado el secreto&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comprobar-que-no-existe-un-valor">
+<h3><a class="toc-backref" href="#id13">Comprobar que no existe un valor</a><a class="headerlink" href="#comprobar-que-no-existe-un-valor" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Lista con datos repetidos:</span>
+<span class="linenos"> 2</span><span class="n">lista_compra</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;pescado&#39;</span><span class="p">,</span> <span class="s1">&#39;galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;fresas&#39;</span><span class="p">,</span> <span class="s1">&#39;pescado&#39;</span><span class="p">,</span> <span class="s1">&#39;pescado&#39;</span><span class="p">,</span><span class="s1">&#39;fresas&#39;</span><span class="p">]</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># lista donde irán valores filtrados:</span>
+<span class="linenos"> 5</span><span class="n">lista_unica</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># recorrer los datos:</span>
+<span class="linenos"> 8</span><span class="k">for</span> <span class="n">compra</span> <span class="ow">in</span> <span class="n">lista_compra</span><span class="p">:</span>
+<span class="linenos"> 9</span>    <span class="k">if</span> <span class="n">compra</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lista_unica</span><span class="p">:</span>
+<span class="linenos">10</span>        <span class="n">lista_unica</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">compra</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="n">lista_unica</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="formatear-contenido-de-una-variable-con-otras">
+<h3><a class="toc-backref" href="#id14">Formatear contenido de una variable con otras</a><a class="headerlink" href="#formatear-contenido-de-una-variable-con-otras" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Guillermo&quot;</span>
+<span class="linenos">2</span><span class="n">apellidos</span> <span class="o">=</span> <span class="s2">&quot;Granados Gómez&quot;</span>
+<span class="linenos">3</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1"># para formatear cadenas se usa format():</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Me llamo </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> y tengo </span><span class="si">{}</span><span class="s2"> años.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">edad</span><span class="p">)))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-numeros">
+<h2><a class="toc-backref" href="#id15">Manipulación de Números</a><a class="headerlink" href="#manipulacion-de-numeros" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="conversion-string-a-integer">
+<h3><a class="toc-backref" href="#id16">Conversión String a Integer</a><a class="headerlink" href="#conversion-string-a-integer" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introduce un número: &quot;</span><span class="p">))</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">numero</span> <span class="o">+</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-string-a-float">
+<h3><a class="toc-backref" href="#id17">Conversión String a Float</a><a class="headerlink" href="#conversion-string-a-float" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">numero</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introduce un número: &quot;</span><span class="p">))</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">numero</span> <span class="o">+</span> <span class="mf">12.6</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="redondeo-de-decimales">
+<h3><a class="toc-backref" href="#id18">Redondeo de decimales</a><a class="headerlink" href="#redondeo-de-decimales" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">numero</span> <span class="o">=</span> <span class="mf">13.587</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># redondeo a entero:</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">numero</span><span class="p">))</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># redondear a nivel decimal:</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">numero</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-listas">
+<h2><a class="toc-backref" href="#id19">Manipulación de Listas</a><a class="headerlink" href="#manipulacion-de-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="comprobar-tamano">
+<h3><a class="toc-backref" href="#id20">Comprobar tamaño</a><a class="headerlink" href="#comprobar-tamano" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;talco&quot;</span><span class="p">,</span> <span class="s2">&quot;crema&quot;</span><span class="p">,</span> <span class="s2">&quot;gel&quot;</span><span class="p">,</span> <span class="s2">&quot;champú&quot;</span><span class="p">]</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># También se usa len para medir tamaño de una lista:</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="imprimir-contenido">
+<h3><a class="toc-backref" href="#id21">Imprimir contenido</a><a class="headerlink" href="#imprimir-contenido" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="imprimir-ultimo-valor-de-la-lista">
+<h3><a class="toc-backref" href="#id22">Imprimir ultimo valor de la lista</a><a class="headerlink" href="#imprimir-ultimo-valor-de-la-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="anadir-elemento-a-la-lista">
+<h3><a class="toc-backref" href="#id23">Añadir elemento a la lista</a><a class="headerlink" href="#anadir-elemento-a-la-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;nuevo texto&quot;</span><span class="p">)</span>
+<span class="linenos">2</span><span class="nb">print</span> <span class="n">lista</span>
+</pre></div>
+</div>
+</section>
+<section id="borra-el-ultimo-elemento">
+<h3><a class="toc-backref" href="#id24">Borra el último elemento</a><a class="headerlink" href="#borra-el-ultimo-elemento" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lista</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="borrar-elemento-por-su-posicion">
+<h3><a class="toc-backref" href="#id25">Borrar elemento por su posición</a><a class="headerlink" href="#borrar-elemento-por-su-posicion" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">del</span> <span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="combinar-elementos-de-la-lista-en-un-string">
+<h3><a class="toc-backref" href="#id26">Combinar elementos de la lista en un string</a><a class="headerlink" href="#combinar-elementos-de-la-lista-en-un-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="linenos">2</span><span class="n">lista</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="convertir-a-lista-una-serie-de-valores">
+<h3><a class="toc-backref" href="#id27">Convertir a lista una serie de valores</a><a class="headerlink" href="#convertir-a-lista-una-serie-de-valores" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">numeros</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="linenos">2</span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numeros</span><span class="p">)</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="rango-de-numeros">
+<h3><a class="toc-backref" href="#id28">Rango de números</a><a class="headerlink" href="#rango-de-numeros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">rango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">rango</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-valor-maximo">
+<h3><a class="toc-backref" href="#id29">Recuperar valor máximo</a><a class="headerlink" href="#recuperar-valor-maximo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">rango</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-valor-minimo">
+<h3><a class="toc-backref" href="#id30">Recuperar valor mínimo</a><a class="headerlink" href="#recuperar-valor-minimo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">rango</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="suma-total-de-todos-los-valores">
+<h3><a class="toc-backref" href="#id31">Suma total de todos los valores</a><a class="headerlink" href="#suma-total-de-todos-los-valores" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">rango</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="ordenar-elementos">
+<h3><a class="toc-backref" href="#id32">Ordenar elementos</a><a class="headerlink" href="#ordenar-elementos" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gato&quot;</span><span class="p">,</span> <span class="s2">&quot;nocilla&quot;</span><span class="p">,</span> <span class="s2">&quot;avión&quot;</span><span class="p">,</span> <span class="s2">&quot;leche&quot;</span><span class="p">]</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># Orden normal:</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># Orden inverso:</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En las tuplas podemos usar casi todas las mismas funciones excepto append() y pop() y
+se cambia el modificador list() por tuple()</p>
+</div>
+</section>
+<section id="filtrar-elementos-con-funcion-filter">
+<h3><a class="toc-backref" href="#id33">Filtrar elementos con función filter</a><a class="headerlink" href="#filtrar-elementos-con-funcion-filter" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">lista_consolas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 2</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Mega Drive&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;4ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 3</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Master System&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;3ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sony&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;PlayStation&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;5ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Nintendo&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Gamecube&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;6ª Generación&#39;</span><span class="p">}</span>
+<span class="linenos"> 6</span><span class="p">]</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># recuperar todas las consolas menos las de Segaa:</span>
+<span class="linenos"> 9</span><span class="n">consolas</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">consola</span><span class="p">:</span> <span class="n">consola</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="n">lista_consolas</span><span class="p">))</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">consolas</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="o">..</span> <span class="n">attention</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="n">El</span> <span class="n">añadir</span> <span class="n">la</span> <span class="n">función</span> <span class="nb">list</span><span class="p">()</span> <span class="n">es</span> <span class="n">debido</span> <span class="n">a</span> <span class="n">que</span> <span class="n">el</span> <span class="n">dato</span> <span class="n">que</span> <span class="n">devuelve</span> <span class="n">es</span> <span class="n">tipo</span> <span class="nb">filter</span><span class="p">,</span> <span class="n">entonces</span> <span class="n">hay</span> <span class="n">que</span> <span class="n">convertirlo</span><span class="p">,</span> <span class="n">lo</span> <span class="n">mismo</span> <span class="n">ocurre</span> <span class="n">con</span> <span class="nb">map</span><span class="p">()</span><span class="o">.</span>
+<span class="linenos">15</span><span class="o">..</span> <span class="n">note</span><span class="p">::</span>
+<span class="linenos">16</span>    <span class="n">La</span> <span class="n">función</span> <span class="nb">filter</span> <span class="n">recibe</span> <span class="n">dos</span> <span class="n">parámetros</span><span class="p">,</span> <span class="n">el</span> <span class="n">primero</span> <span class="n">será</span> <span class="n">la</span> <span class="n">función</span> <span class="n">a</span> <span class="n">ejectuar</span> <span class="n">y</span> <span class="n">el</span> <span class="n">segundo</span> <span class="n">un</span> <span class="n">iterable</span> <span class="n">como</span> <span class="n">una</span> <span class="n">lista</span><span class="p">,</span> <span class="nb">set</span> <span class="n">o</span> <span class="n">tupla</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="mapear-elementos-de-un-iterable-con-map">
+<h3><a class="toc-backref" href="#id34">Mapear elementos de un iterable con map</a><a class="headerlink" href="#mapear-elementos-de-un-iterable-con-map" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La función map recorre todos los elementos de un iterable de modo similar a una secuencia for.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># multiplicar por 10 los números:</span>
+<span class="linenos"> 4</span><span class="n">numeros_diez</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="n">numeros</span><span class="p">))</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="n">numeros_diez</span><span class="p">)</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># sumar ambas listas:</span>
+<span class="linenos"> 9</span><span class="n">total_numeros</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="n">numeros</span><span class="p">,</span> <span class="n">numeros_diez</span><span class="p">))</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">total_numeros</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-diccionarios">
+<h2><a class="toc-backref" href="#id35">Manipulación de Diccionarios</a><a class="headerlink" href="#manipulacion-de-diccionarios" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="convertir-a-tupla">
+<h3><a class="toc-backref" href="#id36">Convertir a tupla</a><a class="headerlink" href="#convertir-a-tupla" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">tupla</span> <span class="o">=</span> <span class="n">diccionario</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="copiar-un-diccionario">
+<h3><a class="toc-backref" href="#id37">Copiar un diccionario</a><a class="headerlink" href="#copiar-un-diccionario" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">otro</span> <span class="o">=</span> <span class="n">diccionario</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-solo-las-claves-del-diccionarios">
+<h3><a class="toc-backref" href="#id38">Recuperar solo las claves del diccionarios</a><a class="headerlink" href="#recuperar-solo-las-claves-del-diccionarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">claves</span> <span class="o">=</span> <span class="n">diccionario</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">claves</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-solo-los-valores-del-diccionario">
+<h3><a class="toc-backref" href="#id39">Recuperar solo los valores del diccionario</a><a class="headerlink" href="#recuperar-solo-los-valores-del-diccionario" title="Enlazar permanentemente con este título">¶</a></h3>
+</section>
+</section>
+<section id="tratamiento-de-archivos">
+<h2><a class="toc-backref" href="#id40">Tratamiento de archivos</a><a class="headerlink" href="#tratamiento-de-archivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><strong>Nomenclatura</strong></p>
+<ul class="simple">
+<li><p>Escritura: w</p></li>
+<li><p>Lectura: r</p></li>
+<li><p>Actualización: a</p></li>
+</ul>
+<section id="manipulacion-de-archivos">
+<h3><a class="toc-backref" href="#id41">Manipulación de archivos</a><a class="headerlink" href="#manipulacion-de-archivos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Escritura de archivos:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># abrimos el archivo con escritura por ejemplo:</span>
+<span class="linenos"> 2</span><span class="n">archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;archivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Escribimos varias líneas:</span>
+<span class="linenos"> 5</span><span class="n">archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="n">archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="n">archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Lo de antes es un salto de línea&#39;</span><span class="p">)</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># Y lo cerramos</span>
+<span class="linenos">10</span><span class="n">archivo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lectura de archivos:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;archivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># Y lo guardamos en una lista eliminando los saltos:</span>
+<span class="linenos">4</span><span class="n">lista</span> <span class="o">=</span> <span class="n">archivo</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+<span class="linenos">7</span>    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="linenos">8</span>
+<span class="linenos">9</span><span class="n">archivo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Actualización de archivos:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;archivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;linea adicional&#39;</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="n">archivo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="librerias.html" class="btn btn-neutral float-right" title="Librería Estandar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sintaxis.html" class="btn btn-neutral float-left" title="Sintaxis Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

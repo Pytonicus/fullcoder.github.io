@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Emails con Python &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Entornos Virtuales" href="entornos.html" />
+    <link rel="prev" title="Manejo de paquetes" href="paquetes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Emails con Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#smtplib-envio-de-emails">smtplib: Envío de emails</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modo-basico">Modo básico</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modo-enriquecido-con-html">Modo enriquecido con HTML</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Emails con Python</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python/emails.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="emails-con-python">
+<h1><a class="toc-backref" href="#id1">Emails con Python</a><a class="headerlink" href="#emails-con-python" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-python.png"><img alt="Logo Python" class="align-center" src="../_images/logo-python.png" style="width: 256.0px; height: 256.0px;" /></a>
+<p>Envío de emails con Python</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#emails-con-python" id="id1">Emails con Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#smtplib-envio-de-emails" id="id2">smtplib: Envío de emails</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modo-basico" id="id3">Modo básico</a></p></li>
+<li><p><a class="reference internal" href="#modo-enriquecido-con-html" id="id4">Modo enriquecido con HTML</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="smtplib-envio-de-emails">
+<h2><a class="toc-backref" href="#id2">smtplib: Envío de emails</a><a class="headerlink" href="#smtplib-envio-de-emails" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="modo-basico">
+<h3><a class="toc-backref" href="#id3">Modo básico</a><a class="headerlink" href="#modo-basico" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># conectamos al servidor:</span>
+<span class="linenos"> 4</span><span class="n">conn</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s1">&#39;smtp.gmail.com&#39;</span><span class="p">,</span> <span class="mi">587</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="c1"># habilitar el tls:</span>
+<span class="linenos"> 6</span><span class="n">conn</span><span class="o">.</span><span class="n">starttls</span><span class="p">()</span>
+<span class="linenos"> 7</span><span class="c1"># comprobamos si funciona:</span>
+<span class="linenos"> 8</span><span class="n">conn</span><span class="o">.</span><span class="n">ehlo</span><span class="p">()</span>
+<span class="linenos"> 9</span><span class="c1"># iniciamos sesion:</span>
+<span class="linenos">10</span><span class="n">conn</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s1">&#39;pepe@fakemail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;contraseña_email&#39;</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># y enviamos el correo:</span>
+<span class="linenos">13</span><span class="n">conn</span><span class="o">.</span><span class="n">sendmail</span><span class="p">(</span><span class="s1">&#39;pepe@fakemail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;destino@correoremitente.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Subject: Hey que tal</span><span class="se">\n\n</span><span class="s1"> Texto del mensaje, </span><span class="se">\n</span><span class="s1"> Hey que tal, puedo seguir escribiendo sin miedo</span><span class="se">\n</span><span class="s1"> - &lt;b&gt;Firmado guillermo&lt;/b&gt;&#39;</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="n">conn</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="modo-enriquecido-con-html">
+<h3><a class="toc-backref" href="#id4">Modo enriquecido con HTML</a><a class="headerlink" href="#modo-enriquecido-con-html" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Correos implicados:</span>
+<span class="linenos"> 4</span><span class="n">yo</span> <span class="o">=</span> <span class="s1">&#39;pepe@fakemail.com&#39;</span>
+<span class="linenos"> 5</span><span class="n">cliente</span> <span class="o">=</span> <span class="s1">&#39;cliente@mail.com&#39;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Contenedor Mime con datos del correo:</span>
+<span class="linenos"> 8</span><span class="n">msg</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">(</span><span class="s1">&#39;alternative&#39;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Email de prueba&#39;</span>
+<span class="linenos">10</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">yo</span>
+<span class="linenos">11</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cliente</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Cuerpo HTML:</span>
+<span class="linenos">14</span><span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="linenos">15</span><span class="s2">&lt;html&gt;</span>
+<span class="linenos">16</span><span class="s2">    &lt;head&gt;&lt;head&gt;</span>
+<span class="linenos">17</span><span class="s2">    &lt;body&gt;</span>
+<span class="linenos">18</span><span class="s2">        &lt;h1&gt;Correo de prueba&lt;/h1&gt;</span>
+<span class="linenos">19</span><span class="s2">        &lt;p&gt;Este es un correo de prueba para:&lt;/p&gt;</span>
+<span class="linenos">20</span><span class="s2">        &lt;ul&gt;</span>
+<span class="linenos">21</span><span class="s2">            &lt;li&gt;Nombre: Pedro.&lt;/li&gt;</span>
+<span class="linenos">22</span><span class="s2">            &lt;li&gt;Apellidos: Leal a ti.&lt;/li&gt;</span>
+<span class="linenos">23</span><span class="s2">            &lt;li&gt;Email: </span><span class="si">{}</span><span class="s2">. &lt;/li&gt;</span>
+<span class="linenos">24</span><span class="s2">            &lt;li&gt;Número de teléfono: 600600666.&lt;/li&gt;</span>
+<span class="linenos">25</span><span class="s2">        &lt;/ul&gt;</span>
+<span class="linenos">26</span><span class="s2">    &lt;/body&gt;</span>
+<span class="linenos">27</span><span class="s2">&lt;/html&gt;</span>
+<span class="linenos">28</span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cliente</span><span class="p">)</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="c1"># Mime cuerpo y añadir al mensaje:</span>
+<span class="linenos">31</span><span class="n">mime_html</span> <span class="o">=</span> <span class="n">MIMEText</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="n">msg</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">mime_html</span><span class="p">)</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="c1"># Preparar envio y enviar:</span>
+<span class="linenos">36</span><span class="n">conn</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s1">&#39;smtp.gmail.com&#39;</span><span class="p">,</span> <span class="mi">587</span><span class="p">)</span>
+<span class="linenos">37</span><span class="n">conn</span><span class="o">.</span><span class="n">starttls</span><span class="p">()</span>
+<span class="linenos">38</span><span class="n">conn</span><span class="o">.</span><span class="n">ehlo</span><span class="p">()</span>
+<span class="linenos">39</span><span class="n">conn</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">yo</span><span class="p">,</span> <span class="s1">&#39;contraseña&#39;</span><span class="p">)</span>
+<span class="linenos">40</span><span class="n">conn</span><span class="o">.</span><span class="n">sendmail</span><span class="p">(</span><span class="n">cliente</span><span class="p">,</span> <span class="n">yo</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">as_string</span><span class="p">())</span>
+<span class="linenos">41</span><span class="n">conn</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="entornos.html" class="btn btn-neutral float-right" title="Entornos Virtuales" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="paquetes.html" class="btn btn-neutral float-left" title="Manejo de paquetes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

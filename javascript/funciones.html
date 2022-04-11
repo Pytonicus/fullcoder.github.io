@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Funciones &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="NVM: ntornos Virtuales" href="entornos.html" />
+    <link rel="prev" title="Sintaxis javascript" href="sintaxis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Funciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-variables">Manipulación de variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#averiguar-tipo-de-dato">Averiguar tipo de dato</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-strings">Manipulación de Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#longitud-de-un-string">Longitud de un String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-numero-a-string">Conversión número a String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-string-a-array">Conversión String a Array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reemplazar-palabras">Reemplazar palabras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#primera-letra-mayuscula">Primera letra mayúscula</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-a-mayusculas">Conversión a mayúsculas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-a-minusculas">Conversión a minúsculas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eliminar-espacios-en-blanco-a-los-lados">Eliminar espacios en blanco a los lados</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#localizar-posicion-de-caracteres-en-cadena">Localizar posición de caracteres en cadena</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-numeros">Manipulación de Números</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-string-a-integer">Conversión String a Integer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-string-a-float">Conversión String a Float</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#redondeo-de-decimales">Redondeo de decimales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validar-numeros">Validar numeros</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-arrays">Manipulación de Arrays</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comprobar-tamano">Comprobar tamaño</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imprimir-contenido">Imprimir contenido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rango-de-numeros">Rango de números</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-valor-maximo">Recuperar valor máximo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-valor-minimo">Recuperar valor mínimo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suma-total-de-todos-los-valores">Suma total de todos los valores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-json">Manipulación JSON</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#convertir-array-en-json">Convertir Array en JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#convertir-json-en-array">Convertir JSON en Array</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-fechas">Manipulación de fechas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tratamiento-de-archivos">Tratamiento de archivos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#recuperar-contenido-de-archivo">Recuperar contenido de archivo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manipulacion-de-archivos">Manipulación de archivos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-de-cabeceras">Manipulación de cabeceras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#redireccion">Redirección</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modificar-el-comportamiento-de-un-script">Modificar el comportamiento de un script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descargar-un-archivo-desde-un-script">Descargar un archivo desde un script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tratamiento-de-cors">Tratamiento de CORS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulacion-del-sistema">Manipulación del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#averiguar-el-sistema-operativo">Averiguar el Sistema operativo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#averiguar-la-arquitectura">Averiguar la arquitectura</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#math-operaciones-matematicas">Math: operaciones matemáticas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#random-numeros-aleatorios">Random: Números aleatorios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Funciones</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/javascript/funciones.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="funciones">
+<h1><a class="toc-backref" href="#id1">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/JavaScript-logo.png"><img alt="Logo JavaScript" class="align-center" src="../_images/JavaScript-logo.png" style="width: 263.0px; height: 263.0px;" /></a>
+<p>Sintáxis básica de JavaScript</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#funciones" id="id1">Funciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#manipulacion-de-variables" id="id2">Manipulación de variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#averiguar-tipo-de-dato" id="id3">Averiguar tipo de dato</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-strings" id="id4">Manipulación de Strings</a></p>
+<ul>
+<li><p><a class="reference internal" href="#longitud-de-un-string" id="id5">Longitud de un String</a></p></li>
+<li><p><a class="reference internal" href="#conversion-numero-a-string" id="id6">Conversión número a String</a></p></li>
+<li><p><a class="reference internal" href="#conversion-string-a-array" id="id7">Conversión String a Array</a></p></li>
+<li><p><a class="reference internal" href="#reemplazar-palabras" id="id8">Reemplazar palabras</a></p></li>
+<li><p><a class="reference internal" href="#primera-letra-mayuscula" id="id9">Primera letra mayúscula</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-mayusculas" id="id10">Conversión a mayúsculas</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-minusculas" id="id11">Conversión a minúsculas</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-espacios-en-blanco-a-los-lados" id="id12">Eliminar espacios en blanco a los lados</a></p></li>
+<li><p><a class="reference internal" href="#localizar-posicion-de-caracteres-en-cadena" id="id13">Localizar posición de caracteres en cadena</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-numeros" id="id14">Manipulación de Números</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conversion-string-a-integer" id="id15">Conversión String a Integer</a></p></li>
+<li><p><a class="reference internal" href="#conversion-string-a-float" id="id16">Conversión String a Float</a></p></li>
+<li><p><a class="reference internal" href="#redondeo-de-decimales" id="id17">Redondeo de decimales</a></p></li>
+<li><p><a class="reference internal" href="#validar-numeros" id="id18">Validar numeros</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-arrays" id="id19">Manipulación de Arrays</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comprobar-tamano" id="id20">Comprobar tamaño</a></p></li>
+<li><p><a class="reference internal" href="#imprimir-contenido" id="id21">Imprimir contenido</a></p></li>
+<li><p><a class="reference internal" href="#rango-de-numeros" id="id22">Rango de números</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-valor-maximo" id="id23">Recuperar valor máximo</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-valor-minimo" id="id24">Recuperar valor mínimo</a></p></li>
+<li><p><a class="reference internal" href="#suma-total-de-todos-los-valores" id="id25">Suma total de todos los valores</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-json" id="id26">Manipulación JSON</a></p>
+<ul>
+<li><p><a class="reference internal" href="#convertir-array-en-json" id="id27">Convertir Array en JSON</a></p></li>
+<li><p><a class="reference internal" href="#convertir-json-en-array" id="id28">Convertir JSON en Array</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-fechas" id="id29">Manipulación de fechas</a></p></li>
+<li><p><a class="reference internal" href="#tratamiento-de-archivos" id="id30">Tratamiento de archivos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#recuperar-contenido-de-archivo" id="id31">Recuperar contenido de archivo</a></p></li>
+<li><p><a class="reference internal" href="#manipulacion-de-archivos" id="id32">Manipulación de archivos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-cabeceras" id="id33">Manipulación de cabeceras</a></p>
+<ul>
+<li><p><a class="reference internal" href="#redireccion" id="id34">Redirección</a></p></li>
+<li><p><a class="reference internal" href="#modificar-el-comportamiento-de-un-script" id="id35">Modificar el comportamiento de un script</a></p></li>
+<li><p><a class="reference internal" href="#descargar-un-archivo-desde-un-script" id="id36">Descargar un archivo desde un script</a></p></li>
+<li><p><a class="reference internal" href="#tratamiento-de-cors" id="id37">Tratamiento de CORS</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-del-sistema" id="id38">Manipulación del Sistema</a></p>
+<ul>
+<li><p><a class="reference internal" href="#averiguar-el-sistema-operativo" id="id39">Averiguar el Sistema operativo</a></p></li>
+<li><p><a class="reference internal" href="#averiguar-la-arquitectura" id="id40">Averiguar la arquitectura</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#math-operaciones-matematicas" id="id41">Math: operaciones matemáticas</a></p></li>
+<li><p><a class="reference internal" href="#random-numeros-aleatorios" id="id42">Random: Números aleatorios</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="manipulacion-de-variables">
+<h2><a class="toc-backref" href="#id2">Manipulación de variables</a><a class="headerlink" href="#manipulacion-de-variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="averiguar-tipo-de-dato">
+<h3><a class="toc-backref" href="#id3">Averiguar tipo de dato</a><a class="headerlink" href="#averiguar-tipo-de-dato" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">cadena</span> <span class="o">=</span> <span class="s2">&quot;PlayStation&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span> <span class="nx">cadena</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-strings">
+<h2><a class="toc-backref" href="#id4">Manipulación de Strings</a><a class="headerlink" href="#manipulacion-de-strings" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="longitud-de-un-string">
+<h3><a class="toc-backref" href="#id5">Longitud de un String</a><a class="headerlink" href="#longitud-de-un-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">consola</span> <span class="o">=</span> <span class="s2">&quot;La videoconsola PlayStation fue lanzada en 1995&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="c1">// ajustamos la cantidad de decimales a mostrar:</span>
+<span class="linenos">3</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consola</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-numero-a-string">
+<h3><a class="toc-backref" href="#id6">Conversión número a String</a><a class="headerlink" href="#conversion-numero-a-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mf">23</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kd">var</span> <span class="nx">cadena</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-string-a-array">
+<h3><a class="toc-backref" href="#id7">Conversión String a Array</a><a class="headerlink" href="#conversion-string-a-array" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">videoconsolas</span> <span class="o">=</span> <span class="s2">&quot;Playstation, Gameboy, PS Vita&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kd">var</span> <span class="nx">arrayConsolas</span> <span class="o">=</span> <span class="nx">videoconsolas</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">);</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arrayConsolas</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="reemplazar-palabras">
+<h3><a class="toc-backref" href="#id8">Reemplazar palabras</a><a class="headerlink" href="#reemplazar-palabras" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="primera-letra-mayuscula">
+<h3><a class="toc-backref" href="#id9">Primera letra mayúscula</a><a class="headerlink" href="#primera-letra-mayuscula" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-mayusculas">
+<h3><a class="toc-backref" href="#id10">Conversión a mayúsculas</a><a class="headerlink" href="#conversion-a-mayusculas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nx">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Cadena de texto&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1">// Cadena puesta toda en mayúsculas:</span>
+<span class="linenos">4</span><span class="nx">resultado</span> <span class="o">=</span> <span class="nx">mensaje</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-minusculas">
+<h3><a class="toc-backref" href="#id11">Conversión a minúsculas</a><a class="headerlink" href="#conversion-a-minusculas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nx">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Cadena de texto&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1">// Cadena puesta toda en minúsculas:</span>
+<span class="linenos">4</span><span class="nx">resultado</span> <span class="o">=</span> <span class="nx">mensaje</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-espacios-en-blanco-a-los-lados">
+<h3><a class="toc-backref" href="#id12">Eliminar espacios en blanco a los lados</a><a class="headerlink" href="#eliminar-espacios-en-blanco-a-los-lados" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">mensaje</span> <span class="o">=</span> <span class="s2">&quot;         mensaje sin espacios        &quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nx">resultado</span> <span class="o">=</span> <span class="nx">mensaje</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="localizar-posicion-de-caracteres-en-cadena">
+<h3><a class="toc-backref" href="#id13">Localizar posición de caracteres en cadena</a><a class="headerlink" href="#localizar-posicion-de-caracteres-en-cadena" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">consola</span> <span class="o">=</span> <span class="s2">&quot;La videoconsola PlayStation fue lanzada en 1995&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1">// primera posición de elemento localizado:</span>
+<span class="linenos">4</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consola</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;videoconsola&quot;</span><span class="p">));</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1">// primera posición último elemento localizado:</span>
+<span class="linenos">7</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consola</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;videoconsola&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-numeros">
+<h2><a class="toc-backref" href="#id14">Manipulación de Números</a><a class="headerlink" href="#manipulacion-de-numeros" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="conversion-string-a-integer">
+<h3><a class="toc-backref" href="#id15">Conversión String a Integer</a><a class="headerlink" href="#conversion-string-a-integer" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">numeroTexto</span> <span class="o">=</span> <span class="s2">&quot;25&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1">// conversión con función:</span>
+<span class="linenos">4</span><span class="kd">var</span> <span class="nx">numero</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">.</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">numeroTexto</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-string-a-float">
+<h3><a class="toc-backref" href="#id16">Conversión String a Float</a><a class="headerlink" href="#conversion-string-a-float" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">numeroTexto</span> <span class="o">=</span> <span class="s2">&quot;25.72&quot;</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1">// conversión con función:</span>
+<span class="linenos">4</span><span class="kd">var</span> <span class="nx">numero</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">.</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">numeroTexto</span><span class="p">);</span>
+<span class="linenos">5</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="redondeo-de-decimales">
+<h3><a class="toc-backref" href="#id17">Redondeo de decimales</a><a class="headerlink" href="#redondeo-de-decimales" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">numero</span> <span class="o">=</span> <span class="mf">27.29</span><span class="p">;</span>
+<span class="linenos">2</span><span class="c1">// ajustamos la cantidad de decimales a mostrar:</span>
+<span class="linenos">3</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">0</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="validar-numeros">
+<h3><a class="toc-backref" href="#id18">Validar numeros</a><a class="headerlink" href="#validar-numeros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">numero</span> <span class="o">=</span> <span class="kc">NaN</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+<span class="linenos">4</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-arrays">
+<h2><a class="toc-backref" href="#id19">Manipulación de Arrays</a><a class="headerlink" href="#manipulacion-de-arrays" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="comprobar-tamano">
+<h3><a class="toc-backref" href="#id20">Comprobar tamaño</a><a class="headerlink" href="#comprobar-tamano" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">consolas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Playstation&quot;</span><span class="p">,</span> <span class="s2">&quot;Gameboy&quot;</span><span class="p">,</span> <span class="s2">&quot;Nintendo DS&quot;</span><span class="p">];</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consolas</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="imprimir-contenido">
+<h3><a class="toc-backref" href="#id21">Imprimir contenido</a><a class="headerlink" href="#imprimir-contenido" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="rango-de-numeros">
+<h3><a class="toc-backref" href="#id22">Rango de números</a><a class="headerlink" href="#rango-de-numeros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-valor-maximo">
+<h3><a class="toc-backref" href="#id23">Recuperar valor máximo</a><a class="headerlink" href="#recuperar-valor-maximo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-valor-minimo">
+<h3><a class="toc-backref" href="#id24">Recuperar valor mínimo</a><a class="headerlink" href="#recuperar-valor-minimo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="suma-total-de-todos-los-valores">
+<h3><a class="toc-backref" href="#id25">Suma total de todos los valores</a><a class="headerlink" href="#suma-total-de-todos-los-valores" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-json">
+<h2><a class="toc-backref" href="#id26">Manipulación JSON</a><a class="headerlink" href="#manipulacion-json" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="convertir-array-en-json">
+<h3><a class="toc-backref" href="#id27">Convertir Array en JSON</a><a class="headerlink" href="#convertir-array-en-json" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">datoJSON</span> <span class="o">=</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">persona</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="convertir-json-en-array">
+<h3><a class="toc-backref" href="#id28">Convertir JSON en Array</a><a class="headerlink" href="#convertir-json-en-array" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span> <span class="nx">datoObjeto</span> <span class="o">=</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">datoJSON</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-fechas">
+<h2><a class="toc-backref" href="#id29">Manipulación de fechas</a><a class="headerlink" href="#manipulacion-de-fechas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Creamos el objeto date con la clase date:</span>
+<span class="linenos"> 2</span><span class="kd">var</span> <span class="nx">fecha</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Date</span><span class="p">();</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">// Cada vez que escribimos new Date() generará una nueva fecha.</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1">// Ahora podemos obtener el día:</span>
+<span class="linenos"> 7</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">getDay</span><span class="p">();</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1">// Podemos ver cual es el día del mes:</span>
+<span class="linenos">10</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">getDate</span><span class="p">();</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">// Y así podemos obtener más tipos de datos como la hora:</span>
+<span class="linenos">13</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1">// Y podemos asignarle fechas:</span>
+<span class="linenos">16</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="tratamiento-de-archivos">
+<h2><a class="toc-backref" href="#id30">Tratamiento de archivos</a><a class="headerlink" href="#tratamiento-de-archivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="recuperar-contenido-de-archivo">
+<h3><a class="toc-backref" href="#id31">Recuperar contenido de archivo</a><a class="headerlink" href="#recuperar-contenido-de-archivo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="manipulacion-de-archivos">
+<h3><a class="toc-backref" href="#id32">Manipulación de archivos</a><a class="headerlink" href="#manipulacion-de-archivos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Escritura de archivos:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lectura de archivos:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Actualización de archivos:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-cabeceras">
+<h2><a class="toc-backref" href="#id33">Manipulación de cabeceras</a><a class="headerlink" href="#manipulacion-de-cabeceras" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="redireccion">
+<h3><a class="toc-backref" href="#id34">Redirección</a><a class="headerlink" href="#redireccion" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="modificar-el-comportamiento-de-un-script">
+<h3><a class="toc-backref" href="#id35">Modificar el comportamiento de un script</a><a class="headerlink" href="#modificar-el-comportamiento-de-un-script" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lista de MIMES más comunes: <a class="reference external" href="https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types</a></p></li>
+</ul>
+</section>
+<section id="descargar-un-archivo-desde-un-script">
+<h3><a class="toc-backref" href="#id36">Descargar un archivo desde un script</a><a class="headerlink" href="#descargar-un-archivo-desde-un-script" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="tratamiento-de-cors">
+<h3><a class="toc-backref" href="#id37">Tratamiento de CORS</a><a class="headerlink" href="#tratamiento-de-cors" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-del-sistema">
+<h2><a class="toc-backref" href="#id38">Manipulación del Sistema</a><a class="headerlink" href="#manipulacion-del-sistema" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="averiguar-el-sistema-operativo">
+<h3><a class="toc-backref" href="#id39">Averiguar el Sistema operativo</a><a class="headerlink" href="#averiguar-el-sistema-operativo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="averiguar-la-arquitectura">
+<h3><a class="toc-backref" href="#id40">Averiguar la arquitectura</a><a class="headerlink" href="#averiguar-la-arquitectura" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="math-operaciones-matematicas">
+<h2><a class="toc-backref" href="#id41">Math: operaciones matemáticas</a><a class="headerlink" href="#math-operaciones-matematicas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="random-numeros-aleatorios">
+<h2><a class="toc-backref" href="#id42">Random: Números aleatorios</a><a class="headerlink" href="#random-numeros-aleatorios" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="entornos.html" class="btn btn-neutral float-right" title="NVM: ntornos Virtuales" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sintaxis.html" class="btn btn-neutral float-left" title="Sintaxis javascript" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

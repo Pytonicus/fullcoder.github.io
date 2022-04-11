@@ -1,0 +1,743 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sintaxis LANG &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Sintaxis LANG</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_template/Lenguajes/sintaxis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="sintaxis-lang">
+<h1><a class="toc-backref" href="#id1">Sintaxis LANG</a><a class="headerlink" href="#sintaxis-lang" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="logos/logo-[].png"><img alt="Logo []" class="align-center" src="logos/logo-[].png" /></a>
+<p>Sintáxis básica de []</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-lang" id="id1">Sintaxis LANG</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p></li>
+<li><p><a class="reference internal" href="#estructura-en-lang" id="id6">Estructura en LANG</a></p></li>
+<li><p><a class="reference internal" href="#concatenacion" id="id7">Concatenación</a></p></li>
+<li><p><a class="reference internal" href="#lang-cli-comandos-de-lang" id="id8">LANG-CLI - Comandos de LANG</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id9">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id10">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id11">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales-corroborar" id="id12">Operadores relacionales CORROBORAR</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos-corroborar" id="id13">Operadores lógicos CORROBORAR</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id14">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id15">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id16">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id17">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id18">Bucle while</a></p></li>
+<li><p><a class="reference internal" href="#detener-secuenda-de-script" id="id19">Detener secuenda de script</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#punteros" id="id20">Punteros</a></p></li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id21">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arrays" id="id22">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#arrays-asociativos" id="id23">Arrays asociativos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-de-errores" id="id24">Control de errores</a></p></li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id25">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funciones" id="id26">Funciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-orientada-a-objetos" id="id27">Programación orientada a objetos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clases-y-objetos" id="id28">Clases y objetos</a></p></li>
+<li><p><a class="reference internal" href="#clases-abstractas-y-resolucion-de-ambito" id="id29">Clases abstractas y resolución de ámbito</a></p></li>
+<li><p><a class="reference internal" href="#interfaces" id="id30">Interfaces</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#structs" id="id31">Structs</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id32">Enums</a></p></li>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id33">Importar y exportar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#include-y-require" id="id34">include y require</a></p></li>
+<li><p><a class="reference internal" href="#namespace" id="id35">Namespace</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Instalación: []</p></li>
+<li><p>Extensión de archivos: <strong>.[]</strong></p></li>
+</ul>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Comentarios de una sola línea:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comentarios multilínea:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Datos de entrada y salida a través de la consola y/o el navegador.</p>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="estructura-en-lang">
+<h3><a class="toc-backref" href="#id6">Estructura en LANG</a><a class="headerlink" href="#estructura-en-lang" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Código LANG puro:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>código LANG junto a HTML:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>También podemos cargar etiquetas HTML con LANG:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="concatenacion">
+<h3><a class="toc-backref" href="#id7">Concatenación</a><a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Concatenación de variables y cadenas se realiza con <strong>.</strong></p>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="lang-cli-comandos-de-lang">
+<h3><a class="toc-backref" href="#id8">LANG-CLI - Comandos de LANG</a><a class="headerlink" href="#lang-cli-comandos-de-lang" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Comandos de LANG:</p>
+<ul class="simple">
+<li><p>LANG -v: versión usada (EJEMPLO FALSO)</p></li>
+</ul>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id9">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id10">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id11">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Incremento y decremento:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales-corroborar">
+<h3><a class="toc-backref" href="#id12">Operadores relacionales CORROBORAR</a><a class="headerlink" href="#operadores-relacionales-corroborar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos-corroborar">
+<h3><a class="toc-backref" href="#id13">Operadores lógicos CORROBORAR</a><a class="headerlink" href="#operadores-logicos-corroborar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>&amp;&amp;</strong>.</p></li>
+<li><p>or: <strong>||</strong>.</p></li>
+<li><p>not: <strong>!</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id14">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id15">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if alternativo:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Operador ternario:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id16">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Estructura de un switch:</p>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id17">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach clave / valor:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id18">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>While sencillo:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>do-while:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="detener-secuenda-de-script">
+<h3><a class="toc-backref" href="#id19">Detener secuenda de script</a><a class="headerlink" href="#detener-secuenda-de-script" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="punteros">
+<h2><a class="toc-backref" href="#id20">Punteros</a><a class="headerlink" href="#punteros" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id21">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="arrays">
+<h3><a class="toc-backref" href="#id22">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Declaración con función array():</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Imprimir y asignar valores:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="arrays-asociativos">
+<h3><a class="toc-backref" href="#id23">Arrays asociativos</a><a class="headerlink" href="#arrays-asociativos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Declaración con función array():</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Imprimir y asignar valores:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="control-de-errores">
+<h2><a class="toc-backref" href="#id24">Control de errores</a><a class="headerlink" href="#control-de-errores" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id25">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="funciones">
+<h3><a class="toc-backref" href="#id26">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Procedimienos:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funciones:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uso de parámetros:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Funciones anónimas:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ámbito global:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="programacion-orientada-a-objetos">
+<h2><a class="toc-backref" href="#id27">Programación orientada a objetos</a><a class="headerlink" href="#programacion-orientada-a-objetos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los elementos de una clase se definen con ámbito <strong>public</strong>, <strong>private</strong> y <strong>protected</strong>.
+Adicionalmente se puede agregar el modificador <strong>static</strong> para poder acceder a los atributos y métodos sin crear un objeto.</p>
+<section id="clases-y-objetos">
+<h3><a class="toc-backref" href="#id28">Clases y objetos</a><a class="headerlink" href="#clases-y-objetos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Estructura clase:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constructor:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Get y Set:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Modificar Get y Set de Atributos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creación de objeto:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">...</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Herencia:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="clases-abstractas-y-resolucion-de-ambito">
+<h3><a class="toc-backref" href="#id29">Clases abstractas y resolución de ámbito</a><a class="headerlink" href="#clases-abstractas-y-resolucion-de-ambito" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>uso de clases no instanciables:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="interfaces">
+<h3><a class="toc-backref" href="#id30">Interfaces</a><a class="headerlink" href="#interfaces" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="structs">
+<h2><a class="toc-backref" href="#id31">Structs</a><a class="headerlink" href="#structs" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="enums">
+<h2><a class="toc-backref" href="#id32">Enums</a><a class="headerlink" href="#enums" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="importar-y-exportar">
+<h2><a class="toc-backref" href="#id33">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="include-y-require">
+<h3><a class="toc-backref" href="#id34">include y require</a><a class="headerlink" href="#include-y-require" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Importar archivos LANG:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="namespace">
+<h3><a class="toc-backref" href="#id35">Namespace</a><a class="headerlink" href="#namespace" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul>
+<li><p>Exportar (videojuegos.LANG):</p>
+<blockquote>
+<div><div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Importar namespace (index.LANG):</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

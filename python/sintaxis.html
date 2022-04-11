@@ -1,0 +1,1068 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sintaxis Python &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Funciones predefinidas" href="funciones.html" />
+    <link rel="prev" title="Framework: Laravel" href="../php/laravel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sintaxis Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#elementos-basicos-del-lenguaje">Elementos básicos del lenguaje</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comentarios">Comentarios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entrada-y-salida-estandar">Entrada y salida estandar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estructura-en-python">Estructura en python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#concatenacion">Concatenación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-cli-comandos-de-python">Python-CLI - Comandos de python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#variables-y-tipos-de-datos">Variables y tipos de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores">Operadores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-aritmeticos">Operadores aritméticos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-relacionales">Operadores relacionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-logicos">Operadores lógicos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estructuras-de-control">Estructuras de control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-if">Condicional if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-switch">Condicional Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bucle-for">Bucle for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bucle-while">Bucle while</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detener-secuenda-de-script">Detener secuenda de script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compresion-de-listas">Compresión de listas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-datos-avanzados">Tipos de datos avanzados</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listas">Listas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tuplas">Tuplas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diccionarios">Diccionarios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#control-de-errores">Control de errores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programacion-modular">Programación modular</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funciones">Funciones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#programacion-orientada-a-objetos">Programación orientada a objetos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clases-y-objetos">Clases y objetos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clases-abstractas">Clases abstractas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metodo-str">Método «__str__»</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#importar-y-exportar">Importar y exportar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modulos-y-paquetes">Módulos y paquetes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Sintaxis Python</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python/sintaxis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="sintaxis-python">
+<h1><a class="toc-backref" href="#id1">Sintaxis Python</a><a class="headerlink" href="#sintaxis-python" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-python.png"><img alt="Logo Python" class="align-center" src="../_images/logo-python.png" style="width: 256.0px; height: 256.0px;" /></a>
+<p>Sintáxis básica de Python 3.8</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-python" id="id1">Sintaxis Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p></li>
+<li><p><a class="reference internal" href="#estructura-en-python" id="id6">Estructura en python</a></p></li>
+<li><p><a class="reference internal" href="#concatenacion" id="id7">Concatenación</a></p></li>
+<li><p><a class="reference internal" href="#python-cli-comandos-de-python" id="id8">Python-CLI - Comandos de python</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id9">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id10">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id11">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id12">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id13">Operadores lógicos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id14">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id15">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id16">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id17">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id18">Bucle while</a></p></li>
+<li><p><a class="reference internal" href="#detener-secuenda-de-script" id="id19">Detener secuenda de script</a></p></li>
+<li><p><a class="reference internal" href="#compresion-de-listas" id="id20">Compresión de listas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id21">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#listas" id="id22">Listas</a></p></li>
+<li><p><a class="reference internal" href="#tuplas" id="id23">Tuplas</a></p></li>
+<li><p><a class="reference internal" href="#diccionarios" id="id24">Diccionarios</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-de-errores" id="id25">Control de errores</a></p></li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id26">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funciones" id="id27">Funciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-orientada-a-objetos" id="id28">Programación orientada a objetos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clases-y-objetos" id="id29">Clases y objetos</a></p></li>
+<li><p><a class="reference internal" href="#clases-abstractas" id="id30">Clases abstractas</a></p></li>
+<li><p><a class="reference internal" href="#interfaces" id="id31">Interfaces</a></p></li>
+<li><p><a class="reference internal" href="#metodo-str" id="id32">Método «__str__»</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id33">Importar y exportar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modulos-y-paquetes" id="id34">Módulos y paquetes</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Instalación: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3</span></code></p></li>
+<li><p>Extensión de archivos: <strong>.py</strong></p></li>
+</ul>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Comentarios de una sola línea:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Comentario de una sola línea</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comentarios multilínea:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">2</span><span class="sd">Este comentario</span>
+<span class="linenos">3</span><span class="sd">tiene más de una línea.</span>
+<span class="linenos">4</span><span class="sd">Puede servir para escribir</span>
+<span class="linenos">5</span><span class="sd">un manual u otras cosas.</span>
+<span class="linenos">6</span><span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># entrada estandar:</span>
+<span class="linenos">2</span><span class="n">dato</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;introduce un dato: &#39;</span><span class="p">)</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># salida estandar:</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">dato</span><span class="p">)</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="c1"># salida en una sola línea:</span>
+<span class="linenos">8</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+<span class="linenos">9</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="estructura-en-python">
+<h3><a class="toc-backref" href="#id6">Estructura en python</a><a class="headerlink" href="#estructura-en-python" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">random</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">numero_aleatorio</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">numero_aleatorio</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>En Python no se hace uso de llaves ni de ; final</p>
+</div>
+</section>
+<section id="concatenacion">
+<h3><a class="toc-backref" href="#id7">Concatenación</a><a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Concatenación de variables y cadenas se realiza con <strong>+</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># concatenación con +</span>
+<span class="linenos"> 2</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cadena concatenada a &quot;</span> <span class="o">+</span> <span class="s2">&quot;otra cadena&quot;</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;Pepe&quot;</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;resultado en variable: &quot;</span> <span class="o">+</span> <span class="n">variable</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># usando format para colocar variables:</span>
+<span class="linenos"> 8</span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Guillermo&quot;</span>
+<span class="linenos"> 9</span><span class="n">apellidos</span> <span class="o">=</span> <span class="s2">&quot;Granados Gómez&quot;</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Me llamo </span><span class="si">{}</span><span class="s2"> y mis apellidos son </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="python-cli-comandos-de-python">
+<h3><a class="toc-backref" href="#id8">Python-CLI - Comandos de python</a><a class="headerlink" href="#python-cli-comandos-de-python" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Comandos de python y pip:</p>
+<ul class="simple">
+<li><p>python3: abre la consola de python y con exit() se puede cerrar.</p></li>
+<li><p>python3 –version: versión usada</p></li>
+<li><p>python3 archivo.py: ejecuta un script python.</p></li>
+</ul>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id9">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;Cadena de texto&quot;</span>
+<span class="linenos"> 2</span><span class="n">entero</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="linenos"> 3</span><span class="n">decimal</span> <span class="o">=</span> <span class="mf">23.27</span>
+<span class="linenos"> 4</span><span class="n">booleano</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># False</span>
+<span class="linenos"> 5</span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datos&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="linenos"> 6</span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;dato uno&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 8</span>    <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Pepe&#39;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s1">&#39;telefono&#39;</span><span class="p">:</span> <span class="mi">753283723</span>
+<span class="linenos">10</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">CONSTANTE</span> <span class="o">=</span> <span class="s2">&quot;soy una presunta constante&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id10">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id11">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sumar</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="linenos">2</span><span class="n">restar</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">9</span>
+<span class="linenos">3</span><span class="n">multiplicar</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">*</span> <span class="mi">6</span>
+<span class="linenos">4</span><span class="n">dividir</span> <span class="o">=</span> <span class="mi">13</span> <span class="o">/</span> <span class="mi">20</span>
+<span class="linenos">5</span><span class="n">resto</span> <span class="o">=</span> <span class="mi">54</span> <span class="o">%</span> <span class="mi">7</span>
+<span class="linenos">6</span><span class="n">potencia</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># la variable debe tener un valor asignado:</span>
+<span class="linenos">2</span><span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">resultado</span> <span class="o">+=</span> <span class="mi">12</span>
+<span class="linenos">5</span><span class="n">resultado</span> <span class="o">-=</span> <span class="mi">16</span>
+<span class="linenos">6</span><span class="n">resultado</span> <span class="o">*=</span> <span class="mi">19</span>
+<span class="linenos">7</span><span class="n">resultado</span> <span class="o">/=</span> <span class="mi">6</span>
+<span class="linenos">8</span><span class="n">resultado</span> <span class="o">**=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales">
+<h3><a class="toc-backref" href="#id12">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos">
+<h3><a class="toc-backref" href="#id13">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>and</strong>.</p></li>
+<li><p>or: <strong>or</strong>.</p></li>
+<li><p>not: <strong>!</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id14">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id15">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+<span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+<span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">)</span>
+<span class="linenos">5</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">edad</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">65</span> <span class="p">:</span>
+<span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres un anciano&quot;</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="k">elif</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+<span class="linenos">7</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">)</span>
+<span class="linenos">8</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">9</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Operador ternario:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">edad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce tu edad: &quot;</span><span class="p">))</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;eres mayor de edad&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Todavía eres menor de edad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id16">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>No existe el condicional Switch en Python, su alternativa es usar <strong>if-elif-else</strong></p>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id17">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Repetición nº </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>for clave / valor:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">electrodomesticos</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">2</span>    <span class="s2">&quot;producto&quot;</span><span class="p">:</span> <span class="s2">&quot;Nevera&quot;</span><span class="p">,</span>
+<span class="linenos">3</span>    <span class="s2">&quot;modelo&quot;</span><span class="p">:</span> <span class="s2">&quot;FX27&quot;</span><span class="p">,</span>
+<span class="linenos">4</span>    <span class="s2">&quot;marca&quot;</span><span class="p">:</span> <span class="s2">&quot;Fagor&quot;</span><span class="p">,</span>
+<span class="linenos">5</span>    <span class="s2">&quot;precio&quot;</span><span class="p">:</span> <span class="mf">783.23</span>
+<span class="linenos">6</span><span class="p">}</span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">electrodomesticos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="linenos">9</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id18">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>While sencillo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;código de mensaje - </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="linenos">5</span>    <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>While infinito:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">numero</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="linenos"> 2</span><span class="c1"># al añadir True hacemos un bucle infinito:</span>
+<span class="linenos"> 3</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos"> 4</span>    <span class="n">adivina</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Adivinia el número &gt;&gt; &#39;</span><span class="p">))</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="k">if</span> <span class="n">adivina</span> <span class="o">==</span> <span class="n">numero</span><span class="p">:</span>
+<span class="linenos"> 7</span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acertaste!&#39;</span><span class="p">)</span>
+<span class="linenos"> 8</span>        <span class="c1"># Con exit() finalizamos el programa</span>
+<span class="linenos"> 9</span>        <span class="n">exit</span><span class="p">()</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fallaste!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="detener-secuenda-de-script">
+<h3><a class="toc-backref" href="#id19">Detener secuenda de script</a><a class="headerlink" href="#detener-secuenda-de-script" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
+<span class="linenos">3</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ya has llegado a 5 y no irás más lejos&quot;</span><span class="p">)</span>
+<span class="linenos">4</span>        <span class="n">exit</span><span class="p">()</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esta frase no se mostrará&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="compresion-de-listas">
+<h3><a class="toc-backref" href="#id20">Compresión de listas</a><a class="headerlink" href="#compresion-de-listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las compresión de lista es un método para recuperar una serie de valores y agregarlos a una lista en una sola secuencia:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># tenemos un diccionario:</span>
+<span class="linenos"> 2</span><span class="n">lista_consolas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 3</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Mega Drive&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;4ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Master System&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;3ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sony&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;PlayStation&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;5ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Nintendo&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Gamecube&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;6ª Generación&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># se crea una lista y dentro lo primero que anotamos es el dato a recuperar y acto seguido el bucle sobre la lista de valores:</span>
+<span class="linenos">10</span><span class="n">consolas</span> <span class="o">=</span> <span class="p">[</span><span class="n">consola</span><span class="p">[</span><span class="s1">&#39;modelo&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">consola</span> <span class="ow">in</span> <span class="n">lista_consolas</span><span class="p">]</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="n">consolas</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Con condición:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">lista_consolas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 2</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Mega Drive&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;4ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 3</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Master System&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;3ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Sony&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;PlayStation&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;5ª Generación&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Nintendo&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span><span class="s1">&#39;Gamecube&#39;</span><span class="p">,</span> <span class="s1">&#39;generación&#39;</span><span class="p">:</span> <span class="s1">&#39;6ª Generación&#39;</span><span class="p">}</span>
+<span class="linenos"> 6</span><span class="p">]</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Se añaden la condición después del bucle:</span>
+<span class="linenos"> 9</span><span class="n">consolas</span> <span class="o">=</span> <span class="p">[</span><span class="n">consola</span><span class="p">[</span><span class="s1">&#39;modelo&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">consola</span> <span class="ow">in</span> <span class="n">lista_consolas</span> <span class="k">if</span> <span class="n">consola</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sega&#39;</span><span class="p">]</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">consolas</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Con un bucle for el resultado sería:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">consolas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">2</span><span class="k">for</span> <span class="n">consola</span> <span class="ow">in</span> <span class="n">lista_consolas</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="k">if</span> <span class="n">consola</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sega&#39;</span><span class="p">:</span>
+<span class="linenos">4</span>        <span class="n">consolas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">consola</span><span class="p">[</span><span class="s1">&#39;modelo&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Hay que tener en cuenta que el primer dato es solo el resultado de un bucle for, teniendo eso en cuenta se pueden hacer muchos tipos de operaciones.</p>
+</div>
+</section>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id21">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="listas">
+<h3><a class="toc-backref" href="#id22">Listas</a><a class="headerlink" href="#listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cadena&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">18.27</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;otra cadena&quot;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mf">18.77</span><span class="p">]]</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># asignación:</span>
+<span class="linenos">4</span><span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Morcilla&quot;</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># impresión:</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="tuplas">
+<h3><a class="toc-backref" href="#id23">Tuplas</a><a class="headerlink" href="#tuplas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;cadena&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">18.27</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;otra cadena&quot;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mf">18.77</span><span class="p">])</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># impresión</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Las tuplas son inmutables por lo tanto no se pueden asignar valores</p>
+</div>
+</section>
+<section id="diccionarios">
+<h3><a class="toc-backref" href="#id24">Diccionarios</a><a class="headerlink" href="#diccionarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">operadores</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 2</span>    <span class="p">{</span><span class="s2">&quot;suma&quot;</span><span class="p">:</span> <span class="s2">&quot;+&quot;</span><span class="p">},</span>
+<span class="linenos"> 3</span>    <span class="p">{</span><span class="s2">&quot;resta&quot;</span><span class="p">:</span> <span class="s2">&quot;-&quot;</span><span class="p">},</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s2">&quot;multiplicación&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s2">&quot;división&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s2">&quot;resto&quot;</span><span class="p">:</span> <span class="s2">&quot;%&quot;</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s2">&quot;potencia&quot;</span><span class="p">:</span> <span class="s2">&quot;**&quot;</span><span class="p">}</span>
+<span class="linenos"> 8</span><span class="p">]</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># ejemplo recorrido en listado de diccionarios:</span>
+<span class="linenos">11</span><span class="k">for</span> <span class="n">operador</span> <span class="ow">in</span> <span class="n">operadores</span><span class="p">:</span>
+<span class="linenos">12</span>    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">operador</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="linenos">13</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># asignación:</span>
+<span class="linenos">16</span><span class="n">operadores</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;suma&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Sumar&quot;</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># impresión:</span>
+<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="n">operadores</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;suma&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="control-de-errores">
+<h2><a class="toc-backref" href="#id25">Control de errores</a><a class="headerlink" href="#control-de-errores" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="p">:</span>
+<span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="linenos">3</span><span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+<span class="linenos">4</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No has escrito un nombre&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id26">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="funciones">
+<h3><a class="toc-backref" href="#id27">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Procedimienos:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola persona&quot;</span><span class="p">)</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">saludar</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funciones:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="k">return</span> <span class="s2">&quot;Hola persona&quot;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">saludar</span><span class="p">())</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uso de parámetros:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="k">return</span> <span class="s2">&quot;Hola </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;Antonio&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Funciones anónimas:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># lambda recibe uno o varios parámetros y hace un return directamente de forma anonima:</span>
+<span class="linenos">2</span><span class="n">sumar</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">sumar</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">18</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ámbito global:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Alberto&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
+<span class="linenos">4</span>    <span class="k">return</span> <span class="s2">&quot;¿Qué tal </span><span class="si">{}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="n">saludar</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Las variables en Python son por lo general de ámbito global</p>
+</div>
+</section>
+</section>
+<section id="programacion-orientada-a-objetos">
+<h2><a class="toc-backref" href="#id28">Programación orientada a objetos</a><a class="headerlink" href="#programacion-orientada-a-objetos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El ámbito de atributos y métodos de una clase en Python son globales.</p>
+<section id="clases-y-objetos">
+<h3><a class="toc-backref" href="#id29">Clases y objetos</a><a class="headerlink" href="#clases-y-objetos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Estructura clase:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Videoconsola</span><span class="p">():</span>
+<span class="linenos"> 2</span>    <span class="c1"># atributos:</span>
+<span class="linenos"> 3</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="s2">&quot;Mega Drive&quot;</span>
+<span class="linenos"> 4</span>    <span class="n">marca</span> <span class="o">=</span> <span class="s2">&quot;Sega&quot;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1"># los métodos reciben siempre self para hacer uso de los atributos de la clase:</span>
+<span class="linenos"> 7</span>    <span class="k">def</span> <span class="nf">descripcion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 8</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es una </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">))</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># crear objeto:</span>
+<span class="linenos">12</span><span class="n">megaDrive</span> <span class="o">=</span> <span class="n">Videoconsola</span><span class="p">()</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># recuperar atributo:</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="n">megaDrive</span><span class="o">.</span><span class="n">marca</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># recuperar métodos:</span>
+<span class="linenos">18</span><span class="n">megaDrive</span><span class="o">.</span><span class="n">descripcion</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constructor:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Videoconsola</span><span class="p">():</span>
+<span class="linenos"> 2</span>    <span class="c1"># atributos:</span>
+<span class="linenos"> 3</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="s2">&quot;Mega Drive&quot;</span>
+<span class="linenos"> 4</span>    <span class="n">marca</span> <span class="o">=</span> <span class="s2">&quot;Sega&quot;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1"># El constructor recibe self y los parámetros que se pasan por el constructor:</span>
+<span class="linenos"> 7</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">marca</span><span class="p">):</span>
+<span class="linenos"> 8</span>        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+<span class="linenos"> 9</span>        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="k">def</span> <span class="nf">descripcion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">12</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es una </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">))</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># crear objeto y pasar parámetros al constructor:</span>
+<span class="linenos">16</span><span class="n">megaDrive</span> <span class="o">=</span> <span class="n">Videoconsola</span><span class="p">(</span><span class="s2">&quot;MegaDrive&quot;</span><span class="p">,</span> <span class="s2">&quot;Sega&quot;</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="n">megaDrive</span><span class="o">.</span><span class="n">marca</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="n">megaDrive</span><span class="o">.</span><span class="n">descripcion</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Get y Set:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+<span class="linenos"> 2</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">dni</span><span class="p">):</span>
+<span class="linenos"> 3</span>        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+<span class="linenos"> 4</span>        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="n">apellido</span>
+<span class="linenos"> 5</span>        <span class="bp">self</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span>
+<span class="linenos"> 6</span>        <span class="c1"># para atributos y métodos privados añadimos _ antes de forma simbólica:</span>
+<span class="linenos"> 7</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_dni</span> <span class="o">=</span> <span class="n">dni</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="c1"># para evitar recuperar el atributo dni usamos el siguiente decorador que lo encapsula:</span>
+<span class="linenos">10</span>    <span class="nd">@property</span> <span class="c1"># Este sería el get</span>
+<span class="linenos">11</span>    <span class="k">def</span> <span class="nf">dni</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">12</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dni</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="nd">@dni</span><span class="o">.</span><span class="n">setter</span> <span class="c1"># y este el set</span>
+<span class="linenos">15</span>    <span class="k">def</span> <span class="nf">dni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dni</span><span class="p">):</span>
+<span class="linenos">16</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_dni</span> <span class="o">=</span> <span class="n">dni</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">19</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, me llamo </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> y tengo </span><span class="si">{}</span><span class="s2"> años&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">edad</span><span class="p">))</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="n">pedro</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s2">&quot;Martinez Sal&quot;</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="s2">&quot;323223112V&quot;</span><span class="p">)</span>
+<span class="linenos">23</span><span class="n">pedro</span><span class="o">.</span><span class="n">saludar</span><span class="p">()</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1"># Uso de get:</span>
+<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi DNI es: &quot;</span> <span class="o">+</span> <span class="n">pedro</span><span class="o">.</span><span class="n">dni</span><span class="p">)</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1"># Uso de set:</span>
+<span class="linenos">29</span><span class="n">pedro</span><span class="o">.</span><span class="n">dni</span> <span class="o">=</span> <span class="s2">&quot;75753233X&quot;</span>
+<span class="linenos">30</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nuevo DNI: &quot;</span> <span class="o">+</span> <span class="n">pedro</span><span class="o">.</span><span class="n">dni</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Herencia:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Persona</span><span class="p">():</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">genero</span><span class="p">):</span>
+<span class="linenos"> 4</span>        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+<span class="linenos"> 5</span>        <span class="bp">self</span><span class="o">.</span><span class="n">genero</span> <span class="o">=</span> <span class="n">genero</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="k">def</span> <span class="nf">datos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 8</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Su nombre es </span><span class="si">{}</span><span class="s2"> y su género es.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">genero</span><span class="p">))</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="k">class</span> <span class="nc">Luis</span><span class="p">(</span><span class="n">Persona</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">genero</span><span class="p">,</span> <span class="n">peso</span><span class="p">,</span> <span class="n">estatura</span><span class="p">):</span>
+<span class="linenos">13</span>        <span class="c1"># para los atributos del padre cargamos el superconstructor y le pasamos los atributos del padre:</span>
+<span class="linenos">14</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">genero</span><span class="p">)</span>
+<span class="linenos">15</span>        <span class="bp">self</span><span class="o">.</span><span class="n">peso</span> <span class="o">=</span> <span class="n">peso</span>
+<span class="linenos">16</span>        <span class="bp">self</span><span class="o">.</span><span class="n">estatura</span> <span class="o">=</span> <span class="n">estatura</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="c1"># Podemos sobrecargar el método para que imprima más atributos:</span>
+<span class="linenos">19</span>    <span class="k">def</span> <span class="nf">datos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">20</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Su nombre es </span><span class="si">{}</span><span class="s2">, su género </span><span class="si">{}</span><span class="s2">, pesa </span><span class="si">{}</span><span class="s2"> kilos y mide </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">genero</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">peso</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">estatura</span><span class="p">))</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Objeto creado con padre y uso de metodo datos:</span>
+<span class="linenos">23</span><span class="n">pedro</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s2">&quot;Masculino&quot;</span><span class="p">)</span>
+<span class="linenos">24</span><span class="n">pedro</span><span class="o">.</span><span class="n">datos</span><span class="p">()</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="c1"># Objeto creado con hijo y uso de metodo datos:</span>
+<span class="linenos">27</span><span class="n">luis</span> <span class="o">=</span> <span class="n">Luis</span><span class="p">(</span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span> <span class="s2">&quot;Masculino&quot;</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mf">1.75</span><span class="p">)</span>
+<span class="linenos">28</span><span class="n">luis</span><span class="o">.</span><span class="n">datos</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede hacer herencia múltiple pasándole a la clase hija varias clases padres por parámetro y esta podrá trabajar con todos sus atributos y métodos.
+Ej: class <strong>Luis(Persona, Profesion):</strong></p>
+</div>
+</section>
+<section id="clases-abstractas">
+<h3><a class="toc-backref" href="#id30">Clases abstractas</a><a class="headerlink" href="#clases-abstractas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es posible trabajar con clases abstactas gracias a la librería <strong>abc</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># se importa la librería para abstracciones:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># se le indica a la clase que es abstracta con abc:</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Videoconsola</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="linenos"> 6</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="s2">&quot;Super Nintendo&quot;</span>
+<span class="linenos"> 7</span>    <span class="n">marca</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">marca</span><span class="p">):</span>
+<span class="linenos">10</span>        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+<span class="linenos">11</span>        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Se ha creado el objeto&quot;</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">def</span> <span class="nf">juegos</span><span class="p">():</span>
+<span class="linenos">16</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La consola dispone de alrededor de 700 títulos&quot;</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="c1"># las funciones abstractas se deben usar obligatoriamente en la clase hija:</span>
+<span class="linenos">20</span>    <span class="c1"># Utilizan un decorador de abc:</span>
+<span class="linenos">21</span>    <span class="nd">@abstractmethod</span>
+<span class="linenos">22</span>    <span class="k">def</span> <span class="nf">precio</span><span class="p">():</span>
+<span class="linenos">23</span>        <span class="sd">&quot;&quot;&quot; Texto convencional: este método muestra el precio &quot;&quot;&quot;</span>
+<span class="linenos">24</span>        <span class="k">pass</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="c1"># clase a partir de clase abstracta:</span>
+<span class="linenos">27</span><span class="k">class</span> <span class="nc">SuperNintendo</span><span class="p">(</span><span class="n">Videoconsola</span><span class="p">):</span>
+<span class="linenos">28</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">29</span>        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="s2">&quot;SNES&quot;</span>
+<span class="linenos">30</span>        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s2">&quot;Nintendo&quot;</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>    <span class="k">def</span> <span class="nf">precio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">34</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La consola cuesta 200 €&quot;</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="c1"># uso de clase hija:</span>
+<span class="linenos">39</span><span class="n">superNintendo</span> <span class="o">=</span> <span class="n">SuperNintendo</span><span class="p">()</span>
+<span class="linenos">40</span><span class="nb">print</span><span class="p">(</span><span class="n">superNintendo</span><span class="o">.</span><span class="n">modelo</span><span class="p">)</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span><span class="n">superNintendo</span><span class="o">.</span><span class="n">precio</span><span class="p">()</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span><span class="c1"># Desestructuración de métodos:</span>
+<span class="linenos">45</span><span class="n">Videoconsola</span><span class="o">.</span><span class="n">juegos</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="interfaces">
+<h3><a class="toc-backref" href="#id31">Interfaces</a><a class="headerlink" href="#interfaces" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las interfaces como tales no existen en python pero hay un modo de trabajar de forma similar</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">VideoconsolaInterface</span><span class="p">():</span>
+<span class="linenos"> 2</span>    <span class="c1"># En una supuesta interfaz creamos los métodos y le pasamos el valor pass para dejarlos vacíos:</span>
+<span class="linenos"> 3</span>    <span class="k">def</span> <span class="nf">descripcion</span><span class="p">():</span>
+<span class="linenos"> 4</span>        <span class="sd">&quot;&quot;&quot; Muestra una descripción de la consola &quot;&quot;&quot;</span>
+<span class="linenos"> 5</span>        <span class="k">pass</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="k">class</span> <span class="nc">NeoGeo</span><span class="p">(</span><span class="n">VideoconsolaInterface</span><span class="p">):</span>
+<span class="linenos"> 9</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">precio</span><span class="p">):</span>
+<span class="linenos">10</span>        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+<span class="linenos">11</span>        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+<span class="linenos">12</span>        <span class="bp">self</span><span class="o">.</span><span class="n">precio</span> <span class="o">=</span> <span class="n">precio</span>
+<span class="linenos">13</span>        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">precio</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">def</span> <span class="nf">descripcion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">16</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es la consola de </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">))</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="n">neoGeo</span> <span class="o">=</span> <span class="n">NeoGeo</span><span class="p">(</span><span class="s2">&quot;Neo Geo Pocket&quot;</span><span class="p">,</span> <span class="s2">&quot;SNK&quot;</span><span class="p">,</span> <span class="s2">&quot;149.99&quot;</span><span class="p">)</span>
+<span class="linenos">20</span><span class="n">neoGeo</span><span class="o">.</span><span class="n">descripcion</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="metodo-str">
+<h3><a class="toc-backref" href="#id32">Método «__str__»</a><a class="headerlink" href="#metodo-str" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El método <strong>__str__()</strong> retorna una cadena al imprimir el objeto que se genera:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Consola</span><span class="p">:</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">):</span>
+<span class="linenos"> 4</span>        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+<span class="linenos"> 5</span>        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="c1"># el método __str__ define una cadena que retorna al imprmir:</span>
+<span class="linenos"> 8</span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 9</span>        <span class="k">return</span> <span class="s2">&quot;Es una videoconsola </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="n">playstation</span> <span class="o">=</span> <span class="n">Consola</span><span class="p">(</span><span class="s2">&quot;Sony&quot;</span><span class="p">,</span> <span class="s2">&quot;PlayStation&quot;</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Al imprimir el valor devolverá la cadena asignada en __str__:</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="n">playstation</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="importar-y-exportar">
+<h2><a class="toc-backref" href="#id33">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="modulos-y-paquetes">
+<h3><a class="toc-backref" href="#id34">Módulos y paquetes</a><a class="headerlink" href="#modulos-y-paquetes" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Podemos crear nuestros propios módulos en python para cortar partes del código específicas:</p>
+<ul class="simple">
+<li><p>Lo primero es crear un nuevo archivo.py y guardar ahí por ejemplo una clase.</p></li>
+<li><p>Luego creamos un segundo archivo que será el principal.py y para importarlo basta con escribir <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">archivo</span></code> al comienzo del proyecto.</p></li>
+</ul>
+<p>Si lo que queremos es guardar el módulo en una carpeta entonces estamos hablando de un Paquete:</p>
+<ul class="simple">
+<li><p>Los paquetes son archivos.py que guardamos en una carpeta.</p></li>
+<li><p>Dentro de esa carpeta creamos siempre un archivo llamado <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> para que el interprete lo considere un paquete.</p></li>
+<li><p>Luego en el archivo principal.py lo importamos con la línea <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">carpeta</span> <span class="pre">import</span> <span class="pre">archivo</span></code></p></li>
+</ul>
+<p>Y para poner un alias a un paquete o módulo de python ya sea estandar o personalizado utilizamos <code class="docutils literal notranslate"><span class="pre">as</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">carpeta</span> <span class="kn">import</span> <span class="n">archivo</span> <span class="k">as</span> <span class="n">traductor</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="funciones.html" class="btn btn-neutral float-right" title="Funciones predefinidas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../php/laravel.html" class="btn btn-neutral float-left" title="Framework: Laravel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

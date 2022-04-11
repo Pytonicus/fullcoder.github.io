@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interfaces gráficas: WPF &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Interfaces gráficas: WPF</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/csharp/wpf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="interfaces-graficas-wpf">
+<h1><a class="toc-backref" href="#id2">Interfaces gráficas: WPF</a><a class="headerlink" href="#interfaces-graficas-wpf" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-csharp.png"><img alt="Logo C#" class="align-center" src="../_images/logo-csharp.png" style="width: 213.60000000000002px; height: 240.0px;" /></a>
+<p>Interfaces gráficas con WPF en C#</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#interfaces-graficas-wpf" id="id2">Interfaces gráficas: WPF</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configurar-visual-studio" id="id3">Configurar Visual Studio</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-proyecto" id="id4">Crear un Proyecto</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#xaml" id="id5">XAML</a></p>
+<ul>
+<li><p><a class="reference internal" href="#estructura-basica" id="id6">Estructura básica</a></p></li>
+<li><p><a class="reference internal" href="#tipos-de-contenedores" id="id7">Tipos de contenedores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#stackpanel" id="id8">StackPanel</a></p></li>
+<li><p><a class="reference internal" href="#wrappanel" id="id9">WrapPanel</a></p></li>
+<li><p><a class="reference internal" href="#grid" id="id10">Grid</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#elementos-comunes" id="id11">Elementos Comunes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#button" id="id12">Button</a></p></li>
+<li><p><a class="reference internal" href="#textblock" id="id13">TextBlock</a></p></li>
+<li><p><a class="reference internal" href="#listbox-y-listboxitem" id="id14">ListBox y ListBoxItem</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id15">TextBlock</a></p></li>
+<li><p><a class="reference internal" href="#slider" id="id16">Slider</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#dependency-properties-propiedades-de-dependencias" id="id17">Dependency Properties: Propiedades de dependencias</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#logica-de-wpf" id="id18">Lógica de WPF</a></p>
+<ul>
+<li><p><a class="reference internal" href="#routedevents-eventos" id="id19">RoutedEvents: Eventos</a></p></li>
+<li><p><a class="reference internal" href="#data-binding-enlace-de-datos" id="id20">Data Binding: Enlace de datos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#binding-enlazando-datos" id="id21">Binding: Enlazando datos</a></p></li>
+<li><p><a class="reference internal" href="#inotfypropertychanged-detectar-y-recuperar-datos" id="id22">INotfyPropertyChanged: Detectar y recuperar datos</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="configurar-visual-studio">
+<h2><a class="toc-backref" href="#id3">Configurar Visual Studio</a><a class="headerlink" href="#configurar-visual-studio" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Abrir el Visual Studio Installer</p></li>
+<li><p>Añadir en carga de trabajos <strong>Desarrollo de escritorio .NET</strong></p></li>
+</ul>
+<section id="crear-un-proyecto">
+<h3><a class="toc-backref" href="#id4">Crear un Proyecto</a><a class="headerlink" href="#crear-un-proyecto" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Para crear un nuevo proyecto seleccionamos la opción <strong>APlicacion de WPF (.NET Framework)</strong> y le ponemos el nombre que queramos.</p></li>
+<li><p>Cargará el proyecto con una ventana inicial.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede trabajar tanto en la ventana como en el código.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>A la izquierda podemos desplegar un <strong>cuadro de herramientas</strong> para añadir cosas a la ventana.</p>
+</div>
+</section>
+</section>
+<section id="xaml">
+<h2><a class="toc-backref" href="#id5">XAML</a><a class="headerlink" href="#xaml" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es un lenguaje que permite escribir toda la interfaz de usuario.</p>
+<section id="estructura-basica">
+<h3><a class="toc-backref" href="#id6">Estructura básica</a><a class="headerlink" href="#estructura-basica" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Al crear el proyecto tenemos el siguiente archivo principal llamado MainWindow.xaml</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;Window</span> <span class="na">x:Class=</span><span class="s">&quot;wpf_01.MainWindow&quot;</span>
+<span class="linenos"> 2</span>        <span class="na">xmlns=</span><span class="s">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span>
+<span class="linenos"> 3</span>        <span class="na">xmlns:x=</span><span class="s">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span>
+<span class="linenos"> 4</span>        <span class="na">xmlns:d=</span><span class="s">&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span>
+<span class="linenos"> 5</span>        <span class="na">xmlns:mc=</span><span class="s">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span>
+<span class="linenos"> 6</span>        <span class="na">xmlns:local=</span><span class="s">&quot;clr-namespace:wpf_01&quot;</span>
+<span class="linenos"> 7</span>        <span class="na">mc:Ignorable=</span><span class="s">&quot;d&quot;</span>
+<span class="linenos"> 8</span>        <span class="na">Title=</span><span class="s">&quot;MainWindow&quot;</span> <span class="na">Height=</span><span class="s">&quot;450&quot;</span> <span class="na">Width=</span><span class="s">&quot;800&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 9</span>    <span class="cm">&lt;!-- Dentro de grid se agrega el contenido de la ventana --&gt;</span>
+<span class="linenos">10</span>    <span class="nt">&lt;Grid&gt;</span>
+<span class="linenos">11</span>        <span class="cm">&lt;!-- Cada etiqueta de elemento tiene dentro unos atributos que ajustan su estilo --&gt;</span>
+<span class="linenos">12</span>        <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;Botón de prueba&quot;</span> <span class="na">Height=</span><span class="s">&quot;30&quot;</span> <span class="na">Width=</span><span class="s">&quot;120&quot;</span><span class="nt">&gt;&lt;/Button&gt;</span>
+<span class="linenos">13</span>    <span class="nt">&lt;/Grid&gt;</span>
+<span class="linenos">14</span><span class="nt">&lt;/Window&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="tipos-de-contenedores">
+<h3><a class="toc-backref" href="#id7">Tipos de contenedores</a><a class="headerlink" href="#tipos-de-contenedores" title="Enlazar permanentemente con este título">¶</a></h3>
+<section id="stackpanel">
+<h4><a class="toc-backref" href="#id8">StackPanel</a><a class="headerlink" href="#stackpanel" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">&lt;!-- Stack panel apila elementos de arriba abajo y reemplaza al Grid: --&gt;</span>
+<span class="linenos"> 2</span><span class="nt">&lt;StackPanel&gt;</span>
+<span class="linenos"> 3</span>    <span class="nt">&lt;TextBlock</span> <span class="na">HorizontalAlignment=</span><span class="s">&quot;Center&quot;</span> <span class="na">Margin=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>Tus videoconsolas<span class="nt">&lt;/TextBlock&gt;</span>
+<span class="linenos"> 4</span>    <span class="nt">&lt;ListBox</span> <span class="na">Height=</span><span class="s">&quot;80&quot;</span> <span class="na">Width=</span><span class="s">&quot;500&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 5</span>        <span class="nt">&lt;ListBoxItem</span> <span class="na">Content=</span><span class="s">&quot;PlayStation&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 6</span>        <span class="nt">&lt;ListBoxItem</span> <span class="na">Content=</span><span class="s">&quot;Gameboy&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 7</span>        <span class="nt">&lt;ListBoxItem</span> <span class="na">Content=</span><span class="s">&quot;Nintendo DS&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 8</span>    <span class="nt">&lt;/ListBox&gt;</span>
+<span class="linenos"> 9</span>    <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;Añadir consola&quot;</span> <span class="na">Margin=</span><span class="s">&quot;20&quot;</span> <span class="na">Click=</span><span class="s">&quot;Button_Click&quot;</span><span class="nt">&gt;&lt;/Button&gt;</span>
+<span class="linenos">10</span><span class="nt">&lt;/StackPanel&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="wrappanel">
+<h4><a class="toc-backref" href="#id9">WrapPanel</a><a class="headerlink" href="#wrappanel" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;WrapPanel&gt;</span>
+<span class="linenos">2</span>    <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">&quot;Hola amigo&quot;</span> <span class="na">Margin=</span><span class="s">&quot;20&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">3</span>    <span class="nt">&lt;Button</span> <span class="na">Margin=</span><span class="s">&quot;20&quot;</span><span class="nt">&gt;</span>Botón<span class="nt">&lt;/Button&gt;</span>
+<span class="linenos">4</span>    <span class="nt">&lt;Button</span> <span class="na">Margin=</span><span class="s">&quot;20&quot;</span><span class="nt">&gt;</span>Otro botón<span class="nt">&lt;/Button&gt;</span>
+<span class="linenos">5</span><span class="nt">&lt;/WrapPanel&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="grid">
+<h4><a class="toc-backref" href="#id10">Grid</a><a class="headerlink" href="#grid" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;Grid&gt;</span>
+<span class="linenos"> 2</span>    <span class="cm">&lt;!-- Opcionalmente se puede definir las columnas: --&gt;</span>
+<span class="linenos"> 3</span>    <span class="nt">&lt;Grid.ColumnDefinitions&gt;</span>
+<span class="linenos"> 4</span>        <span class="cm">&lt;!-- cada columna tendrá una posición como un array: --&gt;</span>
+<span class="linenos"> 5</span>        <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;200&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 6</span>        <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;200&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 7</span>        <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;200&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 8</span>        <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;200&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 9</span>    <span class="nt">&lt;/Grid.ColumnDefinitions&gt;</span>
+<span class="linenos">10</span>    <span class="cm">&lt;!-- Opcionalmente se pueden definir filas: --&gt;</span>
+<span class="linenos">11</span>    <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+<span class="linenos">12</span>        <span class="cm">&lt;!-- con * se ajusta todo el alto o ancho que pueda: --&gt;</span>
+<span class="linenos">13</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">14</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">15</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">16</span>    <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+<span class="linenos">17</span>    <span class="cm">&lt;!-- Asignar botón a primera columna segunda fila: --&gt;</span>
+<span class="linenos">18</span>    <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;Botón&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">19</span>    <span class="cm">&lt;!-- Asignar botón a segunda columna primera fila: --&gt;</span>
+<span class="linenos">20</span>    <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;Botón&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;1&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">21</span>    <span class="cm">&lt;!-- Asignar botón a tercera columna tercera fila: --&gt;</span>
+<span class="linenos">22</span>    <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;Botón&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;2&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">23</span><span class="nt">&lt;/Grid&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="elementos-comunes">
+<h3><a class="toc-backref" href="#id11">Elementos Comunes</a><a class="headerlink" href="#elementos-comunes" title="Enlazar permanentemente con este título">¶</a></h3>
+<section id="button">
+<h4><a class="toc-backref" href="#id12">Button</a><a class="headerlink" href="#button" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Botón sencillo.</p>
+<p>Estructura del elemento:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;Button</span> <span class="na">Height=</span><span class="s">&quot;30&quot;</span> <span class="na">Click=</span><span class="s">&quot;Lanzar_Mensaje&quot;</span><span class="nt">&gt;</span>Texto<span class="nt">&lt;/Button&gt;</span>
+</pre></div>
+</div>
+<p>Atributos comunes:</p>
+<ul class="simple">
+<li><p>Content: texto del botón, también se puede poner en entre etiquetas.</p></li>
+<li><p>Height: define el alto. Recibe valor numérico.</p></li>
+<li><p>Width: define el ancho. Recibe valor numérico.</p></li>
+<li><p>FontSize: Tamaño de fuente. Recibe valor numérico.</p></li>
+<li><p>Foreground: Color de fuente. Recibe color en texto o hexadecimal.</p></li>
+<li><p>HorizontalAlignment: Alineación horizontal. Valores Left, Center y Right.</p></li>
+<li><p>Margin: margen entre elementos externos. Recibe valor numérico.</p></li>
+<li><p>ToolTip: Mensaje de ayuda que se muestra al situar el ratón sobre el elemento.</p></li>
+<li><p>Name: Se asigna un identificador al elemento para localizarlo en el código.</p></li>
+</ul>
+</section>
+<section id="textblock">
+<h4><a class="toc-backref" href="#id13">TextBlock</a><a class="headerlink" href="#textblock" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Bloque de texto.</p>
+<p>Estructura del elemento:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;TextBlock</span> <span class="na">HorizontalAlignment=</span><span class="s">&quot;Center&quot;</span> <span class="na">Margin=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>Tus videoconsolas<span class="nt">&lt;/TextBlock&gt;</span>
+</pre></div>
+</div>
+<p>Atributos comunes:</p>
+<ul class="simple">
+<li><p>Content: texto del botón, también se puede poner en entre etiquetas.</p></li>
+<li><p>Height: define el alto. Recibe valor numérico.</p></li>
+<li><p>Width: define el ancho. Recibe valor numérico.</p></li>
+<li><p>FontSize: Tamaño de fuente. Recibe valor numérico.</p></li>
+<li><p>Foreground: Color de fuente. Recibe color en texto o hexadecimal.</p></li>
+<li><p>HorizontalAlignment: Alineación horizontal. Valores Left, Center y Right.</p></li>
+<li><p>Margin: margen entre elementos externos. Recibe valor numérico.</p></li>
+<li><p>ToolTip: Mensaje de ayuda que se muestra al situar el ratón sobre el elemento.</p></li>
+<li><p>Name: Se asigna un identificador al elemento para localizarlo en el código.</p></li>
+</ul>
+</section>
+<section id="listbox-y-listboxitem">
+<h4><a class="toc-backref" href="#id14">ListBox y ListBoxItem</a><a class="headerlink" href="#listbox-y-listboxitem" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Listado de elementos y elementos internos del mismo.</p>
+<p>Estructura del elemento:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;ListBox</span> <span class="na">Height=</span><span class="s">&quot;80&quot;</span> <span class="na">Width=</span><span class="s">&quot;500&quot;</span> <span class="nt">&gt;</span>
+<span class="linenos">2</span>    <span class="nt">&lt;ListBoxItem</span> <span class="na">Content=</span><span class="s">&quot;PlayStation&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">3</span>    <span class="nt">&lt;ListBoxItem</span> <span class="na">Content=</span><span class="s">&quot;Gameboy&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">4</span>    <span class="nt">&lt;ListBoxItem</span> <span class="na">Content=</span><span class="s">&quot;Nintendo DS&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">5</span><span class="nt">&lt;/ListBox&gt;</span>
+</pre></div>
+</div>
+<p>Atributos comunes:</p>
+<ul class="simple">
+<li><p>Content: texto del botón, también se puede poner en entre etiquetas.</p></li>
+<li><p>Height: define el alto. Recibe valor numérico.</p></li>
+<li><p>Width: define el ancho. Recibe valor numérico.</p></li>
+<li><p>FontSize: Tamaño de fuente. Recibe valor numérico.</p></li>
+<li><p>Foreground: Color de fuente. Recibe color en texto o hexadecimal.</p></li>
+<li><p>HorizontalAlignment: Alineación horizontal. Valores Left, Center y Right.</p></li>
+<li><p>Margin: margen entre elementos externos. Recibe valor numérico.</p></li>
+<li><p>ToolTip: Mensaje de ayuda que se muestra al situar el ratón sobre el elemento.</p></li>
+<li><p>Name: Se asigna un identificador al elemento para localizarlo en el código.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h4><a class="toc-backref" href="#id15">TextBlock</a><a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Caja de texto.</p>
+<p>Estructura del elemento:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;TextBox</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Height=</span><span class="s">&quot;25&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Atributos comunes:</p>
+<ul class="simple">
+<li><p>Text: Contenido autodefinido de la caja.</p></li>
+<li><p>Height: define el alto. Recibe valor numérico.</p></li>
+<li><p>Width: define el ancho. Recibe valor numérico.</p></li>
+<li><p>FontSize: Tamaño de fuente. Recibe valor numérico.</p></li>
+<li><p>Foreground: Color de fuente. Recibe color en texto o hexadecimal.</p></li>
+<li><p>HorizontalAlignment: Alineación horizontal. Valores Left, Center y Right.</p></li>
+<li><p>Margin: margen entre elementos externos. Recibe valor numérico.</p></li>
+<li><p>ToolTip: Mensaje de ayuda que se muestra al situar el ratón sobre el elemento.</p></li>
+<li><p>Name: Se asigna un identificador al elemento para localizarlo en el código.</p></li>
+</ul>
+</section>
+<section id="slider">
+<h4><a class="toc-backref" href="#id16">Slider</a><a class="headerlink" href="#slider" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Barra de selección con valor decimal.</p>
+<p>Estructura del elemento:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;Slider</span> <span class="na">Name=</span><span class="s">&quot;SliderPrueba&quot;</span> <span class="na">Minimun=</span><span class="s">&quot;0&quot;</span> <span class="na">Maximum=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Atributos comunes:</p>
+<ul class="simple">
+<li><p>Value: Valor autodefinido de la caja.</p></li>
+<li><p>Minimun: valor mínimo aceptado.</p></li>
+<li><p>Maximum: Valor máximo permitido.</p></li>
+<li><p>IsSnapToTickEnabled: definie si el valor es entero en lugar de decimal.</p></li>
+<li><p>Height: define el alto. Recibe valor numérico.</p></li>
+<li><p>Width: define el ancho. Recibe valor numérico.</p></li>
+<li><p>HorizontalAlignment: Alineación horizontal. Valores Left, Center y Right.</p></li>
+<li><p>Margin: margen entre elementos externos. Recibe valor numérico.</p></li>
+<li><p>ToolTip: Mensaje de ayuda que se muestra al situar el ratón sobre el elemento.</p></li>
+<li><p>Name: Se asigna un identificador al elemento para localizarlo en el código.</p></li>
+</ul>
+</section>
+</section>
+<section id="dependency-properties-propiedades-de-dependencias">
+<h3><a class="toc-backref" href="#id17">Dependency Properties: Propiedades de dependencias</a><a class="headerlink" href="#dependency-properties-propiedades-de-dependencias" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es un modo de generar estilos y animaciones a los elementos de WPF:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;Button</span> <span class="na">Height=</span><span class="s">&quot;50&quot;</span> <span class="na">Width=</span><span class="s">&quot;100&quot;</span> <span class="na">Content=</span><span class="s">&quot;Botón mágico&quot;</span> <span class="na">Background=</span><span class="s">&quot;Green&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>        <span class="cm">&lt;!-- Se genera un estilo con el elemento --&gt;</span>
+<span class="linenos"> 3</span>        <span class="nt">&lt;Button.Style&gt;</span>
+<span class="linenos"> 4</span>            <span class="cm">&lt;!-- dentro del elemento se añade una etiqueta de estilo que apunte al elemento que queremos cambiar: --&gt;</span>
+<span class="linenos"> 5</span>            <span class="nt">&lt;Style</span> <span class="na">TargetType=</span><span class="s">&quot;Button&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 6</span>                <span class="cm">&lt;!-- Se puede establecer uno o varios elementos disparadores: --&gt;</span>
+<span class="linenos"> 7</span>                <span class="nt">&lt;Style.Triggers&gt;</span>
+<span class="linenos"> 8</span>                    <span class="cm">&lt;!-- ejemplo de disparador por posición: --&gt;</span>
+<span class="linenos"> 9</span>                    <span class="nt">&lt;Trigger</span> <span class="na">Property=</span><span class="s">&quot;IsMouseOver&quot;</span> <span class="na">Value=</span><span class="s">&quot;True&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">10</span>                        <span class="cm">&lt;!-- Adherimos el nuevo atributo del elemento escogido: --&gt;</span>
+<span class="linenos">11</span>                        <span class="nt">&lt;Setter</span> <span class="na">Property=</span><span class="s">&quot;FontSize&quot;</span> <span class="na">Value=</span><span class="s">&quot;24&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">12</span>                        <span class="nt">&lt;Setter</span> <span class="na">Property=</span><span class="s">&quot;Foreground&quot;</span> <span class="na">Value=</span><span class="s">&quot;Red&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">13</span>                    <span class="nt">&lt;/Trigger&gt;</span>
+<span class="linenos">14</span>                <span class="nt">&lt;/Style.Triggers&gt;</span>
+<span class="linenos">15</span>            <span class="nt">&lt;/Style&gt;</span>
+<span class="linenos">16</span>        <span class="nt">&lt;/Button.Style&gt;</span>
+<span class="linenos">17</span>    <span class="nt">&lt;/Button&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Esta estructura se puede aplicar a otros elementos para generar estilos y animaciones interactivas.</p>
+</div>
+</section>
+</section>
+<section id="logica-de-wpf">
+<h2><a class="toc-backref" href="#id18">Lógica de WPF</a><a class="headerlink" href="#logica-de-wpf" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si la estructura de una ventana en XAML se escribe en <strong>MainWindow.xaml</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;Window</span> <span class="na">x:Class=</span><span class="s">&quot;wpf_01.MainWindow&quot;</span>
+<span class="linenos"> 2</span>        <span class="na">xmlns=</span><span class="s">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span>
+<span class="linenos"> 3</span>        <span class="na">xmlns:x=</span><span class="s">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span>
+<span class="linenos"> 4</span>        <span class="na">xmlns:d=</span><span class="s">&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span>
+<span class="linenos"> 5</span>        <span class="na">xmlns:mc=</span><span class="s">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span>
+<span class="linenos"> 6</span>        <span class="na">xmlns:local=</span><span class="s">&quot;clr-namespace:wpf_01&quot;</span>
+<span class="linenos"> 7</span>        <span class="na">mc:Ignorable=</span><span class="s">&quot;d&quot;</span>
+<span class="linenos"> 8</span>        <span class="na">Title=</span><span class="s">&quot;MainWindow&quot;</span> <span class="na">Height=</span><span class="s">&quot;450&quot;</span> <span class="na">Width=</span><span class="s">&quot;800&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 9</span>    <span class="nt">&lt;Grid&gt;</span>
+<span class="linenos">10</span>        <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;Lanzar mensaje&quot;</span> <span class="na">Width=</span><span class="s">&quot;200&quot;</span> <span class="na">Height=</span><span class="s">&quot;40&quot;</span> <span class="na">Click=</span><span class="s">&quot;Lanzar_Mensaje&quot;</span> <span class="nt">&gt;&lt;/Button&gt;</span>
+<span class="linenos">11</span>    <span class="nt">&lt;/Grid&gt;</span>
+<span class="linenos">12</span><span class="nt">&lt;/Window&gt;</span>
+</pre></div>
+</div>
+<p>la lógica se añade en el archivo MainWindow.xaml.cs en código C#:</p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Text</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Controls</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Data</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Documents</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Input</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Media</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Media.Imaging</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Navigation</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Shapes</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="k">namespace</span><span class="w"> </span><span class="nn">wpf_01</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
+<span class="linenos">19</span><span class="w">    </span><span class="c1">/// Lógica de interacción para MainWindow.xaml</span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
+<span class="linenos">21</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainWindow</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Window</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">MainWindow</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="c1">// método creado que se dispara al hacer clic en el botón</span>
+<span class="linenos">28</span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Lanzar_Mensaje</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">RoutedEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">            </span><span class="c1">// mostrar una ventana emergente:</span>
+<span class="linenos">31</span><span class="w">            </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Soy una ventana emergente&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">34</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Al establecer un evento Visual Studio nos brinda la opción de generar automáticamente el método.
+Es recomendado utilizar esa acción ya que también te implementa los parámetros correctos.</p>
+</div>
+<section id="routedevents-eventos">
+<h3><a class="toc-backref" href="#id19">RoutedEvents: Eventos</a><a class="headerlink" href="#routedevents-eventos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Click: Dispara un evento al pulsarlo. Recibe el nombre de la función que ejecutará.</p></li>
+<li><p>MouseUp: Dispara un evento al hacer click y luego soltar el botón derecho. Recibe el nombre de la función que ejecutará.</p></li>
+<li><p>PreviewMouseLeftButtonDown: Dispara un evento al hacer click izquierdo.</p></li>
+<li><p>PreviewMouseRightButtonDown: Dispara un evento al hacer click derecho.</p></li>
+<li><p>PreviewMouseLeftButtonUp: Dispara un evento al hacer click izquierdo y soltar.</p></li>
+<li><p>PreviewMouseRightButtonUp: Dispara un evento al hacer click derecho y soltar.</p></li>
+</ul>
+</section>
+<section id="data-binding-enlace-de-datos">
+<h3><a class="toc-backref" href="#id20">Data Binding: Enlace de datos</a><a class="headerlink" href="#data-binding-enlace-de-datos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Como se establece un enlace de datos desde un origen en C# al destino en XAML:</p>
+<ul class="simple">
+<li><p>OneWay: Enlace desde origen a destino.</p></li>
+<li><p>TwoWay: Comunicación mutua entre origen y destino.</p></li>
+<li><p>OneWayToSource: Enlace desde destino a origen.</p></li>
+<li><p>OneTime: Enlace desde origen a destino que se ejecuta solo una vez.</p></li>
+</ul>
+<section id="binding-enlazando-datos">
+<h4><a class="toc-backref" href="#id21">Binding: Enlazando datos</a><a class="headerlink" href="#binding-enlazando-datos" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Enlace de datos que se realiza con llaves y que puede contener las siguientes propiedades:
+* ElementName: Nombre del elemento con el que va a vincularse.
+* Path: Atributo del elemento vinculado que va a recuperar.
+* Mode: Modo de enlace (OneWay, TwoWay, OneWayToSource, OneTime)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;Grid&gt;</span>
+<span class="linenos"> 2</span>    <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+<span class="linenos"> 3</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 4</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 5</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 6</span>        <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;200&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos"> 7</span>    <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+<span class="linenos"> 8</span>    <span class="nt">&lt;WrapPanel</span> <span class="na">Grid.Row=</span><span class="s">&quot;0&quot;</span> <span class="na">HorizontalAlignment=</span><span class="s">&quot;Center&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 9</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">&quot;Número 1&quot;</span> <span class="na">Margin=</span><span class="s">&quot;20&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">10</span>        <span class="nt">&lt;TextBox</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Height=</span><span class="s">&quot;25&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="na">Name=</span><span class="s">&quot;Num1&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">11</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">&quot;Número 2&quot;</span> <span class="na">Margin=</span><span class="s">&quot;20&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">12</span>        <span class="nt">&lt;TextBox</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Height=</span><span class="s">&quot;25&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="na">Name=</span><span class="s">&quot;Num2&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">13</span>    <span class="nt">&lt;/WrapPanel&gt;</span>
+<span class="linenos">14</span>    <span class="nt">&lt;WrapPanel</span> <span class="na">Grid.Row=</span><span class="s">&quot;1&quot;</span> <span class="na">HorizontalAlignment=</span><span class="s">&quot;Center&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">15</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">&quot;{Binding ElementName=Num1, Path=Text, Mode=OneWay}&quot;</span> <span class="na">Margin=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">16</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Name=</span><span class="s">&quot;Operacion&quot;</span> <span class="na">Text=</span><span class="s">&quot;+&quot;</span> <span class="na">Margin=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">17</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">&quot;{Binding ElementName=Num2, Path=Text, Mode=OneWay}&quot;</span> <span class="na">Margin=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">18</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">&quot;=&quot;</span> <span class="na">Margin=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">19</span>        <span class="nt">&lt;TextBlock</span> <span class="na">Name=</span><span class="s">&quot;Resultado&quot;</span> <span class="na">Text=</span><span class="s">&quot;0&quot;</span> <span class="na">Margin=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">20</span>    <span class="nt">&lt;/WrapPanel&gt;</span>
+<span class="linenos">21</span>    <span class="nt">&lt;WrapPanel</span> <span class="na">Grid.Row=</span><span class="s">&quot;2&quot;</span> <span class="na">HorizontalAlignment=</span><span class="s">&quot;Center&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">22</span>        <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;sumar&quot;</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="na">Height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">23</span>        <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;restar&quot;</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="na">Height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">24</span>        <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;multiplicar&quot;</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="na">Height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">25</span>        <span class="nt">&lt;Button</span> <span class="na">Content=</span><span class="s">&quot;dividir&quot;</span> <span class="na">Width=</span><span class="s">&quot;80&quot;</span> <span class="na">Margin=</span><span class="s">&quot;10&quot;</span> <span class="na">Height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">26</span>    <span class="nt">&lt;/WrapPanel&gt;</span>
+<span class="linenos">27</span>    <span class="nt">&lt;Button</span> <span class="na">Grid.Row=</span><span class="s">&quot;3&quot;</span> <span class="na">Width=</span><span class="s">&quot;150&quot;</span> <span class="na">Height=</span><span class="s">&quot;50&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;24&quot;</span> <span class="na">Content=</span><span class="s">&quot;calcular&quot;</span> <span class="nt">/&gt;</span>
+<span class="linenos">28</span><span class="nt">&lt;/Grid&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="inotfypropertychanged-detectar-y-recuperar-datos">
+<h4><a class="toc-backref" href="#id22">INotfyPropertyChanged: Detectar y recuperar datos</a><a class="headerlink" href="#inotfypropertychanged-detectar-y-recuperar-datos" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Detectar cambios en XAML y recuperarlos en C#.</p>
+<ul class="simple">
+<li><p>Asignar variables Binding en XAML:</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

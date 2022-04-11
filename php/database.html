@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manipulación de base de datos &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Manejo de paquetes" href="paquetes.html" />
+    <link rel="prev" title="Comunicación Cliente / Servidor" href="procesamiento.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manipulación de base de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#conexion-sqlite-3">Conexión SQLITE 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conexion-mysql">Conexión MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conexion-sql-server">Conexión SQL SERVER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operaciones-crud">Operaciones CRUD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#crear-base-de-datos">Crear base de datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crear-una-tabla">Crear una tabla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insertar-registros">Insertar registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inserciones-y-actualizaciones-multiples">Inserciones y actualizaciones múltiples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#leer-registros">Leer registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#borrar-registros">Borrar registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#actualizar-registros">Actualizar registros</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Manipulación de base de datos</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/php/database.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="manipulacion-de-base-de-datos">
+<h1><a class="toc-backref" href="#id1">Manipulación de base de datos</a><a class="headerlink" href="#manipulacion-de-base-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-php.png"><img alt="Logo PHP" class="align-center" src="../_images/logo-php.png" style="width: 360.0px; height: 188.54999999999998px;" /></a>
+<p>Manipulación de base de datos con PDO en PHP 7.4</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#manipulacion-de-base-de-datos" id="id1">Manipulación de base de datos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conexion-sqlite-3" id="id2">Conexión SQLITE 3</a></p></li>
+<li><p><a class="reference internal" href="#conexion-mysql" id="id3">Conexión MySQL</a></p></li>
+<li><p><a class="reference internal" href="#conexion-sql-server" id="id4">Conexión SQL SERVER</a></p></li>
+<li><p><a class="reference internal" href="#operaciones-crud" id="id5">Operaciones CRUD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-base-de-datos" id="id6">Crear base de datos</a></p></li>
+<li><p><a class="reference internal" href="#crear-una-tabla" id="id7">Crear una tabla</a></p></li>
+<li><p><a class="reference internal" href="#insertar-registros" id="id8">Insertar registros</a></p></li>
+<li><p><a class="reference internal" href="#inserciones-y-actualizaciones-multiples" id="id9">Inserciones y actualizaciones múltiples</a></p></li>
+<li><p><a class="reference internal" href="#leer-registros" id="id10">Leer registros</a></p></li>
+<li><p><a class="reference internal" href="#borrar-registros" id="id11">Borrar registros</a></p></li>
+<li><p><a class="reference internal" href="#actualizar-registros" id="id12">Actualizar registros</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="conexion-sqlite-3">
+<h2><a class="toc-backref" href="#id2">Conexión SQLITE 3</a><a class="headerlink" href="#conexion-sqlite-3" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Pasos iniciales:</p>
+<ul class="simple">
+<li><p>Primero tenemos que instalar sqlite3 en nuestro sistema: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">php7.4-sqlite3</span></code></p></li>
+<li><p>Luego localizamos el archivo <strong>php.ini</strong> que suele estar en <strong>/etc/php/7.4/ y dentro de las carpetas **apache2</strong> y <strong>cli</strong> encontraremos estos archivos.</p></li>
+<li><p>Editamos y buscamos las líneas que ponen <code class="docutils literal notranslate"><span class="pre">;extension=pdo_sqlite</span></code> y <code class="docutils literal notranslate"><span class="pre">;extension=sqlite</span></code> si tienen un <strong>;</strong> lo quitamos para habilitarlas.</p></li>
+<li><p>Conectar a una base de datos SQLite 3:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">try</span><span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="c1">// realizamos la conexion con el motor sqlite y apuntamos directamente a la base de datos:</span>
+<span class="linenos"> 4</span>        <span class="nv">$db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;sqlite:datos.sqlite&#39;</span><span class="p">);</span>
+<span class="linenos"> 5</span>        <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos"> 6</span>        <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_DEFAULT_FETCH_MODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">);</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>        <span class="k">echo</span> <span class="s2">&quot;Conexión realizada con éxito&quot;</span><span class="p">;</span>
+<span class="linenos"> 9</span>    <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+<span class="linenos">10</span>        <span class="k">echo</span> <span class="s2">&quot;Error de conexión: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span>    <span class="c1">// para cerrar la conexión:</span>
+<span class="linenos">13</span>    <span class="nv">$con</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">14</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conexion-mysql">
+<h2><a class="toc-backref" href="#id3">Conexión MySQL</a><a class="headerlink" href="#conexion-mysql" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Pasos iniciales:</p>
+<ul class="simple">
+<li><p>Primero tenemos que instalar sqlite3 en nuestro sistema: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">php7.4-mysql</span></code></p></li>
+<li><p>Luego localizamos el archivo <strong>php.ini</strong> que suele estar en <strong>/etc/php/7.4/ y dentro de las carpetas **apache2</strong> y <strong>cli</strong> encontraremos estos archivos.</p></li>
+<li><p>Editamos y buscamos las líneas que ponen <code class="docutils literal notranslate"><span class="pre">;extension=pdo_mysql</span></code> si tienen un <strong>;</strong> lo quitamos para habilitarlas.</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// preparamos los datos del servidor:</span>
+<span class="linenos"> 3</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>    <span class="k">try</span><span class="p">{</span>
+<span class="linenos"> 7</span>        <span class="c1">// preparamos la conexión eligiendo el motor mysql:</span>
+<span class="linenos"> 8</span>        <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=prueba&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 9</span>        <span class="c1">// realizamos la conexión:</span>
+<span class="linenos">10</span>        <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">11</span>        <span class="k">echo</span> <span class="s2">&quot;Conexión realizada con éxito&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>    <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+<span class="linenos">13</span>        <span class="k">echo</span> <span class="s2">&quot;Error de conexión: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos">14</span>    <span class="p">}</span>
+<span class="linenos">15</span>    <span class="c1">// para cerrar la conexión:</span>
+<span class="linenos">16</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">17</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conexion-sql-server">
+<h2><a class="toc-backref" href="#id4">Conexión SQL SERVER</a><a class="headerlink" href="#conexion-sql-server" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para realizar la conexión a SQL SERVER:
+* Instalamos el driver ODBC: <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=36434">https://www.microsoft.com/en-us/download/details.aspx?id=36434</a>
+* Descargamos el controlador para PHP: <a class="reference external" href="https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-ver15#download">https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-ver15#download</a>
+* Se extraen las librerías .dll en la carpeta ext/ del directorio php/ que tenganmos.
+* Se edita php.ini para que reconozca las librerías y se reinicia el servidor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extension</span><span class="o">=</span><span class="n">php_sqlsrv_74_ts_x64</span><span class="o">.</span><span class="n">dll</span>
+<span class="n">extension</span><span class="o">=</span><span class="n">php_sqlsrv_74_nts_x64</span><span class="o">.</span><span class="n">dll</span>
+<span class="n">extension</span><span class="o">=</span><span class="n">php_pdo_sqlsrv_74_nts_x64</span><span class="o">.</span><span class="n">dll</span>
+<span class="n">extension</span><span class="o">=</span><span class="n">php_pdo_sqlsrv_74_ts_x64</span><span class="o">.</span><span class="n">dll</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>crear un usuario que pueda hacer login en el servidor DDBB y permitr el acceso desde SQL Server en lugar de Windows Authorization.</p></li>
+<li><p>Luego podemos crear el conector:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// preparamos los datos del servidor:</span>
+<span class="linenos"> 3</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;NOMBREEQUIPO&quot;</span><span class="p">;</span> <span class="c1">// no vale localhost.</span>
+<span class="linenos"> 4</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>    <span class="k">try</span><span class="p">{</span>
+<span class="linenos"> 7</span>        <span class="c1">// preparamos la conexión eligiendo el motor mysql:</span>
+<span class="linenos"> 8</span>        <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;sqlsrv:server=</span><span class="si">$servidor</span><span class="s2">;database=prueba&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 9</span>        <span class="c1">// realizamos la conexión:</span>
+<span class="linenos">10</span>        <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">11</span>        <span class="k">echo</span> <span class="s2">&quot;Conexión realizada con éxito&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>    <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+<span class="linenos">13</span>        <span class="k">echo</span> <span class="s2">&quot;Error de conexión: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos">14</span>    <span class="p">}</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1">// para cerrar la conexión:</span>
+<span class="linenos">17</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">18</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="operaciones-crud">
+<h2><a class="toc-backref" href="#id5">Operaciones CRUD</a><a class="headerlink" href="#operaciones-crud" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="crear-base-de-datos">
+<h3><a class="toc-backref" href="#id6">Crear base de datos</a><a class="headerlink" href="#crear-base-de-datos" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="c1">// ignoramos elegir la base de datos al preparar conexión::</span>
+<span class="linenos"> 6</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 7</span>    <span class="c1">// realizamos la conexión:</span>
+<span class="linenos"> 8</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos"> 9</span>    <span class="c1">// preparamos la consulta:</span>
+<span class="linenos">10</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;CREATE DATABASE pruebaSQL&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>    <span class="c1">// realizamos la consulta:</span>
+<span class="linenos">12</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="k">echo</span> <span class="s2">&quot;Base de datos creada con éxito&quot;</span><span class="p">;</span>
+<span class="linenos">15</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">16</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="crear-una-tabla">
+<h3><a class="toc-backref" href="#id7">Crear una tabla</a><a class="headerlink" href="#crear-una-tabla" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$base</span> <span class="o">=</span> <span class="s2">&quot;prueba&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=</span><span class="si">$base</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;CREATE TABLE agenda(</span>
+<span class="linenos">12</span><span class="s2">        id INT(10) AUTO_INCREMENT PRIMARY KEY,</span>
+<span class="linenos">13</span><span class="s2">        nombre VARCHAR(30) NOT NULL,</span>
+<span class="linenos">14</span><span class="s2">        edad INT(10) NOT NULL</span>
+<span class="linenos">15</span><span class="s2">        )&quot;</span><span class="p">;</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="k">echo</span> <span class="s2">&quot;Tabla creada con éxito&quot;</span><span class="p">;</span>
+<span class="linenos">20</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">21</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="insertar-registros">
+<h3><a class="toc-backref" href="#id8">Insertar registros</a><a class="headerlink" href="#insertar-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$base</span> <span class="o">=</span> <span class="s2">&quot;prueba&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=</span><span class="si">$base</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO agenda (nombre, edad) values (&#39;Alfredo&#39;, 30)&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">echo</span> <span class="s2">&quot;Inserción realizada con éxito&quot;</span><span class="p">;</span>
+<span class="linenos">16</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">17</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="inserciones-y-actualizaciones-multiples">
+<h3><a class="toc-backref" href="#id9">Inserciones y actualizaciones múltiples</a><a class="headerlink" href="#inserciones-y-actualizaciones-multiples" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$base</span> <span class="o">=</span> <span class="s2">&quot;prueba&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=</span><span class="si">$base</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// Preparar consulta para separar parametros:</span>
+<span class="linenos">11</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;INSERT INTO agenda (nombre, edad) VALUES (:nombre, :edad)&quot;</span><span class="p">);</span>
+<span class="linenos">12</span>    <span class="c1">// preparar parametros:</span>
+<span class="linenos">13</span>    <span class="nv">$sql</span><span class="o">-&gt;</span><span class="na">bindParam</span><span class="p">(</span><span class="s1">&#39;:nombre&#39;</span><span class="p">,</span> <span class="nv">$nombre</span><span class="p">);</span>
+<span class="linenos">14</span>    <span class="nv">$sql</span><span class="o">-&gt;</span><span class="na">bindParam</span><span class="p">(</span><span class="s1">&#39;:edad&#39;</span><span class="p">,</span> <span class="nv">$edad</span><span class="p">);</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1">// insertar mas de un registro a la vez:</span>
+<span class="linenos">17</span>    <span class="nv">$nombre</span> <span class="o">=</span> <span class="s2">&quot;Antonio&quot;</span><span class="p">;</span>
+<span class="linenos">18</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">38</span><span class="p">;</span>
+<span class="linenos">19</span>    <span class="nv">$sql</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="nv">$nombre</span> <span class="o">=</span> <span class="s2">&quot;Eustaquia&quot;</span><span class="p">;</span>
+<span class="linenos">22</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">73</span><span class="p">;</span>
+<span class="linenos">23</span>    <span class="nv">$sql</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>    <span class="k">echo</span> <span class="s2">&quot;Inserciones realizadas correctamente&quot;</span><span class="p">;</span>
+<span class="linenos">26</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">27</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>los bindParams se pueden usar en operaciones INSERT y en operaciones UPDATE</p>
+</div>
+</section>
+<section id="leer-registros">
+<h3><a class="toc-backref" href="#id10">Leer registros</a><a class="headerlink" href="#leer-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$base</span> <span class="o">=</span> <span class="s2">&quot;prueba&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=</span><span class="si">$base</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// Preparar consulta:</span>
+<span class="linenos">11</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM agenda&quot;</span><span class="p">);</span>
+<span class="linenos">12</span>    <span class="c1">// Ejecutar consulta, ,fetch para registros individuales y fetchAll para multiples:</span>
+<span class="linenos">13</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="nv">$sql</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span> <span class="c1">// usar el parametro FETCH_ASSOC imprime de forma limpia.</span>
+<span class="linenos">14</span>    <span class="c1">// Recorrer todos los datos:</span>
+<span class="linenos">15</span>    <span class="k">foreach</span><span class="p">(</span><span class="nv">$sql</span> <span class="k">as</span> <span class="nv">$data</span><span class="p">){</span>
+<span class="linenos">16</span>        <span class="k">echo</span> <span class="s2">&quot;- &quot;</span> <span class="o">.</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="linenos">17</span>    <span class="p">}</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">20</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="borrar-registros">
+<h3><a class="toc-backref" href="#id11">Borrar registros</a><a class="headerlink" href="#borrar-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$base</span> <span class="o">=</span> <span class="s2">&quot;prueba&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=</span><span class="si">$base</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// Preparar consulta:</span>
+<span class="linenos">11</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM agenda WHERE id=1&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>    <span class="c1">// ejecutar consulta:</span>
+<span class="linenos">13</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">echo</span> <span class="s2">&quot;Registro eliminado&quot;</span><span class="p">;</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="nv">$con</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">18</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="actualizar-registros">
+<h3><a class="toc-backref" href="#id12">Actualizar registros</a><a class="headerlink" href="#actualizar-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s2">&quot;guillermo&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$base</span> <span class="o">=</span> <span class="s2">&quot;prueba&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$servidor</span><span class="s2">;dbname=</span><span class="si">$base</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// Preparar consulta:</span>
+<span class="linenos">11</span>    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;UPDATE agenda SET nombre=&#39;Elvira&#39;, edad=32 WHERE id=2&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>    <span class="c1">// preparar estado:</span>
+<span class="linenos">13</span>    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos">14</span>    <span class="c1">// ejecutar consulta:</span>
+<span class="linenos">15</span>    <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="k">echo</span> <span class="s2">&quot;Registro actualizado&quot;</span><span class="p">;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="nv">$con</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos">20</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="paquetes.html" class="btn btn-neutral float-right" title="Manejo de paquetes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="procesamiento.html" class="btn btn-neutral float-left" title="Comunicación Cliente / Servidor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

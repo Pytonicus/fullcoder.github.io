@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Namespace System &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Eventos y Delegados" href="eventos.html" />
+    <link rel="prev" title="Funciones predefinidas" href="funciones.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Namespace System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#system-collections">System.Collections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arraylist">ArrayList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listas">Listas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diccionarios">Diccionarios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#system-io">System.IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#leer-archivo">Leer archivo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manipulacion-de-archivos">Manipulación de archivos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Namespace System</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/csharp/librerias.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="namespace-system">
+<h1><a class="toc-backref" href="#id1">Namespace System</a><a class="headerlink" href="#namespace-system" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-csharp.png"><img alt="Logo C#" class="align-center" src="../_images/logo-csharp.png" style="width: 213.60000000000002px; height: 240.0px;" /></a>
+<p>Namespace de uso común en C#</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#namespace-system" id="id1">Namespace System</a></p>
+<ul>
+<li><p><a class="reference internal" href="#system-collections" id="id2">System.Collections</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arraylist" id="id3">ArrayList</a></p></li>
+<li><p><a class="reference internal" href="#listas" id="id4">Listas</a></p></li>
+<li><p><a class="reference internal" href="#diccionarios" id="id5">Diccionarios</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#system-io" id="id6">System.IO</a></p>
+<ul>
+<li><p><a class="reference internal" href="#leer-archivo" id="id7">Leer archivo</a></p></li>
+<li><p><a class="reference internal" href="#manipulacion-de-archivos" id="id8">Manipulación de archivos</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="system-collections">
+<h2><a class="toc-backref" href="#id2">System.Collections</a><a class="headerlink" href="#system-collections" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="arraylist">
+<h3><a class="toc-backref" href="#id3">ArrayList</a><a class="headerlink" href="#arraylist" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los arrayList son un tipo de array que puede contenter valores mixtos.</p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="c1">// cargamos la librería Collections:</span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="c1">// arrayList de tamaño definido:</span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">miListaLimitada</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">(</span><span class="m">10</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="c1">// arrayList de tamaño dinámico:</span>
+<span class="linenos">15</span><span class="w">            </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">miLista</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">            </span><span class="c1">// agregar elementos de cualquier tipo:</span>
+<span class="linenos">18</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">30</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Alfredo&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">true</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">            </span><span class="c1">// eliminar elemento:</span>
+<span class="linenos">23</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="s">&quot;Alfredo&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="w">            </span><span class="c1">// eliminar elementos de un arrayList por posición:</span>
+<span class="linenos">26</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="m">1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="w">            </span><span class="c1">// eliminar por rango ej: a partir del índice 2 borrar dos elementos (índice 3 y 4):</span>
+<span class="linenos">29</span><span class="w">            </span><span class="n">lista</span><span class="p">.</span><span class="n">RemoveRange</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">            </span><span class="c1">// ordenar elementos por su valor:</span>
+<span class="linenos">32</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">Sort</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="w">            </span><span class="c1">// Comprobar cuantos elementos tiene el ArrayList:</span>
+<span class="linenos">35</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">miLista</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="w">            </span><span class="c1">// comprobar si existe un valor en la lista:</span>
+<span class="linenos">38</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">miLista</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="m">66.62</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="w">            </span><span class="c1">// encontrar la posición de un valor de la list:</span>
+<span class="linenos">41</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">miLista</span><span class="p">.</span><span class="n">FindIndex</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">66.62</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">42</span>
+<span class="linenos">43</span><span class="w">            </span><span class="c1">// vaciar lista</span>
+<span class="linenos">44</span><span class="w">            </span><span class="n">miLista</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">45</span>
+<span class="linenos">46</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">47</span>
+<span class="linenos">48</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">50</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="listas">
+<h3><a class="toc-backref" href="#id4">Listas</a><a class="headerlink" href="#listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las listas son idénticas a los arrays salvo que se pueden añadir o quitar elementos del mismo a través de métodos específicos.</p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="c1">// cargamos Collections generic para listas de un solo tipo:</span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="c1">// crear una lista vacia:</span>
+<span class="linenos">12</span><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">precios</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">            </span><span class="c1">// crear una lista con valores asignados:</span>
+<span class="linenos">15</span><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">preciosIva</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">5.23</span><span class="p">,</span><span class="w"> </span><span class="m">6.21</span><span class="p">,</span><span class="w"> </span><span class="m">32.26</span><span class="p">,</span><span class="w"> </span><span class="m">66.62</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">            </span><span class="c1">// añadir valores:</span>
+<span class="linenos">18</span><span class="w">            </span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">15.23</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">            </span><span class="c1">// eliminar elemento por su valor:</span>
+<span class="linenos">21</span><span class="w">            </span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="m">6.21</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">            </span><span class="c1">// eliminar elemento por su índice:</span>
+<span class="linenos">24</span><span class="w">            </span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="m">0</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="w">            </span><span class="c1">// ordenar elementos por su valor:</span>
+<span class="linenos">27</span><span class="w">            </span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Sort</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">            </span><span class="c1">// Comprobar cuantos elementos tiene la lista:</span>
+<span class="linenos">30</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">            </span><span class="c1">// comprobar si existe un valor en la lista:</span>
+<span class="linenos">33</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="m">66.62</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="w">            </span><span class="c1">// encontrar la posición de un valor de la list:</span>
+<span class="linenos">36</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">preciosIva</span><span class="p">.</span><span class="n">FindIndex</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">66.62</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="w">            </span><span class="c1">// vaciar lista</span>
+<span class="linenos">39</span><span class="w">            </span><span class="n">preciosIva</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">44</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="diccionarios">
+<h3><a class="toc-backref" href="#id5">Diccionarios</a><a class="headerlink" href="#diccionarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los diccionarios son un tipo de dato similar a sus homónimos en Python o los objetos en javaScript:</p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">diccio</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="c1">// crear un diccionario:</span>
+<span class="linenos">11</span><span class="w">            </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">consolas</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">            </span><span class="c1">// agregar elementos</span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">consolas</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PlayStation&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">            </span><span class="n">consolas</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;marca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="n">consolas</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;lanzamiento&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1994&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">            </span><span class="c1">// utilizar elementos:</span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;La videoconsola {0} {1} fue lanzada en el año {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">consolas</span><span class="p">[</span><span class="s">&quot;marca&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">consolas</span><span class="p">[</span><span class="s">&quot;nombre&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">consolas</span><span class="p">[</span><span class="s">&quot;lanzamiento&quot;</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">            </span><span class="c1">// crear diccionario y asignar valores directamente:</span>
+<span class="linenos">23</span><span class="w">            </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">userPedro</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;()</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pedro&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;apellidos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lopez Aguirrez&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;Edad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;33&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">            </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="w">            </span><span class="c1">// Recorrer elementos del diccionario:</span>
+<span class="linenos">31</span><span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">usuario</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">userPedro</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}: {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">usuario</span><span class="p">.</span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">usuario</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">41</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ejemplo de listado de diccionarios:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">diccio</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="c1">// crear un listado para diccionarios:</span>
+<span class="linenos">11</span><span class="w">            </span><span class="n">List</span><span class="p">&lt;</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;&gt;</span><span class="w"> </span><span class="n">usuarios</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;&gt;();</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">            </span><span class="c1">// crear diccionarios:</span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">userPedro</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;()</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pedro&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;apellidos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lopez Aguirrez&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">            </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">userPaco</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;()</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Paco&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;apellidos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ortega Marín&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">            </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">            </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">userJulia</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;()</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Julia&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">                </span><span class="p">{</span><span class="s">&quot;apellidos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gamez Gómez&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">            </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="w">            </span><span class="c1">// añadir elementos al listado:</span>
+<span class="linenos">31</span><span class="w">            </span><span class="n">usuarios</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">userPedro</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">            </span><span class="n">usuarios</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">userPaco</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">            </span><span class="n">usuarios</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">userJulia</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="n">usuario</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">usuarios</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Usuario: {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">usuario</span><span class="p">[</span><span class="s">&quot;nombre&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">usuario</span><span class="p">[</span><span class="s">&quot;apellidos&quot;</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">41</span>
+<span class="linenos">42</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">45</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="system-io">
+<h2><a class="toc-backref" href="#id6">System.IO</a><a class="headerlink" href="#system-io" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="leer-archivo">
+<h3><a class="toc-backref" href="#id7">Leer archivo</a><a class="headerlink" href="#leer-archivo" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="c1">// Cargar librería:</span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="c1">// cargar texto. El caracter @ normaliza la ruta:</span>
+<span class="linenos">14</span><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="s">@&quot;C:\textos\texto.txt&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">archivo</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="manipulacion-de-archivos">
+<h3><a class="toc-backref" href="#id8">Manipulación de archivos</a><a class="headerlink" href="#manipulacion-de-archivos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Escritura de archivos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="c1">// se guarda en un array y esta vez usamos ReadAllLines:</span>
+<span class="linenos">13</span><span class="w">            </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllLines</span><span class="p">(</span><span class="s">@&quot;C:\textos\texto.txt&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">            </span><span class="c1">// recorremos con un foreach:</span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">foreach</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">archivo</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;\t&quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">linea</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lectura de archivos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="c1">// se genera un array con las líneas que irán en el texto:</span>
+<span class="linenos">13</span><span class="w">            </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">lineas</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Titulo: La casa de Cera&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Descripción: es una novela de miedito.&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="c1">// se guarda en una ruta:</span>
+<span class="linenos">15</span><span class="w">            </span><span class="n">File</span><span class="p">.</span><span class="n">WriteAllLines</span><span class="p">(</span><span class="s">@&quot;C:\textos\novela.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lineas</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Se ha escrito el archivo&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Actualización de archivos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="c1">// para actualizar el archivo hacemos uso de Streamwritter, no olvides añadir true para que no sobreescriba:</span>
+<span class="linenos">12</span><span class="w">            </span><span class="n">using</span><span class="p">(</span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="s">@&quot;C:\textos\novela.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">                </span><span class="n">archivo</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Calificación: 8/10&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Añadido con éxito&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ejemplo: Uso de StreamWriter para crear un procesador de texto:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Título del archivo: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">titulo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="s">@&quot;C:\textos\&quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">titulo</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">&quot;.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">texto</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="s">&quot;fin&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Escribe una línea: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">                    </span><span class="n">texto</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">                    </span><span class="n">archivo</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="eventos.html" class="btn btn-neutral float-right" title="Eventos y Delegados" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="funciones.html" class="btn btn-neutral float-left" title="Funciones predefinidas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

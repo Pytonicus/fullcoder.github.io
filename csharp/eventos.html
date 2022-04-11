@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Eventos y Delegados &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Basic y Commodore 64" href="../otros/basic.html" />
+    <link rel="prev" title="Namespace System" href="librerias.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librerias.html">Namespace System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Eventos y Delegados</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#delegados">Delegados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-anonimos">Métodos anónimos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expresiones-lambda">Expresiones Lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eventos">Eventos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Eventos y Delegados</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/csharp/eventos.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="eventos-y-delegados">
+<h1><a class="toc-backref" href="#id1">Eventos y Delegados</a><a class="headerlink" href="#eventos-y-delegados" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-csharp.png"><img alt="Logo C#" class="align-center" src="../_images/logo-csharp.png" style="width: 213.60000000000002px; height: 240.0px;" /></a>
+<p>Delegados y eventos que corresponden al lenguaje C#</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#eventos-y-delegados" id="id1">Eventos y Delegados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#delegados" id="id2">Delegados</a></p></li>
+<li><p><a class="reference internal" href="#metodos-anonimos" id="id3">Métodos anónimos</a></p></li>
+<li><p><a class="reference internal" href="#expresiones-lambda" id="id4">Expresiones Lambda</a></p></li>
+<li><p><a class="reference internal" href="#eventos" id="id5">Eventos</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="delegados">
+<h2><a class="toc-backref" href="#id2">Delegados</a><a class="headerlink" href="#delegados" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Funcionamiento básico de un delegado:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// declaración de un delegado:</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">RealizarOperacion</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="c1">// método suma:</span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Suma</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">        </span><span class="c1">// metodo resta:</span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Resta</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">            </span><span class="c1">// crear instancia de un delegado y apuntar al metodo suma:</span>
+<span class="linenos">25</span><span class="w">            </span><span class="n">RealizarOperacion</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Suma</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">            </span><span class="n">RealizarOperacion</span><span class="w"> </span><span class="n">resta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Resta</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="w">            </span><span class="c1">// pasarle los valores e imprimir:</span>
+<span class="linenos">29</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">suma</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">18</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">resta</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">35</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-anonimos">
+<h2><a class="toc-backref" href="#id3">Métodos anónimos</a><a class="headerlink" href="#metodos-anonimos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las funciones anónimas se han añadido en este lugar ya que dependen de los delegados para ser creadas:</p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// se crea un delegado para la función anónima:</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">RealizarSaludo</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="c1">// definimos la función anónima con el uso del delegate:</span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">RealizarSaludo</span><span class="w"> </span><span class="n">saludar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hola, me llamo &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">            </span><span class="c1">// uso de la función anónima:</span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">saludar</span><span class="p">(</span><span class="s">&quot;Guillermo&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="expresiones-lambda">
+<h2><a class="toc-backref" href="#id4">Expresiones Lambda</a><a class="headerlink" href="#expresiones-lambda" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="c1">// creamos una lista sencilla:</span>
+<span class="linenos">11</span><span class="w">            </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">listadoBase</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">            </span><span class="c1">// se puede filtrar la lista usando expresiones lambda:</span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">listaPares</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">listadoBase</span><span class="p">.</span><span class="n">FindAll</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">foreach</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">listado</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">listaPares</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">listado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="eventos">
+<h2><a class="toc-backref" href="#id5">Eventos</a><a class="headerlink" href="#eventos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>PROXIMAMENTE…</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../otros/basic.html" class="btn btn-neutral float-right" title="Basic y Commodore 64" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="librerias.html" class="btn btn-neutral float-left" title="Namespace System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

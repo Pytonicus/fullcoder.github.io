@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manipulación de base de datos &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Manipulación de base de datos</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_template/Lenguajes/database.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="manipulacion-de-base-de-datos">
+<h1><a class="toc-backref" href="#id1">Manipulación de base de datos</a><a class="headerlink" href="#manipulacion-de-base-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="logos/logo-[].png"><img alt="Logo []" class="align-center" src="logos/logo-[].png" /></a>
+<p>Manipulación de base de datos con [] en []</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#manipulacion-de-base-de-datos" id="id1">Manipulación de base de datos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conexion-sqlite-3" id="id2">Conexión SQLITE 3</a></p></li>
+<li><p><a class="reference internal" href="#conexion-mysql" id="id3">Conexión MySQL</a></p></li>
+<li><p><a class="reference internal" href="#operaciones-crud" id="id4">Operaciones CRUD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-base-de-datos" id="id5">Crear base de datos</a></p></li>
+<li><p><a class="reference internal" href="#crear-una-tabla" id="id6">Crear una tabla</a></p></li>
+<li><p><a class="reference internal" href="#insertar-registros" id="id7">Insertar registros</a></p></li>
+<li><p><a class="reference internal" href="#inserciones-y-actualizaciones-multiples" id="id8">Inserciones y actualizaciones múltiples</a></p></li>
+<li><p><a class="reference internal" href="#leer-registros" id="id9">Leer registros</a></p></li>
+<li><p><a class="reference internal" href="#borrar-registros" id="id10">Borrar registros</a></p></li>
+<li><p><a class="reference internal" href="#actualizar-registros" id="id11">Actualizar registros</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="conexion-sqlite-3">
+<h2><a class="toc-backref" href="#id2">Conexión SQLITE 3</a><a class="headerlink" href="#conexion-sqlite-3" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Pasos iniciales:</p>
+<ul class="simple">
+<li><p>paso x…</p></li>
+<li><p>Conectar a una base de datos SQLite 3:</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="conexion-mysql">
+<h2><a class="toc-backref" href="#id3">Conexión MySQL</a><a class="headerlink" href="#conexion-mysql" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Pasos iniciales:</p>
+<ul class="simple">
+<li><p>Paso x…</p></li>
+</ul>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="operaciones-crud">
+<h2><a class="toc-backref" href="#id4">Operaciones CRUD</a><a class="headerlink" href="#operaciones-crud" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="crear-base-de-datos">
+<h3><a class="toc-backref" href="#id5">Crear base de datos</a><a class="headerlink" href="#crear-base-de-datos" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="crear-una-tabla">
+<h3><a class="toc-backref" href="#id6">Crear una tabla</a><a class="headerlink" href="#crear-una-tabla" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="insertar-registros">
+<h3><a class="toc-backref" href="#id7">Insertar registros</a><a class="headerlink" href="#insertar-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="inserciones-y-actualizaciones-multiples">
+<h3><a class="toc-backref" href="#id8">Inserciones y actualizaciones múltiples</a><a class="headerlink" href="#inserciones-y-actualizaciones-multiples" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="leer-registros">
+<h3><a class="toc-backref" href="#id9">Leer registros</a><a class="headerlink" href="#leer-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="borrar-registros">
+<h3><a class="toc-backref" href="#id10">Borrar registros</a><a class="headerlink" href="#borrar-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>...
+</pre></div>
+</div>
+</section>
+<section id="actualizar-registros">
+<h3><a class="toc-backref" href="#id11">Actualizar registros</a><a class="headerlink" href="#actualizar-registros" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-LANG notranslate"><div class="highlight"><pre><span></span>...
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

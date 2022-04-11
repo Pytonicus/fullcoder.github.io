@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manejo de paquetes &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Codificación y Hash" href="cifrado.html" />
+    <link rel="prev" title="Manipulación de base de datos" href="database.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manejo de paquetes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instalar-composer">Instalar Composer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#archivo-de-configuracion">Archivo de configuración</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comandos-mas-destacados">Comandos mas destacados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejemplo-de-uso-paquete-faker">Ejemplo de uso paquete faker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../go/sintaxis.html">Sintaxis GO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../go/web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Manejo de paquetes</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/php/paquetes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="manejo-de-paquetes">
+<h1><a class="toc-backref" href="#id1">Manejo de paquetes</a><a class="headerlink" href="#manejo-de-paquetes" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-composer.png"><img alt="Logo PHP" class="align-center" src="../_images/logo-composer.png" style="width: 240.0px; height: 284.8px;" /></a>
+<p>Manejo de paquetes y dependencias con Composer en PHP 7.4</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#manejo-de-paquetes" id="id1">Manejo de paquetes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalar-composer" id="id2">Instalar Composer</a></p></li>
+<li><p><a class="reference internal" href="#archivo-de-configuracion" id="id3">Archivo de configuración</a></p></li>
+<li><p><a class="reference internal" href="#comandos-mas-destacados" id="id4">Comandos mas destacados</a></p></li>
+<li><p><a class="reference internal" href="#ejemplo-de-uso-paquete-faker" id="id5">Ejemplo de uso paquete faker</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="instalar-composer">
+<h2><a class="toc-backref" href="#id2">Instalar Composer</a><a class="headerlink" href="#instalar-composer" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Primero instalamos dependencias: <cite>sudo apt install curl php-cli php-mbstring git unzip</cite></p></li>
+<li><p>Ahora nos vamos a nuestro directorio personal y hacemos curl: <cite>curl -sS https://getcomposer.org/installer -o composer-setup.php</cite></p></li>
+<li><p>Instalamos composer: <cite>sudo php composer-setup.php –install-dir=/usr/local/bin –filename=composer</cite></p></li>
+</ul>
+</section>
+<section id="archivo-de-configuracion">
+<h2><a class="toc-backref" href="#id3">Archivo de configuración</a><a class="headerlink" href="#archivo-de-configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En la raiz del proyecto se crea un archivo llamado composer.json:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ggranados/proyecto_composer&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&quot;require&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">        </span><span class="nt">&quot;php&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&gt;=7.4&quot;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="nt">&quot;require-dev&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">        </span><span class="nt">&quot;fzaninotto/faker&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dev-master&quot;</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">9</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="comandos-mas-destacados">
+<h2><a class="toc-backref" href="#id4">Comandos mas destacados</a><a class="headerlink" href="#comandos-mas-destacados" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p><strong>composer install</strong>: Instala todas las dependencias de composer.json.</p></li>
+<li><p><strong>composer update</strong>: Analiza y actualiza las dependencias de composer.json.</p></li>
+<li><p><strong>composer require autor/nombre_paquete</strong>: instala un nuevo paquete.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se pueden encontrar paquetes PHP compatibles con Composer en: <a class="reference external" href="https://packagist.org/">https://packagist.org/</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los paquetes se instalan en el directorio vendor/</p>
+</div>
+</section>
+<section id="ejemplo-de-uso-paquete-faker">
+<h2><a class="toc-backref" href="#id5">Ejemplo de uso paquete faker</a><a class="headerlink" href="#ejemplo-de-uso-paquete-faker" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// cargamos las dependencias globales:</span>
+<span class="linenos"> 3</span>    <span class="k">require_once</span><span class="p">(</span><span class="s1">&#39;./vendor/autoload.php&#39;</span><span class="p">);</span>
+<span class="linenos"> 4</span>    <span class="c1">// creamos una instancia de Faker:</span>
+<span class="linenos"> 5</span>    <span class="nv">$faker</span> <span class="o">=</span> <span class="nx">Faker\Factory</span><span class="o">::</span><span class="na">create</span><span class="p">();</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="c1">// en un for generamos nombres de relleno con faker:</span>
+<span class="linenos"> 8</span>    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+<span class="linenos"> 9</span>        <span class="k">echo</span> <span class="nv">$faker</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">.</span> <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+<span class="linenos">10</span>    <span class="p">}</span>
+<span class="linenos">11</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cifrado.html" class="btn btn-neutral float-right" title="Codificación y Hash" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="database.html" class="btn btn-neutral float-left" title="Manipulación de base de datos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

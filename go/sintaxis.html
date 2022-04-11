@@ -1,0 +1,1415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sintaxis GO &mdash; Fullcoder Manuales</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/faculty.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto:400,700|Roboto+Mono:400,700&display=swap" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Funciones predefinidas" href="funciones.html" />
+    <link rel="prev" title="Entornos: Node.JS" href="../javascript/expressjs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+  
+    <a class="heading heading-extra-margin" href="../index.html">
+      <div class="logo-box logo-box-large">
+        <img class="logo" src="../_static/fullcoderlogo.png"/>
+      </div>
+      
+        <span class="icon icon-home"> Fullcoder</span>
+      
+    </a>
+  
+
+  
+    
+    
+  
+
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">PHP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../php/sintaxis.html">Sintaxis PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/procesamiento.html">Comunicación Cliente / Servidor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/database.html">Manipulación de base de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/cifrado.html">Codificación y Hash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/laravel.html">Framework: Laravel</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/sintaxis.html">Sintaxis Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/otras_librerias.html">Otras Librerías Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/database.html">Bases de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/paquetes.html">Manejo de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/emails.html">Emails con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/entornos.html">Entornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/analisis.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/django.html">Framework: Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/flask.html">Microframework: Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/drf.html">Framework: Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/testing.html">Testing en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/despliegue.html">Gunicorn: Despliegue web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JavaScript:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/sintaxis.html">Sintaxis javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/entornos.html">NVM: ntornos Virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/nodejs.html">Entornos: Node.JS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/expressjs.html">Entornos: Node.JS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GO:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sintaxis GO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#elementos-basicos-del-lenguaje">Elementos básicos del lenguaje</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comentarios">Comentarios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entrada-y-salida-estandar">Entrada y salida estandar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estructura-en-go">Estructura en GO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#concatenacion">Concatenación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#go-cli-comandos-de-go">GO-CLI - Comandos de GO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#variables-y-tipos-de-datos">Variables y tipos de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores">Operadores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-aritmeticos">Operadores aritméticos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-relacionales">Operadores relacionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-logicos">Operadores lógicos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estructuras-de-control">Estructuras de control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-if">Condicional if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-switch">Condicional Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bucle-for">Bucle for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bucle-while">Bucle while</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#punteros">Punteros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#defer">Defer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-datos-avanzados">Tipos de datos avanzados</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arrays">Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slices">Slices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapas">Mapas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#control-de-errores">Control de errores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programacion-modular">Programación modular</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funciones">Funciones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#programacion-orientada-a-objetos">Programación orientada a objetos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#structs">Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metodos-de-structs">Métodos de structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#herencia">Herencia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interfaces">Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#importar-y-exportar">Importar y exportar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#paquetes-en-go">Paquetes en GO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librerias.html">Librería Estandar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concurrencia.html">Concurrencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Desarrollo Web</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C#:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/sintaxis.html">Sintaxis C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/funciones.html">Funciones predefinidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/librerias.html">Namespace System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/eventos.html">Eventos y Delegados</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Otros Lenguajes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otros/basic.html">Basic y Commodore 64</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fullcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+  
+
+  
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+  <li class="breadcrumb"><a href="../index.html">Fullcoder</a> &raquo;</li>
+    
+  <li class="breadcrumb">Sintaxis GO</li>
+
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/go/sintaxis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="sintaxis-go">
+<h1><a class="toc-backref" href="#id1">Sintaxis GO</a><a class="headerlink" href="#sintaxis-go" title="Enlazar permanentemente con este título">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-go.png"><img alt="Logo GO" class="align-center" src="../_images/logo-go.png" style="width: 360.0px; height: 135.29999999999998px;" /></a>
+<p>Sintáxis básica de GO</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-go" id="id1">Sintaxis GO</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p></li>
+<li><p><a class="reference internal" href="#estructura-en-go" id="id6">Estructura en GO</a></p></li>
+<li><p><a class="reference internal" href="#concatenacion" id="id7">Concatenación</a></p></li>
+<li><p><a class="reference internal" href="#go-cli-comandos-de-go" id="id8">GO-CLI - Comandos de GO</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id9">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id10">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id11">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id12">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id13">Operadores lógicos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id14">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id15">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id16">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id17">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id18">Bucle while</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#punteros" id="id19">Punteros</a></p>
+<ul>
+<li><p><a class="reference internal" href="#defer" id="id20">Defer</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id21">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arrays" id="id22">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#slices" id="id23">Slices</a></p></li>
+<li><p><a class="reference internal" href="#mapas" id="id24">Mapas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-de-errores" id="id25">Control de errores</a></p></li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id26">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funciones" id="id27">Funciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-orientada-a-objetos" id="id28">Programación orientada a objetos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#structs" id="id29">Structs</a></p></li>
+<li><p><a class="reference internal" href="#metodos-de-structs" id="id30">Métodos de structs</a></p></li>
+<li><p><a class="reference internal" href="#herencia" id="id31">Herencia</a></p></li>
+<li><p><a class="reference internal" href="#interfaces" id="id32">Interfaces</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id33">Importar y exportar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#paquetes-en-go" id="id34">Paquetes en GO</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Instalación: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">golang</span></code></p></li>
+<li><p>Extensión de archivos: <strong>.go</strong></p></li>
+</ul>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Comentarios de una sola línea:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Esto es un comentario de una línea</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comentarios multilínea:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cm">/*</span>
+<span class="linenos">2</span><span class="cm">Comentarios de</span>
+<span class="linenos">3</span><span class="cm">tipo multilínea</span>
+<span class="linenos">4</span><span class="cm">*/</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Datos de entrada y salida a través de la consola y/o el navegador.</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// declarar valor entrada:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// salida estandar:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;¿Qué edad tienes?: &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// entrada estandar:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scan</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// impresión con salto de línea:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Tienes&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;años&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="c1">// Introducir múltiples valores:</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidoUno</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidoDos</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;¿Cómo te llamas?: &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanf</span><span class="p">(</span><span class="s">&quot;%v %v %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">apellidoUno</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">apellidoDos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Te llamas %v %v %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidoUno</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidoDos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="estructura-en-go">
+<h3><a class="toc-backref" href="#id6">Estructura en GO</a><a class="headerlink" href="#estructura-en-go" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Código GO puro:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1">// Función principal:</span><span class="w"></span>
+<span class="linenos">6</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="c1">// imprimir un saludo:</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola a full!&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">9</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="concatenacion">
+<h3><a class="toc-backref" href="#id7">Concatenación</a><a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Concatenación de variables y cadenas se realiza con <strong>+</strong></p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Guillermo&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="c1">// concatenar:</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Me llamo &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// se puede ir agregando variables y dejará espacios:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;amigo mío, tienes&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;años&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="c1">// impresión usando verbos:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Guillermo&quot;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">apellidos</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">edad</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">33</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">    </span><span class="c1">// cada %v devolverá el valor de una variable según el orden:</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Te llamas %v %v y tienes %v años&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidos</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="go-cli-comandos-de-go">
+<h3><a class="toc-backref" href="#id8">GO-CLI - Comandos de GO</a><a class="headerlink" href="#go-cli-comandos-de-go" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Comandos de GO:</p>
+<ul class="simple">
+<li><p>go version: versión de go instalada.</p></li>
+<li><p>go build: se ejecuta en la raiz del proyecto para generar un ejecutable.</p></li>
+<li><p>go build archivo.go: genera un ejecutable de un script.</p></li>
+<li><p>GOOS=windows GOARCH=386 go build archivo.go: genera un ejecutable para otro sistema.</p></li>
+<li><p>go run archivo.go: ejecuta un script de go.</p></li>
+<li><p>godoc: Abre un servidor web en la dirección <a class="reference external" href="http://localhost:6000">http://localhost:6000</a></p></li>
+<li><p>go get: permite descargar bibliotecas y utilidades de terceros.</p></li>
+<li><p>go mod: permite gestionar los proyectos locales. <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">mod</span> <span class="pre">init</span> <span class="pre">nombre_proyecto</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Para poder importar paquetes externos con <strong>go get</strong> antes hay que ejecutar el comando <strong>go mod init nombre_proyecto</strong></p>
+</div>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id9">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// declaración, que se puede hacer así o de una vez:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">otroTexto</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">otroTexto</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Soy otra cadena&quot;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">numeroSinSimbolo</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">decimal</span><span class="w"> </span><span class="kt">float32</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">2.35</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">decimalLargo</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">32.23423423</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">booleano</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// declaración múltiple:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nx">nombre</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Guillermo&quot;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="nx">apellidos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nx">edad</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="mi">34</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Soy&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidos</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;y tengo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;años.&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">    </span><span class="c1">// declaracion con operador de inicialización:</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="nx">texto</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Cadena de texto \n - separada por una línea&quot;</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">otroTexto</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Las variables declaradas deben usarse o dará error a la hora de compilar. Se recomienda también declarar en la medida de lo posible usando el operador :=</p>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// definición de constante:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">PI</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">PI</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// definir múltiples constantes:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Guillermo&quot;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nx">apellidos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nx">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">33</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="nx">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id10">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id11">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">resta</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">multiplicacion</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">division</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">resto</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Incremento y decremento:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="c1">// incremento y decremento:</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">numero</span><span class="o">++</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="o">++</span><span class="nx">numero</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">numero</span><span class="o">--</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="o">--</span><span class="nx">numero</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">    </span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">11</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">numero</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales">
+<h3><a class="toc-backref" href="#id12">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos">
+<h3><a class="toc-backref" href="#id13">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>&amp;&amp;</strong>.</p></li>
+<li><p>or: <strong>||</strong>.</p></li>
+<li><p>not: <strong>!</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id14">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id15">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;¿Qué edad tienes? \n&gt;&gt;&gt; &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;¿Qué edad tienes? \n&gt;&gt;&gt; &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Todavía eres menor de edad&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;¿Qué edad tienes? \n&gt;&gt;&gt; &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">65</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Eres un anciano&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Todavía eres menor de edad&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if declaración corta:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// crear una función para recibir parámetros:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">func</span><span class="w"> </span><span class="nx">calcula_edad</span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="c1">// asignar una variable al scope de un if:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">e</span><span class="p">;</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Eres menor de edad&quot;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">mi_edad</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;¿Qué edad Tienes?&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">mi_edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">calcula_edad</span><span class="p">(</span><span class="nx">mi_edad</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id16">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Estructura de un switch:</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">operacion</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;¿Qué quieres saber? \n&gt;&gt;&gt; &quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">operacion</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="nx">operacion</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;nombre&quot;</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Me llamo Guillermo&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;apellidos&quot;</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Mis apellidos son Granados Gómez&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;edad&quot;</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Tengo 33 años&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;No reconozco el comando...&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Se pueden validar más de un valor en case añadiéndolos con comas: <strong>case “a”,”e”,”i”,”o”,”u”</strong></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los Switch en GO permiten validar condiciones como a &gt; 10 de un modo similar a if.</p>
+</div>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id17">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Repetición nº&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// existe un slice:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">consolas</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Megadrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Playstation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gameboy&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// y lo podemos recorrer con un for y range:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="c1">// si no queremos usar el índice:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id18">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Según la guía de Go el bucle For es el bucle While de go:</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">linenos</dt>
+<dd class="field-odd"><p>package main</p>
+<p>import «fmt»</p>
+<dl>
+<dt>func main() {</dt><dd><p>var repetir string</p>
+<p>repeticion := 0</p>
+<dl>
+<dt>for {</dt><dd><p>repeticion++</p>
+<p>fmt.Println(«Repetición nº», repeticion)</p>
+<p>fmt.Print(»¿Repetir otra vez? (s/n): «)
+fmt.Scan(&amp;repetir)</p>
+<dl class="simple">
+<dt>if repetir == «n» {</dt><dd><p>break</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="punteros">
+<h2><a class="toc-backref" href="#id19">Punteros</a><a class="headerlink" href="#punteros" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Cuando trabajamos con punteros establecemos un enlace con una variable, de modo que por ejemplo
+en el caso de las funciones, al enviar parámetros lo que mandamos es una copia, pero gracias a los punteros
+se puede enviar por parámetros la variable original para modificarla.</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">// La función recibe un puntero tipo string:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">cambiar</span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="o">*</span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="o">*</span><span class="nx">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Adolfo&quot;</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1">// se crea una variable con un nombre:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Pedro&quot;</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// se envía el puntero de la variable original para modificar:</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">cambiar</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">// al imprimir de nuevo la variable original vemos que el nombre cambió:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="c1">// podemos ver la referencia de la memoria donde se asignó el puntero:</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="defer">
+<h3><a class="toc-backref" href="#id20">Defer</a><a class="headerlink" href="#defer" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Defer ejecutará la función seleccionada como la última. Esta sentencia se usa normalmente para cerrar archivos.</p>
+<ul class="simple">
+<li><p>Ejemplo con funciones:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">// funciones a cargar:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">funcion1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola desde función 1&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="kd">func</span><span class="w"> </span><span class="nx">funcion2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola desde función 2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="kd">func</span><span class="w"> </span><span class="nx">funcion3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola desde función 3&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="kd">func</span><span class="w"> </span><span class="nx">funcion4</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola desde función 4&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="c1">// ahora se ejecutarán las funciones con los mensajes:</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="nx">funcion1</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">funcion2</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="nx">funcion3</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">    </span><span class="nx">funcion4</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">30</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id21">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="arrays">
+<h3><a class="toc-backref" href="#id22">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// dclaración de array con tipo definido:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// asignar valores al array:</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1">// asignación directa:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">array2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Paco&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adolfo&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">array2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// Asignación directa sin establecer longitud:</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">array3</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Galletas&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fresas&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Aceite&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tomates&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">array3</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="c1">// recuperar una parte del array:</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">array3</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span><span class="w"></span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// declarar array multidimensional:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">arrayMulti</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// asignar un valor a una posición:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">arrayMulti</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">11</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// utilizar el valor asignado:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">arrayMulti</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Como en otros lenguajes de programación clásicos los arrays son de un tamaño
+definido previamente en su declaración. Para trabajar con tamaños dinámicos existen los Slices</p>
+</div>
+</section>
+<section id="slices">
+<h3><a class="toc-backref" href="#id23">Slices</a><a class="headerlink" href="#slices" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// declaración y asignación directa:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">personas</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Paco&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pepe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adolfo&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">personas</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// declarar y asignar una parte de otro slice:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">dos</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">personas</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">dos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Slice multidimensional:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// declaración y asignación directa:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">agenda</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[][]</span><span class="kt">string</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Paco&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;22&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Futbolista&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Pedro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;34&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Barrendero&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">agenda</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;es un&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">agenda</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;y tiene&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">agenda</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;años&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="mapas">
+<h3><a class="toc-backref" href="#id24">Mapas</a><a class="headerlink" href="#mapas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los mapas son colecciones de datos de la misma forma que un diccionario en Python o un objeto literal en JavaScript.</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// se crea un struct:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consola</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">lanzamiento</span><span class="w">   </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// ahora se crea el mapa y se utiliza el struct de base:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="nx">Consola</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sega&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Saturn&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1994</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1994</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="c1">// añadir un nuevo valor con su clave definida:</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">consolas</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Nintendo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;64&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1996</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">consolas</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Para crear un mapa vacío lo más común es utilizar la función <strong>make()</strong></p>
+</div>
+</section>
+</section>
+<section id="control-de-errores">
+<h2><a class="toc-backref" href="#id25">Control de errores</a><a class="headerlink" href="#control-de-errores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El control de errores en GO no funciona del mismo modo que en otros lenguajes de programación. En el caso de GO cuando se realizan ciertas operaciones estas requieren de dos variables,
+una de ellas la que se esta trabajando y la segunda un error que si todo va bien devuelve un valor nil. Si no devuelve nil usamos una condición if para devolver un mensaje de error:</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;strconv&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;40.36&quot;</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">num_entero</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">strconv</span><span class="p">.</span><span class="nx">Atoi</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// en este caso manejamos el error:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\n El valor introducido no es un entero&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">num_entero</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id26">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="funciones">
+<h3><a class="toc-backref" href="#id27">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Procedimienos:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// declarar una función:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">func</span><span class="w"> </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Saludo desde función&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// utilizar una función:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">saludar</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funciones:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// las funciones retornan un valor que se debe definir:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">func</span><span class="w"> </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Saludo desde función&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// utilizar una función:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">saludar</span><span class="p">())</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uso de parámetros:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// los parametros se reciben con un valor definido::</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">func</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">saludo</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">saludo</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1">// pasar un parámetro:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">saludar</span><span class="p">(</span><span class="s">&quot;Guillermo&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Recibir parámetros indefinidos:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">// enviar parámetros de forma dinámica:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">imprimir</span><span class="p">(</span><span class="nx">cosas</span><span class="w"> </span><span class="o">...</span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">cosas</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">imprimir</span><span class="p">(</span><span class="s">&quot;Consola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Movil&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tablet&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Retorno múltiple:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">// se define entre parentesis el tipo de devolución de varios valores:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">nombreCompleto</span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidos</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// se devuelven dos valores:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidos</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="c1">// asignamos los valores a las variables:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">nombreCompleto</span><span class="p">(</span><span class="s">&quot;Guillermo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// asignar un elemento con retorno múltiple:</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">soloNombre</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">nombreCompleto</span><span class="p">(</span><span class="s">&quot;Guillermo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Me llamo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="nx">m</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Solo mi nombre es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">soloNombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Funciones anónimas:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// se crea la función:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">func</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// se crea una variable con las caracteristicas de la función:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">operacion</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="c1">// y se asigna la función anterior a la declaración anterior:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">operacion</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">sumar</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">operacion</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="programacion-orientada-a-objetos">
+<h2><a class="toc-backref" href="#id28">Programación orientada a objetos</a><a class="headerlink" href="#programacion-orientada-a-objetos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El paradigma orientado a objetos en GO cambia radicalmente frente a otro lenguajes sustituyendo las clases por estructuras.</p>
+<section id="structs">
+<h3><a class="toc-backref" href="#id29">Structs</a><a class="headerlink" href="#structs" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los Structs son estructuras de datos similares a las clases con la diferencia que estos carecen de constructores y métodos de antemano.</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// Crear una estructura:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consola</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">marca</span><span class="w">       </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">modelo</span><span class="w">      </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1">// crear un nuevo objeto del tipo Consola:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">playstation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Playstation&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1994</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">    </span><span class="c1">// uso de atributos:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;La consola&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">playstation</span><span class="p">.</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">playstation</span><span class="p">.</span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fue lanzada en&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">playstation</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-de-structs">
+<h3><a class="toc-backref" href="#id30">Métodos de structs</a><a class="headerlink" href="#metodos-de-structs" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consola</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">marca</span><span class="w">       </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">modelo</span><span class="w">      </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1">// Método de Consola:</span><span class="w"></span>
+<span class="linenos">12</span><span class="c1">// los métodos reciben primero un puntero a la structura y luego los datos:</span><span class="w"></span>
+<span class="linenos">13</span><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">Consola</span><span class="p">)</span><span class="w"> </span><span class="nx">imprimir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// en los paréntesis de imprimir recibe los parámetros requeridos:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;La consola&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fue lanzada en&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">playstation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Playstation&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1994</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">// ejecutar la función:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">playstation</span><span class="p">.</span><span class="nx">imprimir</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="herencia">
+<h3><a class="toc-backref" href="#id31">Herencia</a><a class="headerlink" href="#herencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>uso de clases no instanciables:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consola</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">marca</span><span class="w">       </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">modelo</span><span class="w">      </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">Consola</span><span class="p">)</span><span class="w"> </span><span class="nx">imprimir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;La consola&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fue lanzada en&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1">// Herencia:</span><span class="w"></span>
+<span class="linenos">16</span><span class="kd">type</span><span class="w"> </span><span class="nx">Portatil</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// cargar el struct del que se quiere heredar:</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">Consola</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">alimentacion</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="c1">// se pueden añadir nuevos atributos</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1">// también se pueden añadir métodos que utilicen los atributos y métodos del padre:</span><span class="w"></span>
+<span class="linenos">23</span><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="o">*</span><span class="nx">Portatil</span><span class="p">)</span><span class="w"> </span><span class="nx">imp_portatil</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;La consola&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fue lanzada en&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;y utiliza&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">alimentacion</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;para funcionar&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="nx">playstation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Playstation&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1994</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="w">    </span><span class="nx">playstation</span><span class="p">.</span><span class="nx">imprimir</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">    </span><span class="c1">// crear objeto, aqui solo se puede añadir los atributos existentes en el struct:</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="nx">gameboy</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Portatil</span><span class="p">{</span><span class="nx">alimentacion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4 Pilas AAA&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">    </span><span class="c1">// para añadir los atributos del padre se realiza de forma individual:</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">    </span><span class="nx">gameboy</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Nintendo&quot;</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">gameboy</span><span class="p">.</span><span class="nx">modelo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Gameboy&quot;</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">    </span><span class="nx">gameboy</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1990</span><span class="w"></span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="w">    </span><span class="c1">// se puede ver como se aislan los atributos del padre y los del hijo:</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">gameboy</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">41</span>
+<span class="linenos">42</span><span class="w">    </span><span class="nx">gameboy</span><span class="p">.</span><span class="nx">imprimir</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">    </span><span class="nx">gameboy</span><span class="p">.</span><span class="nx">imp_portatil</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">44</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="interfaces">
+<h3><a class="toc-backref" href="#id32">Interfaces</a><a class="headerlink" href="#interfaces" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// se crea un interface y se le asignan los métodos del struct:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kd">type</span><span class="w"> </span><span class="nx">Printer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">imprimir</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">encender</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consola</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">marca</span><span class="w">       </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">modelo</span><span class="w">      </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">Consola</span><span class="p">)</span><span class="w"> </span><span class="nx">imprimir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;La consola&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fue lanzada en&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">Consola</span><span class="p">)</span><span class="w"> </span><span class="nx">encender</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Se ha encendido la&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">modelo</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="kd">type</span><span class="w"> </span><span class="nx">Portatil</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="nx">consola</span><span class="w">      </span><span class="nx">Consola</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="nx">alimentacion</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="c1">// se crean las funciones que manejará los métodos usando el interface:</span><span class="w"></span>
+<span class="linenos">31</span><span class="kd">func</span><span class="w"> </span><span class="nx">imprimirConsola</span><span class="p">(</span><span class="nx">printer</span><span class="w"> </span><span class="nx">Printer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="nx">printer</span><span class="p">.</span><span class="nx">imprimir</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">33</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="kd">func</span><span class="w"> </span><span class="nx">encenderConsola</span><span class="p">(</span><span class="nx">printer</span><span class="w"> </span><span class="nx">Printer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">printer</span><span class="p">.</span><span class="nx">encender</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">37</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">    </span><span class="nx">playstation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="nx">marca</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Playstation&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">:</span><span class="w"> </span><span class="mi">1994</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">    </span><span class="c1">// se utiliza el interface en lugar</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">    </span><span class="nx">imprimirConsola</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">playstation</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">    </span><span class="nx">encenderConsola</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">playstation</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">44</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="importar-y-exportar">
+<h2><a class="toc-backref" href="#id33">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="paquetes-en-go">
+<h3><a class="toc-backref" href="#id34">Paquetes en GO</a><a class="headerlink" href="#paquetes-en-go" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>GO reconoce cada carpeta como un paquete, de este modo en una aplicación básica existirá un archivo main.go referenciando al paquete main y el resto
+de archivos exportarán sus funciones automáticamente si estan son públicas, que en GO las funciones públicas comienzan en <strong>Mayúscula</strong>.</p>
+<ul class="simple">
+<li><p>Paso 1: Crear nuevo directorio y dentro un archivo <strong>main.go</strong></p></li>
+<li><p>Paso 2: Crear archivo go.mod - Abrir terminal en la raiz del proyecto y ejectuar <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">mod</span> <span class="pre">init</span> <span class="pre">nombre_proyecto</span></code></p></li>
+<li><p>Paso 3: Crear un nuevo paquete <strong>consolas</strong> y dentro un archivo al que llamaremos <strong>listar.go</strong>:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">package</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="c1">// cada paquete lleva el nombre de su carpeta correspondiente</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1">// las funciones solo serán públicas si las ponemos en mayúsculas:</span><span class="w"></span>
+<span class="linenos">6</span><span class="kd">func</span><span class="w"> </span><span class="nx">Listado</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;NES, Gameboy, Megadrive, Saturn&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">8</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Paso 4: Importar paquete y ejecutar función en <strong>main.go</strong>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">package</span> <span class="n">consolas</span> <span class="o">//</span> <span class="n">cada</span> <span class="n">paquete</span> <span class="n">lleva</span> <span class="n">el</span> <span class="n">nombre</span> <span class="n">de</span> <span class="n">su</span> <span class="n">carpeta</span> <span class="n">correspondiente</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kn">import</span> <span class="s2">&quot;fmt&quot;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="o">//</span> <span class="n">las</span> <span class="n">funciones</span> <span class="n">solo</span> <span class="n">serán</span> <span class="n">públicas</span> <span class="n">si</span> <span class="n">las</span> <span class="n">ponemos</span> <span class="n">en</span> <span class="n">mayúsculas</span><span class="p">:</span>
+<span class="linenos">6</span><span class="n">func</span> <span class="n">Listado</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos">7</span>    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;NES, Gameboy, Megadrive, Saturn&quot;</span><span class="p">)</span>
+<span class="linenos">8</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Paso 5: Para ejecutar todo el proyecto ir a raiz desde consola y ejecutar <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">run</span> <span class="pre">.</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="funciones.html" class="btn btn-neutral float-right" title="Funciones predefinidas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../javascript/expressjs.html" class="btn btn-neutral float-left" title="Entornos: Node.JS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
