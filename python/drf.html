@@ -1,0 +1,1825 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Framework: Django Rest Framework &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Testing en Python" href="testing.html" />
+    <link rel="prev" title="Microframework: Flask" href="flask.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/python/drf.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeros-pasos">
+   Primeros Pasos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-proyecto-django">
+     Crear un proyecto Django
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-y-configurar-django-rest-framework">
+     Instalar y configurar Django Rest Framework
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serializadores">
+   Serializadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#serializador-basico">
+     Serializador básico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-salida-de-datos">
+     Modificar salida de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-creacion-de-datos">
+     Modificar creación de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-actualizacion-de-datos">
+     Modificar actualización de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viewsets">
+   ViewSets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-mostrar-informacion">
+     GET (mostrar información)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-paginacion-y-personalizar-salida">
+       GET - Paginación y personalizar salida
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#post-crear-registro">
+     POST (Crear registro)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delete-eliminar-elemento">
+     DELETE - Eliminar elemento
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#put-actualizar-registros">
+     PUT - Actualizar registros
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-de-la-api">
+   Rutas de la API
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#permisos">
+   Permisos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permisos-globales-settings-py">
+     Permisos Globales (settings.py)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permisos-individuales">
+     Permisos individuales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permisos-personalizados">
+     Permisos personalizados
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-documentacion-automatica">
+   Crear documentación automática
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autenticacion-con-jwt">
+   Autenticación con JWT
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obtener-un-token">
+     Obtener un Token
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#haciendo-una-peticion-contra-la-api-con-jwt">
+     Haciendo una petición contra la API con JWT
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Framework: Django Rest Framework</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeros-pasos">
+   Primeros Pasos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-proyecto-django">
+     Crear un proyecto Django
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-y-configurar-django-rest-framework">
+     Instalar y configurar Django Rest Framework
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serializadores">
+   Serializadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#serializador-basico">
+     Serializador básico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-salida-de-datos">
+     Modificar salida de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-creacion-de-datos">
+     Modificar creación de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-actualizacion-de-datos">
+     Modificar actualización de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viewsets">
+   ViewSets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-mostrar-informacion">
+     GET (mostrar información)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-paginacion-y-personalizar-salida">
+       GET - Paginación y personalizar salida
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#post-crear-registro">
+     POST (Crear registro)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delete-eliminar-elemento">
+     DELETE - Eliminar elemento
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#put-actualizar-registros">
+     PUT - Actualizar registros
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-de-la-api">
+   Rutas de la API
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#permisos">
+   Permisos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permisos-globales-settings-py">
+     Permisos Globales (settings.py)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permisos-individuales">
+     Permisos individuales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permisos-personalizados">
+     Permisos personalizados
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-documentacion-automatica">
+   Crear documentación automática
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autenticacion-con-jwt">
+   Autenticación con JWT
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obtener-un-token">
+     Obtener un Token
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#haciendo-una-peticion-contra-la-api-con-jwt">
+     Haciendo una petición contra la API con JWT
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="framework-django-rest-framework">
+<h1><a class="toc-backref" href="#id1">Framework: Django Rest Framework</a><a class="headerlink" href="#framework-django-rest-framework" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-django-rest.png"><img alt="Logo HTML5" class="align-center" src="../_images/logo-django-rest.png" style="width: 450.0px; height: 198.75px;" /></a>
+<p>Esta es la documentación que he recopilado para trabajar con Djang rest framework. Una extensión de django para crear API Rest.</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#framework-django-rest-framework" id="id1">Framework: Django Rest Framework</a></p>
+<ul>
+<li><p><a class="reference internal" href="#primeros-pasos" id="id2">Primeros Pasos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-proyecto-django" id="id3">Crear un proyecto Django</a></p></li>
+<li><p><a class="reference internal" href="#instalar-y-configurar-django-rest-framework" id="id4">Instalar y configurar Django Rest Framework</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#serializadores" id="id5">Serializadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#serializador-basico" id="id6">Serializador básico</a></p></li>
+<li><p><a class="reference internal" href="#modificar-salida-de-datos" id="id7">Modificar salida de datos</a></p></li>
+<li><p><a class="reference internal" href="#modificar-creacion-de-datos" id="id8">Modificar creación de datos</a></p></li>
+<li><p><a class="reference internal" href="#modificar-actualizacion-de-datos" id="id9">Modificar actualización de datos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#viewsets" id="id10">ViewSets</a></p>
+<ul>
+<li><p><a class="reference internal" href="#get-mostrar-informacion" id="id11">GET (mostrar información)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#get-paginacion-y-personalizar-salida" id="id12">GET - Paginación y personalizar salida</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#post-crear-registro" id="id13">POST (Crear registro)</a></p></li>
+<li><p><a class="reference internal" href="#delete-eliminar-elemento" id="id14">DELETE - Eliminar elemento</a></p></li>
+<li><p><a class="reference internal" href="#put-actualizar-registros" id="id15">PUT - Actualizar registros</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rutas-de-la-api" id="id16">Rutas de la API</a></p></li>
+<li><p><a class="reference internal" href="#permisos" id="id17">Permisos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#permisos-globales-settings-py" id="id18">Permisos Globales (settings.py)</a></p></li>
+<li><p><a class="reference internal" href="#permisos-individuales" id="id19">Permisos individuales</a></p></li>
+<li><p><a class="reference internal" href="#permisos-personalizados" id="id20">Permisos personalizados</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#crear-documentacion-automatica" id="id21">Crear documentación automática</a></p></li>
+<li><p><a class="reference internal" href="#autenticacion-con-jwt" id="id22">Autenticación con JWT</a></p>
+<ul>
+<li><p><a class="reference internal" href="#obtener-un-token" id="id23">Obtener un Token</a></p></li>
+<li><p><a class="reference internal" href="#haciendo-una-peticion-contra-la-api-con-jwt" id="id24">Haciendo una petición contra la API con JWT</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="primeros-pasos">
+<h2><a class="toc-backref" href="#id2">Primeros Pasos</a><a class="headerlink" href="#primeros-pasos" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="crear-un-proyecto-django">
+<h3><a class="toc-backref" href="#id3">Crear un proyecto Django</a><a class="headerlink" href="#crear-un-proyecto-django" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Lo primero que vamos a hacer es crear un entorno virtual.</p></li>
+<li><p>Luego instalamos Django <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django</span></code></p></li>
+<li><p>Creamos un projecto en Django <code class="docutils literal notranslate"><span class="pre">django-admin</span> <span class="pre">startproject</span> <span class="pre">prueba_api</span></code></p></li>
+<li><p>Ejecutamos el servidor para ver que se ha creado correctamente <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p></li>
+</ul>
+</section>
+<section id="instalar-y-configurar-django-rest-framework">
+<h3><a class="toc-backref" href="#id4">Instalar y configurar Django Rest Framework</a><a class="headerlink" href="#instalar-y-configurar-django-rest-framework" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Empezamos instalando las librerías necesarias:</p>
+<ul class="simple">
+<li><p>Instalamos Django Rest Framework <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">djangorestframework</span></code></p></li>
+<li><p>Instalamos Django-filter <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django-filter</span></code></p></li>
+<li><p>Y por último, instalamos Markdown: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">markdown</span></code></p></li>
+</ul>
+<p>Pasamos a configurar el proyecto:</p>
+<ul class="simple">
+<li><p>Lo primero será añadir <strong>rest_framework</strong> a settings.py:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">2</span>    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+<span class="linenos">3</span>    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+<span class="linenos">4</span>    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+<span class="linenos">5</span>    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+<span class="linenos">6</span>    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+<span class="linenos">7</span>    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+<span class="linenos">8</span>    <span class="s1">&#39;rest_framework&#39;</span>
+<span class="linenos">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora como mínimo necesitamos tener una app creada, para ello ejecutamos <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">startapp</span> <span class="pre">API</span></code></p></li>
+<li><p>Añadimos la app a settings.py:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 2</span>    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+<span class="linenos"> 3</span>    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+<span class="linenos"> 4</span>    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+<span class="linenos"> 5</span>    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s1">&#39;rest_framework&#39;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s1">&#39;API&#39;</span>
+<span class="linenos">10</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Realizamos la migración de la base de datos <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code></p></li>
+<li><p>Y creamos un superusuario <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">createsuperuser</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Una forma cómoda de trabajar con aplicaciones mixtas es crear un directorio API dentro de la app y ahí un nuevo views.py y serializers.py</p>
+</div>
+</section>
+</section>
+<section id="serializadores">
+<h2><a class="toc-backref" href="#id5">Serializadores</a><a class="headerlink" href="#serializadores" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los serializadores se encargan de trabajar con los modelos de datos para adaptarlos a la API.</p>
+<ul class="simple">
+<li><p>Para comenzar tenemos que crear un modelo en nuestra API (API/models.py):</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consola</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="sd">&quot;&quot;&quot; Modelo de datos para videoconsolas &quot;&quot;&quot;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="n">marca</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 8</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 9</span>    <span class="n">lanzamiento</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">12</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="k">class</span> <span class="nc">Videojuego</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos">16</span>    <span class="sd">&quot;&quot;&quot; Modelo de datos para videojuegos &quot;&quot;&quot;</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="n">titulo</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="n">consola</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Consola</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">22</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ejecutamos <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">makemigrations</span> <span class="pre">API</span></code> para preparar las migraciones y migramos la tabla <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span> <span class="pre">API</span></code></p></li>
+</ul>
+<section id="serializador-basico">
+<h3><a class="toc-backref" href="#id6">Serializador básico</a><a class="headerlink" href="#serializador-basico" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Vamos a crear un archivo para el serializador en la ruta (API/serializers/consolaSerializer.py):</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Importamos la librería de serializers:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
+<span class="linenos"> 3</span><span class="c1"># Importamos el modelo de datos a usar:</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># Creamos el serializador:</span>
+<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">ConsolaSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="linenos"> 8</span>    <span class="c1"># de forma similar a los formularios, es conveniente definir los campos del modelo:</span>
+<span class="linenos"> 9</span>    <span class="n">marca</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos">10</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos">11</span>    <span class="n">lanzamiento</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="linenos">14</span>        <span class="c1"># Elegimos el modelo:</span>
+<span class="linenos">15</span>        <span class="n">model</span> <span class="o">=</span> <span class="n">Consola</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="c1"># Aquí se definen los campos que va a manejar el serializador:</span>
+<span class="linenos">18</span>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">19</span>            <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">20</span>            <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">21</span>            <span class="s1">&#39;lanzamiento&#39;</span>
+<span class="linenos">22</span>        <span class="p">]</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="c1"># el metodo validador recibirá los datos que se van a regsitrar y los comprobará antes de ingresarlos:</span>
+<span class="linenos">25</span>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="c1"># podemos crear validaciones específicas:</span>
+<span class="linenos">27</span>    <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span>  <span class="o">&lt;</span> <span class="mi">1970</span><span class="p">:</span>
+<span class="linenos">28</span>        <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;El año de lanzamiento es demasiado bajo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Con esto ya hemos preparado el primer serializador.</p>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Recuerda crear un archivo vacío llamado <strong>__init__.py</strong> en cada carpeta que se generes para convertirlo en módulo.</p>
+</div>
+</section>
+<section id="modificar-salida-de-datos">
+<h3><a class="toc-backref" href="#id7">Modificar salida de datos</a><a class="headerlink" href="#modificar-salida-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede modificar la salida de datos a mostrar en el JSON:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
+<span class="linenos"> 2</span><span class="c1"># importamos el modelo videojuego para listarlos:</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span><span class="p">,</span> <span class="n">Videojuego</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">ConsolaSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="linenos"> 6</span>    <span class="n">marca</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 7</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 8</span>    <span class="n">lanzamiento</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="linenos">11</span>        <span class="n">model</span> <span class="o">=</span> <span class="n">Consola</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>        <span class="c1"># Aquí se definen los campos que va a manejar el serializador:</span>
+<span class="linenos">14</span>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">15</span>            <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+<span class="linenos">16</span>            <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">17</span>            <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">18</span>            <span class="s1">&#39;lanzamiento&#39;</span>
+<span class="linenos">19</span>        <span class="p">]</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="linenos">22</span>        <span class="c1"># podemos crear validaciones específicas:</span>
+<span class="linenos">23</span>        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span>  <span class="o">&lt;</span> <span class="mi">1970</span><span class="p">:</span>
+<span class="linenos">24</span>            <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;El año de lanzamiento es demasiado bajo&#39;</span><span class="p">)</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>        <span class="k">return</span> <span class="n">data</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>    <span class="c1"># Se puede personalizar la salida de datos con este método:</span>
+<span class="linenos">29</span>    <span class="k">def</span> <span class="nf">to_representation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
+<span class="linenos">30</span>        <span class="c1"># podemos ir llamando cada uno de los títulos disponibles por su consola:</span>
+<span class="linenos">31</span>        <span class="n">juegos</span> <span class="o">=</span> <span class="n">Videojuego</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">consola</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="linenos">32</span>        <span class="k">return</span> <span class="p">{</span>
+<span class="linenos">33</span>            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<span class="linenos">34</span>            <span class="s2">&quot;marca&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span>
+<span class="linenos">35</span>            <span class="s2">&quot;modelo&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span>
+<span class="linenos">36</span>            <span class="s2">&quot;lanzamiento&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">lanzamiento</span><span class="p">,</span>
+<span class="linenos">37</span>            <span class="s2">&quot;juegos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">juego</span><span class="o">.</span><span class="n">titulo</span> <span class="k">for</span> <span class="n">juego</span> <span class="ow">in</span> <span class="n">juegos</span><span class="p">]</span> <span class="c1"># tan solo hay que añadir el titulo de cada elemento del listado que hemos localizado</span>
+<span class="linenos">38</span>        <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="modificar-creacion-de-datos">
+<h3><a class="toc-backref" href="#id8">Modificar creación de datos</a><a class="headerlink" href="#modificar-creacion-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede modificar la creacíon de datos para ajustar su guardado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span><span class="p">,</span> <span class="n">Videojuego</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">ConsolaSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="n">marca</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 6</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 7</span>    <span class="n">lanzamiento</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 8</span>    <span class="c1"># creamos un campo nuevo opcional para recibir un videojuego y crearlo si no existe:</span>
+<span class="linenos"> 9</span>    <span class="n">videojuego</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="linenos">12</span>        <span class="n">model</span> <span class="o">=</span> <span class="n">Consola</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">15</span>            <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+<span class="linenos">16</span>            <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">17</span>            <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">18</span>            <span class="s1">&#39;lanzamiento&#39;</span><span class="p">,</span>
+<span class="linenos">19</span>            <span class="s1">&#39;videojuego&#39;</span> <span class="c1"># este hay que añadirlo a la lista de campos para que el validador lo verifique</span>
+<span class="linenos">20</span>        <span class="p">]</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="linenos">23</span>        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span>  <span class="o">&lt;</span> <span class="mi">1970</span><span class="p">:</span>
+<span class="linenos">24</span>            <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;El año de lanzamiento es demasiado bajo&#39;</span><span class="p">)</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>        <span class="k">return</span> <span class="n">data</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>    <span class="k">def</span> <span class="nf">to_representation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
+<span class="linenos">29</span>        <span class="n">juegos</span> <span class="o">=</span> <span class="n">Videojuego</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">consola</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="linenos">30</span>        <span class="k">return</span> <span class="p">{</span>
+<span class="linenos">31</span>            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;marca&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span>
+<span class="linenos">33</span>            <span class="s2">&quot;modelo&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span>
+<span class="linenos">34</span>            <span class="s2">&quot;lanzamiento&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">lanzamiento</span><span class="p">,</span>
+<span class="linenos">35</span>            <span class="s2">&quot;juegos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">juego</span><span class="o">.</span><span class="n">titulo</span> <span class="k">for</span> <span class="n">juego</span> <span class="ow">in</span> <span class="n">juegos</span><span class="p">]</span>
+<span class="linenos">36</span>        <span class="p">}</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="c1"># se usa el método create y en el se localiza si existe la consola y sino se procede a crear:</span>
+<span class="linenos">39</span>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
+<span class="linenos">40</span>        <span class="c1"># se crea la consola con los datos validados:</span>
+<span class="linenos">41</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">validated_data</span><span class="p">)</span>
+<span class="linenos">42</span>        <span class="c1"># se crea el videojuego:</span>
+<span class="linenos">43</span>        <span class="k">if</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;videojuego&#39;</span><span class="p">):</span>
+<span class="linenos">44</span>            <span class="n">Videojuego</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">titulo</span><span class="o">=</span><span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;videojuego&#39;</span><span class="p">),</span> <span class="n">consola_id</span><span class="o">=</span><span class="n">consola</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="linenos">45</span>
+<span class="linenos">46</span>        <span class="c1"># se retorna la creación del objeto:</span>
+<span class="linenos">47</span>        <span class="k">return</span> <span class="n">consola</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>la información que se recibe a continuación ya ha sido validada, por lo tanto no se puede modificar aquello que no pase la validación.</p>
+</div>
+</section>
+<section id="modificar-actualizacion-de-datos">
+<h3><a class="toc-backref" href="#id9">Modificar actualización de datos</a><a class="headerlink" href="#modificar-actualizacion-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede modificar la creacíon de datos para ajustar su guardado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span><span class="p">,</span> <span class="n">Videojuego</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">ConsolaSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="n">marca</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 6</span>    <span class="n">modelo</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 7</span>    <span class="n">lanzamiento</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 8</span>    <span class="n">videojuego</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="linenos">11</span>        <span class="n">model</span> <span class="o">=</span> <span class="n">Consola</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">14</span>            <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+<span class="linenos">15</span>            <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">16</span>            <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">17</span>            <span class="s1">&#39;lanzamiento&#39;</span><span class="p">,</span>
+<span class="linenos">18</span>            <span class="s1">&#39;videojuego&#39;</span>
+<span class="linenos">19</span>        <span class="p">]</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="linenos">22</span>        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">)</span>  <span class="o">&lt;</span> <span class="mi">1970</span><span class="p">:</span>
+<span class="linenos">23</span>            <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;El año de lanzamiento es demasiado bajo&#39;</span><span class="p">)</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>        <span class="k">return</span> <span class="n">data</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="k">def</span> <span class="nf">to_representation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
+<span class="linenos">28</span>        <span class="n">juegos</span> <span class="o">=</span> <span class="n">Videojuego</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">consola</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="linenos">29</span>        <span class="k">return</span> <span class="p">{</span>
+<span class="linenos">30</span>            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<span class="linenos">31</span>            <span class="s2">&quot;marca&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;modelo&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span>
+<span class="linenos">33</span>            <span class="s2">&quot;lanzamiento&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">lanzamiento</span><span class="p">,</span>
+<span class="linenos">34</span>            <span class="s2">&quot;juegos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">juego</span><span class="o">.</span><span class="n">titulo</span> <span class="k">for</span> <span class="n">juego</span> <span class="ow">in</span> <span class="n">juegos</span><span class="p">]</span>
+<span class="linenos">35</span>        <span class="p">}</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
+<span class="linenos">38</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">validated_data</span><span class="p">)</span>
+<span class="linenos">39</span>        <span class="k">if</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;videojuego&#39;</span><span class="p">):</span>
+<span class="linenos">40</span>            <span class="n">Videojuego</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">titulo</span><span class="o">=</span><span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;videojuego&#39;</span><span class="p">),</span> <span class="n">consola_id</span><span class="o">=</span><span class="n">consola</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span>        <span class="k">return</span> <span class="n">consola</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>    <span class="c1"># se puede modificar el update para editar campos como queramos:</span>
+<span class="linenos">46</span>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span>        <span class="c1"># se recuperan los campos validados que queremos modificar:</span>
+<span class="linenos">49</span>        <span class="n">validated_data</span><span class="p">[</span><span class="s2">&quot;marca&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="n">marca</span> <span class="c1"># recuperamos del registro original la marca y evitamos que sea modificable.</span>
+<span class="linenos">50</span>        <span class="n">validated_data</span><span class="p">[</span><span class="s2">&quot;lanzamiento&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1990</span> <span class="c1"># se puede establecer un valor fijo que no cambiará aunque enviemos un dato distinto.</span>
+<span class="linenos">51</span>
+<span class="linenos">52</span>        <span class="c1"># ahora se recorren los valores de ambos objetos y se combinan:</span>
+<span class="linenos">53</span>        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="linenos">54</span>            <span class="nb">setattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+<span class="linenos">55</span>
+<span class="linenos">56</span>        <span class="c1"># se guarda y retornan los cambios:</span>
+<span class="linenos">57</span>        <span class="n">instance</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="linenos">58</span>        <span class="k">return</span> <span class="n">instance</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Al intentar actualizar el registro con los siguientes datos no permitirá el cambio de marca y el lanzamiento asignará siempre 1990:</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&quot;marca&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sammy&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&quot;modelo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Play Funstation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&quot;lanzamiento&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="w"></span>
+<span class="linenos">5</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>la información que se recibe a continuación ya ha sido validada, por lo tanto no se puede modificar aquello que no pase la validación.</p>
+</div>
+</section>
+</section>
+<section id="viewsets">
+<h2><a class="toc-backref" href="#id10">ViewSets</a><a class="headerlink" href="#viewsets" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los viewsets se implementan en las vistas de Django y sirven para mostrar los valores de la API o bien en su frontend o bien como un JSON.</p>
+<section id="get-mostrar-informacion">
+<h3><a class="toc-backref" href="#id11">GET (mostrar información)</a><a class="headerlink" href="#get-mostrar-informacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para crear un ViewSet nos vamos a (API/views/consolaViewSet.py):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># importamos el apiview:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="linenos"> 3</span><span class="c1"># y el response:</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="linenos"> 5</span><span class="c1"># también es necesario traer el modelo:</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span>
+<span class="linenos"> 7</span><span class="c1"># se carga el serializador creado:</span>
+<span class="linenos"> 8</span><span class="kn">from</span> <span class="nn">API.serializers.consolaSerializer</span> <span class="kn">import</span> <span class="n">ConsolaSerializer</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># creamos la vista:</span>
+<span class="linenos">11</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="c1"># con APIView se va definiendo que tipo de entrada permite la vista(funciona como una vista común en Django en lo referente a parametros):</span>
+<span class="linenos">14</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="linenos">15</span>        <span class="c1"># se carga los datos en una variable:</span>
+<span class="linenos">16</span>        <span class="n">consolas</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="linenos">17</span>        <span class="c1"># se le envía al serializador, definimos si va a ser uno o varios resultados con many:</span>
+<span class="linenos">18</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consolas</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>        <span class="c1"># se muestra la respuesta:</span>
+<span class="linenos">21</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="get-paginacion-y-personalizar-salida">
+<h4><a class="toc-backref" href="#id12">GET - Paginación y personalizar salida</a><a class="headerlink" href="#get-paginacion-y-personalizar-salida" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Se puede retornar un número determinado de elementos por página creando un paginador personalizado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">API.serializers.consolaSerializer</span> <span class="kn">import</span> <span class="n">ConsolaSerializer</span>
+<span class="linenos"> 5</span><span class="c1"># se cargan los siguientes módulos de paginador:</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span><span class="p">,</span> <span class="n">PageNotAnInteger</span><span class="p">,</span> <span class="n">EmptyPage</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># creamos la vista:</span>
+<span class="linenos"> 9</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="c1"># se define un nuevo parámetro para recibir por url con el número de página:</span>
+<span class="linenos">11</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>        <span class="c1"># Si queremos un solo resultado, usamos el parámetro consola por url y recuperamos solo un valor:</span>
+<span class="linenos">14</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="linenos">15</span>        <span class="k">if</span> <span class="n">consola</span><span class="p">:</span>
+<span class="linenos">16</span>            <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consola</span><span class="p">)</span>
+<span class="linenos">17</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>        <span class="n">consolas</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="linenos">21</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consolas</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">22</span>        <span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">)</span>
+<span class="linenos">23</span>        <span class="c1"># el paginador recibe la data del serializador y un número de páginas:</span>
+<span class="linenos">24</span>        <span class="n">paginator</span> <span class="o">=</span> <span class="n">Paginator</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos">25</span>        <span class="c1"># Se controla si se recibe o no página y el número de páginas:</span>
+<span class="linenos">26</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">27</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+<span class="linenos">28</span>        <span class="k">except</span> <span class="n">PageNotAnInteger</span><span class="p">:</span>
+<span class="linenos">29</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">30</span>        <span class="k">except</span> <span class="n">EmptyPage</span><span class="p">:</span>
+<span class="linenos">31</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">)</span>
+<span class="linenos">32</span>        <span class="c1"># Se puede modificar la respuesta para retornar datos de la paginación:</span>
+<span class="linenos">33</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span>
+<span class="linenos">34</span>            <span class="s2">&quot;cantidad_paginas&quot;</span><span class="p">:</span> <span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">,</span>
+<span class="linenos">35</span>            <span class="s2">&quot;pagina_actual&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+<span class="linenos">36</span>            <span class="s2">&quot;hay_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">(),</span>
+<span class="linenos">37</span>            <span class="s2">&quot;pagina_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">next_page_number</span><span class="p">()</span> <span class="k">if</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">else</span> <span class="kc">False</span><span class="p">,</span>
+<span class="linenos">38</span>            <span class="s2">&quot;consolas&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">object_list</span>
+<span class="linenos">39</span>        <span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-crear-registro">
+<h3><a class="toc-backref" href="#id13">POST (Crear registro)</a><a class="headerlink" href="#post-crear-registro" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El post se define como un método nuevo para procesar la información:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">email.policy</span> <span class="kn">import</span> <span class="n">HTTP</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">API.serializers.consolaSerializer</span> <span class="kn">import</span> <span class="n">ConsolaSerializer</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span><span class="p">,</span> <span class="n">PageNotAnInteger</span><span class="p">,</span> <span class="n">EmptyPage</span>
+<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">status</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="linenos">13</span>        <span class="k">if</span> <span class="n">consola</span><span class="p">:</span>
+<span class="linenos">14</span>            <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consola</span><span class="p">)</span>
+<span class="linenos">15</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="n">consolas</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="linenos">18</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consolas</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>        <span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;page&quot;</span><span class="p">)</span>
+<span class="linenos">21</span>        <span class="n">paginator</span> <span class="o">=</span> <span class="n">Paginator</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">24</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+<span class="linenos">25</span>        <span class="k">except</span> <span class="n">PageNotAnInteger</span><span class="p">:</span>
+<span class="linenos">26</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">27</span>        <span class="k">except</span> <span class="n">EmptyPage</span><span class="p">:</span>
+<span class="linenos">28</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">)</span>
+<span class="linenos">29</span>        <span class="c1"># Se puede modificar la respuesta para retornar datos de la paginación:</span>
+<span class="linenos">30</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span>
+<span class="linenos">31</span>            <span class="s2">&quot;cantidad_paginas&quot;</span><span class="p">:</span> <span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;pagina_actial&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+<span class="linenos">33</span>            <span class="s2">&quot;hay_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">(),</span>
+<span class="linenos">34</span>            <span class="s2">&quot;pagina_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">next_page_number</span><span class="p">()</span> <span class="k">if</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">else</span> <span class="kc">False</span><span class="p">,</span>
+<span class="linenos">35</span>            <span class="s2">&quot;consolas&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">object_list</span>
+<span class="linenos">36</span>        <span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="c1"># se define el post en la api view:</span>
+<span class="linenos">39</span>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="linenos">40</span>        <span class="c1"># se carga la información de la petición post en el serializador:</span>
+<span class="linenos">41</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="linenos">42</span>        <span class="c1"># se verifica si ha pasado la validación:</span>
+<span class="linenos">43</span>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+<span class="linenos">44</span>            <span class="c1"># se guarda la información y se retorna el resultado:</span>
+<span class="linenos">45</span>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="linenos">46</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span><span class="p">)</span>
+<span class="linenos">47</span>        <span class="c1"># si no ha salido bien se retornan los errores:</span>
+<span class="linenos">48</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="delete-eliminar-elemento">
+<h3><a class="toc-backref" href="#id14">DELETE - Eliminar elemento</a><a class="headerlink" href="#delete-eliminar-elemento" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">email.policy</span> <span class="kn">import</span> <span class="n">HTTP</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">API.serializers.consolaSerializer</span> <span class="kn">import</span> <span class="n">ConsolaSerializer</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span><span class="p">,</span> <span class="n">PageNotAnInteger</span><span class="p">,</span> <span class="n">EmptyPage</span>
+<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">status</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="linenos">13</span>        <span class="k">if</span> <span class="n">consola</span><span class="p">:</span>
+<span class="linenos">14</span>            <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consola</span><span class="p">)</span>
+<span class="linenos">15</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="n">consolas</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="linenos">18</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consolas</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>        <span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;page&quot;</span><span class="p">)</span>
+<span class="linenos">21</span>        <span class="n">paginator</span> <span class="o">=</span> <span class="n">Paginator</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">24</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+<span class="linenos">25</span>        <span class="k">except</span> <span class="n">PageNotAnInteger</span><span class="p">:</span>
+<span class="linenos">26</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">27</span>        <span class="k">except</span> <span class="n">EmptyPage</span><span class="p">:</span>
+<span class="linenos">28</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">)</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span>
+<span class="linenos">31</span>            <span class="s2">&quot;cantidad_paginas&quot;</span><span class="p">:</span> <span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;pagina_actial&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+<span class="linenos">33</span>            <span class="s2">&quot;hay_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">(),</span>
+<span class="linenos">34</span>            <span class="s2">&quot;pagina_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">next_page_number</span><span class="p">()</span> <span class="k">if</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">else</span> <span class="kc">False</span><span class="p">,</span>
+<span class="linenos">35</span>            <span class="s2">&quot;consolas&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">object_list</span>
+<span class="linenos">36</span>        <span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="linenos">39</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="linenos">40</span>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+<span class="linenos">41</span>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="linenos">42</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span><span class="p">)</span>
+<span class="linenos">43</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>    <span class="c1"># Eliminar un registro:</span>
+<span class="linenos">46</span>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="p">):</span>
+<span class="linenos">47</span>        <span class="c1"># se busca el valor:</span>
+<span class="linenos">48</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="linenos">49</span>        <span class="c1"># si existe se borra:</span>
+<span class="linenos">50</span>        <span class="k">if</span> <span class="n">consola</span><span class="p">:</span>
+<span class="linenos">51</span>            <span class="n">consola</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="linenos">52</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;Consola eliminada&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_204_NO_CONTENT</span><span class="p">)</span>
+<span class="linenos">53</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;No existe consola&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="put-actualizar-registros">
+<h3><a class="toc-backref" href="#id15">PUT - Actualizar registros</a><a class="headerlink" href="#put-actualizar-registros" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">email.policy</span> <span class="kn">import</span> <span class="n">HTTP</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">API.models</span> <span class="kn">import</span> <span class="n">Consola</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">API.serializers.consolaSerializer</span> <span class="kn">import</span> <span class="n">ConsolaSerializer</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span><span class="p">,</span> <span class="n">PageNotAnInteger</span><span class="p">,</span> <span class="n">EmptyPage</span>
+<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">status</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">11</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="linenos">12</span>        <span class="k">if</span> <span class="n">consola</span><span class="p">:</span>
+<span class="linenos">13</span>            <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consola</span><span class="p">)</span>
+<span class="linenos">14</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>        <span class="n">consolas</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="linenos">17</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consolas</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>        <span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;page&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>        <span class="n">paginator</span> <span class="o">=</span> <span class="n">Paginator</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">23</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+<span class="linenos">24</span>        <span class="k">except</span> <span class="n">PageNotAnInteger</span><span class="p">:</span>
+<span class="linenos">25</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">26</span>        <span class="k">except</span> <span class="n">EmptyPage</span><span class="p">:</span>
+<span class="linenos">27</span>            <span class="n">consolas_paginated</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span>
+<span class="linenos">30</span>            <span class="s2">&quot;cantidad_paginas&quot;</span><span class="p">:</span> <span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">,</span>
+<span class="linenos">31</span>            <span class="s2">&quot;pagina_actial&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;hay_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">(),</span>
+<span class="linenos">33</span>            <span class="s2">&quot;pagina_siguiente&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">next_page_number</span><span class="p">()</span> <span class="k">if</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">else</span> <span class="kc">False</span><span class="p">,</span>
+<span class="linenos">34</span>            <span class="s2">&quot;consolas&quot;</span><span class="p">:</span> <span class="n">consolas_paginated</span><span class="o">.</span><span class="n">object_list</span>
+<span class="linenos">35</span>        <span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="linenos">38</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="linenos">39</span>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+<span class="linenos">40</span>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="linenos">41</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span><span class="p">)</span>
+<span class="linenos">42</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="p">):</span>
+<span class="linenos">46</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="linenos">47</span>        <span class="k">if</span> <span class="n">consola</span><span class="p">:</span>
+<span class="linenos">48</span>            <span class="n">consola</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="linenos">49</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;Consola eliminada&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_204_NO_CONTENT</span><span class="p">)</span>
+<span class="linenos">50</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;No existe consola&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+<span class="linenos">51</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span>    <span class="c1"># actualizamos registros con put:</span>
+<span class="linenos">54</span>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="p">):</span>
+<span class="linenos">55</span>        <span class="c1"># se recupera el registro a editar:</span>
+<span class="linenos">56</span>        <span class="n">consola</span> <span class="o">=</span> <span class="n">Consola</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">consola</span><span class="p">)</span>
+<span class="linenos">57</span>
+<span class="linenos">58</span>        <span class="c1"># se envía el objeto y la data recibida por put para hacer los cambios:</span>
+<span class="linenos">59</span>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">ConsolaSerializer</span><span class="p">(</span><span class="n">consola</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">partial</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># la opción partial indica que no es necesario enviar todo</span>
+<span class="linenos">60</span>
+<span class="linenos">61</span>        <span class="c1"># se comprueba que todo es correcto:</span>
+<span class="linenos">62</span>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+<span class="linenos">63</span>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="linenos">64</span>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+<span class="linenos">65</span>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;Hay errores en la actualización&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Con esto ya tenemos listo el ViewSet.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si entramos a la ruta <a class="reference external" href="http://localhost:8000/api/consolas">http://localhost:8000/api/consolas</a> veremos una interfaz con el resultado, pero lo más recomendable es trabajar con software como Postman o Insomnia</p>
+</div>
+</section>
+</section>
+<section id="rutas-de-la-api">
+<h2><a class="toc-backref" href="#id16">Rutas de la API</a><a class="headerlink" href="#rutas-de-la-api" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Archivo principal de rutas urls.py:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="linenos">2</span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">5</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+<span class="linenos">6</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;API.urls&#39;</span><span class="p">))</span>
+<span class="linenos">7</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Archivo de rutas adicional: (API/urls.py):</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="linenos">2</span><span class="kn">from</span> <span class="nn">API.views.consolaViewset</span> <span class="kn">import</span> <span class="n">ConsolaApiView</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">5</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="n">ConsolaApiView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;consolas&#39;</span><span class="p">),</span>
+<span class="linenos">6</span>    <span class="c1"># agregamos la ruta para una consola individual:</span>
+<span class="linenos">7</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;consolas/&lt;int:consola&gt;&#39;</span><span class="p">,</span> <span class="n">ConsolaApiView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;consola&#39;</span><span class="p">)</span>
+<span class="linenos">8</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Ahora podemos ejecutar la API en <code class="docutils literal notranslate"><span class="pre">http://localhost:8080/api/consolas</span></code> o <code class="docutils literal notranslate"><span class="pre">http://localhost:8080/api/consolas/1</span></code> y ver como podemos añadir registros.</p>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Con el nivel actual de permisos cualquiera puede introducir valores en la API. Para cambiar eso tenemos que ir al apartado de <strong>permisos</strong></p>
+</div>
+</section>
+<section id="permisos">
+<h2><a class="toc-backref" href="#id17">Permisos</a><a class="headerlink" href="#permisos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Tenemos varios tipos de permisos para gestionar nuestra API. Para establecer permisos creamos una lista al final de (prueba_api/settings.py):</p>
+<ul class="simple">
+<li><p>Por defecto nuestra API estará disponible para lectura y escritura ante cualquier extraño.</p></li>
+</ul>
+<section id="permisos-globales-settings-py">
+<h3><a class="toc-backref" href="#id18">Permisos Globales (settings.py)</a><a class="headerlink" href="#permisos-globales-settings-py" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se pueden establecer permisos globales en toda la aplicación editando settings.py:</p>
+<ul class="simple">
+<li><p>Establecer permisos a solo lectura:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">2</span>    <span class="s1">&#39;DEFAULT_PERMISSION_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">3</span>        <span class="s1">&#39;rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly&#39;</span><span class="p">,</span>
+<span class="linenos">4</span>    <span class="p">],</span>
+<span class="linenos">5</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Añadir acceso por login para poder editar y ver datos.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">2</span>    <span class="s1">&#39;DEFAULT_PERMISSION_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">3</span>        <span class="s1">&#39;rest_framework.permissions.IsAuthenticated&#39;</span><span class="p">,</span>
+<span class="linenos">4</span>    <span class="p">],</span>
+<span class="linenos">5</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Login requerido para editar y visualización sin login:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">2</span>    <span class="s1">&#39;DEFAULT_PERMISSION_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">3</span>        <span class="s1">&#39;rest_framework.permissions.IsAuthenticatedOrReadOnly&#39;</span><span class="p">,</span>
+<span class="linenos">4</span>    <span class="p">],</span>
+<span class="linenos">5</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="permisos-individuales">
+<h3><a class="toc-backref" href="#id19">Permisos individuales</a><a class="headerlink" href="#permisos-individuales" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En los ViewSets se pueden definir permisos para cada vista usando la variable <strong>permission_classes</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Se importan los permisos que vayamos a establecer como IsAuthenticatedOrReadOnly, IsAuthenticate, o IsAdminUser:</span>
+<span class="linenos">2</span><span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">IsAuthenticatedOrReadOnly</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">5</span>    <span class="c1"># se asigna al atributo siguiente el tipo de permiso de esta APIView:</span>
+<span class="linenos">6</span>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">IsAuthenticatedOrReadOnly</span><span class="p">]</span>
+<span class="linenos">7</span>
+<span class="linenos">8</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">9</span>    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="permisos-personalizados">
+<h3><a class="toc-backref" href="#id20">Permisos personalizados</a><a class="headerlink" href="#permisos-personalizados" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede crear un nuevo permiso y utilizarlo tanto como permiso global como para ViewSets individuales:</p>
+<ul class="simple">
+<li><p>En la aplicación deseada se crea un archivo <strong>permissions.py</strong>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># se creará un permiso para que acepte solo un usuario:</span>
+<span class="linenos"> 2</span><span class="c1"># se importa el permiso base:</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">BasePermission</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># se crea la clase del permiso:</span>
+<span class="linenos"> 6</span><span class="k">class</span> <span class="nc">SoloMeOrReadOnly</span><span class="p">(</span><span class="n">BasePermission</span><span class="p">):</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="c1"># tendrá una función que comprueba si soy yo el que inicia sesión o no:</span>
+<span class="linenos"> 9</span>    <span class="k">def</span> <span class="nf">has_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">):</span>
+<span class="linenos">10</span>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+<span class="linenos">11</span>            <span class="k">return</span> <span class="kc">True</span>
+<span class="linenos">12</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">13</span>            <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span> <span class="ow">and</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span> <span class="o">==</span> <span class="s1">&#39;guillermo&#39;</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1"># Este segundo método se invoca para establecer los permisos en un objeto (un articulo o elemento simple):</span>
+<span class="linenos">17</span>    <span class="k">def</span> <span class="nf">has_object_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<span class="linenos">18</span>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+<span class="linenos">19</span>            <span class="k">return</span> <span class="kc">True</span>
+<span class="linenos">20</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">21</span>            <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span> <span class="ow">and</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span> <span class="o">==</span> <span class="s1">&#39;guillermo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En el <strong>ViewSet</strong> se invoca y se aplica como un permiso cualquiera:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># se importa el permiso creado:</span>
+<span class="linenos">2</span><span class="kn">from</span> <span class="nn">API.permissions</span> <span class="kn">import</span> <span class="n">SoloMeOrReadOnly</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="k">class</span> <span class="nc">ConsolaApiView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+<span class="linenos">5</span>    <span class="c1"># se agrega el permiso como cualquier estandar:</span>
+<span class="linenos">6</span>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">SoloMeOrReadOnly</span><span class="p">]</span>
+<span class="linenos">7</span>
+<span class="linenos">8</span>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">consola</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">9</span>    <span class="o">...</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El método <strong>has_object_permission</strong> que se ocupa de los permisos de un elemento en la tabla no es obligatorio si vamos a tener los mismos permisos como en el ejemplo anterior.</p>
+</div>
+</section>
+</section>
+<section id="crear-documentacion-automatica">
+<h2><a class="toc-backref" href="#id21">Crear documentación automática</a><a class="headerlink" href="#crear-documentacion-automatica" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Es muy interesante crear un sistema de documentación automática en nuestra api rest.</p>
+<p>Para ello se hace lo siguiente:</p>
+<ol class="arabic simple">
+<li><p>Instalar coreapi: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">coreapi</span></code></p></li>
+<li><p>Crear la ruta de la documentación en API/urls.py:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">API.views.consolaViewset</span> <span class="kn">import</span> <span class="n">ConsolaApiView</span>
+<span class="linenos"> 3</span><span class="c1"># cargamos el modulo de rutas de rest_framework:</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">rest_framework.documentation</span> <span class="kn">import</span> <span class="n">include_docs_urls</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 7</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="n">ConsolaApiView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;consolas&#39;</span><span class="p">),</span>
+<span class="linenos"> 8</span>    <span class="c1"># agregamos la ruta para una consola individual:</span>
+<span class="linenos"> 9</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;consolas/&lt;int:consola&gt;&#39;</span><span class="p">,</span> <span class="n">ConsolaApiView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;consola&#39;</span><span class="p">),</span>
+<span class="linenos">10</span>        <span class="n">path</span><span class="p">(</span><span class="s1">&#39;docs/&#39;</span><span class="p">,</span> <span class="n">include_docs_urls</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Nombre API&#39;</span><span class="p">,</span> <span class="n">public</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="linenos">11</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Se añade a la constante <strong>REST_FRAMEWORK</strong> el siguiente valor en <strong>settings.py</strong>:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DEFAULT_SCHEMA_CLASS&#39;</span><span class="p">:</span> <span class="s1">&#39;rest_framework.schemas.coreapi.AutoSchema&#39;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="autenticacion-con-jwt">
+<h2><a class="toc-backref" href="#id22">Autenticación con JWT</a><a class="headerlink" href="#autenticacion-con-jwt" title="Enlazar permanentemente con este título">#</a></h2>
+<ol class="arabic simple">
+<li><p>Instalar jwt: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">djangorestframework-simplejwt</span></code></p></li>
+<li><p>Se añade a <strong>INSTALLED_APPS</strong> la aplicación simplejwt: <code class="docutils literal notranslate"><span class="pre">'rest_framework_simplejwt'</span></code></p></li>
+<li><p>Se añaden a la constante <strong>REST_FRAMEWORK</strong> los siguientes valores en <strong>settings.py</strong>:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s1">&#39;DEFAULT_PERMISSION_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 3</span>        <span class="s1">&#39;rest_framework.permissions.IsAuthenticated&#39;</span><span class="p">,</span>
+<span class="linenos"> 4</span>    <span class="p">],</span>
+<span class="linenos"> 5</span>    <span class="s1">&#39;DEFAULT_AUTHENTICATION_CLASSES&#39;</span><span class="p">:</span> <span class="p">(</span> <span class="c1"># Este apartado define los metodos de autenticación</span>
+<span class="linenos"> 6</span>        <span class="s1">&#39;rest_framework_simplejwt.authentication.JWTAuthentication&#39;</span><span class="p">,</span> <span class="c1"># este es el método jwt que vamos a usar</span>
+<span class="linenos"> 7</span>        <span class="s1">&#39;rest_framework.authentication.SessionAuthentication&#39;</span><span class="p">,</span> <span class="c1"># este es el método por sesión</span>
+<span class="linenos"> 8</span>        <span class="s1">&#39;rest_framework.authentication.BasicAuthentication&#39;</span><span class="p">,</span> <span class="c1"># y este es el método básico de usuario y contraseña</span>
+<span class="linenos"> 9</span>    <span class="p">),</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Toca añadir las rutas para obtener el token de autenticación en API/urls.py:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">API.views.consolaViewset</span> <span class="kn">import</span> <span class="n">ConsolaApiView</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">rest_framework.documentation</span> <span class="kn">import</span> <span class="n">include_docs_urls</span>
+<span class="linenos"> 4</span><span class="c1"># Se importan los metodos para obtener y refrescar el token:</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">rest_framework_simplejwt.views</span> <span class="kn">import</span> <span class="n">TokenObtainPairView</span><span class="p">,</span> <span class="n">TokenRefreshView</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 8</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="n">ConsolaApiView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;consolas&#39;</span><span class="p">),</span>
+<span class="linenos"> 9</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;consolas/&lt;int:consola&gt;&#39;</span><span class="p">,</span> <span class="n">ConsolaApiView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;consola&#39;</span><span class="p">),</span>
+<span class="linenos">10</span>        <span class="n">path</span><span class="p">(</span><span class="s1">&#39;docs/&#39;</span><span class="p">,</span> <span class="n">include_docs_urls</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Nombre API&#39;</span><span class="p">,</span> <span class="n">public</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+<span class="linenos">11</span>    <span class="c1"># Añadimos la ruta para obtener el token y para refrescarlo:</span>
+<span class="linenos">12</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span> <span class="n">TokenObtainPairView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;token_obtain_pair&#39;</span><span class="p">),</span>
+<span class="linenos">13</span>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;token/refresh/&#39;</span><span class="p">,</span> <span class="n">TokenRefreshView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;token_refresh&#39;</span><span class="p">)</span>
+<span class="linenos">14</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="obtener-un-token">
+<h3><a class="toc-backref" href="#id23">Obtener un Token</a><a class="headerlink" href="#obtener-un-token" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para obtener un Token se hace lo siguiente:
+1. Abrir Postman o Insomnia (u otro cliente API).
+2. Ejecutar una petición <strong>POST</strong> a la ruta <strong>http://127.0.0.1:8000/api/token</strong> con usuario y contraseña:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;pepillo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;maizfrito&quot;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Esto nos devolverá un token por ejemplo:</p></li>
+</ol>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&quot;refresh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0NjA1MzkxNCwiaWF0IjoxNjQ1OTY3NTE0LCJqdGkiOiJmOGVhOWUzNTdhMGU0ZWU4ODU0Y2NiNWE2NTdjOGY1ZiIsInVzZXJfaWQiOjN9.9DvZVyzfZcmB-v9P_mgETFighXz2KjChPc_EslH5X3M&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&quot;access&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1OTY3ODE0LCJpYXQiOjE2NDU5Njc1MTQsImp0aSI6IjBhNmEyNWM2YjVlMDQ4ZjQ5MzQxYzM2MGNlODM2OTdiIiwidXNlcl9pZCI6M30.He7w5XxjCrgeWupFOnGdVH4EusJ5fRZMbY3zkyZetCI&quot;</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Ahora este token «access» se utilizará para todas las operaciones contra la API que requieran autenticación. Solo hay que elegir en la pestaña Auth de Postman la opción Bearer e ingresar el token en cada consulta.</p></li>
+</ol>
+</section>
+<section id="haciendo-una-peticion-contra-la-api-con-jwt">
+<h3><a class="toc-backref" href="#id24">Haciendo una petición contra la API con JWT</a><a class="headerlink" href="#haciendo-una-peticion-contra-la-api-con-jwt" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Ejemplo de uso con Python.</p>
+<p>La petición se podría dividir en dos partes:</p>
+<ol class="arabic simple">
+<li><p>Solicitud de token:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 4</span>    <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="linenos"> 5</span>    <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;*/*&#39;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="p">}</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;{&quot;username&quot;:&quot;misterg@gmail.com&quot;, &quot;password&quot;:&quot;maizfrito&quot;}&#39;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;http://127.0.0.1:8000/api/token&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="linenos">12</span><span class="n">token</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Petición de datos (listado de series):</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Authorization&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Bearer &#39;</span> <span class="o">+</span> <span class="n">token</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;access&#39;</span><span class="p">)</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://127.0.0.1:8000/api/consolas&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="flask.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Microframework: Flask</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="testing.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Testing en Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

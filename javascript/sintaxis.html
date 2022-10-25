@@ -1,0 +1,1738 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sintaxis javascript &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Funciones" href="funciones.html" />
+    <link rel="prev" title="Monitorización en Python" href="../python/monitorizar.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/javascript/sintaxis.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-javascript">
+     Estructura en javascript
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion">
+     Concatenación
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detener-secuenda-de-script">
+     Detener secuenda de script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetos-literales">
+     Objetos literales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-de-errores">
+   Control de errores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+   Programación orientada a objetos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-y-objetos">
+     Clases y objetos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-y-exportar">
+   Importar y exportar
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sintaxis javascript</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-javascript">
+     Estructura en javascript
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion">
+     Concatenación
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detener-secuenda-de-script">
+     Detener secuenda de script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetos-literales">
+     Objetos literales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-de-errores">
+   Control de errores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+   Programación orientada a objetos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-y-objetos">
+     Clases y objetos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-y-exportar">
+   Importar y exportar
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="sintaxis-javascript">
+<h1><a class="toc-backref" href="#id1">Sintaxis javascript</a><a class="headerlink" href="#sintaxis-javascript" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/JavaScript-logo.png"><img alt="Logo JavaScript" class="align-center" src="../_images/JavaScript-logo.png" style="width: 263.0px; height: 263.0px;" /></a>
+<p>Sintáxis básica de JavaScript</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-javascript" id="id1">Sintaxis javascript</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p></li>
+<li><p><a class="reference internal" href="#estructura-en-javascript" id="id6">Estructura en javascript</a></p></li>
+<li><p><a class="reference internal" href="#concatenacion" id="id7">Concatenación</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id8">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id9">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id10">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id11">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id12">Operadores lógicos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id13">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id14">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id15">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id16">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id17">Bucle while</a></p></li>
+<li><p><a class="reference internal" href="#detener-secuenda-de-script" id="id18">Detener secuenda de script</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id19">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arrays" id="id20">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#objetos-literales" id="id21">Objetos literales</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-de-errores" id="id22">Control de errores</a></p></li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id23">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funciones" id="id24">Funciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-orientada-a-objetos" id="id25">Programación orientada a objetos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clases-y-objetos" id="id26">Clases y objetos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id27">Importar y exportar</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Instalación: No se requiere, con un navegador compatible como Chrome o Firefox es suficiente.</p></li>
+<li><p>Extensión de archivos: <strong>.js</strong></p></li>
+</ul>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Comentarios de una sola línea:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// comentario de una sola linea</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comentarios multilínea:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cm">/* Comentario</span>
+<span class="linenos">2</span><span class="cm">multilinea</span>
+<span class="linenos">3</span><span class="cm">en Javascript */</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Datos de entrada y salida a través de la consola y/o el navegador.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Ejecutar ventana emergente:</span><span class="w"></span>
+<span class="linenos">2</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Soy un mensaje emergente&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">// retorno en consola:</span><span class="w"></span>
+<span class="linenos">5</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Mensaje desde consola&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="c1">// Entrada desde ventana emergente:</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="estructura-en-javascript">
+<h3><a class="toc-backref" href="#id6">Estructura en javascript</a><a class="headerlink" href="#estructura-en-javascript" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Código javascript puro:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Ejemplo de carga Javascript cuando todo el DOM está listo:</span><span class="w"></span>
+<span class="linenos">2</span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Soy una alerta JavaScript&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="p">});</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>código javascript junto a HTML:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Soy un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Soy una alerta JavaScript&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="p">});</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos">16</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">17</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Cargar JavaScript en HTML:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Soy un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">13</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="concatenacion">
+<h3><a class="toc-backref" href="#id7">Concatenación</a><a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Concatenación de variables y cadenas se realiza con <strong>+</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Guillermo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1">// Concatenación básica:</span><span class="w"></span>
+<span class="linenos">4</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Te llamas &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1">// uso de templates:</span><span class="w"></span>
+<span class="linenos">7</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`te llamas </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id8">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// declaración y asignación variable global:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">var</span><span class="w"> </span><span class="nx">consola</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;PlayStation&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">// variable local de alcance limitado:</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="kd">let</span><span class="w"> </span><span class="nx">consola</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;PlayStation&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">// tipos:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Cadena de texto&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="kd">var</span><span class="w"> </span><span class="nx">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="kd">var</span><span class="w"> </span><span class="nx">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.25</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="kd">var</span><span class="w"> </span><span class="nx">booleano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>var se utiliza comunmente para declarar variables que se van a usar en cualquier parte del codigo,
+esto implica que pueden suceder posibles errores y conflitos si se agranda el código. Por ello se
+recomienda el uso de let especialmente en funciones y otros ámbitos para limitar su uso en otras partes.</p>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">const</span><span class="w"> </span><span class="nx">nacimiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1987</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id9">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id10">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="kd">var</span><span class="w"> </span><span class="nx">multiplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="kd">var</span><span class="w"> </span><span class="nx">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="kd">var</span><span class="w"> </span><span class="nx">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Incremento y decremento:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Incremento</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">dato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="nx">dato</span><span class="o">++</span><span class="w"></span>
+<span class="linenos">4</span><span class="c1">// decremento:</span><span class="w"></span>
+<span class="linenos">5</span><span class="nx">dato</span><span class="o">--</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="nx">resta</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="nx">multiplicar</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="nx">division</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="nx">resto</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales">
+<h3><a class="toc-backref" href="#id11">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos">
+<h3><a class="toc-backref" href="#id12">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>&amp;&amp;</strong>.</p></li>
+<li><p>or: <strong>||</strong>.</p></li>
+<li><p>not: <strong>!</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id13">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id14">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// variables:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">numA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="kd">var</span><span class="w"> </span><span class="nx">numB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1">// comprobar cual es mayor:</span><span class="w"></span>
+<span class="linenos">6</span><span class="k">if</span><span class="p">(</span><span class="nx">numA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">numB</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número A es mayor que número B&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">8</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// variables:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">var</span><span class="w"> </span><span class="nx">numA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="kd">var</span><span class="w"> </span><span class="nx">numB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// comprobar cual es mayor:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="k">if</span><span class="p">(</span><span class="nx">numA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">numB</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número A es mayor que número B&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número B es mayor que número A&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// variables:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">var</span><span class="w"> </span><span class="nx">numA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="kd">var</span><span class="w"> </span><span class="nx">numB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;15&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">// comprobar cual es mayor:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="k">if</span><span class="p">(</span><span class="nx">numA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">numB</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número A es mayor que número B&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">numA</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">numB</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Son idénticos&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">numA</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">numB</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Son parecidos pero uno es String&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número B es mayor que número A&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>En este ejemplo se observa una === ya que en JavaScript al comparar dos números con == si uno es cadena
+devuelve true la condición, en este caso si quitamos las comillas de numB se cumplirá la condición === que
+está antes.</p>
+</div>
+<ul class="simple">
+<li><p>Operador ternario:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// variables:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">numA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="kd">var</span><span class="w"> </span><span class="nx">numB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1">// comprobar cual es mayor:</span><span class="w"></span>
+<span class="linenos">6</span><span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">numB</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Número A es mayor que número B&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Número B es mayor que número A&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id15">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Estructura de un switch:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">var</span><span class="w"> </span><span class="nx">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// asignamos la variable a evaluar dentro del switch:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="k">switch</span><span class="p">(</span><span class="nx">nota</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="c1">// Vamos asignando casos a evaluar:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">0</span><span class="o">:</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suspenso&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suspenso&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suspenso&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suspenso&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suspenso&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suficiente&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">6</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Aprovado&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">7</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Bien&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">8</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Notable&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">9</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Notable Alto&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">10</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Sobresaliente&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;No reconozco la nota&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">41</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id16">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// introducir un valor:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">tabla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una tabla&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">// recorrer valor e incrementar la tabla</span><span class="w"></span>
+<span class="linenos">5</span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">tabla</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">tabla</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">7</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Array de valores:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MegaDrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GameBoy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Super Nintendo&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">// recorrer valor e incrementar la tabla</span><span class="w"></span>
+<span class="linenos">5</span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">consolas</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Consola: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">consolas</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">7</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id17">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>While sencillo:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span><span class="w"> </span><span class="nx">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">while</span><span class="p">(</span><span class="nx">productos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Productos en stock: º &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">productos</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="nx">productos</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>do-while:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span><span class="w"> </span><span class="nx">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">do</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Quedan: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">productos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; artículos&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="nx">productos</span><span class="w"> </span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="nx">productos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="detener-secuenda-de-script">
+<h3><a class="toc-backref" href="#id18">Detener secuenda de script</a><a class="headerlink" href="#detener-secuenda-de-script" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor es igual a: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Una pausita&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// Rompemos la instrucción.</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fuera del ciclo&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id19">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="arrays">
+<h3><a class="toc-backref" href="#id20">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MegaDrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Saturn&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consolas</span><span class="p">[</span><span class="mf">2</span><span class="p">]);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">var</span><span class="w"> </span><span class="nx">domesticas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MegaDrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Saturn&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">var</span><span class="w"> </span><span class="nx">portatiles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GameBoy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PSP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PS Vita&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kd">var</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">domesticas</span><span class="p">,</span><span class="w"> </span><span class="nx">portatiles</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consolas</span><span class="p">[</span><span class="mf">1</span><span class="p">][</span><span class="mf">2</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1">// nueva portatil:</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="nx">consolas</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;3DS&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consolas</span><span class="p">[</span><span class="mf">1</span><span class="p">][</span><span class="mf">3</span><span class="p">]);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Desestructuración de Arrays:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// array:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MegaDrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Saturn&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">// desestructuración:</span><span class="w"></span>
+<span class="linenos">5</span><span class="kd">var</span><span class="w"> </span><span class="p">[</span><span class="nx">consola1</span><span class="p">,</span><span class="w"> </span><span class="nx">consola2</span><span class="p">,</span><span class="w"> </span><span class="nx">consola3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">consolas</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">consola1</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nx">consola2</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nx">consola3</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="objetos-literales">
+<h3><a class="toc-backref" href="#id21">Objetos literales</a><a class="headerlink" href="#objetos-literales" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">var</span><span class="w"> </span><span class="nx">objeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="s2">&quot;Pepe&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="s2">&quot;apellidos&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;García Gámez&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="s2">&quot;edad&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">27</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="s2">&quot;casado&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="s2">&quot;aficiones&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;golf&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;esquiar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pescar&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">8</span>
+<span class="linenos">9</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">objeto</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">objeto</span><span class="p">.</span><span class="nx">apellidos</span><span class="si">}</span><span class="sb"> tiene </span><span class="si">${</span><span class="nx">objeto</span><span class="p">.</span><span class="nx">edad</span><span class="si">}</span><span class="sb"> años.`</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Recorrer valores en array de objetos:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// lista de consolas:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">var</span><span class="w"> </span><span class="nx">consolas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;lanzamiento&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1994</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PlayStation 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;lanzamiento&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2001</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PSP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;lanzamiento&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2005</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">objeto</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">consolas</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`La videoconsola </span><span class="si">${</span><span class="nx">consolas</span><span class="p">[</span><span class="nx">objeto</span><span class="p">].</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> fue lanzada en </span><span class="si">${</span><span class="nx">consolas</span><span class="p">[</span><span class="nx">objeto</span><span class="p">].</span><span class="nx">lanzamiento</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Desestructuración de objetos:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// objeto:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alfredo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;apellidos&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Lopez Gavilán&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1">// desestructuración:</span><span class="w"></span>
+<span class="linenos">6</span><span class="kd">var</span><span class="w"> </span><span class="p">{</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidos</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">persona</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">apellidos</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="control-de-errores">
+<h2><a class="toc-backref" href="#id22">Control de errores</a><a class="headerlink" href="#control-de-errores" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">boton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;boton&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="c1">// Cremos un error a proposito:</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="nx">boton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()=&gt;{</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Has pulsado&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="linenos">7</span><span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Error al activar listener: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">9</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id23">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="funciones">
+<h3><a class="toc-backref" href="#id24">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Procedimienos:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludo</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funciones:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">saludo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uso de parámetros:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;, tienes &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; años.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">resultado</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="kd">var</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Guillermo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">31</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Parametros REST:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// REST envia un número indefinido de parámetros separados por coma:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">function</span><span class="w"> </span><span class="nx">consolasFavoritas</span><span class="p">(...</span><span class="nx">consolas</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Mis consolas favoritas: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">consolas</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="nx">consolasFavoritas</span><span class="p">(</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MegaDrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GameBoy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GameCube&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Operador SPREAD:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// podemos asignarle el parámetro rest para recibir los valores SPREAD:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">function</span><span class="w"> </span><span class="nx">cocinar</span><span class="p">(</span><span class="nx">ingrediente1</span><span class="p">,</span><span class="w"> </span><span class="nx">ingrediente2</span><span class="p">,</span><span class="w"> </span><span class="nx">ingrediente3</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">otros</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Necesitamos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ingrediente1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ingrediente2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ingrediente3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">otros</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">5</span><span class="c1">// Especias:</span><span class="w"></span>
+<span class="linenos">6</span><span class="kd">var</span><span class="w"> </span><span class="nx">especias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Ajo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; Mezcla cajún&#39;</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="c1">// Y pasarle parámetros SPREAD:</span><span class="w"></span>
+<span class="linenos">9</span><span class="nx">cocinar</span><span class="p">(</span><span class="s2">&quot;Pollo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pan rallado&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;huevos&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">especias</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Funciones anónimas:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Función anónima asignada a una variable:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">var</span><span class="w"> </span><span class="nx">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">nombre</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola de nuevo &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="kd">var</span><span class="w"> </span><span class="nx">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;¿Quíen eres?&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1">// invocamos la función a través de su variable:</span><span class="w"></span>
+<span class="linenos">10</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">(</span><span class="nx">persona</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Arrow Functions:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Creamos una variable y le psamos una función lambda:</span><span class="w"></span>
+<span class="linenos">2</span><span class="kd">var</span><span class="w"> </span><span class="nx">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">nombre</span><span class="p">)=&gt;{</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1">// Inicializamos la variable como una función:</span><span class="w"></span>
+<span class="linenos">7</span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Guillermo&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Callbacks:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// Creamos una función normal a la que le pasamos un callback llamado sumarCB:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">function</span><span class="w"> </span><span class="nx">calcular</span><span class="p">(</span><span class="nx">datoA</span><span class="p">,</span><span class="w"> </span><span class="nx">datoB</span><span class="p">,</span><span class="w"> </span><span class="nx">sumarCB</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datoA</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">datoB</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="c1">// Ejecutamos la función callback pasándole la variable suma:</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nx">sumarCB</span><span class="p">(</span><span class="nx">suma</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1">// Ejecutamos la función calcular y creamos la función callback que recibirá arriba:</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="nx">calcular</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">resultado</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// La función callback imprimirá el valor que recibe de la función anterior:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">});</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="programacion-orientada-a-objetos">
+<h2><a class="toc-backref" href="#id25">Programación orientada a objetos</a><a class="headerlink" href="#programacion-orientada-a-objetos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los elementos de una clase se definen con ámbito <strong>public</strong>, <strong>private</strong> y <strong>protected</strong>.
+Adicionalmente se puede agregar el modificador <strong>static</strong> para poder acceder a los atributos y métodos sin crear un objeto.</p>
+<section id="clases-y-objetos">
+<h3><a class="toc-backref" href="#id26">Clases y objetos</a><a class="headerlink" href="#clases-y-objetos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Estructura clase:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// clase:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kd">class</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// Los atributos se inicializan en el constructor:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="c1">// atributos:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// metodos:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">saberConsola</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Es una </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> que apareció en el año </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Get y Set:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">class</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">saberConsola</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Es una </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> que apareció en el año </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// get y set:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">marca</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">marca</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creación de objeto:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">    </span><span class="c1">// crear objeto:</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">consola</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Consola</span><span class="p">(</span><span class="s2">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1994</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// utilizar un método:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nx">consola</span><span class="p">.</span><span class="nx">saberConsola</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="c1">// asignar nuevo valor:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">consola</span><span class="p">.</span><span class="nx">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Play Station&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="c1">// asignar con set atributo:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">consola</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Nintendo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// devolver un valor con get:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">consola</span><span class="p">.</span><span class="nx">marca</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">consola</span><span class="p">.</span><span class="nx">saberConsola</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Herencia:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">class</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">marca</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="p">,</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lanzamiento</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">saberConsola</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Es una </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> que apareció en el año </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">lanzamiento</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1">// clase hija:</span><span class="w"></span>
+<span class="linenos">14</span><span class="kd">class</span><span class="w"> </span><span class="nx">PlayStation</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Consola</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="kr">constructor</span><span class="p">(...</span><span class="nx">juegosFamosos</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="c1">// pasar atributos al constructor padre usando el superconstructor:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">super</span><span class="p">(</span><span class="s2">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1994</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">juegosFamosos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">juegosFamosos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">saberJuegos</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Los juegos más famosos de </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> son </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">juegosFamosos</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="kd">var</span><span class="w"> </span><span class="nx">playstation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">PlayStation</span><span class="p">(</span><span class="s2">&quot;Metal Gear Solid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tekken&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Final Fantasy&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">28</span><span class="c1">// cargar metodo de la clase hija:</span><span class="w"></span>
+<span class="linenos">29</span><span class="nx">playstation</span><span class="p">.</span><span class="nx">saberJuegos</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">30</span><span class="c1">// cargar metodo de la clase padre:</span><span class="w"></span>
+<span class="linenos">31</span><span class="nx">playstation</span><span class="p">.</span><span class="nx">saberConsola</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="importar-y-exportar">
+<h2><a class="toc-backref" href="#id27">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>En el archivo <strong>HTML</strong> cargar el script principal como un módulo:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Exportar función:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">saludar</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Importar función:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">import</span><span class="w"> </span><span class="nx">saludar</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./saludar.js&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Guillermo&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../python/monitorizar.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Monitorización en Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="funciones.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Funciones</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

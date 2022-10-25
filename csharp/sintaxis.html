@@ -1,0 +1,2205 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sintaxis C# &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Funciones predefinidas" href="funciones.html" />
+    <link rel="prev" title="Sintaxis C" href="../cplus/sintaxis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/csharp/sintaxis.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-c">
+     Estructura en C#
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion">
+     Concatenación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-cli-comandos-de-c">
+     C#-CLI - Comandos de C#
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-de-errores">
+   Control de errores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodos">
+     Métodos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+   Programación orientada a objetos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-y-objetos">
+     Clases y objetos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#herencia">
+   Herencia
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interfaces">
+   Interfaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structs">
+   Structs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enums">
+   Enums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-y-exportar">
+   Importar y exportar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespace">
+     Namespace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sintaxis C#</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-c">
+     Estructura en C#
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion">
+     Concatenación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-cli-comandos-de-c">
+     C#-CLI - Comandos de C#
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-de-errores">
+   Control de errores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodos">
+     Métodos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+   Programación orientada a objetos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-y-objetos">
+     Clases y objetos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#herencia">
+   Herencia
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interfaces">
+   Interfaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structs">
+   Structs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enums">
+   Enums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-y-exportar">
+   Importar y exportar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespace">
+     Namespace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="sintaxis-c">
+<h1><a class="toc-backref" href="#id1">Sintaxis C#</a><a class="headerlink" href="#sintaxis-c" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-csharp.png"><img alt="Logo C#" class="align-center" src="../_images/logo-csharp.png" style="width: 213.60000000000002px; height: 240.0px;" /></a>
+<p>Sintáxis básica de C#</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-c" id="id1">Sintaxis C#</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p></li>
+<li><p><a class="reference internal" href="#estructura-en-c" id="id6">Estructura en C#</a></p></li>
+<li><p><a class="reference internal" href="#concatenacion" id="id7">Concatenación</a></p></li>
+<li><p><a class="reference internal" href="#c-cli-comandos-de-c" id="id8">C#-CLI - Comandos de C#</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id9">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id10">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id11">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id12">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id13">Operadores lógicos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id14">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id15">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id16">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id17">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id18">Bucle while</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id19">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arrays" id="id20">Arrays</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-de-errores" id="id21">Control de errores</a></p></li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id22">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#metodos" id="id23">Métodos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-orientada-a-objetos" id="id24">Programación orientada a objetos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clases-y-objetos" id="id25">Clases y objetos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#herencia" id="id26">Herencia</a></p></li>
+<li><p><a class="reference internal" href="#interfaces" id="id27">Interfaces</a></p></li>
+<li><p><a class="reference internal" href="#structs" id="id28">Structs</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id29">Enums</a></p></li>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id30">Importar y exportar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#namespace" id="id31">Namespace</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul>
+<li><p>Instalación: Mediante Visual Studio o Unity.</p></li>
+<li><dl class="simple">
+<dt>Instalación Visual Studio 2019 Windows:</dt><dd><ul class="simple">
+<li><p>Descargamos la versión comunity</p></li>
+<li><p>En carga de trabajo seleccionamos Desarrollo de escritorio de .NET y Desarrollo de la plataforma universal de Windows</p></li>
+<li><p>En la siguiente pestaña de componentes individuales seleccionamos la opción Herramientas de LINQ to SQL</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Instalación Monodevelop Linux:</dt><dd><ul>
+<li><dl>
+<dt>Para usar el IDE MonoDevelop:</dt><dd><ul class="simple">
+<li><p>Añadir Repositorio:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span><span class="o">//</span><span class="n">keyserver</span><span class="o">.</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">keys</span> <span class="mi">3</span><span class="n">FA7E0328081BFF6A14DA29AA6A19B38D3D831EF</span>
+<span class="linenos">2</span><span class="n">echo</span> <span class="s2">&quot;deb https://download.mono-project.com/repo/ubuntu vs-bionic main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mono</span><span class="o">-</span><span class="n">official</span><span class="o">-</span><span class="n">vs</span><span class="o">.</span><span class="n">list</span>
+<span class="linenos">3</span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="linenos">4</span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span> <span class="n">dirmngr</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Instalar MonoDevelop:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">monodevelop</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Instalar SDK .NET en Linux: <a class="reference external" href="https://dotnet.microsoft.com/download/dotnet/sdk-for-vs-code?utm_source=vs-code&amp;amp;utm_medium=referral&amp;amp;utm_campaign=sdk-install">https://dotnet.microsoft.com/download/dotnet/sdk-for-vs-code?utm_source=vs-code&amp;amp;utm_medium=referral&amp;amp;utm_campaign=sdk-install</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Extensión de archivos: <strong>.cs</strong></p></li>
+</ul>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// comentario de una línea</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="cm">/* Comentario</span>
+<span class="linenos">4</span><span class="cm">multilínea */</span><span class="w"></span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1">/// &lt;summary&gt;</span>
+<span class="linenos">7</span><span class="c1">/// Comentario de documentación XML &lt;/summary&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Datos de entrada y salida a través de la consola y/o el navegador.</p>
+<ul class="simple">
+<li><p>Uso de la clase Console:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="c1">// Salida en consola:</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Mensaje - &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="c1">// Imprimir y saltar de línea:</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Introduce un valor: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="c1">// Leer valor y lo guarda en formato string:</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Escribe tu nombre: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">leerOtroValor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Te llamas {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">leerOtroValor</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">        </span><span class="c1">// Leer valor de consola y guardar en variable en formato ASCII:</span>
+<span class="linenos">15</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">leerValor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El valor introducido es: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">leerValor</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">        </span><span class="c1">// Toma un solo caracter:</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El uso de Console.Read() es muy útil para evitar que se cierre la consola.</p>
+</div>
+</section>
+<section id="estructura-en-c">
+<h3><a class="toc-backref" href="#id6">Estructura en C#</a><a class="headerlink" href="#estructura-en-c" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear proyecto: Abrimos VS y pinchamos en Crear un proyecto, luego elegimos Aplicación de consola (.NET Framework o la opción .NET Core si no esta la primera), cambiamos el nombre del proyecto y creamos.</p></li>
+<li><p>Código C# puro:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">HolaMundo</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola FullCoder!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="concatenacion">
+<h3><a class="toc-backref" href="#id7">Concatenación</a><a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Concatenación de variables y cadenas se realiza con <strong>+</strong></p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Guillermo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">33</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="c1">// uso de +:</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Me llamo &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">&quot; y tengo &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">&quot; años&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="c1">// uso de template:</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Me llamo {0} y tengo {1} años.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="c-cli-comandos-de-c">
+<h3><a class="toc-backref" href="#id8">C#-CLI - Comandos de C#</a><a class="headerlink" href="#c-cli-comandos-de-c" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Al trabajar con C# es poco probable el uso de CLI, así que por ahora se omitirá este apartado.</p>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id9">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Text</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="c1">// declaración:</span>
+<span class="linenos">14</span><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">            </span><span class="c1">// asignación de valores:</span>
+<span class="linenos">18</span><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroEntero</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">comaFlotante</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2.832</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">otroFlotante</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3.2f</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">cadena</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;cadena de texto&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">interruptor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">            </span><span class="c1">// Impresión de valores::</span>
+<span class="linenos">25</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Valor del número: &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">numeroEntero</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">            </span><span class="c1">// dejamos el read abierto para que no se cierre la consola:</span>
+<span class="linenos">28</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">31</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// se declara usando const y además se añade el tipo:</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fechaNacimiento</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1987</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">fechaNacimiento</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id10">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id11">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">operacion</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sumar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">restar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">multiplicar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">dividir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Incremento y decremento:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">valor</span><span class="p">++;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">++</span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">valor</span><span class="p">--;</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">--</span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">-=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">*=</span><span class="w"> </span><span class="m">22</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="p">/=</span><span class="w"> </span><span class="m">11</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales">
+<h3><a class="toc-backref" href="#id12">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos">
+<h3><a class="toc-backref" href="#id13">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>&amp;&amp;</strong>.</p></li>
+<li><p>or: <strong>||</strong>.</p></li>
+<li><p>not: <strong>!</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id14">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id15">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">18</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">11</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Todavía eres menor&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Introduce tu edad: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">leer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">leer</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="m">65</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Eres un anciano&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Eres menor de edad&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if alternativo:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">18</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="m">18</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Eres mayor de edad&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Aparte de este if, existe for, foreach y while que comparten la misma forma de operar.</p>
+</div>
+<ul class="simple">
+<li><p>Operador ternario:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">200</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">mensaje</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">mensaje</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="s">&quot;es una pechá&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;es una mijita&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">mensaje</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id16">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Estructura de un switch:</p>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Introduce un comando: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">operacion</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">operacion</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;saludar&quot;</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola amigo&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;fecha&quot;</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hoy es &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;lenguaje&quot;</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Esta app esta escrita en C#&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Comando no reconocido...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id17">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="p">++)</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El valor de contador es: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">consola</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">videconsolas</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Consola: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">consola</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id18">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>While sencillo:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">&lt;=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El valor de contador es: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">i</span><span class="p">++;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>do-while:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="k">do</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El valor de contador es: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id19">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="arrays">
+<h3><a class="toc-backref" href="#id20">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// declaración array:</span>
+<span class="linenos"> 2</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">videconsolas</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="m">3</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="c1">// creación y asignación:</span>
+<span class="linenos"> 4</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">fechas</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="m">1987</span><span class="p">,</span><span class="w"> </span><span class="m">1983</span><span class="p">,</span><span class="w"> </span><span class="m">1990</span><span class="p">,</span><span class="w"> </span><span class="m">2011</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1">// carga de elementos manual:</span>
+<span class="linenos"> 7</span><span class="n">videconsolas</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Mega Drive&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="n">videconsolas</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Master System&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="n">videconsolas</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Saturn&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1">// Impresión de elementos:</span>
+<span class="linenos">12</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Consola de Tercera generación: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">videconsolas</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">videconsolas</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="m">3</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="c1">// array multidimensional, cuantos más puntos más dimensiones:</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="kt">string</span><span class="p">[,]</span><span class="w"> </span><span class="n">tabla</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[,]</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="p">{</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nombre&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Apellidos&quot;</span><span class="p">,</span><span class="s">&quot;Edad&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="p">{</span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Guillermo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;33&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="p">{</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Eduardo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lopez Martinez&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;34&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="p">{</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alfredo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alferez Albeniz&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;37&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">        </span><span class="c1">// imprimir valores:</span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}: {1}, {2}: {3}, {4}: {5} &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">       </span><span class="c1">// insertar datos:</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">tabla</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;4&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">tabla</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Luna&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="n">tabla</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;García Nuñez&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="n">tabla</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;23&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array Irregular:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="c1">// definición y asignación de espacio en primera dimension:</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">string</span><span class="p">[][]</span><span class="w"> </span><span class="n">valores</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="m">3</span><span class="p">][];</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// en cada dimensión se crea un array:</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">valores</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="m">3</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">valores</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="m">6</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">valores</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="m">8</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">        </span><span class="c1">// inserción de registros:</span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">valores</span><span class="p">[</span><span class="m">0</span><span class="p">][</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Hola amigo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Arrays por parámetros:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="c1">// crear el array:</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// pasar array:</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">sumar</span><span class="p">(</span><span class="n">numeros</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// recibir array por funciones:</span>
+<span class="linenos">13</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">numeros</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="m">0</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="m">1</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Total de la operación: &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="control-de-errores">
+<h2><a class="toc-backref" href="#id21">Control de errores</a><a class="headerlink" href="#control-de-errores" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Por favor introduce un número: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// vamos a evitar caracteres no válidos:</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">try</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="c1">// convertimos el resultado a entero, de modo que si se introduce una letra habrá una excepción:</span>
+<span class="linenos">11</span><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El valor es: &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El valor introducido no es un número.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id22">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
+<p>El paradigma de programación de C# es POO, sin embargo es interesante ver en esta sección como crear métodos y llamarlos desde Main.</p>
+<section id="metodos">
+<h3><a class="toc-backref" href="#id23">Métodos</a><a class="headerlink" href="#metodos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Método void:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// En la clase principal existe un método principal:</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="c1">// ejecutamos el método:</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">Mensaje</span><span class="p">();</span><span class="w"> </span><span class="c1">// para poder llamarlo debe tener acceso static</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// este es un método que no devuelve nada (void):</span>
+<span class="linenos">12</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Mensaje</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Este método devuelve un mensaje&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uso de parámetros:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="c1">// pasamos los parámetros:</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">Sumar</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// se define el tipo de parámetro:</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numUno</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numDos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numUno</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">numDos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El resultado de {0} + {1} es: {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numUno</span><span class="p">,</span><span class="w"> </span><span class="n">numDos</span><span class="p">,</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>retorno de valores:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="c1">// Guardamos la operación en una variable:</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Sumar</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">26</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// Se utiliza string en lugar de void para devolver una cadena:</span>
+<span class="linenos">13</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numUno</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numDos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numUno</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">numDos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="c1">// usamos return y aprovechamos el String.Format en este caso:</span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;El resultado de {0} + {1} es: {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numUno</span><span class="p">,</span><span class="w"> </span><span class="n">numDos</span><span class="p">,</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ámbito global o atributos estáticos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// Los atributos declarados estáticos podemos usarlos en Main:</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// asignamos valores y usamos con el método Sumar:</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">num1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">num2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">73</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Sumar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numUno</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numDos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numUno</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">numDos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;El resultado de {0} + {1} es: {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numUno</span><span class="p">,</span><span class="w"> </span><span class="n">numDos</span><span class="p">,</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="programacion-orientada-a-objetos">
+<h2><a class="toc-backref" href="#id24">Programación orientada a objetos</a><a class="headerlink" href="#programacion-orientada-a-objetos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para crear una clase en Visual Studio hacemos clic derecho sobre el nombre deel proyecto y
+le damos a agregar -&gt; clase. Elegimos una clase en blanco.</p>
+<section id="clases-y-objetos">
+<h3><a class="toc-backref" href="#id25">Clases y objetos</a><a class="headerlink" href="#clases-y-objetos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Estructura clase:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Persona</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// atributos de la clase:</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">        </span><span class="c1">// metodos:</span>
+<span class="linenos">13</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">saludo</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola, soy {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Respecto a los modificadores de acceso existen 4 tipos en C#. Public (acceso total), Private (solo acceso desde misma clase),
+Protected (acceso desde la misma clase e hijas), Internal (acceso desde cualquier clase).</p>
+</div>
+<ul class="simple">
+<li><p>Constructor:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Persona</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">        </span><span class="c1">// el constructor:</span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="c1">// asignar valores a los atributos de clase con this:</span>
+<span class="linenos">15</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">saludo</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola, soy {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Puedes crear varios constructores en una clase que reciban uno o dos parámetros, o todos o ninguno.
+Esto permite que puedas crear objetos con más o menos información.</p>
+</div>
+<ul class="simple">
+<li><p>Get y Set:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Persona</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="c1">// método rápido de asignar get y set:</span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">enfermedades</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">        </span><span class="c1">// Get y set para trabajar con atributos privados:</span>
+<span class="linenos">22</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetDNI</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">dni</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">dni</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetDNI</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">dni</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">saludo</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola, soy {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">37</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Modificar Get y Set de Atributos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// tenemos un atributo declarado vacío:</span>
+<span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="k">get</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="k">set</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="c1">// podemos decirle que si la edad es menor a 18 que ponga 18 siempre o sino la edad nueva:</span>
+<span class="linenos">10</span><span class="w">            </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1">// versión reducida:</span>
+<span class="linenos">15</span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="k">set</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creación de objeto:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="c1">// crear objeto de la clase:</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">guillermo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Guillermo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Granados Gómez&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">33</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// uso de atributo público:</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">guillermo</span><span class="p">.</span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">34</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">        </span><span class="c1">// uso de método público:</span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">guillermo</span><span class="p">.</span><span class="n">saludo</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">        </span><span class="c1">// uso de atributos privados:</span>
+<span class="linenos">15</span><span class="w">        </span><span class="n">guillermo</span><span class="p">.</span><span class="n">SetDNI</span><span class="p">(</span><span class="s">&quot;34234234X&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El DNI: {0}&quot;</span><span class="p">,</span><span class="n">guillermo</span><span class="p">.</span><span class="n">GetDNI</span><span class="p">());</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Destructores:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="c1">// usaremos esta libería para debug:</span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="nn">System.Diagnostics</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Persona</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">apellidos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">edad</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetDNI</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">dni</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">dni</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetDNI</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">dni</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">saludo</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola, soy {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">apellidos</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">        </span><span class="c1">// destructor solo se puede usar desde su clase y solo uno:</span>
+<span class="linenos">37</span><span class="w">        </span><span class="p">~</span><span class="n">Persona</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">            </span><span class="c1">// vamos a imprmir por depurador:</span>
+<span class="linenos">40</span><span class="w">            </span><span class="n">Debug</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Se ha destruido el objeto&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">43</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Los destructores solo se deben usar cuando se va a devolver algún valor.</p>
+</div>
+</section>
+</section>
+<section id="herencia">
+<h2><a class="toc-backref" href="#id26">Herencia</a><a class="headerlink" href="#herencia" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Clase padre:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="c1">// clase padre:</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Vehiculo</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// crear atributos privados con getter y setters:</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">idVehiculo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">        </span><span class="c1">// creamos un constructor por defecto por si no establecemos valores en los parámetros:</span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Vehiculo</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">idVehiculo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">000000</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">marca</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Marca vehículo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">            </span><span class="n">modelo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Modelo del vehículo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">        </span><span class="c1">// constructor parametrizado:</span>
+<span class="linenos">22</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Vehiculo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">idVehiculo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">marca</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">modelo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">        </span><span class="c1">// arrancar el vehiculo:</span>
+<span class="linenos">30</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Arrancar</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El vehículo {0} {1} se ha puesto en marcha&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">modelo</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">36</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Clase hija que hereda:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="c1">// con : le decimos la clase de donde debe heredad:</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Formula</span><span class="p">:</span><span class="n">Vehiculo</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">velocidadMax</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="c1">// podemos usar los métodos del padre sin problemas:</span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Formula</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">idVehiculo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">marca</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">modelo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="c1">// métodos propios de la clase hija:</span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Turbo</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;El {0} {1} ha metido el turbo!&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">modelo</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creando objetos:</p></li>
+</ul>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">Vehiculo</span><span class="w"> </span><span class="n">ford</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vehiculo</span><span class="p">(</span><span class="m">073233</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ford&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mustang&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="n">ford</span><span class="p">.</span><span class="n">Arrancar</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">            </span><span class="n">Formula</span><span class="w"> </span><span class="n">mclaren</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Formula</span><span class="p">(</span><span class="m">234323</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mercedes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;McLaren&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">mclaren</span><span class="p">.</span><span class="n">Arrancar</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">mclaren</span><span class="p">.</span><span class="n">Turbo</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="interfaces">
+<h2><a class="toc-backref" href="#id27">Interfaces</a><a class="headerlink" href="#interfaces" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">interface</span><span class="w"> </span><span class="n">IPersona</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="c1">// definir métodos que tendrán la clase:</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Comer</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="nf">Saludar</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="k">class</span><span class="w"> </span><span class="nc">Gente</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IPersona</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">Gente</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Comer</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} va a comer&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Saludar</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0} dice hola.&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En Visual Studio se puede crear una interfaz haciendo click derecho en
+el nombre del proyecto, agregar y seleccionamos interfaz.</p>
+</div>
+</section>
+<section id="structs">
+<h2><a class="toc-backref" href="#id28">Structs</a><a class="headerlink" href="#structs" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// creamos la estructura en la clase:</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">struct</span><span class="w"> </span><span class="nc">Videoconsola</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="c1">// atributos del struct:</span>
+<span class="linenos">12</span><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">            </span><span class="c1">// constructor:</span>
+<span class="linenos">16</span><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="nf">Videoconsola</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="n">marca</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="n">modelo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">modelo</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">            </span><span class="c1">// metodos del struct:</span>
+<span class="linenos">23</span><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ImprimirMensaje</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;La videoconsola es {0} {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">modelo</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">            </span><span class="c1">// declaramos el struct:</span>
+<span class="linenos">32</span><span class="w">            </span><span class="n">Videoconsola</span><span class="w"> </span><span class="n">megadrive</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="w">            </span><span class="c1">// asignamos valores y se quita el error:</span>
+<span class="linenos">35</span><span class="w">            </span><span class="n">megadrive</span><span class="p">.</span><span class="n">marca</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Sega&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">            </span><span class="n">megadrive</span><span class="p">.</span><span class="n">modelo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Mega Drive&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="w">            </span><span class="c1">// la diferencia con las clases es que hasta que no asignamos valores a los atributos no podemos usar sus métodos:</span>
+<span class="linenos">39</span><span class="w">            </span><span class="n">megadrive</span><span class="p">.</span><span class="n">ImprimirMensaje</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">44</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="enums">
+<h2><a class="toc-backref" href="#id29">Enums</a><a class="headerlink" href="#enums" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span><span class="w"> </span><span class="nn">Tipos</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="c1">// los enum se declaran a nivel de namespace:</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="n">Semana</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">=</span><span class="m">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// podemos reorganizar asignando indices numéricos</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="c1">// asignar un día:</span>
+<span class="linenos">12</span><span class="w">            </span><span class="n">Semana</span><span class="w"> </span><span class="n">lunes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Semana</span><span class="p">.</span><span class="n">L</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="c1">// imprimir valor:</span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">lunes</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">            </span><span class="c1">// imprimir posición:</span>
+<span class="linenos">16</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">Semana</span><span class="p">.</span><span class="n">D</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="importar-y-exportar">
+<h2><a class="toc-backref" href="#id30">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="namespace">
+<h3><a class="toc-backref" href="#id31">Namespace</a><a class="headerlink" href="#namespace" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los namespace o espacios de nombre en C# sirven para organizar sus clases.
+Puedes ver más detalles en su documentación oficial: <a class="reference external" href="https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/namespaces/">https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/namespaces/</a></p>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../cplus/sintaxis.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Sintaxis C</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="funciones.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Funciones predefinidas</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

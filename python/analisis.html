@@ -1,0 +1,1864 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Análisis de datos &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Framework: Django" href="django.html" />
+    <link rel="prev" title="Entornos Virtuales" href="entornos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/python/analisis.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anaconda">
+   Anaconda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter">
+   Jupyter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterlab">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solo-jupyter-notebook">
+     Solo Jupyter Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataframes">
+     DataFrames
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-dataframe-a-partir-de-listado-de-objetos">
+       Crear un DataFrame a partir de Listado de objetos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-dataframe-a-partir-de-archivo-csv">
+       Crear un DataFrame a partir de archivo CSV
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ver-informacion-del-dataframe">
+       Ver información del DataFrame
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#averiguar-dimension-dataframe">
+       Averiguar dimensión dataframe
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ver-los-primeros-registros">
+       Ver los primeros registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ver-los-ultimos-registros">
+       Ver los últimos registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordenar-registros">
+       Ordenar Registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-registros-por-un-valor">
+       Buscar registros por un valor
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-registros-por-multiples-valores">
+       Buscar registros por multiples valores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-registros-que-sean-mayores-o-menores">
+       Buscar registros que sean mayores o menores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-un-registro">
+       Eliminar un registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comprobar-valores-nulos">
+       Comprobar valores nulos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#borrar-registros-con-campos-nulos">
+       Borrar registros con campos nulos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reemplazar-campos-nulos-por-un-valor-por-defecto">
+       Reemplazar campos nulos por un valor por defecto
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series">
+     Series
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#contar-registros">
+       Contar registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordenar-series">
+       Ordenar Series
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexacion-booleana">
+       Indexación booleana
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graficos">
+     Gráficos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipos-de-graficos">
+       Tipos de gráficos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#colores">
+       Colores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mapa-de-colores">
+       Mapa de colores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tamano-del-grafico">
+       Tamaño del gráfico
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexacion">
+     Indexación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elegir-columna-como-indice">
+       Elegir columna como índice
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordenar-indices">
+       Ordenar índices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-grupos-por-su-indice">
+       Buscar grupos por su índice
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hojas-de-calculo">
+     Hojas de cálculo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cargar-datos-desde-hoja-local">
+       Cargar datos desde hoja local
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#guardar-dataframe-en-excel-local">
+       Guardar DataFrame en Excel local
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recorrer-dataframe-con-for">
+     Recorrer dataframe con for
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Análisis de datos</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anaconda">
+   Anaconda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter">
+   Jupyter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterlab">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solo-jupyter-notebook">
+     Solo Jupyter Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataframes">
+     DataFrames
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-dataframe-a-partir-de-listado-de-objetos">
+       Crear un DataFrame a partir de Listado de objetos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-dataframe-a-partir-de-archivo-csv">
+       Crear un DataFrame a partir de archivo CSV
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ver-informacion-del-dataframe">
+       Ver información del DataFrame
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#averiguar-dimension-dataframe">
+       Averiguar dimensión dataframe
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ver-los-primeros-registros">
+       Ver los primeros registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ver-los-ultimos-registros">
+       Ver los últimos registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordenar-registros">
+       Ordenar Registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-registros-por-un-valor">
+       Buscar registros por un valor
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-registros-por-multiples-valores">
+       Buscar registros por multiples valores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-registros-que-sean-mayores-o-menores">
+       Buscar registros que sean mayores o menores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-un-registro">
+       Eliminar un registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comprobar-valores-nulos">
+       Comprobar valores nulos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#borrar-registros-con-campos-nulos">
+       Borrar registros con campos nulos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reemplazar-campos-nulos-por-un-valor-por-defecto">
+       Reemplazar campos nulos por un valor por defecto
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series">
+     Series
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#contar-registros">
+       Contar registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordenar-series">
+       Ordenar Series
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexacion-booleana">
+       Indexación booleana
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graficos">
+     Gráficos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipos-de-graficos">
+       Tipos de gráficos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#colores">
+       Colores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mapa-de-colores">
+       Mapa de colores
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tamano-del-grafico">
+       Tamaño del gráfico
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexacion">
+     Indexación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elegir-columna-como-indice">
+       Elegir columna como índice
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordenar-indices">
+       Ordenar índices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buscar-grupos-por-su-indice">
+       Buscar grupos por su índice
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hojas-de-calculo">
+     Hojas de cálculo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cargar-datos-desde-hoja-local">
+       Cargar datos desde hoja local
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#guardar-dataframe-en-excel-local">
+       Guardar DataFrame en Excel local
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recorrer-dataframe-con-for">
+     Recorrer dataframe con for
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="analisis-de-datos">
+<h1><a class="toc-backref" href="#id1">Análisis de datos</a><a class="headerlink" href="#analisis-de-datos" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-pandas.png"><img alt="Logo Pandas" class="align-center" src="../_images/logo-pandas.png" style="width: 264.0px; height: 352.0px;" /></a>
+<p>Análisis de datos con diferentes tecnologías</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#analisis-de-datos" id="id1">Análisis de datos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#anaconda" id="id2">Anaconda</a></p></li>
+<li><p><a class="reference internal" href="#jupyter" id="id3">Jupyter</a></p>
+<ul>
+<li><p><a class="reference internal" href="#jupyterlab" id="id4">JupyterLab</a></p></li>
+<li><p><a class="reference internal" href="#solo-jupyter-notebook" id="id5">Solo Jupyter Notebook</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#pandas" id="id6">Pandas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dataframes" id="id7">DataFrames</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-dataframe-a-partir-de-listado-de-objetos" id="id8">Crear un DataFrame a partir de Listado de objetos</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-dataframe-a-partir-de-archivo-csv" id="id9">Crear un DataFrame a partir de archivo CSV</a></p></li>
+<li><p><a class="reference internal" href="#ver-informacion-del-dataframe" id="id10">Ver información del DataFrame</a></p></li>
+<li><p><a class="reference internal" href="#averiguar-dimension-dataframe" id="id11">Averiguar dimensión dataframe</a></p></li>
+<li><p><a class="reference internal" href="#ver-los-primeros-registros" id="id12">Ver los primeros registros</a></p></li>
+<li><p><a class="reference internal" href="#ver-los-ultimos-registros" id="id13">Ver los últimos registros</a></p></li>
+<li><p><a class="reference internal" href="#ordenar-registros" id="id14">Ordenar Registros</a></p></li>
+<li><p><a class="reference internal" href="#buscar-registros-por-un-valor" id="id15">Buscar registros por un valor</a></p></li>
+<li><p><a class="reference internal" href="#buscar-registros-por-multiples-valores" id="id16">Buscar registros por multiples valores</a></p></li>
+<li><p><a class="reference internal" href="#buscar-registros-que-sean-mayores-o-menores" id="id17">Buscar registros que sean mayores o menores</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-un-registro" id="id18">Eliminar un registro</a></p></li>
+<li><p><a class="reference internal" href="#comprobar-valores-nulos" id="id19">Comprobar valores nulos</a></p></li>
+<li><p><a class="reference internal" href="#borrar-registros-con-campos-nulos" id="id20">Borrar registros con campos nulos</a></p></li>
+<li><p><a class="reference internal" href="#reemplazar-campos-nulos-por-un-valor-por-defecto" id="id21">Reemplazar campos nulos por un valor por defecto</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#series" id="id22">Series</a></p>
+<ul>
+<li><p><a class="reference internal" href="#contar-registros" id="id23">Contar registros</a></p></li>
+<li><p><a class="reference internal" href="#ordenar-series" id="id24">Ordenar Series</a></p></li>
+<li><p><a class="reference internal" href="#indexacion-booleana" id="id25">Indexación booleana</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#graficos" id="id26">Gráficos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tipos-de-graficos" id="id27">Tipos de gráficos</a></p></li>
+<li><p><a class="reference internal" href="#colores" id="id28">Colores</a></p></li>
+<li><p><a class="reference internal" href="#mapa-de-colores" id="id29">Mapa de colores</a></p></li>
+<li><p><a class="reference internal" href="#tamano-del-grafico" id="id30">Tamaño del gráfico</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#indexacion" id="id31">Indexación</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elegir-columna-como-indice" id="id32">Elegir columna como índice</a></p></li>
+<li><p><a class="reference internal" href="#ordenar-indices" id="id33">Ordenar índices</a></p></li>
+<li><p><a class="reference internal" href="#buscar-grupos-por-su-indice" id="id34">Buscar grupos por su índice</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#hojas-de-calculo" id="id35">Hojas de cálculo</a></p>
+<ul>
+<li><p><a class="reference internal" href="#cargar-datos-desde-hoja-local" id="id36">Cargar datos desde hoja local</a></p></li>
+<li><p><a class="reference internal" href="#guardar-dataframe-en-excel-local" id="id37">Guardar DataFrame en Excel local</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#recorrer-dataframe-con-for" id="id38">Recorrer dataframe con for</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="anaconda">
+<h2><a class="toc-backref" href="#id2">Anaconda</a><a class="headerlink" href="#anaconda" title="Enlazar permanentemente con este título">#</a></h2>
+<ul>
+<li><p>Para instalar Anaconda primero instalamos las siguientes dependencias:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libgl1-mesa-glx</span> <span class="pre">libegl1-mesa</span> <span class="pre">libxrandr2</span> <span class="pre">libxrandr2</span> <span class="pre">libxss1</span> <span class="pre">libxcursor1</span> <span class="pre">libxcomposite1</span> <span class="pre">libasound2</span> <span class="pre">libxi6</span> <span class="pre">libxtst6</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Vamos a <a class="reference external" href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a> descargamos e instalamos.</p></li>
+<li><p>Tras la instalación nos preguntará «Do you wish the installer to initialize Anaconda3 by running conda init?» -&gt; decimos yes.</p></li>
+<li><p>Cerramos la terminal para que se actualicen los cambios.</p></li>
+<li><p>Ejecutamos en terminal: <code class="docutils literal notranslate"><span class="pre">anaconda-navigator</span></code></p></li>
+<li><p>Abrimos Jupyter y podemos trabajar con un cuaderno nuevo.</p></li>
+</ul>
+</section>
+<section id="jupyter">
+<h2><a class="toc-backref" href="#id3">Jupyter</a><a class="headerlink" href="#jupyter" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="jupyterlab">
+<h3><a class="toc-backref" href="#id4">JupyterLab</a><a class="headerlink" href="#jupyterlab" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Si tan solo queremos Jupyter en nuestro equipo podemos instalarlo de la siguiente forma:</p>
+<ul class="simple">
+<li><p>Instalar JupyterLab: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyterlab</span></code></p></li>
+<li><p>Ejecutar desde terminal: <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code></p></li>
+</ul>
+<p>De este modo se abrirá Jupiter lab que contiene una serie de herramientas entre ellas Notebook.</p>
+</section>
+<section id="solo-jupyter-notebook">
+<h3><a class="toc-backref" href="#id5">Solo Jupyter Notebook</a><a class="headerlink" href="#solo-jupyter-notebook" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con esta instalación tendremos tan solo el notebook de jupyter:</p>
+<ul class="simple">
+<li><p>Instalar Jupyter Notebook: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">notebook</span></code></p></li>
+<li><p>Ejecutar Notebook: <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="pandas">
+<h2><a class="toc-backref" href="#id6">Pandas</a><a class="headerlink" href="#pandas" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Pandas es la librería para trabajar con DataFrames.</p>
+<ul class="simple">
+<li><p>Comprobar versión:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Se importa pandas como pd:</span>
+<span class="linenos">2</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># de pd se irá ejecutando las distintas funciones:</span>
+<span class="linenos">5</span><span class="n">pd</span><span class="o">.</span><span class="n">show_versions</span><span class="p">()</span> <span class="c1"># como ver la versión a detalle.</span>
+</pre></div>
+</div>
+<section id="dataframes">
+<h3><a class="toc-backref" href="#id7">DataFrames</a><a class="headerlink" href="#dataframes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los dataframes son conjuntos de datos ordenados por filas y columnas:</p>
+<section id="crear-un-dataframe-a-partir-de-listado-de-objetos">
+<h4><a class="toc-backref" href="#id8">Crear un DataFrame a partir de Listado de objetos</a><a class="headerlink" href="#crear-un-dataframe-a-partir-de-listado-de-objetos" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Creamos un listado con varios diccionarios:</span>
+<span class="linenos"> 4</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 8</span><span class="p">]</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Con esta función se crea un dataframe:</span>
+<span class="linenos">11</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Pandas asocia las keys de cada diccionario como título de columna y cada diccionario es una fila en el DataFrame</p>
+</div>
+</section>
+<section id="crear-un-dataframe-a-partir-de-archivo-csv">
+<h4><a class="toc-backref" href="#id9">Crear un DataFrame a partir de archivo CSV</a><a class="headerlink" href="#crear-un-dataframe-a-partir-de-archivo-csv" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Tenemos el siguiente archivo CSV llamado amigos.csv:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span><span class="p">,</span><span class="n">apellidos</span>
+<span class="n">Alfredo</span><span class="p">,</span><span class="n">Ramirez</span> <span class="n">Alberti</span>
+<span class="n">Laura</span><span class="p">,</span><span class="n">Plutarco</span> <span class="n">Pitágoras</span>
+<span class="n">Ernesto</span><span class="p">,</span><span class="n">Granada</span> <span class="n">Aferez</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lo leemos con Pandas y este lo convierte a DataFrame:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># Ejecutamos la lectura del csv:</span>
+<span class="linenos">4</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;amigos.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede saltar filas añadiendo el parametro skiprows y el valor que queramos
+pd.read_csv(r’amigos.csv”, skiprows=3), esto vale para el resto de funciones read_*.</p>
+</div>
+</section>
+<section id="ver-informacion-del-dataframe">
+<h4><a class="toc-backref" href="#id10">Ver información del DataFrame</a><a class="headerlink" href="#ver-informacion-del-dataframe" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># mostrará una información detallada:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="averiguar-dimension-dataframe">
+<h4><a class="toc-backref" href="#id11">Averiguar dimensión dataframe</a><a class="headerlink" href="#averiguar-dimension-dataframe" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Para averiguar la dimensión de un dataframe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># Se guarda el dataframe:</span>
+<span class="linenos">10</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># Y ahora podemos medir su tamaño:</span>
+<span class="linenos">13</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<p>Esto devuelve 3 filas y 2 columnas.</p>
+</section>
+<section id="ver-los-primeros-registros">
+<h4><a class="toc-backref" href="#id12">Ver los primeros registros</a><a class="headerlink" href="#ver-los-primeros-registros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># ver los 5 primeros:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># ver los primeros que queramos:</span>
+<span class="linenos">15</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="ver-los-ultimos-registros">
+<h4><a class="toc-backref" href="#id13">Ver los últimos registros</a><a class="headerlink" href="#ver-los-ultimos-registros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># ver los 5 últimos:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># ver los últimos que queramos:</span>
+<span class="linenos">15</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="ordenar-registros">
+<h4><a class="toc-backref" href="#id14">Ordenar Registros</a><a class="headerlink" href="#ordenar-registros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Ordenar los registros:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">])</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># Ordenar por varios criterios y en orden descendente:</span>
+<span class="linenos">15</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;apellidos&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="buscar-registros-por-un-valor">
+<h4><a class="toc-backref" href="#id15">Buscar registros por un valor</a><a class="headerlink" href="#buscar-registros-por-un-valor" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Recuperar todos los registros con el nombre alfredo:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="buscar-registros-por-multiples-valores">
+<h4><a class="toc-backref" href="#id16">Buscar registros por multiples valores</a><a class="headerlink" href="#buscar-registros-por-multiples-valores" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Recuperar todos los registros con el nombre alfredo:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="p">[(</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;apellidos&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</section>
+<section id="buscar-registros-que-sean-mayores-o-menores">
+<h4><a class="toc-backref" href="#id17">Buscar registros que sean mayores o menores</a><a class="headerlink" href="#buscar-registros-que-sean-mayores-o-menores" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Recuperar todos los amigos mayores de 20:</span>
+<span class="linenos">11</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Del mismo modo podemos sacar los registros menores a.. con &lt;</p>
+</div>
+</section>
+<section id="eliminar-un-registro">
+<h4><a class="toc-backref" href="#id18">Eliminar un registro</a><a class="headerlink" href="#eliminar-un-registro" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Para eliminar un registro basta con saber su fila:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Recuperar todos los registros con el nombre alfredo:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">tabla_amigos</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="n">tabla_amigos</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos eliminar una columna: <code class="docutils literal notranslate"><span class="pre">tabla_amigos</span> <span class="pre">=</span> <span class="pre">tabla_amigos.drop('apellidos',</span> <span class="pre">axis=1)</span></code></p>
+</div>
+</section>
+<section id="comprobar-valores-nulos">
+<h4><a class="toc-backref" href="#id19">Comprobar valores nulos</a><a class="headerlink" href="#comprobar-valores-nulos" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Averiguar valores nulos:</span>
+<span class="linenos">11</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="borrar-registros-con-campos-nulos">
+<h4><a class="toc-backref" href="#id20">Borrar registros con campos nulos</a><a class="headerlink" href="#borrar-registros-con-campos-nulos" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Eliminar valores que contengan campos nulos:</span>
+<span class="linenos">11</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="reemplazar-campos-nulos-por-un-valor-por-defecto">
+<h4><a class="toc-backref" href="#id21">Reemplazar campos nulos por un valor por defecto</a><a class="headerlink" href="#reemplazar-campos-nulos-por-un-valor-por-defecto" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Rellenar valores nulos con otro valor como 0 o &#39;&#39;:</span>
+<span class="linenos">11</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="series">
+<h3><a class="toc-backref" href="#id22">Series</a><a class="headerlink" href="#series" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las series son definidas en el DataFrame como las columnas de una tabla.</p>
+<ul class="simple">
+<li><p>Si queremos acceder a una columna:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># Se guarda el dataframe:</span>
+<span class="linenos">10</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># se llama a la serie:</span>
+<span class="linenos">13</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># también se puede hacer con notación de punto:</span>
+<span class="linenos">16</span><span class="n">tabla_amigos</span><span class="o">.</span><span class="n">apellidos</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># O las series que queramos a la vez:</span>
+<span class="linenos">19</span><span class="n">tabla_amigos</span><span class="p">[[</span><span class="s1">&#39;nombre&#39;</span><span class="p">,</span><span class="s1">&#39;apellidos&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<section id="contar-registros">
+<h4><a class="toc-backref" href="#id23">Contar registros</a><a class="headerlink" href="#contar-registros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Hará un desglose de cuantas veces se repite cada elemento en una Serie:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="ordenar-series">
+<h4><a class="toc-backref" href="#id24">Ordenar Series</a><a class="headerlink" href="#ordenar-series" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Ordenará una serie de datos:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="indexacion-booleana">
+<h4><a class="toc-backref" href="#id25">Indexación booleana</a><a class="headerlink" href="#indexacion-booleana" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">amigos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Alfredo&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Ramirez Alberti&#39;</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Plutarco Pitágoras&#39;</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ernesto&#39;</span><span class="p">,</span> <span class="s1">&#39;apellidos&#39;</span><span class="p">:</span> <span class="s1">&#39;Granada Aferez&#39;</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_amigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">amigos</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Mostrará la posición de la serie junto a True o False si coincide el valor buscado:</span>
+<span class="linenos">12</span><span class="n">tabla_amigos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Alfredo&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="graficos">
+<h3><a class="toc-backref" href="#id26">Gráficos</a><a class="headerlink" href="#graficos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Ejemplo gráfico estandar:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;tomates&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;lechugas&#39;</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="s1">&#39;zanahorias&#39;</span><span class="p">:</span> <span class="mi">172</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;tomates&#39;</span><span class="p">:</span> <span class="mi">434</span><span class="p">,</span> <span class="s1">&#39;lechugas&#39;</span><span class="p">:</span> <span class="mi">156</span><span class="p">,</span> <span class="s1">&#39;zanahorias&#39;</span><span class="p">:</span> <span class="mi">127</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;tomates&#39;</span><span class="p">:</span> <span class="mi">222</span><span class="p">,</span> <span class="s1">&#39;lechugas&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;zanahorias&#39;</span><span class="p">:</span> <span class="mi">142</span><span class="p">}</span>
+<span class="linenos"> 9</span><span class="p">]</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Imprime un gráfico en Jupyter:</span>
+<span class="linenos">14</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c1"># esto equivale por defecto a tabla_ventas.plot(kind=&#39;line&#39;)</span>
+</pre></div>
+</div>
+<section id="tipos-de-graficos">
+<h4><a class="toc-backref" href="#id27">Tipos de gráficos</a><a class="headerlink" href="#tipos-de-graficos" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Modificando el parámetro <strong>kind</strong> obtendremos distintos gráficos:</p>
+<p>Tenemos el siguiente gráfico:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">10</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>bar: gráfico de barras.</p></li>
+<li><p>barh: barras horizontales.</p></li>
+<li><p>pie: gráfico circular o de queso. Funciona con series. <code class="docutils literal notranslate"><span class="pre">tabla_ventas['beneficio'].plot(kind='pie')</span></code></p></li>
+<li><p>scatter: gráfico de dispersión, requiere valores x e y para poder dispersar.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede ajustar un gráfico con dos valores de referencias por ejemplo en x la cantidad y en Y el beneficio:
+<code class="docutils literal notranslate"><span class="pre">tabla_ventas.plot(kind='bar',</span> <span class="pre">x=&quot;cantidad&quot;,</span> <span class="pre">y=&quot;beneficio&quot;)</span></code></p>
+</div>
+</section>
+<section id="colores">
+<h4><a class="toc-backref" href="#id28">Colores</a><a class="headerlink" href="#colores" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Para personalizar colores en los gráficos le pasamos a plot() el parámetro
+color seguido de un color hexadecimal o referencial:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos"> 7</span><span class="p">]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># ponemos las barras amarillas:</span>
+<span class="linenos">12</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;cantidad&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;beneficio&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="mapa-de-colores">
+<h4><a class="toc-backref" href="#id29">Mapa de colores</a><a class="headerlink" href="#mapa-de-colores" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Se pueden usar varios colores con colormap:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Vamos a usar value_counts() para contear todos los valores de una serie:</span>
+<span class="linenos">16</span><span class="n">tabla_ventas</span><span class="p">[</span><span class="s1">&#39;categoria&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;hot&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="tamano-del-grafico">
+<h4><a class="toc-backref" href="#id30">Tamaño del gráfico</a><a class="headerlink" href="#tamano-del-grafico" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Se puede definir un tamaño de gráfico con figsize:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># ponemos las barras amarillas:</span>
+<span class="linenos">16</span><span class="n">tabla_ventas</span><span class="p">[</span><span class="s1">&#39;categoria&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="indexacion">
+<h3><a class="toc-backref" href="#id31">Indexación</a><a class="headerlink" href="#indexacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La indexación por defecto se establece por fila, pero podemos cambiarla.</p>
+<section id="elegir-columna-como-indice">
+<h4><a class="toc-backref" href="#id32">Elegir columna como índice</a><a class="headerlink" href="#elegir-columna-como-indice" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Se puede elegir una columna que reemplazará los valores de fila:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># cambiamos índice por categoria:</span>
+<span class="linenos">16</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;categoria&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>set_index() solo imprime valores, si queremos que se guarde el nuevo índice tenemos que pasarle el parámetro inplace=True:
+<code class="docutils literal notranslate"><span class="pre">tabla_ventas.set_index('categoria',</span> <span class="pre">inplace=True)</span></code></p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Si hemos guardado los índices podemos resetearlos ejecutando el método:
+<code class="docutils literal notranslate"><span class="pre">tabla_ventas.reset_index(inplace=True)</span></code></p>
+</div>
+</section>
+<section id="ordenar-indices">
+<h4><a class="toc-backref" href="#id33">Ordenar índices</a><a class="headerlink" href="#ordenar-indices" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Los índices nuevos tienen el mismo orden de fila, para cambiarlo usamos sort_index():</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;categoria&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># ordenando por índices:</span>
+<span class="linenos">18</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="n">tabla_ventas</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos ponerlos en orden descendiente le pasamos el parámetro <code class="docutils literal notranslate"><span class="pre">ascending=False</span></code> a sort_index()</p>
+</div>
+</section>
+<section id="buscar-grupos-por-su-indice">
+<h4><a class="toc-backref" href="#id34">Buscar grupos por su índice</a><a class="headerlink" href="#buscar-grupos-por-su-indice" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Al tener un índice personalizado podemos recuperar solo los registros que queramos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">tabla_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;categoria&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># Localizar solo aquellos que sean desayunos:</span>
+<span class="linenos">18</span><span class="n">tabla_ventas</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;desayunos&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="hojas-de-calculo">
+<h3><a class="toc-backref" href="#id35">Hojas de cálculo</a><a class="headerlink" href="#hojas-de-calculo" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="cargar-datos-desde-hoja-local">
+<h4><a class="toc-backref" href="#id36">Cargar datos desde hoja local</a><a class="headerlink" href="#cargar-datos-desde-hoja-local" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Se puede abrir una hoja de calculo estableciendo su ruta y convertirla a DataFrame:</p>
+<ul class="simple">
+<li><p>Tenemos la siguiente hoja llamada amigos.xlsx:</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 44%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Nombre</p></th>
+<th class="head"><p>Apellidos</p></th>
+<th class="head"><p>Edad</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Antonio</p></td>
+<td><p>Flores Caracas</p></td>
+<td><p>23</p></td>
+</tr>
+<tr class="row-odd"><td><p>Laura</p></td>
+<td><p>Salazar Piraña</p></td>
+<td><p>34</p></td>
+</tr>
+<tr class="row-even"><td><p>Iñigo</p></td>
+<td><p>Xavier Aguirre</p></td>
+<td><p>47</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Para generar un DataFrame:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># podemos abrir un excel con pandas:</span>
+<span class="linenos">4</span><span class="n">excel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="s1">&#39;amigos.xlsx&#39;</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># Elegimos la hoja del excel que queremos trabajar:</span>
+<span class="linenos">7</span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">excel</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;Hoja 1&#39;</span><span class="p">)</span>
+<span class="linenos">8</span>
+<span class="linenos">9</span><span class="n">dataframe</span>
+</pre></div>
+</div>
+</section>
+<section id="guardar-dataframe-en-excel-local">
+<h4><a class="toc-backref" href="#id37">Guardar DataFrame en Excel local</a><a class="headerlink" href="#guardar-dataframe-en-excel-local" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">total_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># creamos un archivo excel:</span>
+<span class="linenos">16</span><span class="n">excel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="s1">&#39;ventas_agosto.xlsx&#39;</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># Pasamos el dataframe al excel (archivo excel, nombre hoja, índice si/no):</span>
+<span class="linenos">19</span><span class="n">total_ventas</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">excel</span><span class="p">,</span> <span class="s1">&#39;Agosto 2020&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># con el tercer parametro definimos si queremos añadir nuestro propio indice o no.</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="c1"># guardar el dataframe en el pc:</span>
+<span class="linenos">22</span><span class="n">excel</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="recorrer-dataframe-con-for">
+<h3><a class="toc-backref" href="#id38">Recorrer dataframe con for</a><a class="headerlink" href="#recorrer-dataframe-con-for" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Este es un ejemplo de como convertir un dataframe en JSON:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">ventas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 4</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Zanahorias&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">1280</span><span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Puerros&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Lechugas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;verduras&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 7</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Galletas&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 8</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Cereales&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;desayunos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;Coca cola&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;refrescos&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="p">{</span><span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="s1">&#39;desinfectante&#39;</span><span class="p">,</span> <span class="s1">&#39;categoria&#39;</span><span class="p">:</span> <span class="s1">&#39;limpieza&#39;</span><span class="p">,</span> <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;beneficio&#39;</span><span class="p">:</span> <span class="mi">380</span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">]</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">total_ventas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Preparar un listado:</span>
+<span class="linenos">16</span><span class="n">json_ventas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># recorrer dataframe:</span>
+<span class="linenos">19</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">total_ventas</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+<span class="linenos">20</span>    <span class="c1"># construir formato y añadir:</span>
+<span class="linenos">21</span>    <span class="n">json_ventas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+<span class="linenos">22</span>        <span class="s2">&quot;Producto&quot;</span><span class="p">:</span> <span class="n">total_ventas</span><span class="p">[</span><span class="s2">&quot;producto&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span>
+<span class="linenos">23</span>        <span class="s2">&quot;Categoría&quot;</span><span class="p">:</span> <span class="n">total_ventas</span><span class="p">[</span><span class="s2">&quot;categoria&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span>
+<span class="linenos">24</span>        <span class="s2">&quot;Cantidad&quot;</span><span class="p">:</span> <span class="n">total_ventas</span><span class="p">[</span><span class="s2">&quot;cantidad&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span>
+<span class="linenos">25</span>        <span class="s2">&quot;Beneficio&quot;</span><span class="p">:</span> <span class="n">total_ventas</span><span class="p">[</span><span class="s2">&quot;beneficio&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+<span class="linenos">26</span>    <span class="p">})</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="nb">print</span><span class="p">(</span><span class="n">json_ventas</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="entornos.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Entornos Virtuales</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="django.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Framework: Django</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

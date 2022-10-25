@@ -1,0 +1,1731 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sintaxis C &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Librerías C" href="librerias.html" />
+    <link rel="prev" title="Desarrollo Web" href="../go/web.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/C/sintaxis.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#especificacion-de-formato">
+       Especificación de formato
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-c">
+     Estructura en c
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extension">
+     Extensión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compilacion-y-ejecucion">
+     Compilación y ejecución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detener-secuenda-de-script">
+     Detener secuenda de script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#punteros">
+   Punteros
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enumeradores">
+     Enumeradores
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-datos">
+     Estructura de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manejo-de-archivos">
+   Manejo de Archivos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escritura-de-archivos">
+     Escritura de archivos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lectura-de-archivos">
+     Lectura de archivos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizacion-de-archivos">
+     Actualización de archivos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#empaquetado-y-preprocesamiento">
+   Empaquetado y Preprocesamiento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-paquetes">
+     Crear paquetes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-preprocesador">
+     El preprocesador
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sintaxis C</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#especificacion-de-formato">
+       Especificación de formato
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-c">
+     Estructura en c
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extension">
+     Extensión
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compilacion-y-ejecucion">
+     Compilación y ejecución
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detener-secuenda-de-script">
+     Detener secuenda de script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#punteros">
+   Punteros
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enumeradores">
+     Enumeradores
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-datos">
+     Estructura de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manejo-de-archivos">
+   Manejo de Archivos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escritura-de-archivos">
+     Escritura de archivos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lectura-de-archivos">
+     Lectura de archivos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizacion-de-archivos">
+     Actualización de archivos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#empaquetado-y-preprocesamiento">
+   Empaquetado y Preprocesamiento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-paquetes">
+     Crear paquetes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-preprocesador">
+     El preprocesador
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="sintaxis-c">
+<h1><a class="toc-backref" href="#id1">Sintaxis C</a><a class="headerlink" href="#sintaxis-c" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-c.png"><img alt="Logo C" class="align-center" src="../_images/logo-c.png" style="width: 240.0px; height: 240.0px;" /></a>
+<p>Sintáxis básica de C</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-c" id="id1">Sintaxis C</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#especificacion-de-formato" id="id6">Especificación de formato</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructura-en-c" id="id7">Estructura en c</a></p></li>
+<li><p><a class="reference internal" href="#extension" id="id8">Extensión</a></p></li>
+<li><p><a class="reference internal" href="#compilacion-y-ejecucion" id="id9">Compilación y ejecución</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id10">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id11">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id12">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id13">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id14">Operadores lógicos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id15">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id16">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id17">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id18">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id19">Bucle while</a></p></li>
+<li><p><a class="reference internal" href="#detener-secuenda-de-script" id="id20">Detener secuenda de script</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#punteros" id="id21">Punteros</a></p></li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id22">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arrays" id="id23">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#enumeradores" id="id24">Enumeradores</a></p></li>
+<li><p><a class="reference internal" href="#estructura-de-datos" id="id25">Estructura de datos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id26">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funciones" id="id27">Funciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manejo-de-archivos" id="id28">Manejo de Archivos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#escritura-de-archivos" id="id29">Escritura de archivos</a></p></li>
+<li><p><a class="reference internal" href="#lectura-de-archivos" id="id30">Lectura de archivos</a></p></li>
+<li><p><a class="reference internal" href="#actualizacion-de-archivos" id="id31">Actualización de archivos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#empaquetado-y-preprocesamiento" id="id32">Empaquetado y Preprocesamiento</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-paquetes" id="id33">Crear paquetes</a></p></li>
+<li><p><a class="reference internal" href="#el-preprocesador" id="id34">El preprocesador</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para poder compilar un programa escrito en C debemos instalar un compilador, yo personalmente utilizo en linux GCC y el comando para instalarlo es: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">build-essential</span></code></p>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Comentarios de una sola línea:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// Comentario de una sola línea</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comentarios multilínea:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cm">/* Este comentario</span>
+<span class="linenos">2</span><span class="cm">tiene más de una línea.</span>
+<span class="linenos">3</span><span class="cm">Puede servir para escribir</span>
+<span class="linenos">4</span><span class="cm">un manual u otras cosas.</span>
+<span class="linenos">5</span><span class="cm">*/</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">#</a></h3>
+<p>C utiliza para entrada de datos la función scanf() y para la impresión de estos por consola printf()</p>
+<ul class="simple">
+<li><p>Entrada de datos:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// acompañamos con un printf esta sentencia que solo lleva el tipo de dato y el enlace a la variable:</span>
+<span class="linenos">2</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">edad</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Salida de datos:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Tu edad es de %d años</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="especificacion-de-formato">
+<h4><a class="toc-backref" href="#id6">Especificación de formato</a><a class="headerlink" href="#especificacion-de-formato" title="Enlazar permanentemente con este título">#</a></h4>
+<p>En C existen los especificadores de formato cuya finalidad se da en la entrada o salida de datos para especificar donde va a ir un dato:</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de dato</p></th>
+<th class="head"><p>Denominación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>%d</p></td>
+<td><p>Número Entero (int)</p></td>
+</tr>
+<tr class="row-odd"><td><p>%f</p></td>
+<td><p>Número con decimales (float, decimal)</p></td>
+</tr>
+<tr class="row-even"><td><p>%c</p></td>
+<td><p>Caracter o caracteres (char)</p></td>
+</tr>
+<tr class="row-odd"><td><p>%s</p></td>
+<td><p>Cadenas de texto (string)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="estructura-en-c">
+<h3><a class="toc-backref" href="#id7">Estructura en c</a><a class="headerlink" href="#estructura-en-c" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Código c puro:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// en la primera línea importamos la librería estandar de C:</span>
+<span class="linenos">2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">3</span><span class="c1">// creamos la función principal main que no retorna nada (void):</span>
+<span class="linenos">4</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hola mundo!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// con \n hacemos un salto de línea</span>
+<span class="linenos">6</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Las líneas terminan en ; obligatóriamente.</p>
+</div>
+</section>
+<section id="extension">
+<h3><a class="toc-backref" href="#id8">Extensión</a><a class="headerlink" href="#extension" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La extensión utilizada por los archivos C es c Una vez se compila su extensión pasa a ser h</p>
+</section>
+<section id="compilacion-y-ejecucion">
+<h3><a class="toc-backref" href="#id9">Compilación y ejecución</a><a class="headerlink" href="#compilacion-y-ejecucion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>El comando para compilar un programa en C con <strong>GCC</strong> es <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">-o</span> <span class="pre">nombre</span> <span class="pre">script.c</span></code></p></li>
+<li><p>La compilación nos devolverá un programa llamado hola que ejecutamos en Linux como <code class="docutils literal notranslate"><span class="pre">./hola</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id10">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">27</span><span class="p">;</span><span class="w"> </span><span class="c1">// enteros</span>
+<span class="linenos">5</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11.38</span><span class="p">;</span><span class="w"> </span><span class="c1">// decimales</span>
+<span class="linenos">6</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">preciso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415161820</span><span class="p">;</span><span class="w"> </span><span class="c1">// doble precisión</span>
+<span class="linenos">7</span><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// carácteres, que es de cantidad fija.</span>
+<span class="linenos">8</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">2</span><span class="c1">// definir constante en el archivo:</span>
+<span class="linenos">3</span><span class="cp">#define PI 3.1415</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415</span><span class="p">;</span><span class="w"> </span><span class="c1">// constante de función</span>
+<span class="linenos">7</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id11">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id12">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">sumar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="n">restar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="n">multiplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="n">dividir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">    </span><span class="n">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">54</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">9</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Incremento y decremento:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="o">++</span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="o">--</span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="n">i</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="c1">// la variable debe tener un valor asignado:</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales">
+<h3><a class="toc-backref" href="#id13">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos">
+<h3><a class="toc-backref" href="#id14">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>&amp;&amp;</strong>.</p></li>
+<li><p>or: <strong>||</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id15">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id16">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a 0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">9</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a 0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es distinto a 0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a 0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a 1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es un numero desconocido</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id17">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Estructura de un switch:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="n">a</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a 0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a 1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es desconocido</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id18">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d y hemos acabado</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id19">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>While sencillo:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d y hemos terminado</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>do-while:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">do</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d y hemos terminado</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="detener-secuenda-de-script">
+<h3><a class="toc-backref" href="#id20">Detener secuenda de script</a><a class="headerlink" href="#detener-secuenda-de-script" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a es igual a %d y hemos acabado/n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="punteros">
+<h2><a class="toc-backref" href="#id21">Punteros</a><a class="headerlink" href="#punteros" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Cuando trabajamos con punteros establecemos un enlace con una variable, de modo que por ejemplo
+en el caso de las funciones, al enviar parámetros lo que mandamos es una copia, pero gracias a los punteros
+se puede enviar por parámetros la variable original para modificarla.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="c1">// declarar un puntero:</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr_a</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="c1">// asignar variable a un puntero:</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="n">ptr_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;El valor de a es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// modificar un puntero:</span>
+<span class="linenos">13</span><span class="w">    </span><span class="o">*</span><span class="n">ptr_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;El valor de a es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id22">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="arrays">
+<h3><a class="toc-backref" href="#id23">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">count</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Repetición número %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">count</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="enumeradores">
+<h3><a class="toc-backref" href="#id24">Enumeradores</a><a class="headerlink" href="#enumeradores" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los enumeradores nos sirven para generar un tipo de dato utilizando <code class="docutils literal notranslate"><span class="pre">typedef</span></code> y <code class="docutils literal notranslate"><span class="pre">enum</span></code>, por ejemplo en el ejemplo generamos y usamos un tipo Booleano.</p>
+<p>Ejemplo:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="c1">// creamos el enum y lo llamamos BOOLEAN:</span>
+<span class="linenos"> 3</span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nb">false</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nb">true</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">}</span><span class="w"> </span><span class="n">BOOLEAN</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// creamos una variable de tipo BOOLEAN</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">b_var</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// esta variable solo aceptará los valores true o false</span>
+<span class="linenos">12</span><span class="w">    </span><span class="n">b_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">b_var</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Verdadero</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Falso</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="estructura-de-datos">
+<h3><a class="toc-backref" href="#id25">Estructura de datos</a><a class="headerlink" href="#estructura-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La estructura de datos se genera también con <code class="docutils literal notranslate"><span class="pre">typedef</span></code> junto a <code class="docutils literal notranslate"><span class="pre">struct</span></code></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">inval1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">inval2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">outval</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">}</span><span class="w"> </span><span class="n">MY_DATA</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">MY_DATA</span><span class="w"> </span><span class="o">*</span><span class="n">d</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">d</span><span class="o">-&gt;</span><span class="n">outval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="o">-&gt;</span><span class="n">inval1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="o">-&gt;</span><span class="n">inval2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="n">MY_DATA</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="n">inval1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="n">inval2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="n">add</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma de %d y %d es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">inval1</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">inval2</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">outval</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id26">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="funciones">
+<h3><a class="toc-backref" href="#id27">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Procedimienos:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma de 5 y %d es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funciones:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;La suma de 5 y %d es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manejo-de-archivos">
+<h2><a class="toc-backref" href="#id28">Manejo de Archivos</a><a class="headerlink" href="#manejo-de-archivos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>En C existe la posibilidad de manejar archivos de modo que podemos leer, editar y crear nuevos:</p>
+<section id="escritura-de-archivos">
+<h3><a class="toc-backref" href="#id29">Escritura de archivos</a><a class="headerlink" href="#escritura-de-archivos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para escribir un nuevo archivo desde cero utilizamos el modificador <code class="docutils literal notranslate"><span class="pre">wb</span></code>:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;entrada.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fp</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">48</span><span class="p">;</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">58</span><span class="p">;</span><span class="w"> </span><span class="n">value</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="n">fputc</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Añadir un texto formateado con la función <code class="docutils literal notranslate"><span class="pre">fprintf()</span></code>:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;entrada.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fp</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Esto es un texto.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Esto es otro texto.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="lectura-de-archivos">
+<h3><a class="toc-backref" href="#id30">Lectura de archivos</a><a class="headerlink" href="#lectura-de-archivos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Si queremos leer un archivo usamos el modificador <code class="docutils literal notranslate"><span class="pre">rb</span></code>:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;entrada.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fp</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fgetc</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EOF</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="actualizacion-de-archivos">
+<h3><a class="toc-backref" href="#id31">Actualización de archivos</a><a class="headerlink" href="#actualizacion-de-archivos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para actualizar un archivo existente sin destruir la información que ya posee usaremos el modificador <code class="docutils literal notranslate"><span class="pre">ab</span></code>:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;entrada.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ab&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fp</span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Esto es un texto.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Esto es otro texto.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si ejecutamos este codigo varias veces veremos como se incluyen nuevas líneas a nuestro script.</p>
+</div>
+</section>
+</section>
+<section id="empaquetado-y-preprocesamiento">
+<h2><a class="toc-backref" href="#id32">Empaquetado y Preprocesamiento</a><a class="headerlink" href="#empaquetado-y-preprocesamiento" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="crear-paquetes">
+<h3><a class="toc-backref" href="#id33">Crear paquetes</a><a class="headerlink" href="#crear-paquetes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En C podemos dividir el código y llamarlo en la cabecera</p>
+<ol class="arabic simple">
+<li><p>Tenemos un archivo llamado por ejemplo <code class="docutils literal notranslate"><span class="pre">funcion.c</span></code> que contiene una función específica:</p></li>
+</ol>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="nf">add_valores</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Ahora necesitamos un archivo que exporte la función y lo llamamos <code class="docutils literal notranslate"><span class="pre">funcion.h</span></code>:</p></li>
+</ol>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add_valores</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Y ahora en nuestro archivo principal podemos importar este paquete:</p></li>
+</ol>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">2</span><span class="c1">// llamada del archivo funcion.h:</span>
+<span class="linenos">3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;function.h&quot;</span><span class="cp"></span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;El total es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">add_valores</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">7</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Para compilar este programa ejecutamos <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">-o</span> <span class="pre">miprograma</span> <span class="pre">main.c</span> <span class="pre">function.c</span></code></p>
+</div>
+</section>
+<section id="el-preprocesador">
+<h3><a class="toc-backref" href="#id34">El preprocesador</a><a class="headerlink" href="#el-preprocesador" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El archivo de intercambio que creamos antes llamado <code class="docutils literal notranslate"><span class="pre">funcion.h</span></code> es un archivo de preprocesamiento, podemos saltarnos ese paso y añadir directamente la línea al codigo principal:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">2</span><span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add_valores</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;El total es %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">add_valores</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">6</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Es necesario ejecutar la compilación de ambos al mismo tiempo igualmente</p>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../go/web.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Desarrollo Web</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="librerias.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Librerías C</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

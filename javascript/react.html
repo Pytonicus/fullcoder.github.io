@@ -1,0 +1,2247 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Framework: ReactJS &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Framework: React Native" href="react-native.html" />
+    <link rel="prev" title="Framework: ExpressJS" href="expressjs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/javascript/react.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-react">
+     Instalar React
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herramientas-de-desarrollo">
+     Herramientas de desarrollo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importar-react-desde-cdn">
+     Importar React desde CDN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-proyecto-react">
+     Estructura proyecto React
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparar-app-js">
+     Preparar App.js
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#componentes">
+   Componentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-componente">
+     Crear un componente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-css-del-componente">
+     Crear css del componente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilizar-componente">
+     Utilizar componente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-fragment">
+     Uso de fragment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#props-comunicacion-de-padre-a-hijo">
+     Props: Comunicación de padre a hijo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#enviando-propiedades">
+       Enviando propiedades
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recuperando-propiedades">
+       Recuperando propiedades
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#propiedades-por-defecto-default-props">
+       Propiedades por defecto (default props)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validar-propiedades-proptypes">
+       Validar propiedades (PropTypes)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comunicacion-de-hijo-a-padre">
+     Comunicación de hijo a padre
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jsx">
+   JSX
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imprimir-datos-en-jsx">
+     Imprimir datos en JSX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mostrar-contenido-de-un-objeto">
+     Mostrar contenido de un objeto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicionales-en-jsx">
+     Condicionales en JSX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-simple">
+     Condicional simple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-ternaria">
+     Condicional ternaria
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estilos-y-clases">
+     Estilos y clases
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#anadir-estilos-manualmente-con-style">
+       Añadir estilos manualmente con
+       <strong>
+        style
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-clases-con-classname">
+     uso de clases con className
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recorrer-array-con-map">
+     Recorrer array con map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recorrer-array-de-objetos-con-map">
+     Recorrer array de objetos con map
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eventos-y-hooks">
+   Eventos y Hooks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-eventos">
+     Tipos de Eventos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#portapapeles">
+       PORTAPAPELES
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#teclado">
+       TECLADO
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#raton">
+       RATÓN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#formularios">
+       FORMULARIOS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-eventos">
+     Uso de eventos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eventos-sin-retorno">
+       Eventos sin retorno
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eventos-con-retorno-y-parametros">
+       Eventos con retorno y parámetros
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hooks">
+     Hooks
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#usestate">
+       useState
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#useeffect">
+       useEffect
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#usecontext">
+       useContext
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios-en-react">
+   Formularios en React
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-con-react-router">
+   Rutas con React Router
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-archivo-de-rutas">
+     Crear archivo de rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recibir-parametros-de-una-ruta">
+     Recibir parámetros de una ruta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-navbar-con-navlink">
+     Crear Navbar con NavLink
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Framework: ReactJS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-react">
+     Instalar React
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herramientas-de-desarrollo">
+     Herramientas de desarrollo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importar-react-desde-cdn">
+     Importar React desde CDN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-proyecto-react">
+     Estructura proyecto React
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparar-app-js">
+     Preparar App.js
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#componentes">
+   Componentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-componente">
+     Crear un componente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-css-del-componente">
+     Crear css del componente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilizar-componente">
+     Utilizar componente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-fragment">
+     Uso de fragment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#props-comunicacion-de-padre-a-hijo">
+     Props: Comunicación de padre a hijo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#enviando-propiedades">
+       Enviando propiedades
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recuperando-propiedades">
+       Recuperando propiedades
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#propiedades-por-defecto-default-props">
+       Propiedades por defecto (default props)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validar-propiedades-proptypes">
+       Validar propiedades (PropTypes)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comunicacion-de-hijo-a-padre">
+     Comunicación de hijo a padre
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jsx">
+   JSX
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imprimir-datos-en-jsx">
+     Imprimir datos en JSX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mostrar-contenido-de-un-objeto">
+     Mostrar contenido de un objeto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicionales-en-jsx">
+     Condicionales en JSX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-simple">
+     Condicional simple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-ternaria">
+     Condicional ternaria
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estilos-y-clases">
+     Estilos y clases
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#anadir-estilos-manualmente-con-style">
+       Añadir estilos manualmente con
+       <strong>
+        style
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-clases-con-classname">
+     uso de clases con className
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recorrer-array-con-map">
+     Recorrer array con map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recorrer-array-de-objetos-con-map">
+     Recorrer array de objetos con map
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eventos-y-hooks">
+   Eventos y Hooks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-eventos">
+     Tipos de Eventos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#portapapeles">
+       PORTAPAPELES
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#teclado">
+       TECLADO
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#raton">
+       RATÓN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#formularios">
+       FORMULARIOS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-eventos">
+     Uso de eventos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eventos-sin-retorno">
+       Eventos sin retorno
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eventos-con-retorno-y-parametros">
+       Eventos con retorno y parámetros
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hooks">
+     Hooks
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#usestate">
+       useState
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#useeffect">
+       useEffect
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#usecontext">
+       useContext
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios-en-react">
+   Formularios en React
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-con-react-router">
+   Rutas con React Router
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-archivo-de-rutas">
+     Crear archivo de rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recibir-parametros-de-una-ruta">
+     Recibir parámetros de una ruta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-navbar-con-navlink">
+     Crear Navbar con NavLink
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="framework-reactjs">
+<h1><a class="toc-backref" href="#id1">Framework: ReactJS</a><a class="headerlink" href="#framework-reactjs" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-react.png"><img alt="Logo Angular" class="align-center" src="../_images/logo-react.png" style="width: 420.0px; height: 365.04999999999995px;" /></a>
+<p>Documentación básica de ReactJS</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#framework-reactjs" id="id1">Framework: ReactJS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuraciones" id="id2">Configuraciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalar-react" id="id3">Instalar React</a></p></li>
+<li><p><a class="reference internal" href="#herramientas-de-desarrollo" id="id4">Herramientas de desarrollo</a></p></li>
+<li><p><a class="reference internal" href="#importar-react-desde-cdn" id="id5">Importar React desde CDN</a></p></li>
+<li><p><a class="reference internal" href="#estructura-proyecto-react" id="id6">Estructura proyecto React</a></p></li>
+<li><p><a class="reference internal" href="#preparar-app-js" id="id7">Preparar App.js</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#componentes" id="id8">Componentes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-componente" id="id9">Crear un componente</a></p></li>
+<li><p><a class="reference internal" href="#crear-css-del-componente" id="id10">Crear css del componente</a></p></li>
+<li><p><a class="reference internal" href="#utilizar-componente" id="id11">Utilizar componente</a></p></li>
+<li><p><a class="reference internal" href="#uso-de-fragment" id="id12">Uso de fragment</a></p></li>
+<li><p><a class="reference internal" href="#props-comunicacion-de-padre-a-hijo" id="id13">Props: Comunicación de padre a hijo</a></p>
+<ul>
+<li><p><a class="reference internal" href="#enviando-propiedades" id="id14">Enviando propiedades</a></p></li>
+<li><p><a class="reference internal" href="#recuperando-propiedades" id="id15">Recuperando propiedades</a></p></li>
+<li><p><a class="reference internal" href="#propiedades-por-defecto-default-props" id="id16">Propiedades por defecto (default props)</a></p></li>
+<li><p><a class="reference internal" href="#validar-propiedades-proptypes" id="id17">Validar propiedades (PropTypes)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#comunicacion-de-hijo-a-padre" id="id18">Comunicación de hijo a padre</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#jsx" id="id19">JSX</a></p>
+<ul>
+<li><p><a class="reference internal" href="#imprimir-datos-en-jsx" id="id20">Imprimir datos en JSX</a></p></li>
+<li><p><a class="reference internal" href="#mostrar-contenido-de-un-objeto" id="id21">Mostrar contenido de un objeto</a></p></li>
+<li><p><a class="reference internal" href="#condicionales-en-jsx" id="id22">Condicionales en JSX</a></p></li>
+<li><p><a class="reference internal" href="#condicional-simple" id="id23">Condicional simple</a></p></li>
+<li><p><a class="reference internal" href="#condicional-ternaria" id="id24">Condicional ternaria</a></p></li>
+<li><p><a class="reference internal" href="#estilos-y-clases" id="id25">Estilos y clases</a></p>
+<ul>
+<li><p><a class="reference internal" href="#anadir-estilos-manualmente-con-style" id="id26">Añadir estilos manualmente con <strong>style</strong></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#uso-de-clases-con-classname" id="id27">uso de clases con className</a></p></li>
+<li><p><a class="reference internal" href="#recorrer-array-con-map" id="id28">Recorrer array con map</a></p></li>
+<li><p><a class="reference internal" href="#recorrer-array-de-objetos-con-map" id="id29">Recorrer array de objetos con map</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#eventos-y-hooks" id="id30">Eventos y Hooks</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tipos-de-eventos" id="id31">Tipos de Eventos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#portapapeles" id="id32">PORTAPAPELES</a></p></li>
+<li><p><a class="reference internal" href="#teclado" id="id33">TECLADO</a></p></li>
+<li><p><a class="reference internal" href="#raton" id="id34">RATÓN</a></p></li>
+<li><p><a class="reference internal" href="#formularios" id="id35">FORMULARIOS</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#uso-de-eventos" id="id36">Uso de eventos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eventos-sin-retorno" id="id37">Eventos sin retorno</a></p></li>
+<li><p><a class="reference internal" href="#eventos-con-retorno-y-parametros" id="id38">Eventos con retorno y parámetros</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#hooks" id="id39">Hooks</a></p>
+<ul>
+<li><p><a class="reference internal" href="#usestate" id="id40">useState</a></p></li>
+<li><p><a class="reference internal" href="#useeffect" id="id41">useEffect</a></p></li>
+<li><p><a class="reference internal" href="#usecontext" id="id42">useContext</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#formularios-en-react" id="id43">Formularios en React</a></p></li>
+<li><p><a class="reference internal" href="#rutas-con-react-router" id="id44">Rutas con React Router</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id45">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#crear-archivo-de-rutas" id="id46">Crear archivo de rutas</a></p></li>
+<li><p><a class="reference internal" href="#recibir-parametros-de-una-ruta" id="id47">Recibir parámetros de una ruta</a></p></li>
+<li><p><a class="reference internal" href="#crear-navbar-con-navlink" id="id48">Crear Navbar con NavLink</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="configuraciones">
+<h2><a class="toc-backref" href="#id2">Configuraciones</a><a class="headerlink" href="#configuraciones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalar-react">
+<h3><a class="toc-backref" href="#id3">Instalar React</a><a class="headerlink" href="#instalar-react" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Paso 1: Tener instalado NodeJS desde su página oficial: <a class="reference external" href="https://nodejs.org/es/">https://nodejs.org/es/</a>
+Paso 2: Instalar React con npx desde la carpeta del proyecto: <code class="docutils literal notranslate"><span class="pre">npx</span> <span class="pre">create-react-app</span> <span class="pre">nombre-proyecto</span></code>
+Paso 3: Acceder a la carpeta del proyecto y ejecutarlo: <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">start</span></code>
+Paso 4: Se abre el navegador con la ruta: <code class="docutils literal notranslate"><span class="pre">http://localhost:3000</span></code></p>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>npx viene instalado con npm y es su versión en la nube. De modo que si necesitas un paquete y no deseas instalarlo en tu máquina utiliza npx en lugar de npm.</p>
+</div>
+</section>
+<section id="herramientas-de-desarrollo">
+<h3><a class="toc-backref" href="#id4">Herramientas de desarrollo</a><a class="headerlink" href="#herramientas-de-desarrollo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existen una serie de herramientas útiles que se pueden instalar desde la tienda de tu navegador:</p>
+<ul class="simple">
+<li><p>React Developer Tools</p></li>
+</ul>
+<p>También existe una herramienta muy útil para Visual Studio Code:</p>
+<ul class="simple">
+<li><p>ES7 React/Redux/GraphQL/React-Native snippets</p></li>
+</ul>
+</section>
+<section id="importar-react-desde-cdn">
+<h3><a class="toc-backref" href="#id5">Importar React desde CDN</a><a class="headerlink" href="#importar-react-desde-cdn" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existe la opción de importar react desde un cdn en lugar de crear un proyecto con node:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>&lt;!DOCTYPE html&gt;
+<span class="linenos"> 2</span>&lt;html lang=&quot;en&quot;&gt;
+<span class="linenos"> 3</span>&lt;head&gt;
+<span class="linenos"> 4</span>    &lt;meta charset=&quot;UTF-8&quot;&gt;
+<span class="linenos"> 5</span>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+<span class="linenos"> 6</span>    &lt;title&gt;React prueba&lt;/title&gt;
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>&lt;/head&gt;
+<span class="linenos"> 9</span>&lt;body&gt;
+<span class="linenos">10</span>    &lt;div id=&quot;raiz&quot;&gt;&lt;/div&gt;
+<span class="linenos">11</span>
+<span class="linenos">12</span>    &lt;script crossorigin src=&quot;https://unpkg.com/react@18/umd/react.development.js&quot;&gt;&lt;/script&gt;
+<span class="linenos">13</span>    &lt;script crossorigin src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;
+<span class="linenos">14</span>    &lt;!-- React utiliza babel para poder trabajar con JSX --&gt;
+<span class="linenos">15</span>    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.18.13/babel.min.js&quot;&gt;&lt;/script&gt;
+<span class="linenos">16</span>    &lt;!-- Definimos que el tipo de script será de babel: --&gt;
+<span class="linenos">17</span>    &lt;script type=&quot;text/babel&quot;&gt;
+<span class="linenos">18</span>        const raiz = document.querySelector(&#39;#raiz&#39;);
+<span class="linenos">19</span>        const nombre = &quot;Guillermo&quot;;
+<span class="linenos">20</span>        // Las llaves nos permiten incrustar código JSX:
+<span class="linenos">21</span>        const titulo = &lt;h1&gt;Te llamas {nombre}&lt;/h1&gt;;
+<span class="linenos">22</span>
+<span class="linenos">23</span>        ReactDOM.render(titulo, raiz);
+<span class="linenos">24</span>    &lt;/script&gt;
+<span class="linenos">25</span>&lt;/body&gt;
+<span class="linenos">26</span>&lt;/html&gt;
+</pre></div>
+</div>
+</section>
+<section id="estructura-proyecto-react">
+<h3><a class="toc-backref" href="#id6">Estructura proyecto React</a><a class="headerlink" href="#estructura-proyecto-react" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Carpeta Public: Aquí irá todo los archivos públicos como imágenes, iconos y algún que otro html.</p></li>
+<li><dl class="simple">
+<dt>Carpeta src: aquí viene el contenido del proyecto.</dt><dd><ul>
+<li><p>index.js: Archivo de inicio principal de la aplicación. Tiene su homónimo css disponible para los estilos globales.</p></li>
+<li><p>App.js: Componente principal de la aplicación donde se irán cargando el resto de componentes.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Dentro de src podemos crear la siguiente estructura de subcarpetas basado en Atomic Design:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>common: para componentes que se van a reutilizar en distintos sitios de la aplicación.</p></li>
+<li><p>templates: para componentes que pintan diferentes páginas en la aplicación.</p></li>
+<li><p>Router.js: para los componentes que se relacionan con el enrutamiento (React Router).</p></li>
+<li><p>pages: para los componentes que pintan vistas, dentro de esta carpeta se crean otras subcarpetas para componentes como Index, Login, Shop.. y dentro cada uno de sus componentes de un solo uso.</p></li>
+<li><p>requests: para los archivos que consumen servicios rest.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="preparar-app-js">
+<h3><a class="toc-backref" href="#id7">Preparar App.js</a><a class="headerlink" href="#preparar-app-js" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se borra el contenido de <strong>App.js</strong> y <strong>App.css</strong> dentro de la carpeta src y se edita <strong>App.js</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">Se</span> <span class="n">importa</span> <span class="n">el</span> <span class="n">css</span> <span class="n">si</span> <span class="n">existe</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="o">//</span> <span class="n">se</span> <span class="n">crea</span> <span class="n">una</span> <span class="n">función</span><span class="p">:</span>
+<span class="linenos"> 5</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 6</span><span class="o">//</span> <span class="n">esta</span> <span class="n">función</span> <span class="n">retorna</span> <span class="n">un</span> <span class="n">nodo</span> <span class="n">con</span> <span class="n">todas</span> <span class="n">las</span> <span class="n">etiquetas</span> <span class="n">html</span><span class="p">:</span>
+<span class="linenos"> 7</span><span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 8</span>    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Soy</span> <span class="n">un</span> <span class="n">componente</span> <span class="n">de</span> <span class="n">prueba</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos"> 9</span><span class="p">);</span>
+<span class="linenos">10</span><span class="p">}</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="o">//</span> <span class="n">se</span> <span class="n">exporta</span> <span class="n">el</span> <span class="n">componente</span> <span class="n">como</span> <span class="n">un</span> <span class="n">módulo</span><span class="p">:</span>
+<span class="linenos">13</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><strong>index.js</strong> se queda vinculado como nodo principal hacia el archivo <strong>index.html</strong> el resto irán ligados a <strong>app.js</strong></p>
+</div>
+</section>
+</section>
+<section id="componentes">
+<h2><a class="toc-backref" href="#id8">Componentes</a><a class="headerlink" href="#componentes" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los componentes basados en funciones son los más modernos y recomendados para uso de <strong>hooks</strong>.</p>
+<section id="crear-un-componente">
+<h3><a class="toc-backref" href="#id9">Crear un componente</a><a class="headerlink" href="#crear-un-componente" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Crear un componente: en <strong>src</strong> crear un archivo llamado <strong>Prueba.js</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">se</span> <span class="n">crea</span> <span class="n">una</span> <span class="n">función</span> <span class="n">con</span> <span class="n">el</span> <span class="n">componente</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 3</span>    <span class="o">//</span> <span class="n">el</span> <span class="n">retorno</span> <span class="k">del</span> <span class="n">componente</span> <span class="n">será</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">html</span><span class="p">:</span>
+<span class="linenos"> 4</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 5</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 6</span>            <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Componente</span> <span class="n">de</span> <span class="n">prueba</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos"> 7</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 8</span>    <span class="p">);</span>
+<span class="linenos"> 9</span><span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Por convención el nombre del componente comienza en Mayúscula y el contenido html de return irá siempre envuelto en etiquetas <strong>&lt;div&gt;</strong></p>
+</div>
+</section>
+<section id="crear-css-del-componente">
+<h3><a class="toc-backref" href="#id10">Crear css del componente</a><a class="headerlink" href="#crear-css-del-componente" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Además del css principal de <strong>App.css</strong> cada componente lleva su propio archivo css con el mismo nombre <strong>Prueba.css</strong>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">h1</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="utilizar-componente">
+<h3><a class="toc-backref" href="#id11">Utilizar componente</a><a class="headerlink" href="#utilizar-componente" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para utilizar el componente, es necesario cargarlo en otro componente que este funcionando, actualmente <strong>App.js</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="o">//</span> <span class="n">importar</span> <span class="n">componente</span><span class="p">:</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">Prueba</span> <span class="kn">from</span> <span class="s1">&#39;./Prueba&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 6</span><span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 7</span>    <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 8</span>    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Recuerda</span> <span class="n">usar</span> <span class="n">contenedores</span> <span class="n">div</span> <span class="n">sino</span> <span class="n">dará</span> <span class="n">errores</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos"> 9</span>    <span class="p">{</span><span class="o">/*</span> <span class="n">cargar</span> <span class="n">componente</span> <span class="p">(</span><span class="n">metodo</span> <span class="n">para</span> <span class="n">hacer</span> <span class="n">comentarios</span> <span class="n">en</span> <span class="n">el</span> <span class="k">return</span><span class="p">):</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">10</span>    <span class="o">&lt;</span><span class="n">Prueba</span> <span class="o">/&gt;</span>
+<span class="linenos">11</span>    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">12</span><span class="p">);</span>
+<span class="linenos">13</span><span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="uso-de-fragment">
+<h3><a class="toc-backref" href="#id12">Uso de fragment</a><a class="headerlink" href="#uso-de-fragment" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Fragment te permite cargar varios nodos sin tener que añadir al DOM etiquetas div:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">fragment</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="nn">Prueba</span> <span class="kn">from</span> <span class="s1">&#39;./Prueba&#39;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 7</span><span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 8</span>    <span class="o">&lt;</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos"> 9</span>    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">El</span> <span class="n">tag</span> <span class="n">fragment</span> <span class="n">omite</span> <span class="n">el</span> <span class="n">uso</span> <span class="n">de</span> <span class="n">divs</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos">10</span>    <span class="o">&lt;</span><span class="n">Prueba</span> <span class="o">/&gt;</span>
+<span class="linenos">11</span>    <span class="o">&lt;/</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">12</span><span class="p">);</span>
+<span class="linenos">13</span><span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="props-comunicacion-de-padre-a-hijo">
+<h3><a class="toc-backref" href="#id13">Props: Comunicación de padre a hijo</a><a class="headerlink" href="#props-comunicacion-de-padre-a-hijo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los props permiten enviar datos desde componentes padre a hijos</p>
+<section id="enviando-propiedades">
+<h4><a class="toc-backref" href="#id14">Enviando propiedades</a><a class="headerlink" href="#enviando-propiedades" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Editar el componente padre (en este ejemplo <strong>App.js</strong>):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">Prueba</span> <span class="kn">from</span> <span class="s1">&#39;./Prueba&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 6</span><span class="k">return</span> <span class="p">(</span>
+<span class="linenos"> 7</span>    <span class="o">&lt;</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos"> 8</span>    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Listado</span> <span class="n">de</span> <span class="n">consolas</span><span class="p">:</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos"> 9</span>    <span class="o">&lt;</span><span class="n">Prueba</span> <span class="n">marca</span><span class="o">=</span><span class="s2">&quot;Nintendo&quot;</span> <span class="n">modelo</span><span class="o">=</span><span class="s2">&quot;Wii&quot;</span> <span class="o">/&gt;</span>
+<span class="linenos">10</span>    <span class="o">&lt;</span><span class="n">Prueba</span> <span class="n">marca</span><span class="o">=</span><span class="s2">&quot;Nintendo&quot;</span> <span class="n">modelo</span><span class="o">=</span><span class="s2">&quot;Switch&quot;</span> <span class="o">/&gt;</span>
+<span class="linenos">11</span>    <span class="o">&lt;</span><span class="n">Prueba</span> <span class="n">marca</span><span class="o">=</span><span class="s2">&quot;Nintendo&quot;</span> <span class="n">modelo</span><span class="o">=</span><span class="s2">&quot;Gamecube&quot;</span> <span class="o">/&gt;</span>
+<span class="linenos">12</span>    <span class="o">&lt;/</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">13</span><span class="p">);</span>
+<span class="linenos">14</span><span class="p">}</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperando-propiedades">
+<h4><a class="toc-backref" href="#id15">Recuperando propiedades</a><a class="headerlink" href="#recuperando-propiedades" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Recuperar propiedades en el componente hijo (en este caso <strong>Prueba.js</strong>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="o">//</span> <span class="n">cargar</span> <span class="n">propiedades</span> <span class="p">(</span><span class="n">o</span> <span class="n">bien</span> <span class="n">escribimos</span> <span class="n">props</span> <span class="n">y</span> <span class="n">sacamos</span> <span class="n">props</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">props</span><span class="o">.</span><span class="n">modelo</span> <span class="n">o</span> <span class="n">desestructuramos</span> <span class="n">como</span> <span class="n">en</span> <span class="n">este</span> <span class="n">caso</span><span class="p">):</span>
+<span class="linenos"> 6</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">({</span><span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">}){</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 9</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">10</span>            <span class="p">{</span><span class="o">/*</span> <span class="n">Cargar</span> <span class="n">la</span> <span class="n">información</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">11</span>            <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-</span> <span class="p">{</span><span class="n">marca</span><span class="p">}</span> <span class="p">{</span><span class="n">modelo</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos">12</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">13</span>    <span class="p">);</span>
+<span class="linenos">14</span><span class="p">}</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="propiedades-por-defecto-default-props">
+<h4><a class="toc-backref" href="#id16">Propiedades por defecto (default props)</a><a class="headerlink" href="#propiedades-por-defecto-default-props" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Cuando no se reciben propiedades se pueden establecer algunas por defecto en el componente que completan uno o varios campos no recibidos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">({</span><span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">}){</span>
+<span class="linenos"> 4</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 5</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 6</span>            <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">marca</span><span class="p">}</span> <span class="p">{</span><span class="n">modelo</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="linenos"> 7</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 8</span>    <span class="p">);</span>
+<span class="linenos"> 9</span><span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="o">//</span> <span class="n">si</span> <span class="n">el</span> <span class="n">componente</span> <span class="n">no</span> <span class="n">recibe</span> <span class="n">propiedades</span> <span class="n">añade</span> <span class="n">estas</span><span class="p">:</span>
+<span class="linenos">12</span><span class="n">Prueba</span><span class="o">.</span><span class="n">defaultProps</span> <span class="o">=</span> <span class="p">{</span><span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Genérica&quot;</span><span class="p">,</span> <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;estandar&quot;</span><span class="p">}</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="validar-propiedades-proptypes">
+<h4><a class="toc-backref" href="#id17">Validar propiedades (PropTypes)</a><a class="headerlink" href="#validar-propiedades-proptypes" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Se pueden validar los campos recibidos, de manera que cuando uno no cumpla con el formato establecido nos avise por consola:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">PropTypes</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">PropTypes</span> <span class="kn">from</span> <span class="s1">&#39;prop-types&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">({</span><span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">lanzamiento</span><span class="p">}){</span>
+<span class="linenos"> 6</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 7</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 8</span>            <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">marca</span><span class="p">}</span> <span class="p">{</span><span class="n">modelo</span><span class="p">}</span> <span class="n">de</span> <span class="p">{</span><span class="n">lanzamiento</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="linenos"> 9</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">10</span>    <span class="p">);</span>
+<span class="linenos">11</span><span class="p">}</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="o">//</span> <span class="n">crear</span> <span class="n">validador</span><span class="p">:</span>
+<span class="linenos">14</span><span class="n">Prueba</span><span class="o">.</span><span class="n">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">15</span>    <span class="n">marca</span><span class="p">:</span> <span class="n">PropTypes</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">isRequired</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="n">modelo</span><span class="p">:</span> <span class="n">PropTypes</span><span class="o">.</span><span class="n">string</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="n">lanzamiento</span><span class="p">:</span> <span class="n">PropTypes</span><span class="o">.</span><span class="n">number</span>
+<span class="linenos">18</span><span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="comunicacion-de-hijo-a-padre">
+<h3><a class="toc-backref" href="#id18">Comunicación de hijo a padre</a><a class="headerlink" href="#comunicacion-de-hijo-a-padre" title="Enlazar permanentemente con este título">#</a></h3>
+<ol class="arabic simple">
+<li><p>Desde el componente hijo tenemos lo siguiente:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">el</span> <span class="n">hook</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="p">{</span><span class="n">useState</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="o">//</span> <span class="n">la</span> <span class="n">función</span> <span class="n">recibe</span> <span class="n">un</span> <span class="n">hook</span> <span class="n">con</span> <span class="n">los</span> <span class="n">valores</span><span class="p">:</span>
+<span class="linenos"> 6</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">({</span><span class="n">setJuegos</span><span class="p">}){</span>
+<span class="linenos"> 7</span>    <span class="o">//</span> <span class="n">crear</span> <span class="n">un</span> <span class="n">nuevo</span> <span class="n">hook</span> <span class="n">para</span> <span class="n">cambiar</span> <span class="n">el</span> <span class="n">estado</span> <span class="k">del</span> <span class="n">actual</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="n">const</span> <span class="p">[</span><span class="n">nuevoJuego</span><span class="p">,</span> <span class="n">setNuevoJuego</span><span class="p">]</span> <span class="o">=</span> <span class="n">useState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="o">//</span> <span class="n">el</span> <span class="n">hook</span> <span class="n">tendra</span> <span class="n">un</span> <span class="n">handle</span> <span class="n">para</span> <span class="n">cambiar</span> <span class="n">su</span> <span class="n">estado</span><span class="p">:</span>
+<span class="linenos">11</span>    <span class="n">const</span> <span class="n">handleNuevoJuego</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="linenos">12</span>        <span class="n">setNuevoJuego</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+<span class="linenos">13</span>    <span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="o">//</span> <span class="n">crear</span> <span class="n">un</span> <span class="n">handle</span> <span class="n">que</span> <span class="n">añadira</span> <span class="n">el</span> <span class="n">juego</span> <span class="n">nuevo</span><span class="p">:</span>
+<span class="linenos">16</span>    <span class="n">const</span> <span class="n">handleJuegos</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="linenos">17</span>        <span class="o">//</span> <span class="n">recuerda</span> <span class="n">prevenir</span> <span class="n">refresco</span> <span class="n">de</span> <span class="n">pantalla</span><span class="p">:</span>
+<span class="linenos">18</span>        <span class="n">e</span><span class="o">.</span><span class="n">preventDefault</span><span class="p">();</span>
+<span class="linenos">19</span>        <span class="o">//</span> <span class="n">utilizar</span> <span class="n">el</span> <span class="n">hook</span> <span class="k">del</span> <span class="n">padre</span> <span class="n">para</span> <span class="n">añadir</span> <span class="n">el</span> <span class="n">valor</span> <span class="k">del</span> <span class="n">hook</span> <span class="k">del</span> <span class="n">hijo</span> <span class="n">a</span> <span class="n">una</span> <span class="n">lista</span><span class="p">:</span>
+<span class="linenos">20</span>        <span class="n">setJuegos</span><span class="p">(</span><span class="n">juego</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="n">juego</span><span class="p">,</span> <span class="n">nuevoJuego</span><span class="p">]);</span>
+<span class="linenos">21</span>        <span class="o">//</span> <span class="n">regresar</span> <span class="n">a</span> <span class="n">su</span> <span class="n">estado</span> <span class="n">vacio</span> <span class="n">el</span> <span class="n">hook</span> <span class="k">del</span> <span class="n">hijo</span><span class="p">:</span>
+<span class="linenos">22</span>        <span class="n">setNuevoJuego</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="linenos">23</span>    <span class="p">}</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>    <span class="o">//</span> <span class="n">retornar</span> <span class="n">el</span> <span class="nb">input</span> <span class="n">donde</span> <span class="n">introducir</span> <span class="n">nuevos</span> <span class="n">valores</span><span class="p">:</span>
+<span class="linenos">26</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">27</span>        <span class="o">&lt;</span><span class="n">form</span> <span class="n">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="n">handleJuegos</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="linenos">28</span>            <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="n">value</span><span class="o">=</span><span class="p">{</span><span class="n">nuevoJuego</span><span class="p">}</span> <span class="n">onChange</span><span class="o">=</span><span class="p">{</span><span class="n">handleNuevoJuego</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">29</span>        <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="linenos">30</span>    <span class="p">)</span>
+<span class="linenos">31</span><span class="p">}</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Y desde el padre:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="o">//</span> <span class="n">importar</span> <span class="n">el</span> <span class="n">hook</span><span class="p">:</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="p">{</span><span class="n">useState</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="o">//</span> <span class="n">importar</span> <span class="n">el</span> <span class="n">hijo</span><span class="p">:</span>
+<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">Prueba</span> <span class="kn">from</span> <span class="s1">&#39;./Prueba.js&#39;</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 9</span><span class="o">//</span> <span class="n">tenemos</span> <span class="n">el</span> <span class="n">hook</span> <span class="n">principal</span> <span class="n">con</span> <span class="n">los</span> <span class="n">juegos</span><span class="p">:</span>
+<span class="linenos">10</span><span class="n">const</span> <span class="p">[</span><span class="n">juegos</span><span class="p">,</span> <span class="n">setJuegos</span><span class="p">]</span> <span class="o">=</span> <span class="n">useState</span><span class="p">([</span><span class="s1">&#39;Zelda&#39;</span><span class="p">,</span> <span class="s1">&#39;Mario&#39;</span><span class="p">,</span> <span class="s1">&#39;Yoshi&#39;</span><span class="p">]);</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="o">//</span> <span class="n">en</span> <span class="n">el</span> <span class="k">return</span> <span class="n">añadimos</span> <span class="n">el</span> <span class="n">componente</span> <span class="n">al</span> <span class="n">formulario</span> <span class="n">y</span> <span class="n">le</span> <span class="n">pasamos</span> <span class="n">el</span> <span class="n">hook</span> <span class="n">de</span> <span class="n">juegos</span> <span class="n">haciendo</span> <span class="n">el</span> <span class="n">cambio</span> <span class="n">de</span> <span class="n">estado</span><span class="p">:</span>
+<span class="linenos">13</span><span class="k">return</span><span class="p">(</span>
+<span class="linenos">14</span>    <span class="o">&lt;</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">15</span>    <span class="o">&lt;</span><span class="n">Prueba</span> <span class="n">setJuegos</span><span class="o">=</span><span class="p">{</span><span class="n">setJuegos</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">16</span>    <span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="linenos">17</span>        <span class="p">{</span>
+<span class="linenos">18</span>        <span class="n">juegos</span><span class="o">.</span><span class="n">map</span><span class="p">((</span><span class="n">juego</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="linenos">19</span>            <span class="k">return</span> <span class="o">&lt;</span><span class="n">li</span> <span class="n">key</span><span class="o">=</span><span class="p">{</span><span class="n">index</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="n">juego</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="linenos">20</span>        <span class="p">})</span>
+<span class="linenos">21</span>        <span class="p">}</span>
+<span class="linenos">22</span>    <span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="linenos">23</span>    <span class="o">&lt;/</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">24</span><span class="p">)</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="p">}</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede añadir un valor index en los mapeos para evitar errores de duplicate key</p>
+</div>
+</section>
+</section>
+<section id="jsx">
+<h2><a class="toc-backref" href="#id19">JSX</a><a class="headerlink" href="#jsx" title="Enlazar permanentemente con este título">#</a></h2>
+<p>JSX es una combinación de la sintaxis de javascript con XML, similar a HTML.</p>
+<section id="imprimir-datos-en-jsx">
+<h3><a class="toc-backref" href="#id20">Imprimir datos en JSX</a><a class="headerlink" href="#imprimir-datos-en-jsx" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="o">//</span> <span class="n">cargar</span> <span class="n">propiedades</span> <span class="p">(</span><span class="n">o</span> <span class="n">bien</span> <span class="n">escribimos</span> <span class="n">props</span> <span class="n">y</span> <span class="n">sacamos</span> <span class="n">props</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">props</span><span class="o">.</span><span class="n">modelo</span> <span class="n">o</span> <span class="n">desestructuramos</span> <span class="n">como</span> <span class="n">en</span> <span class="n">este</span> <span class="n">caso</span><span class="p">):</span>
+<span class="linenos"> 4</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 5</span>    <span class="o">//</span> <span class="n">crear</span> <span class="n">una</span> <span class="n">variable</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="n">const</span> <span class="n">consola</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 7</span>        <span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>        <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;DS&quot;</span>
+<span class="linenos"> 9</span>    <span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">12</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">13</span>            <span class="p">{</span><span class="o">/*</span> <span class="n">Cargar</span> <span class="n">la</span> <span class="n">información</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">14</span>            <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-</span> <span class="p">{</span><span class="n">consola</span><span class="o">.</span><span class="n">marca</span><span class="p">}</span> <span class="p">{</span><span class="n">consola</span><span class="o">.</span><span class="n">modelo</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos">15</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">16</span>    <span class="p">);</span>
+<span class="linenos">17</span><span class="p">}</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="mostrar-contenido-de-un-objeto">
+<h3><a class="toc-backref" href="#id21">Mostrar contenido de un objeto</a><a class="headerlink" href="#mostrar-contenido-de-un-objeto" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 4</span>    <span class="n">const</span> <span class="n">consola</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 5</span>        <span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>        <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;DS&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>        <span class="n">lanzamiento</span><span class="p">:</span> <span class="mi">2001</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">11</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">12</span>            <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Ver</span> <span class="n">todos</span> <span class="n">los</span> <span class="n">valores</span> <span class="n">de</span> <span class="n">un</span> <span class="n">objeto</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos">13</span>            <span class="p">{</span><span class="o">/*</span> <span class="n">ver</span> <span class="n">valores</span> <span class="k">del</span> <span class="n">objeto</span> <span class="p">(</span><span class="n">objeto</span><span class="p">,</span> <span class="n">campos</span><span class="p">,</span> <span class="n">cantidad</span> <span class="n">de</span> <span class="n">espacios</span><span class="p">):</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">14</span>            <span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;</span><span class="p">{</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">consola</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">3</span><span class="p">)}</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+<span class="linenos">15</span>            <span class="o">&lt;</span><span class="n">hr</span><span class="o">/&gt;</span>
+<span class="linenos">16</span>            <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Ver</span> <span class="n">solo</span> <span class="n">campos</span> <span class="n">determinados</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos">17</span>            <span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;</span><span class="p">{</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">consola</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">],</span> <span class="mi">5</span><span class="p">)}</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+<span class="linenos">18</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">19</span>    <span class="p">);</span>
+<span class="linenos">20</span><span class="p">}</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="condicionales-en-jsx">
+<h3><a class="toc-backref" href="#id22">Condicionales en JSX</a><a class="headerlink" href="#condicionales-en-jsx" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Si es necesario hacer una validación dentro del return se hace del siguiente modo:</p>
+</section>
+<section id="condicional-simple">
+<h3><a class="toc-backref" href="#id23">Condicional simple</a><a class="headerlink" href="#condicional-simple" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 4</span>    <span class="n">const</span> <span class="n">consola</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 5</span>        <span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>        <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;DS&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>        <span class="n">lanzamiento</span><span class="p">:</span> <span class="mi">2001</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">11</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">12</span>            <span class="p">{</span><span class="n">consola</span><span class="o">.</span><span class="n">marca</span> <span class="o">===</span> <span class="s2">&quot;Nintendo&quot;</span> <span class="o">&amp;&amp;</span>
+<span class="linenos">13</span>                <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">La</span> <span class="n">consola</span> <span class="n">es</span> <span class="n">de</span> <span class="n">Nintendo</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="linenos">14</span>            <span class="p">}</span>
+<span class="linenos">15</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">16</span>    <span class="p">);</span>
+<span class="linenos">17</span><span class="p">}</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-ternaria">
+<h3><a class="toc-backref" href="#id24">Condicional ternaria</a><a class="headerlink" href="#condicional-ternaria" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>import &#39;./Prueba.css&#39;;
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>function Prueba(){
+<span class="linenos"> 4</span>    const consola = {
+<span class="linenos"> 5</span>        marca: &quot;Nintendo&quot;,
+<span class="linenos"> 6</span>        modelo: &quot;DS&quot;,
+<span class="linenos"> 7</span>        lanzamiento: 2001
+<span class="linenos"> 8</span>    }
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    return(
+<span class="linenos">11</span>        &lt;div&gt;
+<span class="linenos">12</span>            {consola.marca === &quot;Nintendo&quot; ? (
+<span class="linenos">13</span>                &lt;p&gt;La consola es de Nintendo&lt;/p&gt;
+<span class="linenos">14</span>            ) : (
+<span class="linenos">15</span>                &lt;p&gt;La consola es otra marca&lt;/p&gt;
+<span class="linenos">16</span>            )}
+<span class="linenos">17</span>        &lt;/div&gt;
+<span class="linenos">18</span>    );
+<span class="linenos">19</span>}
+<span class="linenos">20</span>
+<span class="linenos">21</span>export default Prueba;
+</pre></div>
+</div>
+</section>
+<section id="estilos-y-clases">
+<h3><a class="toc-backref" href="#id25">Estilos y clases</a><a class="headerlink" href="#estilos-y-clases" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="anadir-estilos-manualmente-con-style">
+<h4><a class="toc-backref" href="#id26">Añadir estilos manualmente con <strong>style</strong></a><a class="headerlink" href="#anadir-estilos-manualmente-con-style" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 4</span>    <span class="o">//</span> <span class="n">Utilizar</span> <span class="n">la</span> <span class="n">notación</span> <span class="n">CamelCase</span> <span class="n">en</span> <span class="n">lugar</span> <span class="n">de</span> <span class="n">kebab</span><span class="o">-</span><span class="n">case</span> <span class="n">para</span> <span class="n">estilos</span><span class="p">:</span>
+<span class="linenos"> 5</span>    <span class="n">const</span> <span class="n">estilo</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 6</span>        <span class="n">color</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>        <span class="n">backgroundColor</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">11</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">12</span>            <span class="p">{</span><span class="o">/*</span> <span class="n">cargar</span> <span class="n">datos</span> <span class="n">de</span> <span class="n">estilo</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">13</span>            <span class="o">&lt;</span><span class="n">p</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">estilo</span><span class="p">}</span><span class="o">&gt;</span><span class="n">Nintendo</span> <span class="n">Switch</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="linenos">14</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">15</span>    <span class="p">);</span>
+<span class="linenos">16</span><span class="p">}</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="uso-de-clases-con-classname">
+<h3><a class="toc-backref" href="#id27">uso de clases con className</a><a class="headerlink" href="#uso-de-clases-con-classname" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En JSX se reemplaza el atributo class por className:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>import &#39;./Prueba.css&#39;;
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>function Prueba(){
+<span class="linenos"> 4</span>    const lanzamiento = 2017;
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    return(
+<span class="linenos"> 7</span>        &lt;div&gt;
+<span class="linenos"> 8</span>            {/* implementar clase: */}
+<span class="linenos"> 9</span>            &lt;p className={&quot;switch&quot;}&gt;Nintendo Switch&lt;/p&gt;
+<span class="linenos">10</span>            {/* uso ternario de clases condicionales: */}
+<span class="linenos">11</span>            &lt;p className={lanzamiento ? &#39;showLanzamiento&#39; : &#39;hideLanzamiento&#39;}&gt;Lanzamiento: {lanzamiento}&lt;/p&gt;
+<span class="linenos">12</span>        &lt;/div&gt;
+<span class="linenos">13</span>    );
+<span class="linenos">14</span>}
+<span class="linenos">15</span>
+<span class="linenos">16</span>export default Prueba;
+</pre></div>
+</div>
+</section>
+<section id="recorrer-array-con-map">
+<h3><a class="toc-backref" href="#id28">Recorrer array con map</a><a class="headerlink" href="#recorrer-array-con-map" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 4</span>    <span class="n">const</span> <span class="n">consolas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Nintendo Switch&quot;</span><span class="p">,</span> <span class="s2">&quot;Gameboy&quot;</span><span class="p">,</span> <span class="s2">&quot;Master System&quot;</span><span class="p">,</span> <span class="s2">&quot;Playstation&quot;</span><span class="p">];</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 7</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos"> 8</span>            <span class="p">{</span><span class="o">/*</span> <span class="n">recorrer</span> <span class="n">elementos</span> <span class="n">con</span> <span class="nb">map</span> <span class="p">(</span><span class="n">importante</span> <span class="n">añadir</span> <span class="n">una</span> <span class="n">key</span><span class="p">):</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos"> 9</span>            <span class="o">&lt;</span><span class="n">ol</span><span class="o">&gt;</span>
+<span class="linenos">10</span>                <span class="p">{</span>
+<span class="linenos">11</span>                    <span class="n">consolas</span><span class="o">.</span><span class="n">map</span><span class="p">(</span> <span class="n">consola</span> <span class="o">=&gt;</span><span class="p">{</span>
+<span class="linenos">12</span>                        <span class="k">return</span> <span class="o">&lt;</span><span class="n">li</span> <span class="n">key</span><span class="o">=</span><span class="p">{</span><span class="n">consola</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="n">consola</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="linenos">13</span>                    <span class="p">})</span>
+<span class="linenos">14</span>                <span class="p">}</span>
+<span class="linenos">15</span>            <span class="o">&lt;/</span><span class="n">ol</span><span class="o">&gt;</span>
+<span class="linenos">16</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">17</span>    <span class="p">);</span>
+<span class="linenos">18</span><span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="recorrer-array-de-objetos-con-map">
+<h3><a class="toc-backref" href="#id29">Recorrer array de objetos con map</a><a class="headerlink" href="#recorrer-array-de-objetos-con-map" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="s1">&#39;./Prueba.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">function</span> <span class="n">Prueba</span><span class="p">(){</span>
+<span class="linenos"> 4</span>    <span class="n">const</span> <span class="n">consolas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 5</span>        <span class="p">{</span><span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span> <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;Switch&quot;</span><span class="p">},</span>
+<span class="linenos"> 6</span>        <span class="p">{</span><span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Sega&quot;</span><span class="p">,</span> <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;Master System&quot;</span><span class="p">},</span>
+<span class="linenos"> 7</span>        <span class="p">{</span><span class="n">marca</span><span class="p">:</span> <span class="s2">&quot;Sony&quot;</span><span class="p">,</span> <span class="n">modelo</span><span class="p">:</span> <span class="s2">&quot;PlayStation&quot;</span><span class="p">}</span>
+<span class="linenos"> 8</span>    <span class="p">];</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">11</span>        <span class="n">consolas</span><span class="o">.</span><span class="n">map</span><span class="p">(</span> <span class="n">consola</span> <span class="o">=&gt;</span><span class="p">{</span>
+<span class="linenos">12</span>            <span class="k">return</span><span class="p">(</span>
+<span class="linenos">13</span>                <span class="o">&lt;</span><span class="n">div</span> <span class="n">key</span><span class="o">=</span><span class="p">{</span><span class="n">consola</span><span class="o">.</span><span class="n">modelo</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="linenos">14</span>                    <span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="linenos">15</span>                        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{</span><span class="n">consola</span><span class="o">.</span><span class="n">marca</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="linenos">16</span>                        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{</span><span class="n">consola</span><span class="o">.</span><span class="n">modelo</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="linenos">17</span>                    <span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="linenos">18</span>                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">19</span>            <span class="p">)</span>
+<span class="linenos">20</span>        <span class="p">})</span>
+<span class="linenos">21</span>    <span class="p">);</span>
+<span class="linenos">22</span><span class="p">}</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="n">export</span> <span class="n">default</span> <span class="n">Prueba</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Hemos añadido un segundo return para poder añadir más de una línea de JSX dentro del bucle.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede desestructurar el elemento <strong>consola</strong> en <strong>({marca, modelo})</strong>.</p>
+</div>
+</section>
+</section>
+<section id="eventos-y-hooks">
+<h2><a class="toc-backref" href="#id30">Eventos y Hooks</a><a class="headerlink" href="#eventos-y-hooks" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="tipos-de-eventos">
+<h3><a class="toc-backref" href="#id31">Tipos de Eventos</a><a class="headerlink" href="#tipos-de-eventos" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="portapapeles">
+<h4><a class="toc-backref" href="#id32">PORTAPAPELES</a><a class="headerlink" href="#portapapeles" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>onCopy</p></li>
+<li><p>onCut</p></li>
+<li><p>onPaste</p></li>
+</ul>
+</section>
+<section id="teclado">
+<h4><a class="toc-backref" href="#id33">TECLADO</a><a class="headerlink" href="#teclado" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>onKeyDown</p></li>
+<li><p>onKeyUp</p></li>
+<li><p>onKeyPress</p></li>
+</ul>
+</section>
+<section id="raton">
+<h4><a class="toc-backref" href="#id34">RATÓN</a><a class="headerlink" href="#raton" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>onClick</p></li>
+<li><p>onContextMenu</p></li>
+<li><p>onDoubleClick</p></li>
+<li><p>onDrag</p></li>
+<li><p>onDragEnd</p></li>
+<li><p>onDragEnter</p></li>
+<li><p>onDragExit</p></li>
+<li><p>onDragLeave</p></li>
+<li><p>onDragOver</p></li>
+<li><p>onDragStart</p></li>
+<li><p>onDrop</p></li>
+<li><p>onMouseDown</p></li>
+<li><p>onMouseEnter</p></li>
+<li><p>onMouseLeave</p></li>
+<li><p>onMouseMove</p></li>
+<li><p>onMouseOut</p></li>
+<li><p>onMouseOver</p></li>
+<li><p>onMouseUp</p></li>
+</ul>
+</section>
+<section id="formularios">
+<h4><a class="toc-backref" href="#id35">FORMULARIOS</a><a class="headerlink" href="#formularios" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>onChange</p></li>
+<li><p>onInput</p></li>
+<li><p>onInvalid</p></li>
+<li><p>onReset</p></li>
+<li><p>onSubmit</p></li>
+</ul>
+<p>mas eventos en: <a class="reference external" href="https://es.reactjs.org/docs/events.html">https://es.reactjs.org/docs/events.html</a></p>
+</section>
+</section>
+<section id="uso-de-eventos">
+<h3><a class="toc-backref" href="#id36">Uso de eventos</a><a class="headerlink" href="#uso-de-eventos" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="eventos-sin-retorno">
+<h4><a class="toc-backref" href="#id37">Eventos sin retorno</a><a class="headerlink" href="#eventos-sin-retorno" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>import {Fragment} from &#39;react&#39;;
+<span class="linenos"> 2</span>import &#39;./App.css&#39;;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>function App() {
+<span class="linenos"> 5</span>// función que dispara el evento:
+<span class="linenos"> 6</span>const mensaje = (e) =&gt; {
+<span class="linenos"> 7</span>    // lanzar mensaje con alguna propiedad del botón:
+<span class="linenos"> 8</span>    alert(`se ha pulsado ${e.target.innerText}`);
+<span class="linenos"> 9</span>}
+<span class="linenos">10</span>
+<span class="linenos">11</span>return (
+<span class="linenos">12</span>    &lt;Fragment&gt;
+<span class="linenos">13</span>    {/* botón con el evento click: */}
+<span class="linenos">14</span>    &lt;button onClick={mensaje}&gt;Disparar mensaje de alerta&lt;/button&gt;
+<span class="linenos">15</span>    &lt;/Fragment&gt;
+<span class="linenos">16</span>);
+<span class="linenos">17</span>}
+<span class="linenos">18</span>
+<span class="linenos">19</span>export default App;
+</pre></div>
+</div>
+</section>
+<section id="eventos-con-retorno-y-parametros">
+<h4><a class="toc-backref" href="#id38">Eventos con retorno y parámetros</a><a class="headerlink" href="#eventos-con-retorno-y-parametros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>import {Fragment} from &#39;react&#39;;
+<span class="linenos"> 2</span>import &#39;./App.css&#39;;
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>function App() {
+<span class="linenos"> 5</span>// se recibén en el callback los parámetros:
+<span class="linenos"> 6</span>const consola = (marca, modelo) =&gt; {
+<span class="linenos"> 7</span>    // los eventos que retornan algo también reciben algo:
+<span class="linenos"> 8</span>    return (e) =&gt; {
+<span class="linenos"> 9</span>    // ahora hay dos tipos de parámetros, los que se recibén de la función y el evento que se recibe en este caso en el return:
+<span class="linenos">10</span>
+<span class="linenos">11</span>    // parametros recibidos:
+<span class="linenos">12</span>    alert(`${marca} ${modelo}`);
+<span class="linenos">13</span>    // evento recibido por return:
+<span class="linenos">14</span>    alert(`se ha pulsado ${e.target.innerText}`);
+<span class="linenos">15</span>
+<span class="linenos">16</span>    }
+<span class="linenos">17</span>}
+<span class="linenos">18</span>
+<span class="linenos">19</span>return (
+<span class="linenos">20</span>    &lt;Fragment&gt;
+<span class="linenos">21</span>    {/* el evento recibe la función con los parámetros:: */}
+<span class="linenos">22</span>    &lt;button onClick={consola(&#39;Nintendo&#39;,&#39;Switch&#39;)}&gt;Averiguar videoconsola&lt;/button&gt;
+<span class="linenos">23</span>    &lt;/Fragment&gt;
+<span class="linenos">24</span>);
+<span class="linenos">25</span>}
+<span class="linenos">26</span>
+<span class="linenos">27</span>export default App;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="hooks">
+<h3><a class="toc-backref" href="#id39">Hooks</a><a class="headerlink" href="#hooks" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los hooks se utilizan en React para cambiar el estado de un componente, los más comunes son:</p>
+<section id="usestate">
+<h4><a class="toc-backref" href="#id40">useState</a><a class="headerlink" href="#usestate" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Devuelve un valor con estado y una función para actualizarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>import {Fragment} from &#39;react&#39;;
+<span class="linenos"> 2</span>// importar el hook:
+<span class="linenos"> 3</span>import {useState} from &#39;react&#39;;
+<span class="linenos"> 4</span>import &#39;./App.css&#39;;
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>function App() {
+<span class="linenos"> 7</span>// el elemento consola será un hook con un valor por defecto:
+<span class="linenos"> 8</span>const [consola, setConsola] = useState(&quot;ej. Gameboy&quot;);
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>// a continuación se usará una función que ejecute el cambio de estado:
+<span class="linenos">11</span>const consolaChange = (e) =&gt; {
+<span class="linenos">12</span>    // recuperar el valor del input:
+<span class="linenos">13</span>    setConsola(e.target.value);
+<span class="linenos">14</span>}
+<span class="linenos">15</span>
+<span class="linenos">16</span>return (
+<span class="linenos">17</span>    &lt;Fragment&gt;
+<span class="linenos">18</span>    &lt;h1&gt;¿Cuál es tu videoconsola favorita?&lt;/h1&gt;
+<span class="linenos">19</span>    &lt;input type=&quot;text&quot; onChange={consolaChange} /&gt;
+<span class="linenos">20</span>    &lt;p&gt;Mi videoconsola favorita es: {consola}&lt;/p&gt;
+<span class="linenos">21</span>    &lt;/Fragment&gt;
+<span class="linenos">22</span>);
+<span class="linenos">23</span>}
+<span class="linenos">24</span>
+<span class="linenos">25</span>export default App;
+</pre></div>
+</div>
+</section>
+<section id="useeffect">
+<h4><a class="toc-backref" href="#id41">useEffect</a><a class="headerlink" href="#useeffect" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Realiza la ejecución de código después de renderizar la pantalla. Muy útil para subscribirse a servicios rest:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">se</span> <span class="n">importa</span> <span class="n">useEffect</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="p">{</span><span class="n">useState</span><span class="p">,</span> <span class="n">useEffect</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="o">//</span> <span class="n">se</span> <span class="n">declara</span> <span class="n">el</span> <span class="n">hook</span> <span class="n">tipo</span> <span class="n">useState</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="n">const</span> <span class="p">[</span><span class="n">mensaje</span><span class="p">,</span> <span class="n">setMensaje</span><span class="p">]</span> <span class="o">=</span> <span class="n">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="o">//</span> <span class="n">el</span> <span class="n">código</span> <span class="n">de</span> <span class="n">useEffect</span> <span class="n">se</span> <span class="n">ejecuta</span> <span class="n">una</span> <span class="n">vez</span> <span class="n">renderizado</span> <span class="n">el</span> <span class="n">componente</span><span class="p">:</span>
+<span class="linenos"> 9</span>    <span class="n">useEffect</span><span class="p">(</span>
+<span class="linenos">10</span>        <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="linenos">11</span>            <span class="o">//</span> <span class="n">modificación</span> <span class="n">de</span> <span class="n">estado</span><span class="p">:</span>
+<span class="linenos">12</span>            <span class="n">window</span><span class="o">.</span><span class="n">setTimeout</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+<span class="linenos">13</span>                <span class="n">setMensaje</span><span class="p">(</span><span class="n">mensaje</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+<span class="linenos">14</span>            <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="linenos">15</span>        <span class="p">},</span> <span class="p">[</span><span class="n">mensaje</span><span class="p">]</span> <span class="o">//</span> <span class="n">este</span> <span class="n">valor</span> <span class="n">se</span> <span class="n">dispara</span> <span class="n">cuando</span> <span class="n">detecta</span> <span class="n">un</span> <span class="n">cambio</span> <span class="n">de</span> <span class="n">estado</span>
+<span class="linenos">16</span>    <span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="k">return</span> <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">{</span><span class="n">mensaje</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="linenos">19</span><span class="p">}</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="usecontext">
+<h4><a class="toc-backref" href="#id42">useContext</a><a class="headerlink" href="#usecontext" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Crea un contexto por el que se pueden enviar propiedades a cualquier componente sin tener que enviarlo por parámetros:</p>
+<ol class="arabic simple">
+<li><p>Archivo que recibe el contexto <strong>message.js</strong>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">en</span> <span class="n">el</span> <span class="n">archivo</span> <span class="n">React</span> <span class="n">y</span> <span class="n">el</span> <span class="n">hook</span><span class="p">:</span>
+<span class="linenos">2</span><span class="kn">import</span> <span class="nn">React</span><span class="o">,</span> <span class="p">{</span><span class="n">useContext</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos">3</span><span class="o">//</span> <span class="n">crear</span> <span class="n">un</span> <span class="n">mensaje</span><span class="p">:</span>
+<span class="linenos">4</span><span class="n">const</span> <span class="n">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Mensaje genérico&quot;</span><span class="p">;</span>
+<span class="linenos">5</span><span class="o">//</span> <span class="n">cargar</span> <span class="n">en</span> <span class="n">el</span> <span class="n">contexto</span> <span class="n">de</span> <span class="n">React</span><span class="p">:</span>
+<span class="linenos">6</span><span class="n">const</span> <span class="n">MensajeContext</span> <span class="o">=</span> <span class="n">React</span><span class="o">.</span><span class="n">createContext</span><span class="p">(</span><span class="n">mensaje</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Uso del contexto:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos">2</span><span class="o">//</span> <span class="n">utilizar</span> <span class="n">el</span> <span class="n">context</span> <span class="n">sin</span> <span class="n">necesidad</span> <span class="n">de</span> <span class="n">hacer</span> <span class="n">nada</span> <span class="n">mas</span><span class="p">:</span>
+<span class="linenos">3</span><span class="n">const</span> <span class="n">mensaje</span> <span class="o">=</span> <span class="n">useContext</span><span class="p">(</span><span class="n">MensajeContext</span><span class="p">);</span>
+<span class="linenos">4</span><span class="k">return</span> <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">{</span><span class="n">mensaje</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="linenos">5</span><span class="p">}</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="formularios-en-react">
+<h2><a class="toc-backref" href="#id43">Formularios en React</a><a class="headerlink" href="#formularios-en-react" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Combinando el uso de eventos y hooks se preparan los formularios</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="o">//</span> <span class="n">importar</span> <span class="n">el</span> <span class="n">hook</span><span class="p">:</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="p">{</span><span class="n">useState</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 7</span><span class="o">//</span> <span class="n">crear</span> <span class="n">los</span> <span class="n">hooks</span> <span class="n">para</span> <span class="n">el</span> <span class="n">usuario</span> <span class="n">y</span> <span class="n">contraseña</span><span class="p">:</span>
+<span class="linenos"> 8</span><span class="n">const</span> <span class="p">[</span><span class="n">usuario</span><span class="p">,</span> <span class="n">setUsuario</span><span class="p">]</span> <span class="o">=</span> <span class="n">useState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="n">const</span> <span class="p">[</span><span class="n">password</span><span class="p">,</span> <span class="n">setPassword</span><span class="p">]</span> <span class="o">=</span> <span class="n">useState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="o">//</span> <span class="n">cuando</span> <span class="n">escribimos</span> <span class="n">en</span> <span class="n">el</span> <span class="n">campo</span> <span class="n">se</span> <span class="n">irá</span> <span class="n">cambiando</span> <span class="n">su</span> <span class="n">estado</span><span class="p">:</span>
+<span class="linenos">12</span><span class="n">const</span> <span class="n">handleUsuario</span> <span class="o">=</span> <span class="p">(</span><span class="n">evento</span><span class="p">)</span> <span class="o">=&gt;</span><span class="p">{</span>
+<span class="linenos">13</span>    <span class="o">//</span> <span class="n">se</span> <span class="n">recupera</span> <span class="n">el</span> <span class="n">evento</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="n">setUsuario</span><span class="p">(</span><span class="n">evento</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+<span class="linenos">15</span>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">evento</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+<span class="linenos">16</span><span class="p">}</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="n">const</span> <span class="n">handlePassword</span> <span class="o">=</span> <span class="p">(</span><span class="n">evento</span><span class="p">)</span> <span class="o">=&gt;</span><span class="p">{</span>
+<span class="linenos">19</span>    <span class="o">//</span> <span class="n">se</span> <span class="n">recupera</span> <span class="n">el</span> <span class="n">evento</span><span class="p">:</span>
+<span class="linenos">20</span>    <span class="n">setPassword</span><span class="p">(</span><span class="n">evento</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+<span class="linenos">21</span><span class="p">}</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="o">//</span> <span class="n">Ejecutamos</span> <span class="n">esta</span> <span class="n">acción</span> <span class="n">al</span> <span class="n">hacer</span> <span class="n">login</span><span class="p">:</span>
+<span class="linenos">24</span><span class="n">const</span> <span class="n">login</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">=&gt;</span><span class="p">{</span>
+<span class="linenos">25</span>    <span class="o">//</span> <span class="n">para</span> <span class="n">prevenir</span> <span class="n">que</span> <span class="n">refresque</span> <span class="n">por</span> <span class="n">defecto</span> <span class="n">la</span> <span class="n">página</span><span class="p">:</span>
+<span class="linenos">26</span>    <span class="n">e</span><span class="o">.</span><span class="n">preventDefault</span><span class="p">();</span>
+<span class="linenos">27</span>    <span class="k">if</span><span class="p">(</span><span class="n">usuario</span> <span class="o">===</span> <span class="s1">&#39;guillermo&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">password</span> <span class="o">===</span> <span class="s2">&quot;1234&quot;</span><span class="p">){</span>
+<span class="linenos">28</span>    <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;Sesión iniciada correctamente&quot;</span><span class="p">);</span>
+<span class="linenos">29</span>    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">30</span>    <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;Error al iniciar sesión&quot;</span><span class="p">);</span>
+<span class="linenos">31</span>    <span class="p">}</span>
+<span class="linenos">32</span><span class="p">}</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="k">return</span> <span class="p">(</span>
+<span class="linenos">35</span>    <span class="o">&lt;&gt;</span>
+<span class="linenos">36</span>    <span class="o">&lt;</span><span class="n">form</span> <span class="n">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="n">login</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="linenos">37</span>        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Usuario&quot;</span> <span class="n">onChange</span><span class="o">=</span><span class="p">{</span><span class="n">handleUsuario</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">38</span>        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Contraseña&quot;</span> <span class="n">onChange</span><span class="o">=</span><span class="p">{</span><span class="n">handlePassword</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">39</span>        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Iniciar sesión&quot;</span> <span class="o">/&gt;</span>
+<span class="linenos">40</span>    <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="linenos">41</span>    <span class="o">&lt;/&gt;</span>
+<span class="linenos">42</span><span class="p">);</span>
+<span class="linenos">43</span><span class="p">}</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="rutas-con-react-router">
+<h2><a class="toc-backref" href="#id44">Rutas con React Router</a><a class="headerlink" href="#rutas-con-react-router" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para las rutas se utiliza un modulo llamado React Router</p>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id45">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Instalar el módulo en el proyecto: <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">react-router-dom</span> <span class="pre">--save</span></code></p>
+</section>
+<section id="crear-archivo-de-rutas">
+<h3><a class="toc-backref" href="#id46">Crear archivo de rutas</a><a class="headerlink" href="#crear-archivo-de-rutas" title="Enlazar permanentemente con este título">#</a></h3>
+<ol class="arabic simple">
+<li><p>Dentro de la carpeta <strong>src</strong> crear archivo <strong>Router.js</strong>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">funciones</span> <span class="k">del</span> <span class="n">modulo</span> <span class="n">react</span> <span class="n">router</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="p">{</span><span class="n">BrowserRouter</span><span class="p">,</span> <span class="n">Route</span><span class="p">,</span> <span class="n">Routes</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="o">//</span> <span class="n">importar</span> <span class="n">fragment</span> <span class="n">también</span><span class="p">:</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="o">//</span> <span class="n">importar</span> <span class="n">los</span> <span class="n">componentes</span> <span class="n">de</span> <span class="n">vista</span><span class="p">:</span>
+<span class="linenos"> 7</span><span class="kn">import</span> <span class="nn">Inicio</span> <span class="kn">from</span> <span class="s1">&#39;./Inicio&#39;</span><span class="p">;</span>
+<span class="linenos"> 8</span><span class="kn">import</span> <span class="nn">Prueba</span> <span class="kn">from</span> <span class="s1">&#39;./Prueba&#39;</span><span class="p">;</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">Error</span> <span class="kn">from</span> <span class="s1">&#39;./Error&#39;</span><span class="p">;</span>
+<span class="linenos">10</span><span class="kn">import</span> <span class="nn">Parametros</span> <span class="kn">from</span> <span class="s1">&#39;./Parametros&#39;</span><span class="p">;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">function</span> <span class="n">Router</span><span class="p">(){</span>
+<span class="linenos">13</span>    <span class="o">//</span> <span class="n">retornar</span> <span class="n">la</span> <span class="n">estructura</span> <span class="n">de</span> <span class="n">rutas</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">15</span>        <span class="o">&lt;</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">16</span>            <span class="o">&lt;</span><span class="n">BrowserRouter</span><span class="o">&gt;</span>
+<span class="linenos">17</span>                <span class="o">&lt;</span><span class="n">Routes</span><span class="o">&gt;</span>
+<span class="linenos">18</span>                    <span class="p">{</span><span class="o">/*</span> <span class="n">Ruta</span> <span class="n">raiz</span> <span class="p">(</span><span class="n">necesita</span> <span class="n">el</span> <span class="n">atributo</span> <span class="n">exact</span><span class="p">):</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">19</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">exact</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Inicio</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">20</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/prueba&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Prueba</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">21</span>                    <span class="p">{</span><span class="o">/*</span> <span class="n">Ruta</span> <span class="n">con</span> <span class="n">parametros</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">22</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/parametros/:nombre&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Parametros</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">23</span>                    <span class="p">{</span><span class="o">/*</span> <span class="n">Ruta</span> <span class="n">para</span> <span class="n">urls</span> <span class="n">no</span> <span class="n">establecidas</span> <span class="p">(</span><span class="n">error</span> <span class="mi">404</span><span class="p">):</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">24</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;*&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Error</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">25</span>                <span class="o">&lt;/</span><span class="n">Routes</span><span class="o">&gt;</span>
+<span class="linenos">26</span>            <span class="o">&lt;/</span><span class="n">BrowserRouter</span><span class="o">&gt;</span>
+<span class="linenos">27</span>        <span class="o">&lt;/</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">28</span>    <span class="p">)</span>
+<span class="linenos">29</span><span class="p">}</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="n">export</span> <span class="n">default</span> <span class="n">Router</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Cargar el enrutador en <strong>App.js</strong>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="s1">&#39;./App.css&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="o">//</span> <span class="n">importar</span> <span class="n">router</span><span class="p">:</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="nn">Router</span> <span class="kn">from</span> <span class="s1">&#39;./Router&#39;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 7</span><span class="o">//</span> <span class="n">cargar</span> <span class="n">directamente</span> <span class="n">el</span> <span class="n">router</span> <span class="n">en</span> <span class="n">el</span> <span class="k">return</span><span class="p">:</span>
+<span class="linenos"> 8</span><span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 9</span>    <span class="o">&lt;</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">10</span>    <span class="o">&lt;</span><span class="n">Router</span> <span class="o">/&gt;</span>
+<span class="linenos">11</span>    <span class="o">&lt;/</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">12</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="p">}</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="n">export</span> <span class="n">default</span> <span class="n">App</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="recibir-parametros-de-una-ruta">
+<h3><a class="toc-backref" href="#id47">Recibir parámetros de una ruta</a><a class="headerlink" href="#recibir-parametros-de-una-ruta" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Recibir parametros en el controlador <strong>Parametros.js</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">useParams</span> <span class="n">de</span> <span class="n">React</span> <span class="n">Router</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="p">{</span> <span class="n">useParams</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">function</span> <span class="n">Parametros</span><span class="p">(){</span>
+<span class="linenos"> 5</span>    <span class="o">//</span> <span class="n">cargar</span> <span class="n">un</span> <span class="n">parametro</span> <span class="n">mediante</span> <span class="n">desestructuración</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="n">const</span> <span class="p">{</span><span class="n">nombre</span><span class="p">}</span> <span class="o">=</span> <span class="n">useParams</span><span class="p">();</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos"> 9</span>        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">10</span>            <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Te</span> <span class="n">llamas</span><span class="p">:</span> <span class="p">{</span><span class="n">nombre</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="linenos">11</span>        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="linenos">12</span>    <span class="p">)</span>
+<span class="linenos">13</span><span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="n">export</span> <span class="n">default</span> <span class="n">Parametros</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-navbar-con-navlink">
+<h3><a class="toc-backref" href="#id48">Crear Navbar con NavLink</a><a class="headerlink" href="#crear-navbar-con-navlink" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con la función <strong>NavLink</strong> se crea la barra de navegación de nuestra aplicación, editamos <strong>Router.js</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">//</span> <span class="n">importar</span> <span class="n">función</span> <span class="n">navlink</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="p">{</span><span class="n">BrowserRouter</span><span class="p">,</span> <span class="n">Route</span><span class="p">,</span> <span class="n">Routes</span><span class="p">,</span> <span class="n">NavLink</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="o">//</span> <span class="n">importar</span> <span class="n">fragment</span> <span class="n">también</span><span class="p">:</span>
+<span class="linenos"> 4</span><span class="kn">import</span> <span class="p">{</span><span class="n">Fragment</span><span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="o">//</span> <span class="n">importar</span> <span class="n">los</span> <span class="n">componentes</span> <span class="n">de</span> <span class="n">vista</span><span class="p">:</span>
+<span class="linenos"> 7</span><span class="kn">import</span> <span class="nn">Inicio</span> <span class="kn">from</span> <span class="s1">&#39;./Inicio&#39;</span><span class="p">;</span>
+<span class="linenos"> 8</span><span class="kn">import</span> <span class="nn">Prueba</span> <span class="kn">from</span> <span class="s1">&#39;./Prueba&#39;</span><span class="p">;</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">Error</span> <span class="kn">from</span> <span class="s1">&#39;./Error&#39;</span><span class="p">;</span>
+<span class="linenos">10</span><span class="kn">import</span> <span class="nn">Parametros</span> <span class="kn">from</span> <span class="s1">&#39;./Parametros&#39;</span><span class="p">;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">function</span> <span class="n">Router</span><span class="p">(){</span>
+<span class="linenos">13</span>    <span class="o">//</span> <span class="n">retornar</span> <span class="n">la</span> <span class="n">estructura</span> <span class="n">de</span> <span class="n">rutas</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="k">return</span><span class="p">(</span>
+<span class="linenos">15</span>        <span class="o">&lt;</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">16</span>            <span class="o">&lt;</span><span class="n">BrowserRouter</span><span class="o">&gt;</span>
+<span class="linenos">17</span>                <span class="p">{</span><span class="o">/*</span> <span class="n">cargamos</span> <span class="n">el</span> <span class="n">nav</span> <span class="n">aquí</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+<span class="linenos">18</span>                <span class="o">&lt;</span><span class="n">nav</span><span class="o">&gt;</span>
+<span class="linenos">19</span>                    <span class="o">&lt;</span><span class="n">NavLink</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="o">&gt;</span><span class="n">Inicio</span><span class="o">&lt;/</span><span class="n">NavLink</span><span class="o">&gt;</span>
+<span class="linenos">20</span>                    <span class="o">&lt;</span><span class="n">NavLink</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/prueba&quot;</span> <span class="n">activeClassName</span><span class="o">=</span><span class="s2">&quot;activa&quot;</span><span class="o">&gt;</span><span class="n">Prueba</span><span class="o">&lt;/</span><span class="n">NavLink</span><span class="o">&gt;</span>
+<span class="linenos">21</span>                    <span class="o">&lt;</span><span class="n">NavLink</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/parametros/Guillermo&quot;</span> <span class="n">activeClassName</span><span class="o">=</span><span class="s2">&quot;activa&quot;</span><span class="o">&gt;</span><span class="n">Parametros</span><span class="o">&lt;/</span><span class="n">NavLink</span><span class="o">&gt;</span>
+<span class="linenos">22</span>                <span class="o">&lt;/</span><span class="n">nav</span><span class="o">&gt;</span>
+<span class="linenos">23</span>                <span class="o">&lt;</span><span class="n">Routes</span><span class="o">&gt;</span>
+<span class="linenos">24</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">exact</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Inicio</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">25</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/prueba&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Prueba</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">26</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/parametros/:nombre&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Parametros</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">27</span>                    <span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;*&quot;</span> <span class="n">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="n">Error</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="linenos">28</span>                <span class="o">&lt;/</span><span class="n">Routes</span><span class="o">&gt;</span>
+<span class="linenos">29</span>            <span class="o">&lt;/</span><span class="n">BrowserRouter</span><span class="o">&gt;</span>
+<span class="linenos">30</span>        <span class="o">&lt;/</span><span class="n">Fragment</span><span class="o">&gt;</span>
+<span class="linenos">31</span>    <span class="p">)</span>
+<span class="linenos">32</span><span class="p">}</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="n">export</span> <span class="n">default</span> <span class="n">Router</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>El atributo <strong>activeClassName</strong> define el nombre de la clase que se activa cuando esta la ruta activa.
+Solo hay que crear dicha clase en nuestro css y react router la reconocerá.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="expressjs.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Framework: ExpressJS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="react-native.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Framework: React Native</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,2026 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Framework: Laravel &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Sintaxis Python" href="../python/sintaxis.html" />
+    <link rel="prev" title="Codificación y Hash" href="cifrado.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/php/laravel.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-del-proyecto">
+     Creación del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-laravel">
+     Estructura de Laravel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-artisan">
+     Comandos Artisan
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configurar-conexion-a-base-de-datos">
+     Configurar conexión a base de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-en-laravel">
+   Rutas en Laravel
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-sencillas">
+     Rutas sencillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-con-parametros">
+     Rutas con parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condiciones-en-las-rutas">
+     Condiciones en las rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-metodo-de-controlador-en-rutas">
+     Cargar metodo de controlador en rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colecciones-de-rutas">
+     Colecciones de rutas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#middlewares">
+   Middlewares
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas-en-laravel-plantillas-blade">
+   Vistas en Laravel (plantillas Blade)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-variables">
+     Uso de variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-foreach">
+     Bucle foreach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plantilla-base">
+     Plantilla Base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#includes">
+     Includes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enlaces-a-otras-rutas">
+     Enlaces a otras rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mostrar-notificaciones">
+     Mostrar notificaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controladores-en-laravel">
+   Controladores en Laravel
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejar-parametros-en-el-controlador">
+     Manejar parámetros en el controlador
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redireccion-a-otra-ruta">
+     Redirección a otra ruta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-crud-y-enrutamiento-automatico">
+     Crear Crud y enrutamiento automático
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bases-de-datos">
+   Bases de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#migraciones">
+     Migraciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generar-seeders">
+     Generar Seeders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relaciones-de-tablas-y-tablas-ya-existentes">
+     Relaciones de tablas y tablas ya existentes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#query-builder-laravel">
+     Query Builder Laravel
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consultar-datos">
+       Consultar datos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#insertar-datos">
+       Insertar datos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#borrar-registros">
+       Borrar registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#actualizar-registros">
+       Actualizar registros
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-restful">
+   API Restful
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Framework: Laravel</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-del-proyecto">
+     Creación del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-laravel">
+     Estructura de Laravel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-artisan">
+     Comandos Artisan
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configurar-conexion-a-base-de-datos">
+     Configurar conexión a base de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-en-laravel">
+   Rutas en Laravel
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-sencillas">
+     Rutas sencillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-con-parametros">
+     Rutas con parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condiciones-en-las-rutas">
+     Condiciones en las rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-metodo-de-controlador-en-rutas">
+     Cargar metodo de controlador en rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colecciones-de-rutas">
+     Colecciones de rutas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#middlewares">
+   Middlewares
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas-en-laravel-plantillas-blade">
+   Vistas en Laravel (plantillas Blade)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-variables">
+     Uso de variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-foreach">
+     Bucle foreach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plantilla-base">
+     Plantilla Base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#includes">
+     Includes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enlaces-a-otras-rutas">
+     Enlaces a otras rutas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mostrar-notificaciones">
+     Mostrar notificaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controladores-en-laravel">
+   Controladores en Laravel
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejar-parametros-en-el-controlador">
+     Manejar parámetros en el controlador
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redireccion-a-otra-ruta">
+     Redirección a otra ruta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-crud-y-enrutamiento-automatico">
+     Crear Crud y enrutamiento automático
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bases-de-datos">
+   Bases de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#migraciones">
+     Migraciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generar-seeders">
+     Generar Seeders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relaciones-de-tablas-y-tablas-ya-existentes">
+     Relaciones de tablas y tablas ya existentes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#query-builder-laravel">
+     Query Builder Laravel
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consultar-datos">
+       Consultar datos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#insertar-datos">
+       Insertar datos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#borrar-registros">
+       Borrar registros
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#actualizar-registros">
+       Actualizar registros
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-restful">
+   API Restful
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="framework-laravel">
+<h1>Framework: Laravel<a class="headerlink" href="#framework-laravel" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-laravel.png"><img alt="Logo Django" class="align-center" src="../_images/logo-laravel.png" style="width: 360.0px; height: 374.4px;" /></a>
+<p>Documentación básica para trabajar con Laravel 5
+.. contents:: Índice</p>
+<section id="configuraciones">
+<h2>Configuraciones<a class="headerlink" href="#configuraciones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="creacion-del-proyecto">
+<h3>Creación del proyecto<a class="headerlink" href="#creacion-del-proyecto" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Instalar laravel vía composer: <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">create-project</span> <span class="pre">laravel/laravel</span> <span class="pre">proyecto-laravel</span> <span class="pre">&quot;5.6.*&quot;</span> <span class="pre">--prefer-dist</span></code></p></li>
+<li><p>Probar que está funcionando: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">localhost:8000</span> <span class="pre">-t</span> <span class="pre">public/</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Dentro de Public se encuentra el archivo principal de la aplicación, es donde debe apuntar el servidor.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Es necesario tener Composer instalado: <a class="reference external" href="https://getcomposer.org/download/">https://getcomposer.org/download/</a></p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Es importante tener instalado PHP o en su defecto un servidor Lamp o Xamp</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Es posible que no se ejecute el proyecto correctamente en el servidor, si es así
+ejecutamos <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">install</span></code> para solventar dependencias. También pueden faltar
+paquetes de php en linux, se instalan <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">php-mbstring</span></code> y <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">php-xml</span></code>.
+Se vuelve a ejecutar <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">install</span></code> y no debería de dar errores.</p>
+</div>
+</section>
+<section id="estructura-de-laravel">
+<h3>Estructura de Laravel<a class="headerlink" href="#estructura-de-laravel" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En la estructura de un proyecto Laravel estas son las partes más importantes:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>app: directorio con el contenido principal de Laravel y la aplicación.</dt><dd><ul>
+<li><p>http: contiene los modelos por ejemplo.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>bootstrap: Contiene un archivo que inicia el framework y la caché.</p></li>
+<li><p>config: contiene archivos de configuración de la aplicación.</p></li>
+<li><p>database: contiene lo relacionado con las migraciones de la base de datos.</p></li>
+<li><p>public: contiene archivos públicos como los assets o el index</p></li>
+<li><p>resources: es donde se encuentran las vistas de la aplicación.</p></li>
+<li><p>routes: contiene las rutas de la aplicación.</p></li>
+<li><p>storage: almacenará archivos a subir.</p></li>
+<li><p>tests: carpeta con los test de la explicación.</p></li>
+<li><p>vendor: guarda todos los paquetes y librerías instalados con composer.</p></li>
+<li><p>artisan: permite ejecutar comandos cli de Laravel.</p></li>
+<li><p>.env: es donde se configura la conexión a la base de datos entre otros.</p></li>
+</ul>
+</section>
+<section id="comandos-artisan">
+<h3>Comandos Artisan<a class="headerlink" href="#comandos-artisan" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Laravel tiene una lista de comandos con Artisan los cuales se destacan:</p>
+<ul class="simple">
+<li><p>Listar rutas: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">route:list</span></code></p></li>
+<li><p>Crear controlador: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:controller</span> <span class="pre">NuevoController</span></code></p></li>
+<li><p>Crear controlador con CRUD: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:controller</span> <span class="pre">UserController</span> <span class="pre">--resource</span></code></p></li>
+<li><p>Crear una migración: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:migration</span> <span class="pre">create_consolas_table</span> <span class="pre">--table=lista_consolas</span></code></p></li>
+<li><p>Desplegar migración: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">migrate</span></code></p></li>
+<li><p>Refrescar migraciones: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">migrate:refresh</span></code></p></li>
+<li><p>Crear un seeder: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:seed</span> <span class="pre">lista_consolas_seed</span></code></p></li>
+<li><p>Lanzar un seeder: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">db:seed</span> <span class="pre">--class=lista_consolas_seed</span></code></p></li>
+</ul>
+</section>
+<section id="configurar-conexion-a-base-de-datos">
+<h3>Configurar conexión a base de datos<a class="headerlink" href="#configurar-conexion-a-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para configurar la base de datos se edita el archivo <strong>.env</strong> y se añade los datos de configuración de nuestra base de datos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">DB_CONNECTION</span><span class="o">=</span><span class="n">mysql</span>
+<span class="linenos">2</span><span class="n">DB_HOST</span><span class="o">=</span><span class="mf">127.0.0.1</span>
+<span class="linenos">3</span><span class="n">DB_PORT</span><span class="o">=</span><span class="mi">3306</span>
+<span class="linenos">4</span><span class="n">DB_DATABASE</span><span class="o">=</span><span class="n">consolas</span>
+<span class="linenos">5</span><span class="n">DB_USERNAME</span><span class="o">=</span><span class="n">guillermo</span>
+<span class="linenos">6</span><span class="n">DB_PASSWORD</span><span class="o">=</span><span class="mi">1234</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El archivo de configuración también puede configurar correos y bases de datos redis.</p>
+</div>
+</section>
+</section>
+<section id="rutas-en-laravel">
+<h2>Rutas en Laravel<a class="headerlink" href="#rutas-en-laravel" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Las rutas en Laravel las podemos encontrar dentro de la carpetas <strong>routes</strong> en el archivo <strong>web.php</strong></p>
+<p>Ejemplo de ruta:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="cm">/*</span>
+<span class="linenos"> 4</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 5</span><span class="cm">| Web Routes</span>
+<span class="linenos"> 6</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 7</span><span class="cm">|</span>
+<span class="linenos"> 8</span><span class="cm">| Here is where you can register web routes for your application. These</span>
+<span class="linenos"> 9</span><span class="cm">| routes are loaded by the RouteServiceProvider within a group which</span>
+<span class="linenos">10</span><span class="cm">| contains the &quot;web&quot; middleware group. Now create something great!</span>
+<span class="linenos">11</span><span class="cm">|</span>
+<span class="linenos">12</span><span class="cm">*/</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1">// Definición de la ruta raiz:</span>
+<span class="linenos">15</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="linenos">16</span>    <span class="c1">// retornar una vista:</span>
+<span class="linenos">17</span>    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">);</span>
+<span class="linenos">18</span><span class="p">});</span>
+</pre></div>
+</div>
+<section id="rutas-sencillas">
+<h3>Rutas sencillas<a class="headerlink" href="#rutas-sencillas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las rutas utilizan los siguientes métodos:</p>
+<ul class="simple">
+<li><p>GET: recuperar información</p></li>
+<li><p>POST: Enviar información</p></li>
+<li><p>PUT: Actualizar datos</p></li>
+<li><p>DELETE: Eliminar datos</p></li>
+</ul>
+<p>Ejemplo de como cargar una vista en una ruta:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="cm">/*</span>
+<span class="linenos"> 4</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 5</span><span class="cm">| Web Routes</span>
+<span class="linenos"> 6</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 7</span><span class="cm">|</span>
+<span class="linenos"> 8</span><span class="cm">| Here is where you can register web routes for your application. These</span>
+<span class="linenos"> 9</span><span class="cm">| routes are loaded by the RouteServiceProvider within a group which</span>
+<span class="linenos">10</span><span class="cm">| contains the &quot;web&quot; middleware group. Now create something great!</span>
+<span class="linenos">11</span><span class="cm">|</span>
+<span class="linenos">12</span><span class="cm">*/</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1">// Definición de la ruta raiz:</span>
+<span class="linenos">15</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="linenos">16</span>    <span class="c1">// retornar una vista:</span>
+<span class="linenos">17</span>    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">);</span>
+<span class="linenos">18</span><span class="p">});</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/prueba&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(){</span>
+<span class="linenos">22</span>    <span class="c1">// variables que se pueden asignar al callback:</span>
+<span class="linenos">23</span>    <span class="nv">$saludo</span> <span class="o">=</span> <span class="s2">&quot;Hola con Laravel&quot;</span><span class="p">;</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>    <span class="c1">// la función view puede recibir un array con datos que mostrará en la plantilla:</span>
+<span class="linenos">26</span>    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;prueba&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">27</span>        <span class="s1">&#39;saludo&#39;</span> <span class="o">=&gt;</span> <span class="nv">$saludo</span>
+<span class="linenos">28</span>    <span class="p">));</span>
+<span class="linenos">29</span><span class="p">});</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/prueba&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(){</span>
+<span class="linenos">32</span>    <span class="c1">// variables que se pueden asignar al callback:</span>
+<span class="linenos">33</span>    <span class="nv">$saludo</span> <span class="o">=</span> <span class="s2">&quot;Hola con Laravel&quot;</span><span class="p">;</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>    <span class="c1">// otro modo de cargar valores a la vista es con with:</span>
+<span class="linenos">36</span>    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;prueba&#39;</span><span class="p">)</span>
+<span class="linenos">37</span>            <span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="s1">&#39;saludo&#39;</span><span class="p">,</span> <span class="nv">$saludo</span><span class="p">);</span> <span class="c1">// pueden haber tantos with como hagan falta.</span>
+<span class="linenos">38</span><span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="rutas-con-parametros">
+<h3>Rutas con parámetros<a class="headerlink" href="#rutas-con-parametros" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="cm">/*</span>
+<span class="linenos"> 4</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 5</span><span class="cm">| Web Routes</span>
+<span class="linenos"> 6</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 7</span><span class="cm">|</span>
+<span class="linenos"> 8</span><span class="cm">| Here is where you can register web routes for your application. These</span>
+<span class="linenos"> 9</span><span class="cm">| routes are loaded by the RouteServiceProvider within a group which</span>
+<span class="linenos">10</span><span class="cm">| contains the &quot;web&quot; middleware group. Now create something great!</span>
+<span class="linenos">11</span><span class="cm">|</span>
+<span class="linenos">12</span><span class="cm">*/</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="linenos">15</span>    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">);</span>
+<span class="linenos">16</span><span class="p">});</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1">// la ruta recibe el parámetro nombre y este se debe pasar a la función callback:</span>
+<span class="linenos">19</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/saludar/{nombre}&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">){</span>
+<span class="linenos">20</span>    <span class="k">return</span> <span class="s2">&quot;&lt;h2&gt;Hola &quot;</span> <span class="o">.</span> <span class="nv">$nombre</span> <span class="o">.</span> <span class="s2">&quot;&lt;/h2&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">21</span><span class="p">});</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1">// con ? se define parametro opcional pero hay que definir valor por defecto en el parámetro del callback:</span>
+<span class="linenos">24</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/edad/{edad?}&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">=</span> <span class="s2">&quot;desconocida&quot;</span><span class="p">){</span>
+<span class="linenos">25</span>    <span class="k">return</span> <span class="s2">&quot;&lt;h2&gt;Hola, tu edad es: &quot;</span> <span class="o">.</span> <span class="nv">$edad</span> <span class="o">.</span> <span class="s2">&quot;&lt;/h2&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">26</span><span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="condiciones-en-las-rutas">
+<h3>Condiciones en las rutas<a class="headerlink" href="#condiciones-en-las-rutas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las rutas en Laravel pueden recibir condiciones gracias a la función where:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="cm">/*</span>
+<span class="linenos"> 4</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 5</span><span class="cm">| Web Routes</span>
+<span class="linenos"> 6</span><span class="cm">|--------------------------------------------------------------------------</span>
+<span class="linenos"> 7</span><span class="cm">|</span>
+<span class="linenos"> 8</span><span class="cm">| Here is where you can register web routes for your application. These</span>
+<span class="linenos"> 9</span><span class="cm">| routes are loaded by the RouteServiceProvider within a group which</span>
+<span class="linenos">10</span><span class="cm">| contains the &quot;web&quot; middleware group. Now create something great!</span>
+<span class="linenos">11</span><span class="cm">|</span>
+<span class="linenos">12</span><span class="cm">*/</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="linenos">15</span>    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">);</span>
+<span class="linenos">16</span><span class="p">});</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/edad/{edad?}&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">=</span> <span class="s2">&quot;desconocida&quot;</span><span class="p">){</span>
+<span class="linenos">20</span>    <span class="k">return</span> <span class="s2">&quot;&lt;h2&gt;Hola, tu edad es: &quot;</span> <span class="o">.</span> <span class="nv">$edad</span> <span class="o">.</span> <span class="s2">&quot;&lt;/h2&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">21</span><span class="p">})</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="k">array</span><span class="p">(</span> <span class="c1">// con expresiones regulares se pueden filtrar los parámetros:</span>
+<span class="linenos">22</span>    <span class="s1">&#39;edad&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;[0-9]+&#39;</span>
+<span class="linenos">23</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Si se añade más condiciones y son parámetros obligatorios estos deberán cumplirse.</p>
+</div>
+</section>
+<section id="cargar-metodo-de-controlador-en-rutas">
+<h3>Cargar metodo de controlador en rutas<a class="headerlink" href="#cargar-metodo-de-controlador-en-rutas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Lo lógico y más común es devolver un controlador que ya se encargará de toda la lógica que va a llevar la vista:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">// La ruta recibe como segundo parámetro el controlador y tras la @ el método que ejecutar:</span>
+<span class="linenos">2</span><span class="x">Route::get(&#39;/consolas&#39;, &#39;ConsolaController@index&#39;);</span>
+</pre></div>
+</div>
+</section>
+<section id="colecciones-de-rutas">
+<h3>Colecciones de rutas<a class="headerlink" href="#colecciones-de-rutas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se pueden crear prefijos para ordenar las rutas que van dentro de un CRUD:</p>
+<div class="highlight-PHP notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">Route::group([&#39;prefix&#39;=&gt;&#39;consolas&#39;], function(){</span>
+<span class="linenos">2</span><span class="x">    Route::get(&#39;index&#39;, &#39;ConsolasController@index&#39;);</span>
+<span class="linenos">3</span><span class="x">    Route::get(&#39;listar&#39;, &#39;ConsolasController@listar&#39;);</span>
+<span class="linenos">4</span><span class="x">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="middlewares">
+<h2>Middlewares<a class="headerlink" href="#middlewares" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los middlewares son filtros en Laravel, existen ya algunos definidos por defecto:</p>
+<ul class="simple">
+<li><p>Crear middleware: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:middleware</span> <span class="pre">CheckConsola</span></code></p></li>
+<li><p>El middelware se puede editar dentro de <strong>Http/middleware</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span> <span class="nx">App\Http\Middleware</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">use</span> <span class="nx">Closure</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">CheckConsola</span>
+<span class="linenos"> 8</span><span class="p">{</span>
+<span class="linenos"> 9</span>    <span class="sd">/**</span>
+<span class="linenos">10</span><span class="sd">    * Handle an incoming request.</span>
+<span class="linenos">11</span><span class="sd">    *</span>
+<span class="linenos">12</span><span class="sd">    * @param  \Illuminate\Http\Request  $request</span>
+<span class="linenos">13</span><span class="sd">    * @param  \Closure  $next</span>
+<span class="linenos">14</span><span class="sd">    * @return mixed</span>
+<span class="linenos">15</span><span class="sd">    */</span>
+<span class="linenos">16</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">handle</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nx">Closure</span> <span class="nv">$next</span><span class="p">)</span>
+<span class="linenos">17</span>    <span class="p">{</span>
+<span class="linenos">18</span>        <span class="c1">// se va a filtrar el parámetro modelo:</span>
+<span class="linenos">19</span>        <span class="nv">$modelo</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">route</span><span class="p">(</span><span class="s1">&#39;modelo&#39;</span><span class="p">);</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="c1">// si el modelo no es el que tenemos disponible:</span>
+<span class="linenos">22</span>        <span class="k">if</span><span class="p">(</span><span class="nb">is_null</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">)</span> <span class="o">||</span> <span class="nv">$modelo</span> <span class="o">!=</span> <span class="s1">&#39;playstation&#39;</span><span class="p">){</span>
+<span class="linenos">23</span>            <span class="c1">// redirecciona al listado:</span>
+<span class="linenos">24</span>            <span class="k">return</span> <span class="nx">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">action</span><span class="p">(</span><span class="s1">&#39;ConsolaController@index&#39;</span><span class="p">);</span>
+<span class="linenos">25</span>        <span class="p">}</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>        <span class="k">return</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+<span class="linenos">28</span>    <span class="p">}</span>
+<span class="linenos">29</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Hay que dar de alta el middleware en <strong>Http/kernel.php</strong> añadidendo una nueva línea dentro del array <strong>$routeMiddleware</strong>: <code class="docutils literal notranslate"><span class="pre">'checkconsola'</span> <span class="pre">=&gt;</span> <span class="pre">\App\Http\Middleware\CheckConsola::class,</span></code></p></li>
+<li><p>Ahora en las rutas de <strong>webs.php</strong> se define el middelware:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">// añadir el middleware:</span>
+<span class="linenos">2</span><span class="x">Route::get(&#39;/consola/{modelo?}&#39;, array(</span>
+<span class="linenos">3</span><span class="x">    &#39;middleware&#39; =&gt; &#39;checkconsola&#39;,</span>
+<span class="linenos">4</span><span class="x">    &#39;uses&#39; =&gt; &#39;ConsolaController@consola&#39;</span>
+<span class="linenos">5</span><span class="x">));</span>
+</pre></div>
+</div>
+<p>De este modo, el middleware cuando reciba por parámetros una consola que no sea playstation hará un redireccionamiento al listado.</p>
+</section>
+<section id="vistas-en-laravel-plantillas-blade">
+<h2>Vistas en Laravel (plantillas Blade)<a class="headerlink" href="#vistas-en-laravel-plantillas-blade" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Las vistas están en formato blade y las podemos encontrar en <strong>resources/views/</strong>. Su nomenclatura se define por terminar en <strong>.blade.php</strong> para
+hacer referencia que son plantillas blade.</p>
+<p>A la hora de trabajar con vistas es bueno crear una carpeta dentro de <strong>views</strong> llamada <strong>consolas</strong>, dentro
+de esta carpeta se pueden crear todas las vistas relacionadas con las consolas, por ejemplo <strong>listar-consolas.blade.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">&lt;h1&gt;Listado de consolas&lt;/h1&gt;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos">4</span><span class="x">    &lt;li&gt;Sony PlayStation&lt;/li&gt;</span>
+<span class="linenos">5</span><span class="x">    &lt;li&gt;Sega Megadrive&lt;/li&gt;</span>
+<span class="linenos">6</span><span class="x">    &lt;li&gt;Nintendo DS&lt;/li&gt;</span>
+<span class="linenos">7</span><span class="x">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<p>La ruta para cargar esta vista que se encuentra dentro de una carpeta sería la siguiente:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">Route::get(&#39;/consolas&#39;, function(){</span>
+<span class="linenos">2</span><span class="x">    // con el . se indica una ruta de carpetas en views:</span>
+<span class="linenos">3</span><span class="x">    return view(&#39;consolas.listar-consolas&#39;);</span>
+<span class="linenos">4</span><span class="x">});</span>
+</pre></div>
+</div>
+<section id="uso-de-variables">
+<h3>Uso de variables<a class="headerlink" href="#uso-de-variables" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las variables se pueden cargar desde el controlador con el uso de dobles llaves <strong>{{ $variable }}</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">&lt;h1&gt;{{ $titulo }}&lt;/h1&gt;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos">4</span><span class="x">    &lt;li&gt;Sony PlayStation&lt;/li&gt;</span>
+<span class="linenos">5</span><span class="x">    &lt;li&gt;Sega Megadrive&lt;/li&gt;</span>
+<span class="linenos">6</span><span class="x">    &lt;li&gt;Nintendo DS&lt;/li&gt;</span>
+<span class="linenos">7</span><span class="x">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Para añadir comentarios en Blade se usa la sintaxis: <strong>{! Comentario !}</strong>, a diferencia de los comentarios
+html, los comentarios blade no se muestran en el código HTML ya que queda a nivel backend.</p>
+</div>
+</section>
+<section id="condicional-if">
+<h3>Condicional if<a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las condiciones if se ejecutan con el tag <strong>&#64;if, &#64;else, &#64;endif</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;h1&gt;{{ $titulo }}&lt;/h1&gt;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">{! Se crea la condición que se valida entre paréntesis igual que un if corriente !}</span>
+<span class="linenos"> 4</span><span class="x">@if($consolas)</span>
+<span class="linenos"> 5</span><span class="x">    &lt;ul&gt;</span>
+<span class="linenos"> 6</span><span class="x">        &lt;li&gt;Sony PlayStation&lt;/li&gt;</span>
+<span class="linenos"> 7</span><span class="x">        &lt;li&gt;Sega Megadrive&lt;/li&gt;</span>
+<span class="linenos"> 8</span><span class="x">        &lt;li&gt;Nintendo DS&lt;/li&gt;</span>
+<span class="linenos"> 9</span><span class="x">    &lt;/ul&gt;</span>
+<span class="linenos">10</span><span class="x">@else</span>
+<span class="linenos">11</span><span class="x">    &lt;p&gt;No hay consolas disponibles&lt;/p&gt;</span>
+<span class="linenos">12</span><span class="x">@endif</span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-foreach">
+<h3>Bucle foreach<a class="headerlink" href="#bucle-foreach" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los bucles for se ejecutan con el tag <strong>&#64;foreach</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">&lt;h1&gt;{{ $titulo }}&lt;/h1&gt;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos">4</span><span class="x">@foreach($consola as $consolas)</span>
+<span class="linenos">5</span><span class="x">    &lt;li&gt;{{ $consolas }}&lt;/li&gt;</span>
+<span class="linenos">6</span><span class="x">@endforeach</span>
+<span class="linenos">7</span><span class="x">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede ejecutar el foreach clave =&gt; valor de un mismo modo que en PHP.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Existe del mismo modo el bucle for sencillo y el bucle while, sin embargo este tipo de estructuras es mejor utilizarlas en los controladores.</p>
+</div>
+</section>
+<section id="plantilla-base">
+<h3>Plantilla Base<a class="headerlink" href="#plantilla-base" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las plantillas base como en otros frameworks se utilizan para establecer las partes que serán genéricas en todas o la gran mayoría de páginas del proyecto,
+estas plantillas se suelen guardar en la carpeta <strong>layouts</strong> la cual habrá que crear dentro de <strong>views</strong>.</p>
+<p>La plantilla base suele tener el nombre <strong>base.blade.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="x">&lt;html lang=&quot;es&quot;&gt;</span>
+<span class="linenos"> 3</span><span class="x">&lt;head&gt;</span>
+<span class="linenos"> 4</span><span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="linenos"> 7</span><span class="x">    {{-- es muy útil el uso de Yield para sustituir partes estratégicas: --}}</span>
+<span class="linenos"> 8</span><span class="x">    &lt;title&gt;@yield(&#39;title&#39;)&lt;/title&gt;</span>
+<span class="linenos"> 9</span><span class="x">&lt;/head&gt;</span>
+<span class="linenos">10</span><span class="x">&lt;body&gt;</span>
+<span class="linenos">11</span><span class="x">    {{-- Cada section muestra un bloque de contenido: --}}</span>
+<span class="linenos">12</span><span class="x">    @section(&#39;header&#39;)</span>
+<span class="linenos">13</span><span class="x">        &lt;h1&gt;Listado de consolas&lt;/h1&gt;</span>
+<span class="linenos">14</span><span class="x">    @show</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="x">    &lt;div&gt;</span>
+<span class="linenos">17</span><span class="x">        {{-- con yield se define el contenido a sustituir --}}</span>
+<span class="linenos">18</span><span class="x">        @yield(&#39;content&#39;)</span>
+<span class="linenos">19</span><span class="x">    &lt;/div&gt;</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="x">    @section(&#39;footer&#39;)</span>
+<span class="linenos">22</span><span class="x">        &lt;small&gt;Laravel en Fullcoder&lt;/small&gt;</span>
+<span class="linenos">23</span><span class="x">    @show</span>
+<span class="linenos">24</span><span class="x">&lt;/body&gt;</span>
+<span class="linenos">25</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lo siguiente será cargar la base en una plantilla como <strong>listar-consolas.blade.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">{{-- Ahora se extiende la plantilla base: --}}</span>
+<span class="linenos"> 2</span><span class="x">@extends(&#39;layouts.base&#39;)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="x">{{-- Se reemplaza el title del sitio: --}}</span>
+<span class="linenos"> 5</span><span class="x">@section(&#39;title&#39;, &#39;Listado de consolas:&#39;)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="x">{{-- Se carga el section para sustituir el yield content con el listado de consolas: --}}</span>
+<span class="linenos"> 8</span><span class="x">@section(&#39;content&#39;)</span>
+<span class="linenos"> 9</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;li&gt;Sony PlayStation&lt;/li&gt;</span>
+<span class="linenos">11</span><span class="x">    &lt;li&gt;Sega Megadrive&lt;/li&gt;</span>
+<span class="linenos">12</span><span class="x">    &lt;li&gt;Nintendo DS&lt;/li&gt;</span>
+<span class="linenos">13</span><span class="x">&lt;/ul&gt;</span>
+<span class="linenos">14</span><span class="x">@stop</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="x">{{-- se puede añadir o cambiar el comportamiento de un bloque: --}}</span>
+<span class="linenos">17</span><span class="x">@section(&#39;footer&#39;)</span>
+<span class="linenos">18</span><span class="x">    &lt;p&gt;Parte exclusiva en el footer de Listado de consolas&lt;/p&gt;</span>
+<span class="linenos">19</span><span class="x">    {{-- si se añade parent heredará el contenido original, sino sustituye el bloque completo --}}</span>
+<span class="linenos">20</span><span class="x">    @parent</span>
+<span class="linenos">21</span><span class="x">@stop</span>
+</pre></div>
+</div>
+</section>
+<section id="includes">
+<h3>Includes<a class="headerlink" href="#includes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede cargar otras vistas por ejemplo creando en la carpeta views una carpeta llamada <strong>includes</strong> y dentro se puede crear por ejemplo <strong>header.blade.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">&lt;h1&gt;Soy una cabezera&lt;/h1&gt;</span>
+<span class="linenos">2</span><span class="x">&lt;hr&gt;</span>
+</pre></div>
+</div>
+<p>Para cargar dicho header se accede a una plantilla blade como <strong>consolas.blade.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">{! esta cabezera se puede añadir tantas veces como haga falta: !}</span>
+<span class="linenos"> 2</span><span class="x">@include(&#39;includes.header&#39;)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="x">&lt;h1&gt;Listado de consolas&lt;/h1&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;li&gt;Sony PlayStation&lt;/li&gt;</span>
+<span class="linenos"> 8</span><span class="x">    &lt;li&gt;Sega Megadrive&lt;/li&gt;</span>
+<span class="linenos"> 9</span><span class="x">    &lt;li&gt;Nintendo DS&lt;/li&gt;</span>
+<span class="linenos">10</span><span class="x">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="enlaces-a-otras-rutas">
+<h3>Enlaces a otras rutas<a class="headerlink" href="#enlaces-a-otras-rutas" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">{{-- Con action se llama al metodo del controlador para crear el enlace: --}}</span>
+<span class="linenos">2</span><span class="x">&lt;a href=&quot;{{ action(&#39;ConsolaController@index&#39;) }}&quot;&gt;Listado de consolas&lt;/a&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Existe también el método <strong>route()</strong> pero para ello hay que definir un alias a la ruta.</p>
+</div>
+</section>
+<section id="mostrar-notificaciones">
+<h3>Mostrar notificaciones<a class="headerlink" href="#mostrar-notificaciones" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Tenemos el caso en el que se elimina un registro:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">public function borrarConsola($id){</span>
+<span class="linenos">2</span><span class="x">    $consola = DB::table(&#39;lista_consolas&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;delete();</span>
+<span class="linenos">3</span><span class="x">    // se utiliza with para guardar datos en una sesión flash, osea que solo aparecerá 1 vez ideal para notificaciones:</span>
+<span class="linenos">4</span><span class="x">    return redirect()-&gt;action(&#39;ConsolaController@index&#39;)-&gt;with(&#39;status&#39;, &#39;Consola eliminada con éxito&#39;);</span>
+<span class="linenos">5</span><span class="x">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En la vista se puede utilizar las sesiones para cargar el status que hemos creado:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">@extends(&#39;layouts.base&#39;)</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">@section(&#39;title&#39;, &#39;Listado de consolas:&#39;)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="x">@section(&#39;content&#39;)</span>
+<span class="linenos"> 6</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos"> 7</span><span class="x">    @foreach($consolas as $consola)</span>
+<span class="linenos"> 8</span><span class="x">    &lt;li&gt;{{ $consola-&gt;marca }}&lt;/li&gt;</span>
+<span class="linenos"> 9</span><span class="x">    @endforeach</span>
+<span class="linenos">10</span><span class="x">&lt;/ul&gt;</span>
+<span class="linenos">11</span><span class="x">@stop</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="x">@section(&#39;footer&#39;)</span>
+<span class="linenos">14</span><span class="x">    &lt;p&gt;Parte exclusiva en el footer de Listado de consolas&lt;/p&gt;</span>
+<span class="linenos">15</span><span class="x">    @parent</span>
+<span class="linenos">16</span><span class="x">@stop</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="x">{{-- Con blade se muestran los datos almacenados en sesión via with: --}}</span>
+<span class="linenos">19</span><span class="x">@if(session(&#39;status&#39;))</span>
+<span class="linenos">20</span><span class="x">    &lt;h3 style=&quot;color:red;&quot;&gt;{{ session(&#39;status&#39;) }}&lt;/h3&gt;</span>
+<span class="linenos">21</span><span class="x">@endif</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="controladores-en-laravel">
+<h2>Controladores en Laravel<a class="headerlink" href="#controladores-en-laravel" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Crear controlador: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:controller</span> <span class="pre">ConsolaController</span></code></p></li>
+<li><p>Acceder al archivo del controlador en <strong>Http/Controllers</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// se crea un namespace para poder llamar al controlador:</span>
+<span class="linenos"> 4</span><span class="k">namespace</span> <span class="nx">App\Http\Controllers</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1">// se recupera el request para las peticiones http:</span>
+<span class="linenos"> 7</span><span class="k">use</span> <span class="nx">Illuminate\Http\Request</span><span class="p">;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1">// se genera una clase vacía que hereda de controller:</span>
+<span class="linenos">10</span><span class="k">class</span> <span class="nc">ConsolaController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="linenos">11</span><span class="p">{</span>
+<span class="linenos">12</span>    <span class="c1">// crear una vista principal que devuelva el listado de consolas:</span>
+<span class="linenos">13</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos">14</span>        <span class="c1">// tendrá un array de consolas:</span>
+<span class="linenos">15</span>        <span class="nv">$consolas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sony Playstation&#39;</span><span class="p">,</span> <span class="s1">&#39;Sega Megadrive&#39;</span><span class="p">,</span> <span class="s1">&#39;Gameboy&#39;</span><span class="p">];</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="c1">// se retorna una vista:</span>
+<span class="linenos">18</span>        <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;consolas.listar-consolas&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">19</span>            <span class="s1">&#39;consolas&#39;</span> <span class="o">=&gt;</span> <span class="nv">$consolas</span>
+<span class="linenos">20</span>        <span class="p">));</span>
+<span class="linenos">21</span>    <span class="p">}</span>
+<span class="linenos">22</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora se llama al controlador desde las rutas:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="o">//</span> <span class="n">La</span> <span class="n">ruta</span> <span class="n">recibe</span> <span class="n">como</span> <span class="n">segundo</span> <span class="n">parámetro</span> <span class="n">el</span> <span class="n">controlador</span> <span class="n">y</span> <span class="n">tras</span> <span class="n">la</span> <span class="o">@</span> <span class="n">el</span> <span class="n">método</span> <span class="n">que</span> <span class="n">ejecutar</span><span class="p">:</span>
+<span class="linenos">2</span><span class="n">Route</span><span class="p">::</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/consolas&#39;</span><span class="p">,</span> <span class="s1">&#39;ConsolaController@index&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>La vista ahora se puede recorrer el valor con foreach para cargar las consolas en un listado.</p>
+</div>
+<section id="manejar-parametros-en-el-controlador">
+<h3>Manejar parámetros en el controlador<a class="headerlink" href="#manejar-parametros-en-el-controlador" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span> <span class="nx">App\Http\Controllers</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">use</span> <span class="nx">Illuminate\Http\Request</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">ConsolaController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="linenos"> 8</span><span class="p">{</span>
+<span class="linenos"> 9</span>    <span class="c1">// el método recibirá cada parámetro de la ruta con su nombre:</span>
+<span class="linenos">10</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">consola</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">){</span>
+<span class="linenos">11</span>        <span class="c1">// listado de consolas:</span>
+<span class="linenos">12</span>        <span class="nv">$consolasDetalle</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">13</span>            <span class="s1">&#39;playstation&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">14</span>                <span class="s1">&#39;marca&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Sony&#39;</span><span class="p">,</span>
+<span class="linenos">15</span>                <span class="s1">&#39;modelo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Playstation&#39;</span><span class="p">,</span>
+<span class="linenos">16</span>                <span class="s1">&#39;lanzamiento&#39;</span> <span class="o">=&gt;</span> <span class="mi">1994</span>
+<span class="linenos">17</span>            <span class="p">)</span>
+<span class="linenos">18</span>            <span class="p">];</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>        <span class="c1">// dudoso modo de validar el índice:</span>
+<span class="linenos">21</span>        <span class="nv">$modelo</span> <span class="o">=</span> <span class="nv">$modelo</span> <span class="o">?</span> <span class="nv">$consolasDetalle</span><span class="p">[</span><span class="nv">$modelo</span><span class="p">]</span> <span class="o">:</span> <span class="k">Null</span><span class="p">;</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="c1">// respuesta:</span>
+<span class="linenos">24</span>        <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;consolas.consola&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">25</span>            <span class="s1">&#39;consola&#39;</span> <span class="o">=&gt;</span> <span class="nv">$modelo</span>
+<span class="linenos">26</span>        <span class="p">));</span>
+<span class="linenos">27</span>    <span class="p">}</span>
+<span class="linenos">28</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="redireccion-a-otra-ruta">
+<h3>Redirección a otra ruta<a class="headerlink" href="#redireccion-a-otra-ruta" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">public function volver(){</span>
+<span class="linenos">2</span><span class="x">    // se le pasa el método redirect y el método del controlador que va a disparar la acción:</span>
+<span class="linenos">3</span><span class="x">    return redirect()-&gt;action(&#39;ConsolaController@index&#39;)</span>
+<span class="linenos">4</span><span class="x">}</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-crud-y-enrutamiento-automatico">
+<h3>Crear Crud y enrutamiento automático<a class="headerlink" href="#crear-crud-y-enrutamiento-automatico" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con Artisan se puede crear un CRUD completo y recuperar todas sus rutas de manera automática:</p>
+<ol class="arabic simple">
+<li><p>Crear controlador con CRUD: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:controller</span> <span class="pre">UserController</span> <span class="pre">--resource</span></code></p></li>
+<li><p>Crear ruta con método <strong>resources()</strong>:</p></li>
+</ol>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">// ruta de un CRUD completo:</span>
+<span class="linenos">2</span><span class="x">Route::resource(&#39;user&#39;, &#39;UserController&#39;);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Comprobar que existen las rutas nuevas: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">routes:list</span></code></p></li>
+</ol>
+<p>Y con esto ya existen todos los métodos de un CRUD. Muy útil para crear servicios REST.</p>
+</section>
+</section>
+<section id="formularios">
+<h2>Formularios<a class="headerlink" href="#formularios" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Crear un formulario en blade:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;h1&gt;Formulario registro consola&lt;/h1&gt;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">&lt;form action=&quot;{{ action(&#39;ConsolaController@nuevaConsola&#39;) }}&quot; method=&quot;POST&quot;&gt;</span>
+<span class="linenos"> 4</span><span class="x">    {{-- es imprescindible enviar el csrf para evitar fallos: --}}</span>
+<span class="linenos"> 5</span><span class="x">    {{ csrf_field() }}</span>
+<span class="linenos"> 6</span><span class="x">    &lt;label for=&quot;marca&quot;&gt;Marca: &lt;/label&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;input type=&quot;text&quot; name=&quot;marca&quot; /&gt;</span>
+<span class="linenos"> 8</span><span class="x">    &lt;label for=&quot;modelo&quot;&gt;Modelo: &lt;/label&gt;</span>
+<span class="linenos"> 9</span><span class="x">    &lt;input type=&quot;text&quot; name=&quot;modelo&quot; /&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;label for=&quot;lanzamiento&quot;&gt;Lanzamiento: &lt;/label&gt;</span>
+<span class="linenos">11</span><span class="x">    &lt;input type=&quot;text&quot; name=&quot;lanzamiento&quot; /&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="x">    &lt;input type=&quot;submit&quot; value=&quot;registrar&quot; /&gt;</span>
+<span class="linenos">14</span><span class="x">&lt;/form&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Crear las rutas que muestran el formulario y la que recibe los datos:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="o">//</span> <span class="n">rutas</span> <span class="n">para</span> <span class="n">el</span> <span class="n">formulario</span><span class="p">:</span>
+<span class="linenos">2</span><span class="n">Route</span><span class="p">::</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/consolas/nueva&#39;</span><span class="p">,</span> <span class="s1">&#39;ConsolaController@nuevaConsola&#39;</span><span class="p">);</span>
+<span class="linenos">3</span><span class="n">Route</span><span class="p">::</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/consolas/nueva&#39;</span><span class="p">,</span> <span class="s1">&#39;ConsolaController@nuevaConsola&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Crear un nuevo método en el controlador <strong>ConsolaController</strong> para mostrar formulario:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">public function nuevaConsola(Request $request){</span>
+<span class="linenos"> 2</span><span class="x">    $response = view(&#39;consolas.nuevaConsola&#39;);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="x">    $marca = $request-&gt;input(&#39;marca&#39;);</span>
+<span class="linenos"> 6</span><span class="x">    $modelo =  $request-&gt;input(&#39;modelo&#39;);</span>
+<span class="linenos"> 7</span><span class="x">    $lanzamiento =  $request-&gt;input(&#39;lanzamiento&#39;);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="x">    if($request-&gt;input(&#39;marca&#39;) &amp;&amp; $request-&gt;input(&#39;modelo&#39;) &amp;&amp; $request-&gt;input(&#39;lanzamiento&#39;)){</span>
+<span class="linenos">10</span><span class="x">        $response = $marca . &quot; &quot; . $modelo . &quot; fue lanzada en &quot; . $lanzamiento;</span>
+<span class="linenos">11</span><span class="x">    }</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="x">    return $response;</span>
+<span class="linenos">14</span><span class="x">}</span>
+</pre></div>
+</div>
+<p>Con este controlador se ha establecido la validación cuando reciba todos los datos mostrará una respuesta.</p>
+</section>
+<section id="bases-de-datos">
+<h2>Bases de datos<a class="headerlink" href="#bases-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="migraciones">
+<h3>Migraciones<a class="headerlink" href="#migraciones" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear una nueva migración: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:migration</span> <span class="pre">create_consolas_table</span> <span class="pre">--table=lista_consolas</span></code></p></li>
+<li><p>Las migraciones se encuentra en <strong>database/migrations/</strong> ahí se puede ver el archivo <strong>create_consolas_table</strong>:</p></li>
+</ul>
+<div class="highlight-PHP notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">CreateConsolasTable</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="linenos"> 8</span><span class="p">{</span>
+<span class="linenos"> 9</span>    <span class="sd">/**</span>
+<span class="linenos">10</span><span class="sd">    * Run the migrations.</span>
+<span class="linenos">11</span><span class="sd">    *</span>
+<span class="linenos">12</span><span class="sd">    * @return void</span>
+<span class="linenos">13</span><span class="sd">    */</span>
+<span class="linenos">14</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span> <span class="c1">// up crea la tabla</span>
+<span class="linenos">15</span>    <span class="p">{</span>   <span class="c1">// se cambia el schema table por create para crear la tabla o fallará ya que no existe la tabla en mysql:</span>
+<span class="linenos">16</span>        <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;lista_consolas&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">17</span>            <span class="c1">// Se definen los campos:</span>
+<span class="linenos">18</span>            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">increments</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span> <span class="c1">// el tipo increments será autoincremental y por defecto primary key.</span>
+<span class="linenos">19</span>            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+<span class="linenos">20</span>            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;modelo&#39;</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+<span class="linenos">21</span>            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;lanzamiento&#39;</span><span class="p">);</span>
+<span class="linenos">22</span>            <span class="c1">// buena practica es crear un timestamps para registrar cambios en los datos:</span>
+<span class="linenos">23</span>            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+<span class="linenos">24</span>        <span class="p">});</span>
+<span class="linenos">25</span>    <span class="p">}</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="sd">/**</span>
+<span class="linenos">28</span><span class="sd">    * Reverse the migrations.</span>
+<span class="linenos">29</span><span class="sd">    *</span>
+<span class="linenos">30</span><span class="sd">    * @return void</span>
+<span class="linenos">31</span><span class="sd">    */</span>
+<span class="linenos">32</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span> <span class="c1">// borra la tabla</span>
+<span class="linenos">33</span>    <span class="p">{</span>
+<span class="linenos">34</span>        <span class="c1">// se define el drop para eliminar la tabla:</span>
+<span class="linenos">35</span>        <span class="nx">Schema</span><span class="o">::</span><span class="na">drop</span><span class="p">(</span><span class="s1">&#39;lista_consolas&#39;</span><span class="p">);</span>
+<span class="linenos">36</span>    <span class="p">}</span>
+<span class="linenos">37</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lanzar todas la migraciones: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">migrate</span></code></p></li>
+<li><p>Refrescar los cambios en las migraciones: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">migrate:refresh</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Es necesario tener configurado el archivo <strong>.env</strong> para conectarse a la base de datos.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Al refrescar las tablas se borran los registros.</p>
+</div>
+</section>
+<section id="generar-seeders">
+<h3>Generar Seeders<a class="headerlink" href="#generar-seeders" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los seeders se utilizan para rellenar datos de prueba en una aplicación:</p>
+<ul class="simple">
+<li><p>Lo primero es ejecutar el comando: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">make:seed</span> <span class="pre">lista_consolas_seed</span></code></p></li>
+<li><p>En la carpeta <strong>database/seeds/</strong> se ha creado el archivo <strong>lista_consolas_seed.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">use</span> <span class="nx">Illuminate\Database\Seeder</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">lista_consolas_seed</span> <span class="k">extends</span> <span class="nx">Seeder</span>
+<span class="linenos"> 6</span><span class="p">{</span>
+<span class="linenos"> 7</span>    <span class="sd">/**</span>
+<span class="linenos"> 8</span><span class="sd">    * Run the database seeds.</span>
+<span class="linenos"> 9</span><span class="sd">    *</span>
+<span class="linenos">10</span><span class="sd">    * @return void</span>
+<span class="linenos">11</span><span class="sd">    */</span>
+<span class="linenos">12</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
+<span class="linenos">13</span>    <span class="p">{</span>
+<span class="linenos">14</span>        <span class="c1">// crear registros:</span>
+<span class="linenos">15</span>        <span class="nv">$consolas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">16</span>            <span class="k">array</span><span class="p">(</span>
+<span class="linenos">17</span>                <span class="s1">&#39;marca&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Sega&#39;</span><span class="p">,</span>
+<span class="linenos">18</span>                <span class="s1">&#39;modelo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Dreamcast&#39;</span><span class="p">,</span>
+<span class="linenos">19</span>                <span class="s1">&#39;lanzamiento&#39;</span> <span class="o">=&gt;</span> <span class="mi">1998</span><span class="p">,</span>
+<span class="linenos">20</span>                <span class="s1">&#39;n_ventas&#39;</span> <span class="o">=&gt;</span> <span class="mi">2000000</span>
+<span class="linenos">21</span>            <span class="p">),</span>
+<span class="linenos">22</span>            <span class="k">array</span><span class="p">(</span>
+<span class="linenos">23</span>                <span class="s1">&#39;marca&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Nintendo&#39;</span><span class="p">,</span>
+<span class="linenos">24</span>                <span class="s1">&#39;modelo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;WiiU&#39;</span><span class="p">,</span>
+<span class="linenos">25</span>                <span class="s1">&#39;lanzamiento&#39;</span> <span class="o">=&gt;</span> <span class="mi">2015</span><span class="p">,</span>
+<span class="linenos">26</span>                <span class="s1">&#39;n_ventas&#39;</span> <span class="o">=&gt;</span> <span class="mi">11000</span>
+<span class="linenos">27</span>            <span class="p">)</span>
+<span class="linenos">28</span>        <span class="p">];</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span>        <span class="c1">// aquí se ejecuta la consulta que va a introducir en la base de datos una vez ejecutemos el seed:</span>
+<span class="linenos">31</span>        <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;lista_consolas&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="nv">$consolas</span><span class="p">);</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>        <span class="c1">// lanzamos un mensaje por consola:</span>
+<span class="linenos">34</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">command</span><span class="o">-&gt;</span><span class="na">info</span><span class="p">(</span><span class="s1">&#39;Se ha rellenado la tabla de lista_consolas&#39;</span><span class="p">);</span>
+<span class="linenos">35</span>    <span class="p">}</span>
+<span class="linenos">36</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora para lanzar el seed y que guarde los registros: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">artisan</span> <span class="pre">db:seed</span> <span class="pre">--class=lista_consolas_seed</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>En caso de que indique un error de tipo <strong>no se encuentra la clase lista_consolas_seed.php</strong> habrá que ejecutar el comando <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">dump-autoload</span></code> para solucionar el problema.</p>
+</div>
+</section>
+<section id="relaciones-de-tablas-y-tablas-ya-existentes">
+<h3>Relaciones de tablas y tablas ya existentes<a class="headerlink" href="#relaciones-de-tablas-y-tablas-ya-existentes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Aparte de las relaciones entre tablas veremos como tener un modelo que trabaja con una tabla que se creó desde mysql:</p>
+<ul class="simple">
+<li><p>Tabla con relación de uno a muchos (Category):</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="k">class</span> <span class="nc">Category</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="linenos"> 9</span><span class="p">{</span>
+<span class="linenos">10</span>    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
+<span class="linenos">11</span>    <span class="c1">// tabla creada en mysql:</span>
+<span class="linenos">12</span>    <span class="k">protected</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">&#39;categories&#39;</span><span class="p">;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="c1">// relación de uno a muchos:</span>
+<span class="linenos">15</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">posts</span><span class="p">(){</span>
+<span class="linenos">16</span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">hasMany</span><span class="p">(</span><span class="s1">&#39;App\Post&#39;</span><span class="p">);</span>
+<span class="linenos">17</span>    <span class="p">}</span>
+<span class="linenos">18</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Tabla con relación inversa (Post):</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="linenos"> 9</span><span class="p">{</span>
+<span class="linenos">10</span>    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
+<span class="linenos">11</span>    <span class="c1">// tabla creada en mysql:</span>
+<span class="linenos">12</span>    <span class="k">protected</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">&#39;posts&#39;</span><span class="p">;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="c1">// relación de uno a muchos inversa (muchos a uno):</span>
+<span class="linenos">15</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">user</span><span class="p">(){</span>
+<span class="linenos">16</span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">belongsTo</span><span class="p">(</span><span class="s1">&#39;App\Models\User&#39;</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">);</span>
+<span class="linenos">17</span>    <span class="p">}</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">category</span><span class="p">(){</span>
+<span class="linenos">20</span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">belongsTo</span><span class="p">(</span><span class="s1">&#39;App\Models\Category&#39;</span><span class="p">,</span> <span class="s1">&#39;category_id&#39;</span><span class="p">);</span>
+<span class="linenos">21</span>    <span class="p">}</span>
+<span class="linenos">22</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="query-builder-laravel">
+<h3>Query Builder Laravel<a class="headerlink" href="#query-builder-laravel" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="consultar-datos">
+<h4>Consultar datos<a class="headerlink" href="#consultar-datos" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">public function index(){</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">        // consulta para listar datos:</span>
+<span class="linenos"> 4</span><span class="x">        $consolas = DB::table(&#39;lista_consolas&#39;)-&gt;get();</span>
+<span class="linenos"> 5</span><span class="x">        // recuperar solo registros concretos:</span>
+<span class="linenos"> 6</span><span class="x">        $consolas = DB::table(&#39;lista_consolas&#39;)-&gt;where(&#39;marca&#39;, &#39;=&#39;, &#39;Sega&#39;)-&gt;get();</span>
+<span class="linenos"> 7</span><span class="x">        // ordenar registros:</span>
+<span class="linenos"> 8</span><span class="x">        $consolas = DB::table(&#39;lista_consolas&#39;)-&gt;orderBy(&#39;modelo&#39;, &#39;desc&#39;)-&gt;get();</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="x">        return view(&#39;consolas.listar-consolas&#39;, array(</span>
+<span class="linenos">12</span><span class="x">            &#39;consolas&#39; =&gt; $consolas</span>
+<span class="linenos">13</span><span class="x">        ));</span>
+<span class="linenos">14</span><span class="x">    }</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="x">public function consola($id){</span>
+<span class="linenos">17</span><span class="x">    // buscar un registro:</span>
+<span class="linenos">18</span><span class="x">    $consola = DB::table(&#39;lista_consolas&#39;)-&gt;where(&#39;id&#39;, &#39;=&#39;, $id)-&gt;first();</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="x">    // respuesta:</span>
+<span class="linenos">21</span><span class="x">    return view(&#39;consolas.consola&#39;, array(</span>
+<span class="linenos">22</span><span class="x">        &#39;consola&#39; =&gt; $consola</span>
+<span class="linenos">23</span><span class="x">    ));</span>
+<span class="linenos">24</span><span class="x">}</span>
+</pre></div>
+</div>
+</section>
+<section id="insertar-datos">
+<h4>Insertar datos<a class="headerlink" href="#insertar-datos" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">public function nuevaConsola(Request $request){</span>
+<span class="linenos"> 2</span><span class="x">    $response = view(&#39;consolas.nuevaConsola&#39;);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="x">    $marca = $request-&gt;input(&#39;marca&#39;);</span>
+<span class="linenos"> 6</span><span class="x">    $modelo =  $request-&gt;input(&#39;modelo&#39;);</span>
+<span class="linenos"> 7</span><span class="x">    $lanzamiento =  $request-&gt;input(&#39;lanzamiento&#39;);</span>
+<span class="linenos"> 8</span><span class="x">    $ventas = 0;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="x">    if($marca &amp;&amp; $modelo &amp;&amp; $lanzamiento){</span>
+<span class="linenos">11</span><span class="x">        // guardar registro:</span>
+<span class="linenos">12</span><span class="x">        $consola = DB::table(&#39;lista_consolas&#39;)-&gt;insert(array(</span>
+<span class="linenos">13</span><span class="x">            &#39;marca&#39; =&gt; $marca,</span>
+<span class="linenos">14</span><span class="x">            &#39;modelo&#39; =&gt; $modelo,</span>
+<span class="linenos">15</span><span class="x">            &#39;lanzamiento&#39; =&gt; $lanzamiento,</span>
+<span class="linenos">16</span><span class="x">            &#39;n_ventas&#39; =&gt; $ventas</span>
+<span class="linenos">17</span><span class="x">        ));</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="x">        $response = redirect()-&gt;action(&#39;ConsolaController@index&#39;);</span>
+<span class="linenos">20</span><span class="x">    }</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="x">    return $response;</span>
+<span class="linenos">23</span><span class="x">}</span>
+</pre></div>
+</div>
+</section>
+<section id="borrar-registros">
+<h4>Borrar registros<a class="headerlink" href="#borrar-registros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">public function borrarConsola($id){</span>
+<span class="linenos">2</span><span class="x">    // consulta para borrar registro:</span>
+<span class="linenos">3</span><span class="x">    $consola = DB::table(&#39;lista_consolas&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;delete();</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="x">    return redirect()-&gt;action(&#39;ConsolaController@index&#39;)-&gt;with(&#39;status&#39;, &#39;Consola eliminada con éxito&#39;);</span>
+<span class="linenos">6</span><span class="x">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En la vista se puede utilizar las sesiones para cargar el status que hemos creado:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">@extends(&#39;layouts.base&#39;)</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">@section(&#39;title&#39;, &#39;Listado de consolas:&#39;)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="x">@section(&#39;content&#39;)</span>
+<span class="linenos"> 6</span><span class="x">&lt;ul&gt;</span>
+<span class="linenos"> 7</span><span class="x">    @foreach($consolas as $consola)</span>
+<span class="linenos"> 8</span><span class="x">    &lt;li&gt;{{ $consola-&gt;marca }}&lt;/li&gt;</span>
+<span class="linenos"> 9</span><span class="x">    @endforeach</span>
+<span class="linenos">10</span><span class="x">&lt;/ul&gt;</span>
+<span class="linenos">11</span><span class="x">@stop</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="x">@section(&#39;footer&#39;)</span>
+<span class="linenos">14</span><span class="x">    &lt;p&gt;Parte exclusiva en el footer de Listado de consolas&lt;/p&gt;</span>
+<span class="linenos">15</span><span class="x">    @parent</span>
+<span class="linenos">16</span><span class="x">@stop</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="x">{{-- Con blade se muestran los datos almacenados en sesión via with: --}}</span>
+<span class="linenos">19</span><span class="x">@if(session(&#39;status&#39;))</span>
+<span class="linenos">20</span><span class="x">    &lt;h3&gt;{{ session(&#39;status&#39;) }}&lt;/h3&gt;</span>
+<span class="linenos">21</span><span class="x">@endif</span>
+</pre></div>
+</div>
+</section>
+<section id="actualizar-registros">
+<h4>Actualizar registros<a class="headerlink" href="#actualizar-registros" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">public function editarConsola($id, Request $request){</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">    // primero se recupera el registro:</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="x">    if ($request-&gt;isMethod(&#39;post&#39;))</span>
+<span class="linenos"> 7</span><span class="x">    {</span>
+<span class="linenos"> 8</span><span class="x">        $consola = DB::table(&#39;lista_consolas&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;update(array(</span>
+<span class="linenos"> 9</span><span class="x">            &#39;marca&#39; =&gt; $request-&gt;input(&#39;marca&#39;),</span>
+<span class="linenos">10</span><span class="x">            &#39;modelo&#39; =&gt; $request-&gt;input(&#39;modelo&#39;),</span>
+<span class="linenos">11</span><span class="x">            &#39;lanzamiento&#39; =&gt; $request-&gt;input(&#39;lanzamiento&#39;),</span>
+<span class="linenos">12</span><span class="x">            &#39;n_ventas&#39; =&gt; 0</span>
+<span class="linenos">13</span><span class="x">        ));</span>
+<span class="linenos">14</span><span class="x">        $response = redirect()-&gt;action(&#39;ConsolaController@consola&#39;, $id);</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="x">    }else{</span>
+<span class="linenos">17</span><span class="x">        $consola = DB::table(&#39;lista_consolas&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;first();</span>
+<span class="linenos">18</span><span class="x">        $response = view(&#39;consolas.nuevaConsola&#39;, array(</span>
+<span class="linenos">19</span><span class="x">            &#39;consola&#39; =&gt; $consola</span>
+<span class="linenos">20</span><span class="x">        ));</span>
+<span class="linenos">21</span><span class="x">    }</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="x">    return $response;</span>
+<span class="linenos">24</span><span class="x">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Se puede readaptar el formulario para que muestre los datos y alterne la respuesta:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;h1&gt;Formulario registro consola&lt;/h1&gt;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">&lt;!-- Se establece un ternario para preguntar si recibe algun dato del controlador cambiar a edición --&gt;</span>
+<span class="linenos"> 4</span><span class="x">&lt;form action=&quot;{{ isset($consola) ? action(&#39;ConsolaController@editarConsola&#39;, $consola-&gt;id) : action(&#39;ConsolaController@nuevaConsola&#39;) }}&quot; method=&quot;POST&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    {{ csrf_field() }}</span>
+<span class="linenos"> 6</span><span class="x">    &lt;label for=&quot;marca&quot;&gt;Marca: &lt;/label&gt; &lt;!-- con or podemos decidir si hay algo o sino valor por defecto --&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;input type=&quot;text&quot; name=&quot;marca&quot; value=&quot;{{ $consola-&gt;marca or &#39;&#39; }}&quot; /&gt;</span>
+<span class="linenos"> 8</span><span class="x">    &lt;label for=&quot;modelo&quot;&gt;Modelo: &lt;/label&gt;</span>
+<span class="linenos"> 9</span><span class="x">    &lt;input type=&quot;text&quot; name=&quot;modelo&quot; value=&quot;{{ $consola-&gt;modelo or &#39;&#39; }}&quot; /&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;label for=&quot;lanzamiento&quot;&gt;Lanzamiento: &lt;/label&gt;</span>
+<span class="linenos">11</span><span class="x">    &lt;input type=&quot;text&quot; name=&quot;lanzamiento&quot; value=&quot;{{ $consola-&gt;lanzamiento or &#39;&#39; }}&quot;/&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="x">    &lt;input type=&quot;submit&quot; value=&quot;registrar&quot; /&gt;</span>
+<span class="linenos">14</span><span class="x">&lt;/form&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="api-restful">
+<h2>API Restful<a class="headerlink" href="#api-restful" title="Enlazar permanentemente con este título">#</a></h2>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="cifrado.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Codificación y Hash</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../python/sintaxis.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Sintaxis Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

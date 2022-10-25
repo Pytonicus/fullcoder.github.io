@@ -1,0 +1,2453 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>CSS3 &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="reStructuredText" href="restructured.html" />
+    <link rel="prev" title="HTML5" href="html.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/marcado/css.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcionamiento-de-css">
+   Funcionamiento de CSS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios-en-css">
+     Comentarios en CSS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elementos-hijos-dentro-de-css">
+     Elementos hijos dentro de CSS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudo-clases">
+     pseudo-clases
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudo-elementos">
+     Pseudo-elementos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-hojas-de-estilo-dentro-de-otra-hoja-de-estilo">
+   Importar hojas de estilo dentro de otra hoja de estilo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fuentes">
+   Fuentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elegir-una-fuentes">
+     Elegir una fuentes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-fuentes-externas">
+     Cargar fuentes externas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-tamano-de-texto">
+     Definir tamaño de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-grosor-de-texto">
+     Definir grosor de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transformar-texto-de-minusculas-a-mayusculas-y-viceversa">
+     Transformar texto de minúsculas a mayúsculas y viceversa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alineacion-de-texto">
+     Alineación de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aplicar-sangria-a-la-primera-linea">
+     Aplicar sangría a la primera línea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#separacion-entre-caracteres">
+     Separación entre caracteres
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espacio-entre-lineas">
+     Espacio entre líneas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sombreado-de-texto">
+     Sombreado de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-multiples-columnas-de-texto">
+     Crear múltiples columnas de texto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajustar-ancho-y-alto">
+   Ajustar ancho y alto
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ancho">
+     Ancho
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alto">
+     Alto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelo-de-caja-en-css">
+   Modelo de caja en CSS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#margenes">
+     Márgenes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relleno">
+     Relleno
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bordes">
+   Bordes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estilo-del-borde">
+     Estilo del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grosor-del-borde">
+     Grosor del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-del-borde">
+     Color del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redondeado-del-borde">
+     Redondeado del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usando-una-imagen-como-borde">
+     Usando una imagen como borde
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fondos">
+   Fondos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-de-fondo">
+     Color de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#degradado-de-fondo">
+     Degradado de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#degradado-radial">
+     Degradado radial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imagen-de-fondo">
+     Imagen de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajustar-imagen-de-fondo">
+     Ajustar imagen de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repetir-fondo">
+     Repetir fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tamano-del-fondo">
+     Tamaño del fondo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#colores">
+   Colores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cambiar-el-diseno-del-cursor">
+   Cambiar el diseño del cursor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#posicionar-elementos-en-css">
+   Posicionar elementos en CSS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orden-de-los-elementos">
+     Orden de los elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limite-visible-de-los-elementos-hijos">
+     Limite visible de los elementos hijos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flotar-elementos">
+   Flotar elementos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resetear-flotado-de-elementos">
+     Resetear flotado de elementos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sombreado-de-contenedores">
+   Sombreado de contenedores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformar-elementos">
+   Transformar elementos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-el-origen-de-un-elemento">
+     Definir el origen de un elemento
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definir-como-se-muestran-los-elementos">
+   Definir como se muestran los elementos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-especificar-la-posicion-de-los-elementos">
+     Flexbox: Especificar la posición de los elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-mover-elementos-internos-de-izquierda-a-derecha">
+     Flexbox: Mover elementos internos de izquierda a derecha
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-mover-elementos-internos-de-arriba-a-abajo">
+     Flexbox: Mover elementos internos de arriba a abajo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-controlar-salto-de-linea-en-hijos">
+     Flexbox: Controlar salto de línea en hijos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diseno-responsivo">
+   Diseño responsivo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatos-de-tamano">
+     Formatos de Tamaño
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html-responsivo">
+     HTML responsivo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajustar-tamano-segun-resolucion-con-media-queries">
+     Ajustar tamaño según resolución con media queries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#animaciones">
+   Animaciones
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>CSS3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcionamiento-de-css">
+   Funcionamiento de CSS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios-en-css">
+     Comentarios en CSS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elementos-hijos-dentro-de-css">
+     Elementos hijos dentro de CSS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudo-clases">
+     pseudo-clases
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudo-elementos">
+     Pseudo-elementos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-hojas-de-estilo-dentro-de-otra-hoja-de-estilo">
+   Importar hojas de estilo dentro de otra hoja de estilo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fuentes">
+   Fuentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elegir-una-fuentes">
+     Elegir una fuentes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-fuentes-externas">
+     Cargar fuentes externas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-tamano-de-texto">
+     Definir tamaño de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-grosor-de-texto">
+     Definir grosor de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transformar-texto-de-minusculas-a-mayusculas-y-viceversa">
+     Transformar texto de minúsculas a mayúsculas y viceversa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alineacion-de-texto">
+     Alineación de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aplicar-sangria-a-la-primera-linea">
+     Aplicar sangría a la primera línea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#separacion-entre-caracteres">
+     Separación entre caracteres
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espacio-entre-lineas">
+     Espacio entre líneas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sombreado-de-texto">
+     Sombreado de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-multiples-columnas-de-texto">
+     Crear múltiples columnas de texto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajustar-ancho-y-alto">
+   Ajustar ancho y alto
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ancho">
+     Ancho
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alto">
+     Alto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelo-de-caja-en-css">
+   Modelo de caja en CSS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#margenes">
+     Márgenes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relleno">
+     Relleno
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bordes">
+   Bordes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estilo-del-borde">
+     Estilo del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grosor-del-borde">
+     Grosor del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-del-borde">
+     Color del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redondeado-del-borde">
+     Redondeado del borde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usando-una-imagen-como-borde">
+     Usando una imagen como borde
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fondos">
+   Fondos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-de-fondo">
+     Color de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#degradado-de-fondo">
+     Degradado de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#degradado-radial">
+     Degradado radial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imagen-de-fondo">
+     Imagen de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajustar-imagen-de-fondo">
+     Ajustar imagen de fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repetir-fondo">
+     Repetir fondo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tamano-del-fondo">
+     Tamaño del fondo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#colores">
+   Colores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cambiar-el-diseno-del-cursor">
+   Cambiar el diseño del cursor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#posicionar-elementos-en-css">
+   Posicionar elementos en CSS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orden-de-los-elementos">
+     Orden de los elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limite-visible-de-los-elementos-hijos">
+     Limite visible de los elementos hijos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flotar-elementos">
+   Flotar elementos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resetear-flotado-de-elementos">
+     Resetear flotado de elementos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sombreado-de-contenedores">
+   Sombreado de contenedores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformar-elementos">
+   Transformar elementos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-el-origen-de-un-elemento">
+     Definir el origen de un elemento
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definir-como-se-muestran-los-elementos">
+   Definir como se muestran los elementos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-especificar-la-posicion-de-los-elementos">
+     Flexbox: Especificar la posición de los elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-mover-elementos-internos-de-izquierda-a-derecha">
+     Flexbox: Mover elementos internos de izquierda a derecha
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-mover-elementos-internos-de-arriba-a-abajo">
+     Flexbox: Mover elementos internos de arriba a abajo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flexbox-controlar-salto-de-linea-en-hijos">
+     Flexbox: Controlar salto de línea en hijos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diseno-responsivo">
+   Diseño responsivo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatos-de-tamano">
+     Formatos de Tamaño
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html-responsivo">
+     HTML responsivo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajustar-tamano-segun-resolucion-con-media-queries">
+     Ajustar tamaño según resolución con media queries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#animaciones">
+   Animaciones
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="css3">
+<h1><a class="toc-backref" href="#id1">CSS3</a><a class="headerlink" href="#css3" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-css3.png"><img alt="Logo CSS3" class="align-center" src="../_images/logo-css3.png" style="width: 201.25px; height: 270.0px;" /></a>
+<p>Última edición el día 2022-10-26 a las 00:31.</p>
+<p>Esta es la documentación que he recopilado para trabajar con CSS3, un lenguaje de creación de estilos en cascada.</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#css3" id="id1">CSS3</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funcionamiento-de-css" id="id2">Funcionamiento de CSS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comentarios-en-css" id="id3">Comentarios en CSS</a></p></li>
+<li><p><a class="reference internal" href="#elementos-hijos-dentro-de-css" id="id4">Elementos hijos dentro de CSS</a></p></li>
+<li><p><a class="reference internal" href="#pseudo-clases" id="id5">pseudo-clases</a></p></li>
+<li><p><a class="reference internal" href="#pseudo-elementos" id="id6">Pseudo-elementos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#importar-hojas-de-estilo-dentro-de-otra-hoja-de-estilo" id="id7">Importar hojas de estilo dentro de otra hoja de estilo</a></p></li>
+<li><p><a class="reference internal" href="#fuentes" id="id8">Fuentes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elegir-una-fuentes" id="id9">Elegir una fuentes</a></p></li>
+<li><p><a class="reference internal" href="#cargar-fuentes-externas" id="id10">Cargar fuentes externas</a></p></li>
+<li><p><a class="reference internal" href="#definir-tamano-de-texto" id="id11">Definir tamaño de texto</a></p></li>
+<li><p><a class="reference internal" href="#definir-grosor-de-texto" id="id12">Definir grosor de texto</a></p></li>
+<li><p><a class="reference internal" href="#transformar-texto-de-minusculas-a-mayusculas-y-viceversa" id="id13">Transformar texto de minúsculas a mayúsculas y viceversa</a></p></li>
+<li><p><a class="reference internal" href="#alineacion-de-texto" id="id14">Alineación de texto</a></p></li>
+<li><p><a class="reference internal" href="#aplicar-sangria-a-la-primera-linea" id="id15">Aplicar sangría a la primera línea</a></p></li>
+<li><p><a class="reference internal" href="#separacion-entre-caracteres" id="id16">Separación entre caracteres</a></p></li>
+<li><p><a class="reference internal" href="#espacio-entre-lineas" id="id17">Espacio entre líneas</a></p></li>
+<li><p><a class="reference internal" href="#sombreado-de-texto" id="id18">Sombreado de texto</a></p></li>
+<li><p><a class="reference internal" href="#crear-multiples-columnas-de-texto" id="id19">Crear múltiples columnas de texto</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ajustar-ancho-y-alto" id="id20">Ajustar ancho y alto</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ancho" id="id21">Ancho</a></p></li>
+<li><p><a class="reference internal" href="#alto" id="id22">Alto</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modelo-de-caja-en-css" id="id23">Modelo de caja en CSS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#margenes" id="id24">Márgenes</a></p></li>
+<li><p><a class="reference internal" href="#relleno" id="id25">Relleno</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bordes" id="id26">Bordes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#estilo-del-borde" id="id27">Estilo del borde</a></p></li>
+<li><p><a class="reference internal" href="#grosor-del-borde" id="id28">Grosor del borde</a></p></li>
+<li><p><a class="reference internal" href="#color-del-borde" id="id29">Color del borde</a></p></li>
+<li><p><a class="reference internal" href="#redondeado-del-borde" id="id30">Redondeado del borde</a></p></li>
+<li><p><a class="reference internal" href="#usando-una-imagen-como-borde" id="id31">Usando una imagen como borde</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#fondos" id="id32">Fondos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#color-de-fondo" id="id33">Color de fondo</a></p></li>
+<li><p><a class="reference internal" href="#degradado-de-fondo" id="id34">Degradado de fondo</a></p></li>
+<li><p><a class="reference internal" href="#degradado-radial" id="id35">Degradado radial</a></p></li>
+<li><p><a class="reference internal" href="#imagen-de-fondo" id="id36">Imagen de fondo</a></p></li>
+<li><p><a class="reference internal" href="#ajustar-imagen-de-fondo" id="id37">Ajustar imagen de fondo</a></p></li>
+<li><p><a class="reference internal" href="#repetir-fondo" id="id38">Repetir fondo</a></p></li>
+<li><p><a class="reference internal" href="#tamano-del-fondo" id="id39">Tamaño del fondo</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#colores" id="id40">Colores</a></p></li>
+<li><p><a class="reference internal" href="#cambiar-el-diseno-del-cursor" id="id41">Cambiar el diseño del cursor</a></p></li>
+<li><p><a class="reference internal" href="#posicionar-elementos-en-css" id="id42">Posicionar elementos en CSS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#orden-de-los-elementos" id="id43">Orden de los elementos</a></p></li>
+<li><p><a class="reference internal" href="#limite-visible-de-los-elementos-hijos" id="id44">Limite visible de los elementos hijos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#flotar-elementos" id="id45">Flotar elementos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#resetear-flotado-de-elementos" id="id46">Resetear flotado de elementos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sombreado-de-contenedores" id="id47">Sombreado de contenedores</a></p></li>
+<li><p><a class="reference internal" href="#transformar-elementos" id="id48">Transformar elementos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#definir-el-origen-de-un-elemento" id="id49">Definir el origen de un elemento</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#definir-como-se-muestran-los-elementos" id="id50">Definir como se muestran los elementos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#flexbox-especificar-la-posicion-de-los-elementos" id="id51">Flexbox: Especificar la posición de los elementos</a></p></li>
+<li><p><a class="reference internal" href="#flexbox-mover-elementos-internos-de-izquierda-a-derecha" id="id52">Flexbox: Mover elementos internos de izquierda a derecha</a></p></li>
+<li><p><a class="reference internal" href="#flexbox-mover-elementos-internos-de-arriba-a-abajo" id="id53">Flexbox: Mover elementos internos de arriba a abajo</a></p></li>
+<li><p><a class="reference internal" href="#flexbox-controlar-salto-de-linea-en-hijos" id="id54">Flexbox: Controlar salto de línea en hijos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#diseno-responsivo" id="id55">Diseño responsivo</a></p>
+<ul>
+<li><p><a class="reference internal" href="#formatos-de-tamano" id="id56">Formatos de Tamaño</a></p></li>
+<li><p><a class="reference internal" href="#html-responsivo" id="id57">HTML responsivo</a></p></li>
+<li><p><a class="reference internal" href="#ajustar-tamano-segun-resolucion-con-media-queries" id="id58">Ajustar tamaño según resolución con media queries</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#animaciones" id="id59">Animaciones</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="funcionamiento-de-css">
+<h2><a class="toc-backref" href="#id2">Funcionamiento de CSS</a><a class="headerlink" href="#funcionamiento-de-css" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Con CSS podemos definir estilos recuperando etiquetas HTML de tres formas:</p>
+<ul class="simple">
+<li><p>Escribiendo el nombre de la etiqueta:</p></li>
+</ul>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Utilizando el atributo ID de la etiqueta el cual comienza siempre con almohadilla (#):</p></li>
+</ul>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="p">#</span><span class="nn">identificador</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>O usando el atributo clase de la etiqueta que comienza con punto (.):</p></li>
+</ul>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">clase</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Y si queremos que un estilo sea para todos los elementos utilizamos el asterísco (*):</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>De ese modo vamos insertando dentro de los paréntesis las reglas de estilo con las cuales podremos definir tamaño de textos, colores, posición, animaciones, etc…</p>
+<section id="comentarios-en-css">
+<h3><a class="toc-backref" href="#id3">Comentarios en CSS</a><a class="headerlink" href="#comentarios-en-css" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para escribir comentarios en CSS utilizamos el siguiente formato:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Esto es un comentario en CSS */</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="elementos-hijos-dentro-de-css">
+<h3><a class="toc-backref" href="#id4">Elementos hijos dentro de CSS</a><a class="headerlink" href="#elementos-hijos-dentro-de-css" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los elementos hijo son aquellas etiquetas html dentro de otras que podemos seleccionar de las siguientes formas:</p>
+<ul class="simple">
+<li><p>Hijo de otra etiqueta: seleccionar el hijo de una etiqueta <code class="docutils literal notranslate"><span class="pre">ul</span> <span class="pre">li{}</span></code></p></li>
+<li><p>Hijo de Id: la etiqueta hija del id se selecciona con un símbolo menor que: <code class="docutils literal notranslate"><span class="pre">#main</span> <span class="pre">&gt;</span> <span class="pre">p</span> <span class="pre">{}</span></code></p></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">#</span><span class="nn">nav</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="pseudo-clases">
+<h3><a class="toc-backref" href="#id5">pseudo-clases</a><a class="headerlink" href="#pseudo-clases" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las pseudo-clases son elementos que se activa según la interactuación del usuario con la etiqueta a la que asignemos las reglas:</p>
+<ul class="simple">
+<li><p>active: Se activan los estilos cuando estamos pinchando sobre el elemento:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">a</span><span class="p">:</span><span class="nd">active</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>hover: Se activan los estilos cuando posicionamos el cursor sobre el elemento:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>visited: define el estilo de un enlace visitado:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">a</span><span class="p">:</span><span class="nd">visited</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>checked: nos sirve para establecer el estilo de un radio, option o checkbox seleccionado:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">checkbox</span><span class="p">:</span><span class="nd">checked</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>disabled: Reperesenta a cualquier input deshabilitado:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="nd">disabled</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>enabled: Reperesenta a cualquier input habilitado:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="nd">enabled</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>focus: Se activa cuando pinchamos en un input:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">green</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>required: define el estilo de aquellos inputs que tienen el atributo required asignado:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="nd">required</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>valid: define el estilo de un campo input cuando es valido:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="nd">valid</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>invalid: define el estilo de un campo input cuando no es valido:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="nd">invalid</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>first-child: es el primer elemento de un conjunto de hermanos:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="p">:</span><span class="nd">first-child</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>last-child: es el último elemento de un conjunto de hermanos:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="p">:</span><span class="nd">last-child</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>first-letter: define el estilo de la primera letra de un texto:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="p">:</span><span class="nd">first-letter</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="pseudo-elementos">
+<h3><a class="toc-backref" href="#id6">Pseudo-elementos</a><a class="headerlink" href="#pseudo-elementos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los pseudo-elementos son elementos que podemos insertar antes o después de una etiqueta html:</p>
+<ul class="simple">
+<li><p>before: incluiremos un elemento antes de la etiqueta seleccionada.</p></li>
+<li><p>after: incluiremos un elemento después de la etiqueta seleccionada.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">a</span><span class="p">::</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;texto anterior &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="importar-hojas-de-estilo-dentro-de-otra-hoja-de-estilo">
+<h2><a class="toc-backref" href="#id7">Importar hojas de estilo dentro de otra hoja de estilo</a><a class="headerlink" href="#importar-hojas-de-estilo-dentro-de-otra-hoja-de-estilo" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Podemos importar una hoja de estilo en nuestra hoja base utilizando la regla <code class="docutils literal notranslate"><span class="pre">&#64;import</span></code> del siguiente modo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="nt">desktopStyle</span><span class="p">.</span><span class="nc">css</span><span class="o">)</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="fuentes">
+<h2><a class="toc-backref" href="#id8">Fuentes</a><a class="headerlink" href="#fuentes" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Con la etiqueta <code class="docutils literal notranslate"><span class="pre">font</span></code> y sus derivados podemos elegir y personalizar las fuentes de nuestro sitio web.</p>
+<p>Existen una serie de fuentes que vienen con el sistema:</p>
+<ul class="simple">
+<li><p>Serif</p></li>
+<li><p>Sans-Serif</p></li>
+<li><p>Monospace</p></li>
+<li><p>Cursiva</p></li>
+<li><p>Times</p></li>
+<li><p>Arial</p></li>
+<li><p>Courier</p></li>
+<li><p>Comic Sans</p></li>
+<li><p>Times New Roman</p></li>
+<li><p>Helvetica</p></li>
+<li><p>Courier New</p></li>
+<li><p>Georgia</p></li>
+<li><p>Verdana</p></li>
+<li><p>Monaco</p></li>
+<li><p>Geneva</p></li>
+</ul>
+<p>Estas fuentes por lo general siempre están instaladas en el ordenador del cliente y por tanto podemos utilizarlas.</p>
+<section id="elegir-una-fuentes">
+<h3><a class="toc-backref" href="#id9">Elegir una fuentes</a><a class="headerlink" href="#elegir-una-fuentes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para elegir una fuente seleccionamos la etiqueta html, id o clase que queremos personalizar y utilizamos la regla <code class="docutils literal notranslate"><span class="pre">font-family</span></code>:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">,</span><span class="w"> </span><span class="n">Verdana</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cargar-fuentes-externas">
+<h3><a class="toc-backref" href="#id10">Cargar fuentes externas</a><a class="headerlink" href="#cargar-fuentes-externas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos utilizar fuentes de un CDN para nuestros proyectos o fuentes que instalamos en nuestro propio equipo:</p>
+<ol class="arabic simple">
+<li><p>Añadir una fuente con la regla <code class="docutils literal notranslate"><span class="pre">&#64;font-face</span></code>:</p></li>
+</ol>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span><span class="p">{</span><span class="w"></span>
+<span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;fontName&#39;</span><span class="o">;</span><span class="w"></span>
+<span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fontName.eot&#39;</span><span class="o">);</span><span class="w"></span>
+<span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fontName.eot?#iefix&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;embedded-opentype&#39;</span><span class="o">),</span><span class="w"></span>
+<span class="w">    </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fontName.woff&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;woff&#39;</span><span class="o">),</span><span class="w"></span>
+<span class="w">    </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fontName.ttf&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">),</span><span class="w"></span>
+<span class="w">    </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fontName.svg#svgFontName&#39;</span><span class="o">)</span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;svg&#39;</span><span class="o">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Seleccionar la fuente anterior</p></li>
+</ol>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">fontName</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="definir-tamano-de-texto">
+<h3><a class="toc-backref" href="#id11">Definir tamaño de texto</a><a class="headerlink" href="#definir-tamano-de-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para cambiar el tamaño de texto se utiliza la regla <code class="docutils literal notranslate"><span class="pre">font-size</span></code>:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">h1</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Se suele definir su tamaño en Pixels (px), porcentajes (%), Em (em) o Rem (rem).</p>
+</section>
+<section id="definir-grosor-de-texto">
+<h3><a class="toc-backref" href="#id12">Definir grosor de texto</a><a class="headerlink" href="#definir-grosor-de-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para definir el grosor de la fuente utilizamos la regla <code class="docutils literal notranslate"><span class="pre">font-weight</span></code> que posee los siguientes valores:</p>
+<ul class="simple">
+<li><p>normal: normal</p></li>
+<li><p>bold: grueso</p></li>
+<li><p>bolder: más grueso</p></li>
+<li><p>lighter: más fino</p></li>
+<li><p>100</p></li>
+<li><p>200</p></li>
+<li><p>300</p></li>
+<li><p>400</p></li>
+<li><p>500</p></li>
+<li><p>600</p></li>
+<li><p>700</p></li>
+<li><p>800</p></li>
+<li><p>900</p></li>
+<li><p>inherit: heredado</p></li>
+</ul>
+<p>Lo definimos del siguiente modo:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bolder</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="transformar-texto-de-minusculas-a-mayusculas-y-viceversa">
+<h3><a class="toc-backref" href="#id13">Transformar texto de minúsculas a mayúsculas y viceversa</a><a class="headerlink" href="#transformar-texto-de-minusculas-a-mayusculas-y-viceversa" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para transformar un texto de mayúsculas a minúsculas utilizamos la regla <code class="docutils literal notranslate"><span class="pre">text-transform</span></code> que tiene dos opciones:</p>
+<ul class="simple">
+<li><p>lowercase: minúsculas</p></li>
+<li><p>uppercase: mayúsculas</p></li>
+</ul>
+<p>Lo definimos del siguiente modo:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="alineacion-de-texto">
+<h3><a class="toc-backref" href="#id14">Alineación de texto</a><a class="headerlink" href="#alineacion-de-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para alinear un texto la regla que debemos utilizar es <code class="docutils literal notranslate"><span class="pre">text-align</span></code> que tiene los siguientes valores:</p>
+<ul class="simple">
+<li><p>left</p></li>
+<li><p>center</p></li>
+<li><p>right</p></li>
+<li><p>justify</p></li>
+</ul>
+<p>Lo definimos del siguiente modo:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="aplicar-sangria-a-la-primera-linea">
+<h3><a class="toc-backref" href="#id15">Aplicar sangría a la primera línea</a><a class="headerlink" href="#aplicar-sangria-a-la-primera-linea" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos identar el texto utilizando la regla <code class="docutils literal notranslate"><span class="pre">text-indent</span></code> y añadiendo un valor en px, %, em o rem.</p>
+<p>Lo definimos del siguiente modo:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">text-indent</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="separacion-entre-caracteres">
+<h3><a class="toc-backref" href="#id16">Separación entre caracteres</a><a class="headerlink" href="#separacion-entre-caracteres" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La separación de caracteres se aplica con la regla <code class="docutils literal notranslate"><span class="pre">letter-spacing</span></code> en valores:</p>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="espacio-entre-lineas">
+<h3><a class="toc-backref" href="#id17">Espacio entre líneas</a><a class="headerlink" href="#espacio-entre-lineas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para modificar el espacio entre cada línea se utiliza la regla <code class="docutils literal notranslate"><span class="pre">line-height</span></code> seguido de un número decimal:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.7</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="sombreado-de-texto">
+<h3><a class="toc-backref" href="#id18">Sombreado de texto</a><a class="headerlink" href="#sombreado-de-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para crear un sombreado de texto utilizamos la regla <code class="docutils literal notranslate"><span class="pre">text-shadow</span></code> a la cual le introducimos valores para la posición horizontal, la posición vertical y la densidad de la sombra en pixels, por último el color:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mh">#FF0000</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="crear-multiples-columnas-de-texto">
+<h3><a class="toc-backref" href="#id19">Crear múltiples columnas de texto</a><a class="headerlink" href="#crear-multiples-columnas-de-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede asignar un texto con columnas como si se tratase de un periódico con la regla <code class="docutils literal notranslate"><span class="pre">multi-column</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">column-count</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Y especificar la separación entre columnas:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">column-gap</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>También podemos definir el estilo de línea divisora entre columnas y el grosor de esta:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">columns-rule-style</span><span class="p">:</span><span class="w"> </span><span class="kc">dashed</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">columns-rule-width</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ajustar-ancho-y-alto">
+<h2><a class="toc-backref" href="#id20">Ajustar ancho y alto</a><a class="headerlink" href="#ajustar-ancho-y-alto" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="ancho">
+<h3><a class="toc-backref" href="#id21">Ancho</a><a class="headerlink" href="#ancho" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El ancho se define con la regla <code class="docutils literal notranslate"><span class="pre">width</span></code> y podemos trabajar con porcentajes (%) o pixels (px), también existen reglas para definir el ancho mínimo de un elemento con la regla <code class="docutils literal notranslate"><span class="pre">min-width</span></code> y el ancho máximo permitido con <code class="docutils literal notranslate"><span class="pre">max-width</span></code>:</p>
+<p>ejemplo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="alto">
+<h3><a class="toc-backref" href="#id22">Alto</a><a class="headerlink" href="#alto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para el alto tenemos la regla <code class="docutils literal notranslate"><span class="pre">height</span></code> con sus respectivos <code class="docutils literal notranslate"><span class="pre">min-height</span></code> y <code class="docutils literal notranslate"><span class="pre">max-height</span></code> para valores precisos:</p>
+<p>ejemplo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">max-height</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modelo-de-caja-en-css">
+<h2><a class="toc-backref" href="#id23">Modelo de caja en CSS</a><a class="headerlink" href="#modelo-de-caja-en-css" title="Enlazar permanentemente con este título">#</a></h2>
+<p>El modelo de caja en CSS es aquel espacio en el que se puede trabajar su tamaño y espacio.</p>
+<section id="margenes">
+<h3><a class="toc-backref" href="#id24">Márgenes</a><a class="headerlink" href="#margenes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los márgenes son el espacio que podemos definir en el exterior de la caja css y se utiliza la regla <code class="docutils literal notranslate"><span class="pre">margin</span></code>:</p>
+<ul class="simple">
+<li><p>margin: define con un solo tamaño el espaciado de toda la caja.</p></li>
+<li><p>margin-left: define el espacio del margen izquierdo.</p></li>
+<li><p>margin-right: define el espacio del margen derecho.</p></li>
+<li><p>margin-top: define el espacio del margen superior.</p></li>
+<li><p>margin-bottom: define el espacio del margen inferior.</p></li>
+</ul>
+<p>Lo definimos así:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Y también podemos definir el ancho verticual y el ancho horizontal pasándole dos valores:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>O cada uno de ellos utilizando solo la regla <code class="docutils literal notranslate"><span class="pre">margin</span></code> comenzando desde arriba, derecha, abajo e izquierda:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="w"> </span><span class="mi">28</span><span class="kt">px</span><span class="w"> </span><span class="mi">13</span><span class="kt">px</span><span class="w"> </span><span class="mi">26</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="relleno">
+<h3><a class="toc-backref" href="#id25">Relleno</a><a class="headerlink" href="#relleno" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El relleno es el espacio que se define dentro de las cajas CSS con <code class="docutils literal notranslate"><span class="pre">padding</span></code>:</p>
+<ul class="simple">
+<li><p>padding: define con un solo tamaño el espaciado de toda la caja.</p></li>
+<li><p>padding-left: define el espacio del margen izquierdo.</p></li>
+<li><p>padding-right: define el espacio del margen derecho.</p></li>
+<li><p>padding-top: define el espacio del margen superior.</p></li>
+<li><p>padding-bottom: define el espacio del margen inferior.</p></li>
+</ul>
+<p>Lo definimos así:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Y también podemos definir el ancho verticual y el ancho horizontal pasándole dos valores:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>O cada uno de ellos utilizando solo la regla <code class="docutils literal notranslate"><span class="pre">padding</span></code> comenzando desde arriba, derecha, abajo e izquierda:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="w"> </span><span class="mi">28</span><span class="kt">px</span><span class="w"> </span><span class="mi">13</span><span class="kt">px</span><span class="w"> </span><span class="mi">26</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bordes">
+<h2><a class="toc-backref" href="#id26">Bordes</a><a class="headerlink" href="#bordes" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Podemos definir distintas propiedades de los bordes con las reglas de <code class="docutils literal notranslate"><span class="pre">border</span></code></p>
+<p>con la regla <code class="docutils literal notranslate"><span class="pre">border</span></code> se puede definir directamente el grosor del borde, el estilo y el color:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">dotted</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="estilo-del-borde">
+<h3><a class="toc-backref" href="#id27">Estilo del borde</a><a class="headerlink" href="#estilo-del-borde" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existen diversos estilos de bordes que podemos definir con la regla <code class="docutils literal notranslate"><span class="pre">border-style</span></code> los cuales tenemos:</p>
+<ul class="simple">
+<li><p>solid</p></li>
+<li><p>dotted</p></li>
+<li><p>dashed</p></li>
+<li><p>double</p></li>
+<li><p>groove</p></li>
+<li><p>ridge</p></li>
+<li><p>inset</p></li>
+<li><p>outset</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-style</span><span class="p">:</span><span class="w"> </span><span class="kc">dashed</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Esta regla también tiene otro conjunto de reglas para cada borde:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">border-left-style</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-right-style</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-top-style</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-bottom-style</span></code></p></li>
+</ul>
+<p>Y podemos usarlas del siguiente modo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-top-style</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="grosor-del-borde">
+<h3><a class="toc-backref" href="#id28">Grosor del borde</a><a class="headerlink" href="#grosor-del-borde" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para definir el grosor del borde tenemos una regla llamada <cite>border-width</cite> y tiene las siguientes opciones:</p>
+<ul class="simple">
+<li><p>medium</p></li>
+<li><p>thin</p></li>
+<li><p>thick</p></li>
+<li><p>initial</p></li>
+<li><p>Pixels</p></li>
+</ul>
+<p>su uso es el siguiente:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-width</span><span class="p">:</span><span class="w"> </span><span class="kc">thin</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>También podemos utilizar pixels para todos los bordes:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-width</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Definirlos de vertical a horizontal:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-width</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>O incluso cada uno de los bordes de arriba a derecha, abajo e izquierda:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-width</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mi">7</span><span class="kt">px</span><span class="w"> </span><span class="mi">17</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Esta regla también tiene otro conjunto de reglas para cada borde:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">border-left-width</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-right-width</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-top-width</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-bottom-width</span></code></p></li>
+</ul>
+<p>Y podemos usarlas del siguiente modo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-top-width</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="color-del-borde">
+<h3><a class="toc-backref" href="#id29">Color del borde</a><a class="headerlink" href="#color-del-borde" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para elegir el color del borde se utiliza la regla <code class="docutils literal notranslate"><span class="pre">border-color</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Esta regla también tiene otro conjunto de reglas para cada borde:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">border-left-color</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-right-color</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-top-color</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">border-bottom-color</span></code></p></li>
+</ul>
+<p>Y podemos usarlas del siguiente modo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-top-color</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="redondeado-del-borde">
+<h3><a class="toc-backref" href="#id30">Redondeado del borde</a><a class="headerlink" href="#redondeado-del-borde" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existe una regla llamada <code class="docutils literal notranslate"><span class="pre">border-radius</span></code> con la cual definimos el redondeo del filo de nuestro contenedor:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Y podemos bordear una esquina que queramos:</p>
+<ul class="simple">
+<li><p>border-top-left-radius</p></li>
+<li><p>border-top-right-radius</p></li>
+<li><p>border-bottom-left-radius</p></li>
+<li><p>border-bottom-right-radius</p></li>
+</ul>
+</section>
+<section id="usando-una-imagen-como-borde">
+<h3><a class="toc-backref" href="#id31">Usando una imagen como borde</a><a class="headerlink" href="#usando-una-imagen-como-borde" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con la regla <code class="docutils literal notranslate"><span class="pre">border-image-source</span></code> y la regla <code class="docutils literal notranslate"><span class="pre">border-image-width</span></code> podemos definir una imagen como borde:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">border-image-source</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s1">&#39;borde.png&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="fondos">
+<h2><a class="toc-backref" href="#id32">Fondos</a><a class="headerlink" href="#fondos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para trabajar con fondos en css utilizamos el conjunto de reglas <code class="docutils literal notranslate"><span class="pre">background</span></code></p>
+<section id="color-de-fondo">
+<h3><a class="toc-backref" href="#id33">Color de fondo</a><a class="headerlink" href="#color-de-fondo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para lograr un fondo de color utilizamos la regla <code class="docutils literal notranslate"><span class="pre">background-color</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FF0000</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="degradado-de-fondo">
+<h3><a class="toc-backref" href="#id34">Degradado de fondo</a><a class="headerlink" href="#degradado-de-fondo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con el atributo <code class="docutils literal notranslate"><span class="pre">linear-gradient</span></code> podemos definir un degradado de dos o varios colores:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">121</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="mi">35</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">212</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="degradado-radial">
+<h3><a class="toc-backref" href="#id35">Degradado radial</a><a class="headerlink" href="#degradado-radial" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con el atributo <code class="docutils literal notranslate"><span class="pre">radial-gradient</span></code> podemos definir un degradado radial de dos o más colores:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">radial-gradient</span><span class="p">(</span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#99CC00</span><span class="p">,</span><span class="w"> </span><span class="mh">#99CC99</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="imagen-de-fondo">
+<h3><a class="toc-backref" href="#id36">Imagen de fondo</a><a class="headerlink" href="#imagen-de-fondo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Si queremos utilizar una imagen de fondo tenemos la regla <code class="docutils literal notranslate"><span class="pre">background-image</span></code> y se usa del siguiente modo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s1">&#39;fondo.png&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="ajustar-imagen-de-fondo">
+<h3><a class="toc-backref" href="#id37">Ajustar imagen de fondo</a><a class="headerlink" href="#ajustar-imagen-de-fondo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para esta tarea podemos utilizar la regla <code class="docutils literal notranslate"><span class="pre">background-position</span></code> que tiene varios ajustes:</p>
+<ul class="simple">
+<li><p>top</p></li>
+<li><p>center</p></li>
+<li><p>bottom</p></li>
+<li><p>right</p></li>
+<li><p>left</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="repetir-fondo">
+<h3><a class="toc-backref" href="#id38">Repetir fondo</a><a class="headerlink" href="#repetir-fondo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existe una regla llamada <code class="docutils literal notranslate"><span class="pre">background-repeat</span></code> con la que definimos si se repite el fondo y como se repite:</p>
+<ul class="simple">
+<li><p>repeat-x: se repite solo en horizontal.</p></li>
+<li><p>repeat-y: se repite solo en vertical.</p></li>
+<li><p>repeat: se repite rellenando.</p></li>
+<li><p>space: se repite pero dejando espacio entre imágenes.</p></li>
+<li><p>round: se repite ajustando las imágenes.</p></li>
+<li><p>no-repeat: no se repite.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">round</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="tamano-del-fondo">
+<h3><a class="toc-backref" href="#id39">Tamaño del fondo</a><a class="headerlink" href="#tamano-del-fondo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existe una regla para establecer el tamaño del fondo llamada <code class="docutils literal notranslate"><span class="pre">background-size</span></code>:</p>
+<ul class="simple">
+<li><p>auto: Muestra la imagen en su tamaño original.</p></li>
+<li><p>pixels: se puede definir el tamaño con dos valores, primero el horizontal y luego el vertical (500px 250px)</p></li>
+<li><p>porcentaje: lo mismo que pixels pero con porcentajes (100% 50%)</p></li>
+<li><p>cover: Cubrirá la imagen hasta que uno de los bordes toque el final dejando un claro en los otros.</p></li>
+<li><p>contain: cubre todo el fondo estirando la imagen.</p></li>
+<li><p>initial: devuelve la imagen a su estado original.</p></li>
+<li><p>inherit: hereda el tamaño del padre.</p></li>
+</ul>
+<p>Uso de la regla:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="colores">
+<h2><a class="toc-backref" href="#id40">Colores</a><a class="headerlink" href="#colores" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Existen tres formas destacadas de trabajar con colores en CSS:</p>
+<ul class="simple">
+<li><p>Keywords: Nombres de colores como red, yellow, green, black…</p></li>
+<li><p>Hexadecimal: #FF0000, #000000, #FF33AB</p></li>
+<li><p>RGB: rangos del 0 a 255 de cada color: rgb(255, 128, 0)</p></li>
+</ul>
+<p>Podemos definir la opacidad con la regla <code class="docutils literal notranslate"><span class="pre">opacity</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>E incluso si utilizamos rangos RGB podemos utilizar RGBA y añadir directamente la opacidad:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">247</span><span class="p">,</span><span class="w"> </span><span class="mi">235</span><span class="p">,</span><span class="w"> </span><span class="mi">185</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cambiar-el-diseno-del-cursor">
+<h2><a class="toc-backref" href="#id41">Cambiar el diseño del cursor</a><a class="headerlink" href="#cambiar-el-diseno-del-cursor" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para cambiar el diseño del cursor utilizamos la regla <code class="docutils literal notranslate"><span class="pre">cursor</span></code> que posee los siguientes cursores:</p>
+<ul class="simple">
+<li><p>auto: El navegador define de forma automática el cursor.</p></li>
+<li><p>default: El cursor flecha por defecto.</p></li>
+<li><p>none: Ocultar el cursor.</p></li>
+<li><p>context-menu: muestra un aviso de que existe un menú contextual.</p></li>
+<li><p>help: muestra un símbolo de ayuda.</p></li>
+<li><p>pointer: muestra el cursor de un enlace.</p></li>
+<li><p>progress: muestra una barra de progreso.</p></li>
+<li><p>wait: muestra un indicador de espera.</p></li>
+<li><p>cell: muestra una cruz.</p></li>
+<li><p>crosshair: muestra otro tipo de cruz.</p></li>
+<li><p>text: muestra un indicador para comenzar a escribir.</p></li>
+<li><p>vertical-text: muestra un indicador en vertical.</p></li>
+<li><p>alias: muestra una cadena.</p></li>
+<li><p>copy: muestra una cruz verde.</p></li>
+<li><p>move: muestra una mano cerrada para arrastrar.</p></li>
+<li><p>no-drop: no permite el arrastre.</p></li>
+<li><p>not-allowed: muestra simbolo de prohibición.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="posicionar-elementos-en-css">
+<h2><a class="toc-backref" href="#id42">Posicionar elementos en CSS</a><a class="headerlink" href="#posicionar-elementos-en-css" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para establecer que posición debe llevar cada elemento dentro de otros utilizamos la regla <code class="docutils literal notranslate"><span class="pre">position</span></code> que tiene varios atributos:</p>
+<ul class="simple">
+<li><p>static: Por defecto. Los elementos se mostrarán en el orden que van apareciendo.</p></li>
+<li><p>relative: El elemento será posicionado a nuestro antojo utilizando las reglas top, right, left y bottom.</p></li>
+<li><p>absolute: El elemento se verá fijado por su posición.</p></li>
+<li><p>fixed: El elemento se verá de forma fija y flotante donde queramos con las reglas top, left, right y bottom.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">fixed</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="orden-de-los-elementos">
+<h3><a class="toc-backref" href="#id43">Orden de los elementos</a><a class="headerlink" href="#orden-de-los-elementos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos establecer el orden de cada elemento con la regla <code class="docutils literal notranslate"><span class="pre">z-index</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Cuanto mayor es el número más al frente se muestra.</p>
+</section>
+<section id="limite-visible-de-los-elementos-hijos">
+<h3><a class="toc-backref" href="#id44">Limite visible de los elementos hijos</a><a class="headerlink" href="#limite-visible-de-los-elementos-hijos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos limitar la visibilidad de un elemento hijo cuando este se muestre por fuera con <code class="docutils literal notranslate"><span class="pre">overflow</span></code>:</p>
+<ul class="simple">
+<li><p>visible: el contenido es visible aunque sobrepase el contenedor padre.</p></li>
+<li><p>hidden: Oculta los elementos que sobrepasan el contenedor padre.</p></li>
+<li><p>scroll: similar a hidden pero nos aparece una barra de desplazamiento lateral para ver los elementos ocultos.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="flotar-elementos">
+<h2><a class="toc-backref" href="#id45">Flotar elementos</a><a class="headerlink" href="#flotar-elementos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los elementos html se pueden flotar con <code class="docutils literal notranslate"><span class="pre">float</span></code>, esto se puede hacer con las siguientes propiedades:</p>
+<ul class="simple">
+<li><p>left</p></li>
+<li><p>right</p></li>
+<li><p>inherit</p></li>
+<li><p>none</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="resetear-flotado-de-elementos">
+<h3><a class="toc-backref" href="#id46">Resetear flotado de elementos</a><a class="headerlink" href="#resetear-flotado-de-elementos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para que los elementos vuelvan a ser normales a partir de un punto escribimos:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">clear</span><span class="o">:</span><span class="w"> </span><span class="nt">both</span><span class="o">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="sombreado-de-contenedores">
+<h2><a class="toc-backref" href="#id47">Sombreado de contenedores</a><a class="headerlink" href="#sombreado-de-contenedores" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Existe una regla css para sombrear cajas llamada <code class="docutils literal notranslate"><span class="pre">box-shadow</span></code> y funciona como text-shadow:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mh">#F0F0F0</span><span class="n">F0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="transformar-elementos">
+<h2><a class="toc-backref" href="#id48">Transformar elementos</a><a class="headerlink" href="#transformar-elementos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Podemos transformar elementos cambiando su posición o forma con la regla <code class="docutils literal notranslate"><span class="pre">transform</span></code> que recibe los siguientes atributos:</p>
+<ul class="simple">
+<li><p>translate(12px, 15px): cambia de posición un elemento de forma horizontal y vertical.</p></li>
+<li><p>translateX(5px): cambia la posición horizontal de un elemento.</p></li>
+<li><p>translateY(8px): cambia la posición vertical de un elemento.</p></li>
+<li><p>scale(2, 0.5): cambia el tamaño de un elemento horizontal y verticalmente que puede servir para hacer un zoom.</p></li>
+<li><p>scaleX(5): cambia el tamaño horizontal de un elemento.</p></li>
+<li><p>scaleY(2): cambia el tamaño vertical de un elemento.</p></li>
+<li><p>rotate(0.5turn): Invierte la postura de un elemento.</p></li>
+<li><p>skew(19deg, -3deg): Rota horizontalmente y verticalmente un elemento en grados.</p></li>
+<li><p>skewX(30deg): Rota horizontalmente el elemento.</p></li>
+<li><p>skewY(15deg): Rota verticalmente el elemento.</p></li>
+<li><p>rotateX(50deg): Gira el elemento de forma horizontal</p></li>
+<li><p>rotateY(50deg): Gira el elemento de forma vertical</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">rotateY</span><span class="p">(</span><span class="mi">80</span><span class="kt">deg</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="definir-el-origen-de-un-elemento">
+<h3><a class="toc-backref" href="#id49">Definir el origen de un elemento</a><a class="headerlink" href="#definir-el-origen-de-un-elemento" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El origen desde donde se realiza la transformación lo definimos con la regla <code class="docutils literal notranslate"><span class="pre">transform-origin</span></code> y posee las siguientes coordenadas:</p>
+<ul class="simple">
+<li><p>Izquierda: 0%</p></li>
+<li><p>Centro: 50%</p></li>
+<li><p>Derecha: 100%</p></li>
+<li><p>Arriba: 0% 0%</p></li>
+<li><p>Centro absoluto: 50% 50%</p></li>
+<li><p>Abajo: 0% 100%</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">tramsform-origin</span><span class="o">:</span><span class="w"> </span><span class="nt">20</span><span class="o">%;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="definir-como-se-muestran-los-elementos">
+<h2><a class="toc-backref" href="#id50">Definir como se muestran los elementos</a><a class="headerlink" href="#definir-como-se-muestran-los-elementos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Con la regla <code class="docutils literal notranslate"><span class="pre">display</span></code> podemos definir como se muestran el elemento seleccionado:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>block: Se muestra el elemento como un bloque</p></li>
+<li><p>inline: Se muestra el elemento en línea</p></li>
+<li><p>none: oculta el elemento.</p></li>
+<li><p>table: los elementos se muestran como en una tabla.</p></li>
+<li><p>flex: los elementos se muestran en línea de forma flexible y puede acceder al modelo flexbox.</p></li>
+</ul>
+</div></blockquote>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="flexbox-especificar-la-posicion-de-los-elementos">
+<h3><a class="toc-backref" href="#id51">Flexbox: Especificar la posición de los elementos</a><a class="headerlink" href="#flexbox-especificar-la-posicion-de-los-elementos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos especificar como se presentarán los elementos dentro de un contenedor div con la regla <code class="docutils literal notranslate"><span class="pre">flex-direction</span></code> que posee los siguientes atributos:</p>
+<ul class="simple">
+<li><p>row (por defecto): Los elementos internos del div se van posicionando a la derecha.</p></li>
+<li><p>row-reverse (por defecto): Los elementos internos del div se van posicionando a la izquierda.</p></li>
+<li><p>column: Los elementos internos del div se van mostrando de arriba hacia abajo.</p></li>
+<li><p>column-reverse: Los elementos internos del div se van mostrando de abajo hacia arriba.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="flexbox-mover-elementos-internos-de-izquierda-a-derecha">
+<h3><a class="toc-backref" href="#id52">Flexbox: Mover elementos internos de izquierda a derecha</a><a class="headerlink" href="#flexbox-mover-elementos-internos-de-izquierda-a-derecha" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para mover los elementos que se encuentran dentro de un contenedor de izquierda a derecha utilizamos la regla <code class="docutils literal notranslate"><span class="pre">justify-content</span></code> y asignamos uno de los siguientes atributos:</p>
+<ul class="simple">
+<li><p>start: Los elementos se juntan en la izquierda.</p></li>
+<li><p>center: Los elementos se juntan en el centro.</p></li>
+<li><p>space-between: Los elementos dejan toda la separación posible entre ellos.</p></li>
+<li><p>flex-end: Los elementos se ajustan al final</p></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="flexbox-mover-elementos-internos-de-arriba-a-abajo">
+<h3><a class="toc-backref" href="#id53">Flexbox: Mover elementos internos de arriba a abajo</a><a class="headerlink" href="#flexbox-mover-elementos-internos-de-arriba-a-abajo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para mover los elementos que se encuentran dentro de un contenedor de arriba a abajo utilizamos la regla <code class="docutils literal notranslate"><span class="pre">align-items</span></code> con los siguientes atributos:</p>
+<ul class="simple">
+<li><p>stretch: los elementos rellenan todo el espacio posible de arriba hacia abajo.</p></li>
+<li><p>center: los elementos se juntan todos en el centro.</p></li>
+<li><p>start: los elementos se ajustan arriba del todo.</p></li>
+<li><p>end: los elementos se ajustan abajo del todo.</p></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>La regla <code class="docutils literal notranslate"><span class="pre">align-self</span></code> funciona del mismo modo pero con un solo elemento.</p>
+</section>
+<section id="flexbox-controlar-salto-de-linea-en-hijos">
+<h3><a class="toc-backref" href="#id54">Flexbox: Controlar salto de línea en hijos</a><a class="headerlink" href="#flexbox-controlar-salto-de-linea-en-hijos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existe una regla llamada <cite>flex-wrap</cite> que se utiliza para controlar el comportamiento de flexbox en sus hijos para permanecer todos en la misma línea o hacer un salto automático:</p>
+<ul class="simple">
+<li><p>nowrap: los elementos permanecerán en la misma línea aunque sobrepasen el contenedor padre.</p></li>
+<li><p>wrap: los elementos al llegar al límite del contenedor padre irán saltando abajo.</p></li>
+<li><p>wrap-reverse: lo mismo que wrap pero a la inversa.</p></li>
+</ul>
+<p>Ejemplos:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="diseno-responsivo">
+<h2><a class="toc-backref" href="#id55">Diseño responsivo</a><a class="headerlink" href="#diseno-responsivo" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Con CSS se puede crear un diseño adaptado a todos los dispositivos.</p>
+<section id="formatos-de-tamano">
+<h3><a class="toc-backref" href="#id56">Formatos de Tamaño</a><a class="headerlink" href="#formatos-de-tamano" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Tenemos distintos tamaños:</p>
+<ul class="simple">
+<li><p>Pixels: 15px;</p></li>
+<li><p>EM: 2em; Calcula unos 16px en base al contenedor padre.</p></li>
+<li><p>REM: 1rem; Calcula unos 16px pero no es afín al contenedor padre.</p></li>
+<li><p>Porcentajes: 10%; Ofrece un diseño totalmente líquido que se ajusta siempre al contenedor al que pertenece.</p></li>
+</ul>
+</section>
+<section id="html-responsivo">
+<h3><a class="toc-backref" href="#id57">HTML responsivo</a><a class="headerlink" href="#html-responsivo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para preparar nuestro documento html y que sea responsivo debe de tener la siguiente etiqueta <code class="docutils literal notranslate"><span class="pre">viewport</span></code>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;meta</span> <span class="pre">name=&quot;viewport&quot;</span> <span class="pre">content=&quot;width=device-width,</span> <span class="pre">initial-scale=1.0&quot;&gt;</span></code></p>
+<p><strong>detalles del atributo content</strong>:</p>
+<ul class="simple">
+<li><p>width = device-width: quiere decir que el ancho de pantalla se ajustará al dispositivo actual.</p></li>
+<li><p>initial-scale = 1.0: definimos la escala de pantalla en 1.</p></li>
+</ul>
+</section>
+<section id="ajustar-tamano-segun-resolucion-con-media-queries">
+<h3><a class="toc-backref" href="#id58">Ajustar tamaño según resolución con media queries</a><a class="headerlink" href="#ajustar-tamano-segun-resolucion-con-media-queries" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con el media querie <code class="docutils literal notranslate"><span class="pre">&#64;media</span></code> definimos que reglas mostraremos según el tamaño de pantalla.</p>
+<p>Los dispositivos disonibles son:</p>
+<ul class="simple">
+<li><p>screen: para definir que trabajamos con una pantalla.</p></li>
+<li><p>print: para definir que vamos a imprimir.</p></li>
+<li><p>all: para definir que sean reglas para todos los dispositivos.</p></li>
+</ul>
+<p>Los parametros disponibles son:</p>
+<ul class="simple">
+<li><p>min-width: Tamaño mínimo para mostrar estilos.</p></li>
+<li><p>max-width: Tamaño máximo para mostrar estilos.</p></li>
+<li><p>orientation: Orientación de la pantalla entre portrait (vertical) y landscape (horizontal).</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">440px</span><span class="o">)</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">bodoy</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="animaciones">
+<h2><a class="toc-backref" href="#id59">Animaciones</a><a class="headerlink" href="#animaciones" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Podemos definir animaciones para interactuar con elementos del siguiente modo:</p>
+<ol class="arabic simple">
+<li><p>Definimos en que etiqueta irá nuestra animacion con la regla <code class="docutils literal notranslate"><span class="pre">animation</span></code> escribiendo el nombre de la animación y la duración de la misma:</p></li>
+</ol>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">girar</span><span class="w"> </span><span class="mi">5</span><span class="kt">s</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Y ahora creamos la animación con un keyframe en el cual establecemos el comienzo con <code class="docutils literal notranslate"><span class="pre">from</span></code> y el final de la animación con <code class="docutils literal notranslate"><span class="pre">to</span></code>:</p></li>
+</ol>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">animacion</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">from</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">transform</span><span class="p">:</span><span class="nb">rotate</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">to</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">transform</span><span class="p">:</span><span class="nb">rotate</span><span class="p">(</span><span class="mi">0</span><span class="kt">deg</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>podemos decirle que la animación nunca se detenga:</p></li>
+</ol>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">girar</span><span class="w"> </span><span class="mi">5</span><span class="kt">s</span><span class="w"> </span><span class="kc">infinite</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Y que alterne en sentido contrario:</p></li>
+</ol>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">girar</span><span class="w"> </span><span class="mi">5</span><span class="kt">s</span><span class="w"> </span><span class="kc">infinite</span><span class="w"> </span><span class="kc">alternate</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="html.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">HTML5</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="restructured.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">reStructuredText</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

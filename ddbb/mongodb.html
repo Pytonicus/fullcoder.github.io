@@ -1,0 +1,1206 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>MongoDB &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Nginx" href="../sistemas/nginx.html" />
+    <link rel="prev" title="Documentación en Java" href="../java/documentacion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/ddbb/mongodb.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeros-pasos">
+   Primeros pasos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion-de-mongodb">
+     Instalación de MongoDB
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herramienta-mongodb-compass">
+     Herramienta MongoDB Compass
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-datos">
+     Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-de-consola">
+   Comandos de consola
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-de-ejecucion">
+     Comandos de ejecución
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-insercion">
+     Comandos para inserción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-consultas">
+     Comandos para consultas
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consultas-basicas">
+       Consultas básicas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consultas-para-arrays">
+       Consultas para Arrays
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consulta-para-documentos">
+       Consulta para documentos
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-actualizar">
+     Comandos para actualizar
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#actualizar-arrays">
+       Actualizar Arrays
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-eliminar">
+     Comandos para eliminar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores">
+     Operadores
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relaciones-en-mongodb">
+   Relaciones en MongoDB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documento-embebido">
+     Documento embebido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documento-relacionado">
+     Documento relacionado
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indices-en-mongodb">
+   Indices en MongoDB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices-simples">
+     Índices simples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices-compuestos">
+     Índices compuestos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices-unicos">
+     Índices únicos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>MongoDB</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeros-pasos">
+   Primeros pasos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion-de-mongodb">
+     Instalación de MongoDB
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herramienta-mongodb-compass">
+     Herramienta MongoDB Compass
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-datos">
+     Tipos de datos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-de-consola">
+   Comandos de consola
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-de-ejecucion">
+     Comandos de ejecución
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-insercion">
+     Comandos para inserción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-consultas">
+     Comandos para consultas
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consultas-basicas">
+       Consultas básicas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consultas-para-arrays">
+       Consultas para Arrays
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#consulta-para-documentos">
+       Consulta para documentos
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-actualizar">
+     Comandos para actualizar
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#actualizar-arrays">
+       Actualizar Arrays
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-eliminar">
+     Comandos para eliminar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores">
+     Operadores
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relaciones-en-mongodb">
+   Relaciones en MongoDB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documento-embebido">
+     Documento embebido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documento-relacionado">
+     Documento relacionado
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indices-en-mongodb">
+   Indices en MongoDB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices-simples">
+     Índices simples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices-compuestos">
+     Índices compuestos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices-unicos">
+     Índices únicos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="mongodb">
+<h1><a class="toc-backref" href="#id1">MongoDB</a><a class="headerlink" href="#mongodb" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/mongodb-logo.png"><img alt="Logo MongoDB" class="align-center" src="../_images/mongodb-logo.png" style="width: 640.0px; height: 172.5px;" /></a>
+<p>Funcionamiento de MongoDB</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#mongodb" id="id1">MongoDB</a></p>
+<ul>
+<li><p><a class="reference internal" href="#primeros-pasos" id="id2">Primeros pasos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion-de-mongodb" id="id3">Instalación de MongoDB</a></p></li>
+<li><p><a class="reference internal" href="#herramienta-mongodb-compass" id="id4">Herramienta MongoDB Compass</a></p></li>
+<li><p><a class="reference internal" href="#tipos-de-datos" id="id5">Tipos de datos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#comandos-de-consola" id="id6">Comandos de consola</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comandos-de-ejecucion" id="id7">Comandos de ejecución</a></p></li>
+<li><p><a class="reference internal" href="#comandos-para-insercion" id="id8">Comandos para inserción</a></p></li>
+<li><p><a class="reference internal" href="#comandos-para-consultas" id="id9">Comandos para consultas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#consultas-basicas" id="id10">Consultas básicas</a></p></li>
+<li><p><a class="reference internal" href="#consultas-para-arrays" id="id11">Consultas para Arrays</a></p></li>
+<li><p><a class="reference internal" href="#consulta-para-documentos" id="id12">Consulta para documentos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#comandos-para-actualizar" id="id13">Comandos para actualizar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#actualizar-arrays" id="id14">Actualizar Arrays</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#comandos-para-eliminar" id="id15">Comandos para eliminar</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id16">Operadores</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#relaciones-en-mongodb" id="id17">Relaciones en MongoDB</a></p>
+<ul>
+<li><p><a class="reference internal" href="#documento-embebido" id="id18">Documento embebido</a></p></li>
+<li><p><a class="reference internal" href="#documento-relacionado" id="id19">Documento relacionado</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#indices-en-mongodb" id="id20">Indices en MongoDB</a></p>
+<ul>
+<li><p><a class="reference internal" href="#indices-simples" id="id21">Índices simples</a></p></li>
+<li><p><a class="reference internal" href="#indices-compuestos" id="id22">Índices compuestos</a></p></li>
+<li><p><a class="reference internal" href="#indices-unicos" id="id23">Índices únicos</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="primeros-pasos">
+<h2><a class="toc-backref" href="#id2">Primeros pasos</a><a class="headerlink" href="#primeros-pasos" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalacion-de-mongodb">
+<h3><a class="toc-backref" href="#id3">Instalación de MongoDB</a><a class="headerlink" href="#instalacion-de-mongodb" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para instalar MongoDB desde cualquier sistema operativo es recomendable seguir los pasos de su web oficial: <a class="reference external" href="https://www.mongodb.com/try/download/community">https://www.mongodb.com/try/download/community</a></p>
+</section>
+<section id="herramienta-mongodb-compass">
+<h3><a class="toc-backref" href="#id4">Herramienta MongoDB Compass</a><a class="headerlink" href="#herramienta-mongodb-compass" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para instalar la herramienta cliente Studio 3T: <a class="reference external" href="https://studio3t.com/download-studio3t-free">https://studio3t.com/download-studio3t-free</a></p>
+<p>O si prefieres MongoDB Compass: <a class="reference external" href="https://www.mongodb.com/es/products/compass">https://www.mongodb.com/es/products/compass</a></p>
+</section>
+<section id="tipos-de-datos">
+<h3><a class="toc-backref" href="#id5">Tipos de datos</a><a class="headerlink" href="#tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Tipos simples:</p>
+<ul class="simple">
+<li><p>números</p></li>
+<li><p>cadenas de textos</p></li>
+<li><p>fecha</p></li>
+<li><p>hora</p></li>
+<li><p>booleanos</p></li>
+</ul>
+<p>Tipos complejos:</p>
+<ul class="simple">
+<li><p>Arrays</p></li>
+<li><p>objeto</p></li>
+<li><p>binary data</p></li>
+<li><p>objectId (identificador que se crea automáticamente con cada documento)</p></li>
+<li><p>Expresiones regulares</p></li>
+</ul>
+</section>
+</section>
+<section id="comandos-de-consola">
+<h2><a class="toc-backref" href="#id6">Comandos de consola</a><a class="headerlink" href="#comandos-de-consola" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Si estás usando Studio 3T puedes utilizar su consola para ejecutar comandos.</p>
+<section id="comandos-de-ejecucion">
+<h3><a class="toc-backref" href="#id7">Comandos de ejecución</a><a class="headerlink" href="#comandos-de-ejecucion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Arrancar la consola: <code class="docutils literal notranslate"><span class="pre">mongo</span></code></p></li>
+<li><p>Listar bases de datos: <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">dbs</span></code></p></li>
+<li><p>Eliminar base de datos: <code class="docutils literal notranslate"><span class="pre">db.dropDatabase()</span></code></p></li>
+<li><p>Seleccionar o Crear base de datos: <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">nombre_db</span></code> (si no existe hasta que no hagas una inserción no la mostrará)</p></li>
+<li><p>Listar colecciones base de datos: <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">tables</span></code></p></li>
+<li><p>Averiguar en que base de datos estás: <code class="docutils literal notranslate"><span class="pre">db</span></code></p></li>
+<li><p>Ver la metadata de la base de datos seleccionada: <code class="docutils literal notranslate"><span class="pre">db.stats()</span></code></p></li>
+<li><p>Mostrar ayuda para bases de datos: <code class="docutils literal notranslate"><span class="pre">db.help()</span></code></p></li>
+<li><p>Mostrar info del servidor: <code class="docutils literal notranslate"><span class="pre">db.hostInfo()</span></code></p></li>
+<li><p>Mostrar hora del sistema: <code class="docutils literal notranslate"><span class="pre">Date()</span></code></p></li>
+</ul>
+</section>
+<section id="comandos-para-insercion">
+<h3><a class="toc-backref" href="#id8">Comandos para inserción</a><a class="headerlink" href="#comandos-para-insercion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear un documento en una colección: <code class="docutils literal notranslate"><span class="pre">db.consolas.insertOne({marca:</span> <span class="pre">&quot;Nintendo&quot;,</span> <span class="pre">modelo:</span> <span class="pre">&quot;Switch&quot;})</span></code> (si no existe la colección la crea)</p></li>
+<li><p>Crear varios documentos o colecciones: <code class="docutils literal notranslate"><span class="pre">db.consolas.insertMany([{marca:</span> <span class="pre">&quot;Nintendo&quot;,</span> <span class="pre">modelo:</span> <span class="pre">&quot;DS&quot;},</span> <span class="pre">{marca:</span> <span class="pre">&quot;Sony&quot;,</span> <span class="pre">modelo:</span> <span class="pre">&quot;Playstation&quot;}])</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>En el momento que se inserta un registro en una base de datos esta ya aparece y también se crea la colección si no existe.</p>
+</div>
+</section>
+<section id="comandos-para-consultas">
+<h3><a class="toc-backref" href="#id9">Comandos para consultas</a><a class="headerlink" href="#comandos-para-consultas" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="consultas-basicas">
+<h4><a class="toc-backref" href="#id10">Consultas básicas</a><a class="headerlink" href="#consultas-basicas" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Consultar todos los elementos de una colección: <code class="docutils literal notranslate"><span class="pre">db.consolas.find().pretty()</span></code> (pretty mejora la lectura salvo en Studio 3T que viene mejorada)</p></li>
+<li><p>Consultar elementos de una colección que cumplan la condición: <code class="docutils literal notranslate"><span class="pre">db.consolas.find({modelo:</span> <span class="pre">&quot;Switch&quot;})</span></code></p></li>
+<li><p>Contar resultados: <code class="docutils literal notranslate"><span class="pre">db.consolas.find().count()</span></code> (se puede filtrar resultados)</p></li>
+<li><p>Limitar resultados mostrados en búsqueda a un número determinado: <code class="docutils literal notranslate"><span class="pre">db.consolas.find().limit(2)</span></code></p></li>
+<li><p>Consultar documentos y ordenarlos por ascendente (1) o descendiente (-1): <code class="docutils literal notranslate"><span class="pre">db.consolas.find().sort({modelo:</span> <span class="pre">1})</span></code></p></li>
+</ul>
+</section>
+<section id="consultas-para-arrays">
+<h4><a class="toc-backref" href="#id11">Consultas para Arrays</a><a class="headerlink" href="#consultas-para-arrays" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Obtener todos los documentos que contengan los valores definidos en el array: <code class="docutils literal notranslate"><span class="pre">db.consolas.find({videojuegos:</span> <span class="pre">{$all:</span> <span class="pre">[&quot;Crash</span> <span class="pre">Bandicoot&quot;,</span> <span class="pre">&quot;Metal</span> <span class="pre">gear</span> <span class="pre">solid&quot;]}})</span></code> (se pueden establecer uno o varios valores)</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>en el primer ejemplo podemos usar también <strong>$in</strong> o <strong>$ni</strong> para que se cumpla la condición si contiene o no al menos uno de los valores.</p>
+</div>
+</section>
+<section id="consulta-para-documentos">
+<h4><a class="toc-backref" href="#id12">Consulta para documentos</a><a class="headerlink" href="#consulta-para-documentos" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Para consultar en otros documentos embebidos o relacionados:</p>
+<ul class="simple">
+<li><p>Obtener documentos que contengan el valor de un documento embebido: <code class="docutils literal notranslate"><span class="pre">db.consolas.find({&quot;videojuegos.titulo&quot;:</span> <span class="pre">&quot;Super</span> <span class="pre">Mario</span> <span class="pre">oddysey&quot;})</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Hay que observar que cuando se realiza este tipo de búsquedas la clave del elemento si lleva comillas.</p>
+</div>
+</section>
+</section>
+<section id="comandos-para-actualizar">
+<h3><a class="toc-backref" href="#id13">Comandos para actualizar</a><a class="headerlink" href="#comandos-para-actualizar" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Actualizar un documento: <code class="docutils literal notranslate"><span class="pre">db.consolas.updateOne({modelo:</span> <span class="pre">&quot;Switch&quot;},</span> <span class="pre">{</span> <span class="pre">$set:</span> <span class="pre">{lanzamiento:</span> <span class="pre">2017}</span> <span class="pre">})</span></code></p></li>
+<li><p>Vaciar valores y añadir nuevos: <code class="docutils literal notranslate"><span class="pre">db.consolas.replaceOne({modelo:</span> <span class="pre">&quot;Playstation&quot;},</span> <span class="pre">{marca:</span> <span class="pre">&quot;Sony&quot;})</span></code> (ahora solo estará el campo marca)</p></li>
+<li><p>Actualizar varios documentos: <code class="docutils literal notranslate"><span class="pre">db.consolas.updateMany({lanzamiento:</span> <span class="pre">{$gt:</span> <span class="pre">2011}},</span> <span class="pre">{</span> <span class="pre">$set:</span> <span class="pre">{generacion:</span> <span class="pre">&quot;Octava&quot;}</span> <span class="pre">})</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>$gt y $set son filtros. En el primer caso $gt indica que se esta buscando un número mayor que el indicado y en el segundo que se va a editar unos campos.</p>
+</div>
+<section id="actualizar-arrays">
+<h4><a class="toc-backref" href="#id14">Actualizar Arrays</a><a class="headerlink" href="#actualizar-arrays" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Añadir elemento al array: <code class="docutils literal notranslate"><span class="pre">db.users.updateOne({nickname:&quot;pytonicus&quot;},</span> <span class="pre">{$addToSet:</span> <span class="pre">{games:</span> <span class="pre">&quot;Metal</span> <span class="pre">Gear</span> <span class="pre">Solid&quot;}})</span></code></p></li>
+<li><p>Añadir varios elementos al array (sin añadir repetidos): <code class="docutils literal notranslate"><span class="pre">db.users.updateOne({nickname:&quot;pytonicus&quot;},</span> <span class="pre">{$addToSet:</span> <span class="pre">{games:</span> <span class="pre">{$each:</span> <span class="pre">[&quot;Metal</span> <span class="pre">Gear</span> <span class="pre">Solid&quot;,</span> <span class="pre">&quot;Crash</span> <span class="pre">Bandicoot&quot;]}}})</span></code></p></li>
+<li><p>Añadir varios elementos al array (añadiendo repetidos): <code class="docutils literal notranslate"><span class="pre">db.users.updateOne({nickname:&quot;pytonicus&quot;},</span> <span class="pre">{$addToSet:</span> <span class="pre">{games:</span> <span class="pre">{$push:</span> <span class="pre">[&quot;Metal</span> <span class="pre">Gear</span> <span class="pre">Solid&quot;,</span> <span class="pre">&quot;Crash</span> <span class="pre">Bandicoot&quot;]}}})</span></code></p></li>
+<li><p>Eliminar último elemento del array (o primero usando -1): <code class="docutils literal notranslate"><span class="pre">db.users.updateOne({nickname:&quot;pytonicus&quot;},</span> <span class="pre">{$pop:</span> <span class="pre">{games:</span> <span class="pre">1}})</span></code></p></li>
+<li><p>Eliminar un elemento del array: <code class="docutils literal notranslate"><span class="pre">db.users.updateOne({nickname:&quot;pytonicus&quot;},</span> <span class="pre">{$pull:</span> <span class="pre">{games:</span> <span class="pre">&quot;Metal</span> <span class="pre">Gear</span> <span class="pre">Solid&quot;}})</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="comandos-para-eliminar">
+<h3><a class="toc-backref" href="#id15">Comandos para eliminar</a><a class="headerlink" href="#comandos-para-eliminar" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El comando para eliminar realiza su trabajo bajo condición. Si más de un documento cumple con el campo elegido se eliminara el primero en el caso <strong>deleteOne()</strong> y varios si usamos <strong>deleteMany()</strong></p>
+<ul class="simple">
+<li><p>Eliminar un documento: <code class="docutils literal notranslate"><span class="pre">db.consolas.deleteOne({modelo:</span> <span class="pre">&quot;Playstation&quot;})</span></code></p></li>
+<li><p>Eliminar varios documentos: <code class="docutils literal notranslate"><span class="pre">db.consolas.deleteMany({marca:&quot;Nintendo&quot;})</span></code></p></li>
+<li><p>Vaciar colección: <code class="docutils literal notranslate"><span class="pre">db.consolas.deleteMany({})</span></code></p></li>
+<li><p>Eliminar colección: <code class="docutils literal notranslate"><span class="pre">db.consolas.drop()</span></code></p></li>
+</ul>
+</section>
+<section id="operadores">
+<h3><a class="toc-backref" href="#id16">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los operadores empiezan con un símbolo $ y se usan para filtrar la información:</p>
+<ul class="simple">
+<li><p><strong>$set</strong>: añadir o editar campos.</p></li>
+<li><p><strong>$eq</strong>: igual que.</p></li>
+<li><p><strong>$lt</strong>: menor que.</p></li>
+<li><p><strong>$lte</strong>: menor o igual que.</p></li>
+<li><p><strong>$gt</strong>: mayor que.</p></li>
+<li><p><strong>$gte</strong>: mayor o igual que.</p></li>
+<li><p><strong>$ne</strong>: distinto.</p></li>
+<li><p><strong>$in</strong>: dentro de.</p></li>
+<li><p><strong>$nin</strong>: fuera de.</p></li>
+<li><p><strong>$all</strong>: Busca documentos que tengan un array que tengan como mínimo los elementos de la busqueda.</p></li>
+</ul>
+</section>
+</section>
+<section id="relaciones-en-mongodb">
+<h2><a class="toc-backref" href="#id17">Relaciones en MongoDB</a><a class="headerlink" href="#relaciones-en-mongodb" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="documento-embebido">
+<h3><a class="toc-backref" href="#id18">Documento embebido</a><a class="headerlink" href="#documento-embebido" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La relación de un documento embebido suele ser un json dentro de otro:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="s2">&quot;_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;62fb86771d63eaf8fbcc54c5&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;marca&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s2">&quot;modelo&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Switch&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s2">&quot;lanzamiento&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">2017.0</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s2">&quot;generacion&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Octava&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s2">&quot;videojuegos&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">            </span><span class="s2">&quot;titulo&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Zelda Breath of the wild&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">            </span><span class="s2">&quot;lanzamiento&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">2017.0</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">            </span><span class="s2">&quot;titulo&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Super Mario Oddysey&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="s2">&quot;lanzamiento&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">2017.0</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="documento-relacionado">
+<h3><a class="toc-backref" href="#id19">Documento relacionado</a><a class="headerlink" href="#documento-relacionado" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El documento relacionado tiene una lista de identificadores que relacionan a un documento con otros documentos:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="s2">&quot;_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;62fb86771d63eaf8fbcc54c5&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="s2">&quot;marca&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="s2">&quot;modelo&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Switch&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="s2">&quot;lanzamiento&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">2017.0</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="s2">&quot;generacion&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Octava&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="s2">&quot;videojuegos&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">]</span><span class="w"></span>
+<span class="linenos">8</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="indices-en-mongodb">
+<h2><a class="toc-backref" href="#id20">Indices en MongoDB</a><a class="headerlink" href="#indices-en-mongodb" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los índices son estructuras de datos especiales que gestiona MongoDB almacenando el valor de un campo específico. Por defecto en cada colección se crea el índice <strong>_id</strong>.
+Estos índices se utilizan para mejorar el rendimiento en las búsquedas de resultados.</p>
+<ul class="simple">
+<li><p>Listar todos los índices: <code class="docutils literal notranslate"><span class="pre">db.consolas.getIndexes()</span></code></p></li>
+</ul>
+<section id="indices-simples">
+<h3><a class="toc-backref" href="#id21">Índices simples</a><a class="headerlink" href="#indices-simples" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear un índice: <code class="docutils literal notranslate"><span class="pre">db.consolas.createIndex({marca:</span> <span class="pre">-1})</span></code> (-1 ordena descendente, 1 orden ascendente)</p></li>
+<li><p>Eliminar un index (utiliza el name): <code class="docutils literal notranslate"><span class="pre">db.consolas.dropIndex(&quot;marca_-1&quot;)</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Al hacer un find a partir de ahora MongoDB localiza el índice y optimiza las búsquedas.</p>
+</div>
+</section>
+<section id="indices-compuestos">
+<h3><a class="toc-backref" href="#id22">Índices compuestos</a><a class="headerlink" href="#indices-compuestos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El índice compuesto se aplica sobre dos o más campos:</p>
+<ul class="simple">
+<li><p>Crear un índice compuesto: <code class="docutils literal notranslate"><span class="pre">db.consolas.createIndex({marca:</span> <span class="pre">1,</span> <span class="pre">lanzamiento:</span> <span class="pre">-1})</span></code></p></li>
+<li><p>Eliminar un index (utiliza el name): <code class="docutils literal notranslate"><span class="pre">db.consolas.dropIndex(&quot;marca_1_lanzamiento_-1&quot;)</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>todas las consultas que impliquen estos dos campos irán mas deprisa y se organizarán por marca ascendente y luego por lanzamiento descendiente.</p>
+</div>
+</section>
+<section id="indices-unicos">
+<h3><a class="toc-backref" href="#id23">Índices únicos</a><a class="headerlink" href="#indices-unicos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Estos índices se crean para aquellos documentos que tengan un campo con un valor único.</p>
+<ul class="simple">
+<li><p>Crear un índice único: <code class="docutils literal notranslate"><span class="pre">db.consolas.createIndex({modelo:</span> <span class="pre">1},</span> <span class="pre">{unique:</span> <span class="pre">true})</span></code></p></li>
+<li><p>Eliminar un index (utiliza el name): <code class="docutils literal notranslate"><span class="pre">db.consolas.dropIndex(&quot;modelo_1&quot;)</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Si se intenta crear un índice tipo único en un campo que contenga valores repetidos o nulos, dará error.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Al crear este tipo de índice, ya no podrás crear documentos que contenga un valor duplicado en el campo indexado.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../java/documentacion.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Documentación en Java</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../sistemas/nginx.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Nginx</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

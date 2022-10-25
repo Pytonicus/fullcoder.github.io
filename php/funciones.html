@@ -1,0 +1,1740 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Funciones predefinidas &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Comunicación Cliente / Servidor" href="procesamiento.html" />
+    <link rel="prev" title="Sintaxis PHP" href="sintaxis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/php/funciones.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#informacion-del-servidor">
+   Información del servidor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-variables">
+   Manipulación de variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#averiguar-tipo-de-dato">
+     Averiguar tipo de dato
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validacion">
+     Validación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#destruccion">
+     Destrucción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-strings">
+   Manipulación de Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longitud-de-un-string">
+     Longitud de un String
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-a-string">
+     Conversión a String
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-string-a-array">
+     Conversión String a Array
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reemplazar-palabras">
+     Reemplazar palabras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#primera-letra-mayuscula">
+     Primera letra mayúscula
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-a-mayusculas">
+     Conversión a mayúsculas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-a-minusculas">
+     Conversión a minúsculas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-espacios-en-blanco-a-los-lados">
+     Eliminar espacios en blanco a los lados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#localizar-posicion-de-caracteres-en-cadena">
+     Localizar posición de caracteres en cadena
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-numeros">
+   Manipulación de Números
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-string-a-integer">
+     Conversión String a Integer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-string-a-float">
+     Conversión String a Float
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redondeo-de-decimales">
+     Redondeo de decimales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-arrays">
+   Manipulación de Arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imprimir-contenido">
+     Imprimir contenido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anadir-elemento-al-array">
+     Añadir elemento al array
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rango-de-numeros">
+     Rango de números
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-valor-maximo">
+     Recuperar valor máximo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-valor-minimo">
+     Recuperar valor mínimo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suma-total-de-todos-los-valores">
+     Suma total de todos los valores
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-json">
+   Manipulación JSON
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convertir-array-en-json">
+     Convertir Array en JSON
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convertir-json-en-array">
+     Convertir JSON en Array
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-fechas">
+   Manipulación de fechas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tratamiento-de-archivos">
+   Tratamiento de archivos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-contenido-de-archivo">
+     Recuperar contenido de archivo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manipulacion-de-archivos">
+     Manipulación de archivos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-cabeceras">
+   Manipulación de cabeceras
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redireccion">
+     Redirección
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-el-comportamiento-de-un-script">
+     Modificar el comportamiento de un script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descargar-un-archivo-desde-un-script">
+     Descargar un archivo desde un script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tratamiento-de-cors">
+     Tratamiento de CORS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Funciones predefinidas</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#informacion-del-servidor">
+   Información del servidor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-variables">
+   Manipulación de variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#averiguar-tipo-de-dato">
+     Averiguar tipo de dato
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validacion">
+     Validación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#destruccion">
+     Destrucción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-strings">
+   Manipulación de Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longitud-de-un-string">
+     Longitud de un String
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-a-string">
+     Conversión a String
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-string-a-array">
+     Conversión String a Array
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reemplazar-palabras">
+     Reemplazar palabras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#primera-letra-mayuscula">
+     Primera letra mayúscula
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-a-mayusculas">
+     Conversión a mayúsculas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-a-minusculas">
+     Conversión a minúsculas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-espacios-en-blanco-a-los-lados">
+     Eliminar espacios en blanco a los lados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#localizar-posicion-de-caracteres-en-cadena">
+     Localizar posición de caracteres en cadena
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-numeros">
+   Manipulación de Números
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-string-a-integer">
+     Conversión String a Integer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-string-a-float">
+     Conversión String a Float
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redondeo-de-decimales">
+     Redondeo de decimales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-arrays">
+   Manipulación de Arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imprimir-contenido">
+     Imprimir contenido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anadir-elemento-al-array">
+     Añadir elemento al array
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rango-de-numeros">
+     Rango de números
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-valor-maximo">
+     Recuperar valor máximo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-valor-minimo">
+     Recuperar valor mínimo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suma-total-de-todos-los-valores">
+     Suma total de todos los valores
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-json">
+   Manipulación JSON
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convertir-array-en-json">
+     Convertir Array en JSON
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convertir-json-en-array">
+     Convertir JSON en Array
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-fechas">
+   Manipulación de fechas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tratamiento-de-archivos">
+   Tratamiento de archivos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-contenido-de-archivo">
+     Recuperar contenido de archivo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manipulacion-de-archivos">
+     Manipulación de archivos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulacion-de-cabeceras">
+   Manipulación de cabeceras
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redireccion">
+     Redirección
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-el-comportamiento-de-un-script">
+     Modificar el comportamiento de un script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descargar-un-archivo-desde-un-script">
+     Descargar un archivo desde un script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tratamiento-de-cors">
+     Tratamiento de CORS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="funciones-predefinidas">
+<h1><a class="toc-backref" href="#id1">Funciones predefinidas</a><a class="headerlink" href="#funciones-predefinidas" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-php.png"><img alt="Logo PHP" class="align-center" src="../_images/logo-php.png" style="width: 360.0px; height: 188.54999999999998px;" /></a>
+<p>Funciones más usadas en PHP 7.4</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#funciones-predefinidas" id="id1">Funciones predefinidas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#informacion-del-servidor" id="id2">Información del servidor</a></p></li>
+<li><p><a class="reference internal" href="#manipulacion-de-variables" id="id3">Manipulación de variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#averiguar-tipo-de-dato" id="id4">Averiguar tipo de dato</a></p></li>
+<li><p><a class="reference internal" href="#validacion" id="id5">Validación</a></p></li>
+<li><p><a class="reference internal" href="#destruccion" id="id6">Destrucción</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-strings" id="id7">Manipulación de Strings</a></p>
+<ul>
+<li><p><a class="reference internal" href="#longitud-de-un-string" id="id8">Longitud de un String</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-string" id="id9">Conversión a String</a></p></li>
+<li><p><a class="reference internal" href="#conversion-string-a-array" id="id10">Conversión String a Array</a></p></li>
+<li><p><a class="reference internal" href="#reemplazar-palabras" id="id11">Reemplazar palabras</a></p></li>
+<li><p><a class="reference internal" href="#primera-letra-mayuscula" id="id12">Primera letra mayúscula</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-mayusculas" id="id13">Conversión a mayúsculas</a></p></li>
+<li><p><a class="reference internal" href="#conversion-a-minusculas" id="id14">Conversión a minúsculas</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-espacios-en-blanco-a-los-lados" id="id15">Eliminar espacios en blanco a los lados</a></p></li>
+<li><p><a class="reference internal" href="#localizar-posicion-de-caracteres-en-cadena" id="id16">Localizar posición de caracteres en cadena</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-numeros" id="id17">Manipulación de Números</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conversion-string-a-integer" id="id18">Conversión String a Integer</a></p></li>
+<li><p><a class="reference internal" href="#conversion-string-a-float" id="id19">Conversión String a Float</a></p></li>
+<li><p><a class="reference internal" href="#redondeo-de-decimales" id="id20">Redondeo de decimales</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-arrays" id="id21">Manipulación de Arrays</a></p>
+<ul>
+<li><p><a class="reference internal" href="#imprimir-contenido" id="id22">Imprimir contenido</a></p></li>
+<li><p><a class="reference internal" href="#anadir-elemento-al-array" id="id23">Añadir elemento al array</a></p></li>
+<li><p><a class="reference internal" href="#rango-de-numeros" id="id24">Rango de números</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-valor-maximo" id="id25">Recuperar valor máximo</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-valor-minimo" id="id26">Recuperar valor mínimo</a></p></li>
+<li><p><a class="reference internal" href="#suma-total-de-todos-los-valores" id="id27">Suma total de todos los valores</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-json" id="id28">Manipulación JSON</a></p>
+<ul>
+<li><p><a class="reference internal" href="#convertir-array-en-json" id="id29">Convertir Array en JSON</a></p></li>
+<li><p><a class="reference internal" href="#convertir-json-en-array" id="id30">Convertir JSON en Array</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-fechas" id="id31">Manipulación de fechas</a></p></li>
+<li><p><a class="reference internal" href="#tratamiento-de-archivos" id="id32">Tratamiento de archivos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#recuperar-contenido-de-archivo" id="id33">Recuperar contenido de archivo</a></p></li>
+<li><p><a class="reference internal" href="#manipulacion-de-archivos" id="id34">Manipulación de archivos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manipulacion-de-cabeceras" id="id35">Manipulación de cabeceras</a></p>
+<ul>
+<li><p><a class="reference internal" href="#redireccion" id="id36">Redirección</a></p></li>
+<li><p><a class="reference internal" href="#modificar-el-comportamiento-de-un-script" id="id37">Modificar el comportamiento de un script</a></p></li>
+<li><p><a class="reference internal" href="#descargar-un-archivo-desde-un-script" id="id38">Descargar un archivo desde un script</a></p></li>
+<li><p><a class="reference internal" href="#tratamiento-de-cors" id="id39">Tratamiento de CORS</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="informacion-del-servidor">
+<h2><a class="toc-backref" href="#id2">Información del servidor</a><a class="headerlink" href="#informacion-del-servidor" title="Enlazar permanentemente con este título">#</a></h2>
+<p>En un archivo vacío se guarda la siguiente función:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nb">phpinfo</span><span class="p">();</span>
+<span class="linenos">3</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="manipulacion-de-variables">
+<h2><a class="toc-backref" href="#id3">Manipulación de variables</a><a class="headerlink" href="#manipulacion-de-variables" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="averiguar-tipo-de-dato">
+<h3><a class="toc-backref" href="#id4">Averiguar tipo de dato</a><a class="headerlink" href="#averiguar-tipo-de-dato" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$cadena</span> <span class="o">=</span> <span class="s2">&quot;Soy una cadena de texto&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="nb">gettype</span><span class="p">(</span><span class="nv">$cadena</span><span class="p">);</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="validacion">
+<h3><a class="toc-backref" href="#id5">Validación</a><a class="headerlink" href="#validacion" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// variable definida:</span>
+<span class="linenos"> 3</span>    <span class="nv">$gatos</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>    <span class="c1">// guarda el valor 1 (true) si ha sido definida la variable:</span>
+<span class="linenos"> 6</span>    <span class="nv">$definida</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$gatos</span><span class="p">);</span>
+<span class="linenos"> 7</span>    <span class="k">echo</span> <span class="nv">$definida</span><span class="p">;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="c1">// uso como validador:</span>
+<span class="linenos">12</span>    <span class="nv">$comprobar</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$gatos</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;Existen gatos en el código&quot;</span> <span class="o">:</span> <span class="s2">&quot;No existen gatos en el código&quot;</span><span class="p">;</span>
+<span class="linenos">13</span>    <span class="k">echo</span> <span class="nv">$comprobar</span><span class="p">;</span>
+<span class="linenos">14</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="destruccion">
+<h3><a class="toc-backref" href="#id6">Destrucción</a><a class="headerlink" href="#destruccion" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$gatos</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="c1">// destruir la variable gatos:</span>
+<span class="linenos">5</span>    <span class="nb">unset</span><span class="p">(</span><span class="nv">$gatos</span><span class="p">);</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span>    <span class="nv">$comprobar</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$gatos</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;Existen gatos en el código&quot;</span> <span class="o">:</span> <span class="s2">&quot;No existen gatos en el código&quot;</span><span class="p">;</span>
+<span class="linenos">8</span>    <span class="k">echo</span> <span class="nv">$comprobar</span><span class="p">;</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-strings">
+<h2><a class="toc-backref" href="#id7">Manipulación de Strings</a><a class="headerlink" href="#manipulacion-de-strings" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="longitud-de-un-string">
+<h3><a class="toc-backref" href="#id8">Longitud de un String</a><a class="headerlink" href="#longitud-de-un-string" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$consola</span> <span class="o">=</span> <span class="s2">&quot;Nintendo DS&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$consola</span><span class="p">);</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-string">
+<h3><a class="toc-backref" href="#id9">Conversión a String</a><a class="headerlink" href="#conversion-a-string" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$lanzamiento</span> <span class="o">=</span> <span class="mi">2005</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="nv">$fechaLanzamiento</span> <span class="o">=</span> <span class="s2">&quot;Lanzamiento en &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="nx">String</span><span class="p">)</span><span class="nv">$lanzamiento</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="nv">$fechaLanzamiento</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-string-a-array">
+<h3><a class="toc-backref" href="#id10">Conversión String a Array</a><a class="headerlink" href="#conversion-string-a-array" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$string_consolas</span> <span class="o">=</span> <span class="s2">&quot;Nintendo DS, Nintendo 64, Super Nintendo&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="nv">$array_consolas</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">,</span> <span class="nv">$string_consolas</span><span class="p">);</span>
+<span class="linenos">4</span>    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$array_consolas</span><span class="p">);</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="reemplazar-palabras">
+<h3><a class="toc-backref" href="#id11">Reemplazar palabras</a><a class="headerlink" href="#reemplazar-palabras" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$descripcion</span> <span class="o">=</span> <span class="s2">&quot;La Nintendo Mega Drive es la mejor consola de Nintendo hasta la fecha&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span> <span class="s2">&quot;Sega&quot;</span><span class="p">,</span> <span class="nv">$descripcion</span><span class="p">);</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="primera-letra-mayuscula">
+<h3><a class="toc-backref" href="#id12">Primera letra mayúscula</a><a class="headerlink" href="#primera-letra-mayuscula" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$descripcion</span> <span class="o">=</span> <span class="s2">&quot;La Nintendo Mega Drive es la mejor consola de Nintendo hasta la fecha&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="c1">// Primera palabra con letra mayúscula:</span>
+<span class="linenos"> 5</span>    <span class="k">echo</span> <span class="nb">ucfirst</span><span class="p">(</span><span class="nv">$descripcion</span><span class="p">);</span>
+<span class="linenos"> 6</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="c1">// todas las palabras con letra mayúscula:</span>
+<span class="linenos"> 9</span>    <span class="k">echo</span> <span class="nb">ucwords</span><span class="p">(</span><span class="nv">$descripcion</span><span class="p">);</span>
+<span class="linenos">10</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-mayusculas">
+<h3><a class="toc-backref" href="#id13">Conversión a mayúsculas</a><a class="headerlink" href="#conversion-a-mayusculas" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$descripcion</span> <span class="o">=</span> <span class="nb">strtoupper</span><span class="p">(</span><span class="s2">&quot;La Nintendo Mega Drive es la mejor consola de Nintendo hasta la fecha&quot;</span><span class="p">);</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="nv">$descripcion</span><span class="p">;</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-a-minusculas">
+<h3><a class="toc-backref" href="#id14">Conversión a minúsculas</a><a class="headerlink" href="#conversion-a-minusculas" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$descripcion</span> <span class="o">=</span> <span class="s2">&quot;La Nintendo Mega Drive es la mejor consola de Nintendo hasta la fecha&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="nb">strtolower</span><span class="p">(</span><span class="nv">$descripcion</span><span class="p">);</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-espacios-en-blanco-a-los-lados">
+<h3><a class="toc-backref" href="#id15">Eliminar espacios en blanco a los lados</a><a class="headerlink" href="#eliminar-espacios-en-blanco-a-los-lados" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$texto</span> <span class="o">=</span> <span class="s2">&quot;   soy un texto con espacios   &quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$texto</span><span class="p">);</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="localizar-posicion-de-caracteres-en-cadena">
+<h3><a class="toc-backref" href="#id16">Localizar posición de caracteres en cadena</a><a class="headerlink" href="#localizar-posicion-de-caracteres-en-cadena" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$frase</span> <span class="o">=</span> <span class="s2">&quot;En esta frase se esconde el nombre Pepe&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">if</span><span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$frase</span><span class="p">,</span> <span class="s2">&quot;Pepe&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="k">true</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot;Hemos encontrado a Pepe!&quot;</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="p">}</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-numeros">
+<h2><a class="toc-backref" href="#id17">Manipulación de Números</a><a class="headerlink" href="#manipulacion-de-numeros" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="conversion-string-a-integer">
+<h3><a class="toc-backref" href="#id18">Conversión String a Integer</a><a class="headerlink" href="#conversion-string-a-integer" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$numeroCadena</span> <span class="o">=</span> <span class="s2">&quot;173&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="nv">$suma</span> <span class="o">=</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span><span class="nv">$numeroCadena</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="s2">&quot;el resultado es: &quot;</span> <span class="o">.</span> <span class="nv">$suma</span><span class="p">;</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-string-a-float">
+<h3><a class="toc-backref" href="#id19">Conversión String a Float</a><a class="headerlink" href="#conversion-string-a-float" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$numeroCadena</span> <span class="o">=</span> <span class="s2">&quot;17.27&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="nv">$suma</span> <span class="o">=</span> <span class="p">(</span><span class="nx">float</span><span class="p">)</span><span class="nv">$numeroCadena</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="s2">&quot;el resultado es: &quot;</span> <span class="o">.</span> <span class="nv">$suma</span><span class="p">;</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="redondeo-de-decimales">
+<h3><a class="toc-backref" href="#id20">Redondeo de decimales</a><a class="headerlink" href="#redondeo-de-decimales" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$numeroDecimal</span> <span class="o">=</span> <span class="mf">23.783728</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="c1">// Redondeo a entero:</span>
+<span class="linenos"> 5</span>    <span class="k">echo</span> <span class="nb">round</span><span class="p">(</span><span class="nv">$numeroDecimal</span><span class="p">);</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="c1">// Redondeo a decimal:</span>
+<span class="linenos">10</span>    <span class="k">echo</span> <span class="nb">round</span><span class="p">(</span><span class="nv">$numeroDecimal</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// segundo parámetro define cantidad de dígitos a devolver</span>
+<span class="linenos">11</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-arrays">
+<h2><a class="toc-backref" href="#id21">Manipulación de Arrays</a><a class="headerlink" href="#manipulacion-de-arrays" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="imprimir-contenido">
+<h3><a class="toc-backref" href="#id22">Imprimir contenido</a><a class="headerlink" href="#imprimir-contenido" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$fabricantes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Nintendo&quot;</span><span class="p">,</span> <span class="s2">&quot;Sega&quot;</span><span class="p">,</span> <span class="s2">&quot;Sony&quot;</span><span class="p">,</span> <span class="s2">&quot;Microsoft&quot;</span><span class="p">];</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="c1">// Imprimir contenido de una variable y el formato:</span>
+<span class="linenos"> 5</span>    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$fabricantes</span><span class="p">);</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="c1">// Imprimir con un formato más legible:</span>
+<span class="linenos"> 8</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;pre&gt;&quot;</span><span class="p">;</span>
+<span class="linenos"> 9</span>    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$fabricantes</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;/pre&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">11</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="anadir-elemento-al-array">
+<h3><a class="toc-backref" href="#id23">Añadir elemento al array</a><a class="headerlink" href="#anadir-elemento-al-array" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// tenemos un array:</span>
+<span class="linenos"> 3</span>    <span class="nv">$consolasSony</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span> <span class="s2">&quot;PlayStation 2&quot;</span><span class="p">,</span> <span class="s2">&quot;PlayStation 3&quot;</span><span class="p">];</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$consolasSony</span><span class="p">);</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="c1">// utilizamos la siguiente función en la cual el primer parámetro es el array anterior y los siguientes los elementos que se añaden:</span>
+<span class="linenos"> 8</span>    <span class="nb">array_push</span><span class="p">(</span><span class="nv">$consolasSony</span><span class="p">,</span> <span class="s2">&quot;PlayStation 4&quot;</span><span class="p">,</span> <span class="s2">&quot;PlayStation 5&quot;</span><span class="p">);</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$consolasSony</span><span class="p">);</span>
+<span class="linenos">11</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="rango-de-numeros">
+<h3><a class="toc-backref" href="#id24">Rango de números</a><a class="headerlink" href="#rango-de-numeros" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// guardar un rango de números:</span>
+<span class="linenos"> 3</span>    <span class="nv">$rango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+<span class="linenos"> 4</span>    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$rango</span><span class="p">);</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1">// uso en bucles:</span>
+<span class="linenos"> 7</span>    <span class="k">foreach</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$numero</span><span class="p">){</span>
+<span class="linenos"> 8</span>        <span class="k">echo</span> <span class="nv">$numero</span> <span class="o">.</span> <span class="s2">&quot;&lt;br /&gt;&quot;</span><span class="p">;</span>
+<span class="linenos"> 9</span>    <span class="p">}</span>
+<span class="linenos">10</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-valor-maximo">
+<h3><a class="toc-backref" href="#id25">Recuperar valor máximo</a><a class="headerlink" href="#recuperar-valor-maximo" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$fechas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1932</span><span class="p">,</span> <span class="mi">1930</span><span class="p">,</span> <span class="mi">1959</span><span class="p">,</span> <span class="mi">1092</span><span class="p">,</span> <span class="mi">1209</span><span class="p">];</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="s2">&quot;El año mas reciente es: &quot;</span> <span class="o">.</span> <span class="nb">max</span><span class="p">(</span><span class="nv">$fechas</span><span class="p">);</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-valor-minimo">
+<h3><a class="toc-backref" href="#id26">Recuperar valor mínimo</a><a class="headerlink" href="#recuperar-valor-minimo" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$fechas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1932</span><span class="p">,</span> <span class="mi">1930</span><span class="p">,</span> <span class="mi">1959</span><span class="p">,</span> <span class="mi">1092</span><span class="p">,</span> <span class="mi">1209</span><span class="p">];</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="s2">&quot;El año mas antiguo es: &quot;</span> <span class="o">.</span> <span class="nb">min</span><span class="p">(</span><span class="nv">$fechas</span><span class="p">);</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="suma-total-de-todos-los-valores">
+<h3><a class="toc-backref" href="#id27">Suma total de todos los valores</a><a class="headerlink" href="#suma-total-de-todos-los-valores" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$carro</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20.85</span><span class="p">,</span> <span class="mf">10.40</span><span class="p">,</span> <span class="mf">19.94</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">];</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="s2">&quot;El total de la compra es: &quot;</span> <span class="o">.</span> <span class="nb">array_sum</span><span class="p">(</span><span class="nv">$carro</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;€&quot;</span><span class="p">;</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-json">
+<h2><a class="toc-backref" href="#id28">Manipulación JSON</a><a class="headerlink" href="#manipulacion-json" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="convertir-array-en-json">
+<h3><a class="toc-backref" href="#id29">Convertir Array en JSON</a><a class="headerlink" href="#convertir-array-en-json" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// Array a convertir:</span>
+<span class="linenos"> 3</span>    <span class="nv">$videoconsolas</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos"> 4</span>        <span class="s2">&quot;megadrive&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<span class="linenos"> 5</span>            <span class="s2">&quot;lanzamiento&quot;</span> <span class="o">=&gt;</span> <span class="mi">1988</span><span class="p">,</span>
+<span class="linenos"> 6</span>            <span class="s2">&quot;fabricante&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Sega&quot;</span>
+<span class="linenos"> 7</span>        <span class="p">],</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;snes&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<span class="linenos"> 9</span>            <span class="s2">&quot;lanzamiento&quot;</span> <span class="o">=&gt;</span> <span class="mi">1990</span><span class="p">,</span>
+<span class="linenos">10</span>            <span class="s2">&quot;fabricante&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Nintendo&quot;</span>
+<span class="linenos">11</span>        <span class="p">],</span>
+<span class="linenos">12</span>        <span class="s2">&quot;playstation&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<span class="linenos">13</span>            <span class="s2">&quot;lanzamiento&quot;</span> <span class="o">=&gt;</span> <span class="mi">1994</span><span class="p">,</span>
+<span class="linenos">14</span>            <span class="s2">&quot;fabricante&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Sony&quot;</span>
+<span class="linenos">15</span>        <span class="p">]</span>
+<span class="linenos">16</span>    <span class="p">);</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="c1">// Imprmir array codificado en formato JSON:</span>
+<span class="linenos">19</span>    <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$videoconsolas</span><span class="p">);</span>
+<span class="linenos">20</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="convertir-json-en-array">
+<h3><a class="toc-backref" href="#id30">Convertir JSON en Array</a><a class="headerlink" href="#convertir-json-en-array" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// Se realiza una llamada con CURL:</span>
+<span class="linenos"> 3</span>    <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s2">&quot;http://api.plos.org/search?q=title:DNA&quot;</span><span class="p">);</span>
+<span class="linenos"> 4</span>    <span class="c1">// La siguiente función prepara el formato de almacenamiento en String:</span>
+<span class="linenos"> 5</span>    <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+<span class="linenos"> 6</span>    <span class="c1">// Se ejecuta la operación y se guarda en una variable::</span>
+<span class="linenos"> 7</span>    <span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="linenos"> 8</span>    <span class="c1">// Pasamos a la codificación en JSON:</span>
+<span class="linenos"> 9</span>    <span class="nv">$data</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// Validar la salida desde metadatos:</span>
+<span class="linenos">11</span>    <span class="nv">$info</span> <span class="o">=</span> <span class="nb">curl_getinfo</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="c1">// Se ejecuta la respuesta si el resultado es correcto:</span>
+<span class="linenos">16</span>    <span class="k">if</span><span class="p">(</span><span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;http_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">){</span>
+<span class="linenos">17</span>        <span class="c1">// ver el contenido de la variable:</span>
+<span class="linenos">18</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;pre&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">19</span>        <span class="nb">print_r</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">20</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;/pre&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">21</span>    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">22</span>        <span class="k">echo</span> <span class="s2">&quot;Error&quot;</span><span class="p">,</span> <span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="linenos">23</span>    <span class="p">}</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Para poder trabajar con curl hay que instalar la dependencia <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">php7.4-curl</span></code></p>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-fechas">
+<h2><a class="toc-backref" href="#id31">Manipulación de fechas</a><a class="headerlink" href="#manipulacion-de-fechas" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="c1">// devolver un valor:</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="s2">&quot;Hoy es día &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; de &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; de &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">);</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="c1">// devolver fecha formateada:</span>
+<span class="linenos">7</span>    <span class="k">echo</span> <span class="s2">&quot;Son las: &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;H:m&#39;</span><span class="p">);</span>
+<span class="linenos">8</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Códigos comunes para Fecha:</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 84%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de valor</p></th>
+<th class="head"><p>símbolo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Día en notación numeral</p></td>
+<td><p>d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Día por inicial</p></td>
+<td><p>D</p></td>
+</tr>
+<tr class="row-even"><td><p>Día de la semana</p></td>
+<td><p>l</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dias transcurridos desde comienzos de año</p></td>
+<td><p>z</p></td>
+</tr>
+<tr class="row-even"><td><p>Dias que tiene el mes corriente</p></td>
+<td><p>t</p></td>
+</tr>
+<tr class="row-odd"><td><p>Semanas transcurridas desde comienzos de año</p></td>
+<td><p>W</p></td>
+</tr>
+<tr class="row-even"><td><p>Mes actual en notación numeral</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mes actual en notación numeral sin cero</p></td>
+<td><p>n</p></td>
+</tr>
+<tr class="row-even"><td><p>Iniciales del mes corriente</p></td>
+<td><p>M</p></td>
+</tr>
+<tr class="row-odd"><td><p>Año corriente en notación numeral</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>Año con notación numeral abreviada</p></td>
+<td><p>y</p></td>
+</tr>
+<tr class="row-odd"><td><p>Año bisiesto (devuelve 1 si es bisiesto)</p></td>
+<td><p>L</p></td>
+</tr>
+<tr class="row-even"><td><p>Fecha en formato ISO-8601</p></td>
+<td><p>c</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Códigos comunes para Hora:</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 84%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de valor</p></th>
+<th class="head"><p>símbolo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ver si la hora es AM o PM</p></td>
+<td><p>a</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ver si la hora es AM o PM en mayúsculas</p></td>
+<td><p>A</p></td>
+</tr>
+<tr class="row-even"><td><p>Hora en formato 12</p></td>
+<td><p>g</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hora en formato 24</p></td>
+<td><p>G</p></td>
+</tr>
+<tr class="row-even"><td><p>Hora en formato 12 con 0 inicial</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hora en formato 24 con 0 inicial</p></td>
+<td><p>H</p></td>
+</tr>
+<tr class="row-even"><td><p>Minutos</p></td>
+<td><p>i</p></td>
+</tr>
+<tr class="row-odd"><td><p>Segundos</p></td>
+<td><p>s</p></td>
+</tr>
+<tr class="row-even"><td><p>Microsegundos</p></td>
+<td><p>u</p></td>
+</tr>
+<tr class="row-odd"><td><p>Zona Horaria</p></td>
+<td><p>e</p></td>
+</tr>
+<tr class="row-even"><td><p>Horario de sol reducido</p></td>
+<td><p>I</p></td>
+</tr>
+<tr class="row-odd"><td><p>Desfase meridiano de Greenwitch</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>Hora formato Swatch Internet Time</p></td>
+<td><p>B</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hora formato UNIX</p></td>
+<td><p>U</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Los valores textualizados de las fechas están en inglés</p>
+</div>
+</section>
+<section id="tratamiento-de-archivos">
+<h2><a class="toc-backref" href="#id32">Tratamiento de archivos</a><a class="headerlink" href="#tratamiento-de-archivos" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="recuperar-contenido-de-archivo">
+<h3><a class="toc-backref" href="#id33">Recuperar contenido de archivo</a><a class="headerlink" href="#recuperar-contenido-de-archivo" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$foto</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s1">&#39;foto.jpg&#39;</span><span class="p">);</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="nv">$foto</span><span class="p">;</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="manipulacion-de-archivos">
+<h3><a class="toc-backref" href="#id34">Manipulación de archivos</a><a class="headerlink" href="#manipulacion-de-archivos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Escritura de archivos:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$ip</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">];</span>
+<span class="linenos"> 3</span>    <span class="nv">$navegador</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_USER_AGENT&#39;</span><span class="p">];</span>
+<span class="linenos"> 4</span>    <span class="nv">$contenido</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; - Fecha: &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y/m/d - H:i:s&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; - Navegador: &quot;</span> <span class="o">.</span> <span class="nv">$navegador</span> <span class="o">.</span> <span class="s2">&quot; - IP: &quot;</span> <span class="o">.</span> <span class="nv">$ip</span> <span class="o">.</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1">// establecemos el nombre de archivo que vamos a editar:</span>
+<span class="linenos"> 7</span>    <span class="nv">$archivoLogs</span> <span class="o">=</span> <span class="s1">&#39;logs.dat&#39;</span><span class="p">;</span>
+<span class="linenos"> 8</span>    <span class="c1">// abrimos con permisos de creación extras:</span>
+<span class="linenos"> 9</span>    <span class="nv">$manejador</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$archivoLogs</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// escribimos los cambios:</span>
+<span class="linenos">11</span>    <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$manejador</span><span class="p">,</span><span class="nv">$contenido</span><span class="p">);</span>
+<span class="linenos">12</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lectura de archivos:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$archivoLogs</span> <span class="o">=</span> <span class="s1">&#39;logs.dat&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="c1">// abrimos el archivo con permisos de lectura:</span>
+<span class="linenos"> 4</span>    <span class="nv">$manejador</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$archivoLogs</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">);</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1">// establecemos la condición con fgetcsv() de manera que los dividirá:</span>
+<span class="linenos"> 7</span>    <span class="k">while</span><span class="p">(</span><span class="nv">$datos</span> <span class="o">=</span> <span class="nb">fgetcsv</span><span class="p">(</span><span class="nv">$manejador</span><span class="p">,</span><span class="mi">1000000</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)){</span>
+<span class="linenos"> 8</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;pre&gt;&quot;</span><span class="p">;</span>
+<span class="linenos"> 9</span>        <span class="nb">print_r</span><span class="p">(</span><span class="nv">$datos</span><span class="p">);</span>
+<span class="linenos">10</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;/pre&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span>    <span class="nb">fclose</span><span class="p">(</span><span class="nv">$manejador</span><span class="p">);</span>
+<span class="linenos">13</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Actualización de archivos:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$ip</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">];</span>
+<span class="linenos"> 3</span>    <span class="nv">$navegador</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_USER_AGENT&#39;</span><span class="p">];</span>
+<span class="linenos"> 4</span>    <span class="nv">$contenido</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; - Fecha: &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y/m/d - H:i:s&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; - Navegador: &quot;</span> <span class="o">.</span> <span class="nv">$navegador</span> <span class="o">.</span> <span class="s2">&quot; - IP: &quot;</span> <span class="o">.</span> <span class="nv">$ip</span> <span class="o">.</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1">// establecemos el nombre de archivo que vamos a editar:</span>
+<span class="linenos"> 7</span>    <span class="nv">$archivoLogs</span> <span class="o">=</span> <span class="s1">&#39;logs.dat&#39;</span><span class="p">;</span>
+<span class="linenos"> 8</span>    <span class="c1">// abrimos con permisos de actualizacion extras:</span>
+<span class="linenos"> 9</span>    <span class="nv">$manejador</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$archivoLogs</span><span class="p">,</span> <span class="s1">&#39;a+&#39;</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="c1">// escribimos los cambios:</span>
+<span class="linenos">11</span>    <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$manejador</span><span class="p">,</span><span class="nv">$contenido</span><span class="p">);</span>
+<span class="linenos">12</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manipulacion-de-cabeceras">
+<h2><a class="toc-backref" href="#id35">Manipulación de cabeceras</a><a class="headerlink" href="#manipulacion-de-cabeceras" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="redireccion">
+<h3><a class="toc-backref" href="#id36">Redirección</a><a class="headerlink" href="#redireccion" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: https://www.prueba.com&#39;</span><span class="p">);</span>
+<span class="linenos">3</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="modificar-el-comportamiento-de-un-script">
+<h3><a class="toc-backref" href="#id37">Modificar el comportamiento de un script</a><a class="headerlink" href="#modificar-el-comportamiento-de-un-script" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="c1">// indica al navegador que el script php es una imagen.</span>
+<span class="linenos">3</span>    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-type: image/jpg&#39;</span><span class="p">);</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span>    <span class="nv">$foto</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s1">&#39;foto.jpg&#39;</span><span class="p">);</span>
+<span class="linenos">6</span>    <span class="k">echo</span> <span class="nv">$foto</span><span class="p">;</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lista de MIMES más comunes: <a class="reference external" href="https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types</a></p></li>
+</ul>
+</section>
+<section id="descargar-un-archivo-desde-un-script">
+<h3><a class="toc-backref" href="#id38">Descargar un archivo desde un script</a><a class="headerlink" href="#descargar-un-archivo-desde-un-script" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-type: image/jpg&#39;</span><span class="p">);</span>
+<span class="linenos">3</span>    <span class="c1">// se define la disposición y el nombre que tendrá al ser descargado:</span>
+<span class="linenos">4</span>    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-disposition: attachment; filename=&quot;descarga.jpg&quot;&#39;</span><span class="p">);</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>    <span class="nv">$foto</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s1">&#39;foto.jpg&#39;</span><span class="p">);</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="tratamiento-de-cors">
+<h3><a class="toc-backref" href="#id39">Tratamiento de CORS</a><a class="headerlink" href="#tratamiento-de-cors" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// Origen: *: todos | www.codigo.com: una url | null: bloquea cualquier origen excepto el mismo servidor:</span>
+<span class="linenos"> 3</span>    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin: *&#39;</span><span class="p">);</span>
+<span class="linenos"> 4</span>    <span class="c1">// Cabeceras permitidas separadas por comas:</span>
+<span class="linenos"> 5</span>    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method&quot;</span><span class="p">);</span>
+<span class="linenos"> 6</span>    <span class="c1">// Métodos permitidos separados por comas:</span>
+<span class="linenos"> 7</span>    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE&quot;</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;h1&gt;Sitio de prueba&lt;/h1&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">10</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="sintaxis.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Sintaxis PHP</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="procesamiento.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Comunicación Cliente / Servidor</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

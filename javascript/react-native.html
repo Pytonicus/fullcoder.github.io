@@ -1,0 +1,1074 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Framework: React Native &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Framework: Angular" href="../typescript/angular.html" />
+    <link rel="prev" title="Framework: ReactJS" href="react.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/javascript/react-native.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-dependencias-de-react-native">
+     Instalar dependencias de react native
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herramientas-de-desarrollo">
+     Herramientas de desarrollo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emular-aplicacion">
+     Emular aplicación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-basicos">
+     Comandos básicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-basica-de-react-native">
+     Estructura básica de react native
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-similar-a-react">
+     Estructura similar a React
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-recomendada-para-el-proyecto">
+     Estructura recomendada para el proyecto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trabajando-con-componentes">
+   Trabajando con componentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-una-pantalla-o-screen">
+     Crear una pantalla o screen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabajando-con-estilos">
+     Trabajando con estilos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-componentes-react-native">
+   Tipos de Componentes React Native
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#componente-view-pantalla">
+     Componente View (pantalla)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#componente-text-textos">
+     Componente Text (textos)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Framework: React Native</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-dependencias-de-react-native">
+     Instalar dependencias de react native
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herramientas-de-desarrollo">
+     Herramientas de desarrollo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emular-aplicacion">
+     Emular aplicación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-basicos">
+     Comandos básicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-basica-de-react-native">
+     Estructura básica de react native
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-similar-a-react">
+     Estructura similar a React
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-recomendada-para-el-proyecto">
+     Estructura recomendada para el proyecto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trabajando-con-componentes">
+   Trabajando con componentes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-una-pantalla-o-screen">
+     Crear una pantalla o screen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabajando-con-estilos">
+     Trabajando con estilos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-componentes-react-native">
+   Tipos de Componentes React Native
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#componente-view-pantalla">
+     Componente View (pantalla)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#componente-text-textos">
+     Componente Text (textos)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="framework-react-native">
+<h1><a class="toc-backref" href="#id1">Framework: React Native</a><a class="headerlink" href="#framework-react-native" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-react-native.png"><img alt="Logo React native" class="align-center" src="../_images/logo-react-native.png" style="width: 182.7px; height: 120.05px;" /></a>
+<p>Documentación básica de React Native para desarrollo de aplicaciones Híbridas.</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#framework-react-native" id="id1">Framework: React Native</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuraciones" id="id2">Configuraciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalar-dependencias-de-react-native" id="id3">Instalar dependencias de react native</a></p></li>
+<li><p><a class="reference internal" href="#herramientas-de-desarrollo" id="id4">Herramientas de desarrollo</a></p></li>
+<li><p><a class="reference internal" href="#emular-aplicacion" id="id5">Emular aplicación</a></p></li>
+<li><p><a class="reference internal" href="#comandos-basicos" id="id6">Comandos básicos</a></p></li>
+<li><p><a class="reference internal" href="#estructura-basica-de-react-native" id="id7">Estructura básica de react native</a></p></li>
+<li><p><a class="reference internal" href="#estructura-similar-a-react" id="id8">Estructura similar a React</a></p></li>
+<li><p><a class="reference internal" href="#estructura-recomendada-para-el-proyecto" id="id9">Estructura recomendada para el proyecto</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#trabajando-con-componentes" id="id10">Trabajando con componentes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-una-pantalla-o-screen" id="id11">Crear una pantalla o screen</a></p></li>
+<li><p><a class="reference internal" href="#trabajando-con-estilos" id="id12">Trabajando con estilos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tipos-de-componentes-react-native" id="id13">Tipos de Componentes React Native</a></p>
+<ul>
+<li><p><a class="reference internal" href="#componente-view-pantalla" id="id14">Componente View (pantalla)</a></p></li>
+<li><p><a class="reference internal" href="#componente-text-textos" id="id15">Componente Text (textos)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="configuraciones">
+<h2><a class="toc-backref" href="#id2">Configuraciones</a><a class="headerlink" href="#configuraciones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalar-dependencias-de-react-native">
+<h3><a class="toc-backref" href="#id3">Instalar dependencias de react native</a><a class="headerlink" href="#instalar-dependencias-de-react-native" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Tener instalado NodeJS desde su página oficial: <a class="reference external" href="https://nodejs.org/es/">https://nodejs.org/es/</a></p>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>npx viene instalado con npm y es su versión en la nube. De modo que si necesitas un paquete y no deseas instalarlo en tu máquina utiliza npx en lugar de npm.</p>
+</div>
+</section>
+<section id="herramientas-de-desarrollo">
+<h3><a class="toc-backref" href="#id4">Herramientas de desarrollo</a><a class="headerlink" href="#herramientas-de-desarrollo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>App para ejecutar proyecto en fase desarrollo:</p>
+<ul class="simple">
+<li><p>Android: <a class="reference external" href="https://play.google.com/store/search?q=expo&amp;c=apps&amp;hl=es&amp;gl=US">https://play.google.com/store/search?q=expo&amp;c=apps&amp;hl=es&amp;gl=US</a></p></li>
+</ul>
+</section>
+<section id="emular-aplicacion">
+<h3><a class="toc-backref" href="#id5">Emular aplicación</a><a class="headerlink" href="#emular-aplicacion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Para utilizar un emulador de Android, instalamos Android Studio y ejecutamos el icono del movil con la cabeza de android para ejecutar el ADV Manager. Arrancamos un emulador y ya podemos usarlo ejecutando el proyecto con <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">android</span></code> o <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">start</span></code> y luego tecla <strong>a</strong>.</p></li>
+</ul>
+</section>
+<section id="comandos-basicos">
+<h3><a class="toc-backref" href="#id6">Comandos básicos</a><a class="headerlink" href="#comandos-basicos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear proyecto: <code class="docutils literal notranslate"><span class="pre">npx</span> <span class="pre">create-expo-app</span> <span class="pre">my-app</span></code> (crea un proyecto en blanco o con sistema de navegación y seguir los pasos).</p></li>
+<li><p>Ejecutar proyecto con emulador: <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">android</span></code> (existen tres opciones: <strong>android</strong>, <strong>ios</strong> y <strong>web</strong>).</p></li>
+<li><p>Ejecutar proyecto en la App oficial (recomendado): <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">start</span></code> (muestra un qr que podremos escanear con nuestro movil con la app de expo)</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Utilizamos npx para no tener que instalar expo y así tener compatibilidad en cualquier sistema a la hora de instalar.</p>
+</div>
+</section>
+<section id="estructura-basica-de-react-native">
+<h3><a class="toc-backref" href="#id7">Estructura básica de react native</a><a class="headerlink" href="#estructura-basica-de-react-native" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La estructura básica de react native es similar a la de React. El archivo <strong>App.js</strong> se presenta de la siguiente forma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import { StatusBar } from &#39;expo-status-bar&#39;;
+import { StyleSheet, Text, View } from &#39;react-native&#39;;
+
+export default function App() {
+return (
+    &lt;View style={styles.container}&gt;
+    &lt;Text&gt;Buenas!&lt;/Text&gt;
+    &lt;StatusBar style=&quot;auto&quot; /&gt;
+    &lt;/View&gt;
+);
+}
+
+const styles = StyleSheet.create({
+container: {
+    flex: 1,
+    backgroundColor: &#39;#fff&#39;,
+    alignItems: &#39;center&#39;,
+    justifyContent: &#39;center&#39;,
+},
+});
+</pre></div>
+</div>
+</section>
+<section id="estructura-similar-a-react">
+<h3><a class="toc-backref" href="#id8">Estructura similar a React</a><a class="headerlink" href="#estructura-similar-a-react" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La programación es básicamente idéntica a la de react en su base. Por tanto es recomendable echar un ojo al manual de react:
+<a class="reference external" href="https://pytonicus.github.io/fullcodersite/javascript/react.html">https://pytonicus.github.io/fullcodersite/javascript/react.html</a></p>
+</section>
+<section id="estructura-recomendada-para-el-proyecto">
+<h3><a class="toc-backref" href="#id9">Estructura recomendada para el proyecto</a><a class="headerlink" href="#estructura-recomendada-para-el-proyecto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Lo ideal es crear una estructura escalable, este es un ejemplo de estructura recomendada:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>src</strong>: Crear carpeta en la raiz del proyecto llamada src para todo nuestro código. Dentro de ella creamos:</dt><dd><ul>
+<li><p><strong>components</strong>: carpeta para los componentes del proyecto.</p></li>
+<li><p><strong>screens</strong>: carpeta para las pantallas del proyecto. Por cada pantalla creamos una carpeta.</p></li>
+<li><p><strong>navigation</strong>: carpeta para añadir la configuración de navegación</p></li>
+<li><p><strong>data</strong>: carpeta para guardar información en la aplicación.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+<section id="trabajando-con-componentes">
+<h2><a class="toc-backref" href="#id10">Trabajando con componentes</a><a class="headerlink" href="#trabajando-con-componentes" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="crear-una-pantalla-o-screen">
+<h3><a class="toc-backref" href="#id11">Crear una pantalla o screen</a><a class="headerlink" href="#crear-una-pantalla-o-screen" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En la carpeta screens, creamos una carpeta para la pantalla a la que llamaremos <strong>main</strong> y el archivo será <strong>index.js</strong> al que le pasaremos casi toda la lógica de <em>App.js*</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">{</span> <span class="n">StyleSheet</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">View</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="n">function</span> <span class="n">MainScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="n">View</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">styles</span><span class="o">.</span><span class="n">container</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">Text</span><span class="o">&gt;</span><span class="n">Prueba</span> <span class="n">de</span> <span class="n">Index</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">View</span><span class="o">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">const</span> <span class="n">styles</span> <span class="o">=</span> <span class="n">StyleSheet</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+    <span class="n">container</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">backgroundColor</span><span class="p">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">,</span>
+        <span class="n">alignItems</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+        <span class="n">justifyContent</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora para cargar la pantalla vamos a editar <strong>App.js</strong>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">importamos</span> <span class="n">la</span> <span class="n">pantalla</span> <span class="n">nueva</span><span class="p">:</span>
+<span class="kn">import</span> <span class="nn">Main</span> <span class="kn">from</span> <span class="s2">&quot;./src/screens/main/index&quot;</span><span class="p">;</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="n">function</span> <span class="n">App</span><span class="p">()</span> <span class="p">{</span>
+<span class="o">//</span> <span class="n">retornamos</span> <span class="n">solamente</span> <span class="n">la</span> <span class="n">pontalla</span> <span class="n">ya</span> <span class="n">que</span> <span class="n">si</span> <span class="n">usamos</span> <span class="n">view</span> <span class="n">por</span> <span class="n">ejemplo</span> <span class="n">nos</span> <span class="n">limitará</span><span class="o">.</span>
+<span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="n">Main</span> <span class="o">/&gt;</span>
+<span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El componente que se utiliza para pintar una pantalla es <strong>&lt;View&gt;</strong> y solo podemos utilizarlo una vez por pantalla.</p>
+</div>
+</section>
+<section id="trabajando-con-estilos">
+<h3><a class="toc-backref" href="#id12">Trabajando con estilos</a><a class="headerlink" href="#trabajando-con-estilos" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">{</span> <span class="n">StyleSheet</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">View</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="n">function</span> <span class="n">MainScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="n">View</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">styles</span><span class="o">.</span><span class="n">container</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="p">{</span><span class="o">/*</span> <span class="n">cargar</span> <span class="n">un</span> <span class="n">estilo</span> <span class="n">en</span> <span class="n">componente</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+            <span class="o">&lt;</span><span class="n">Text</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">styles</span><span class="o">.</span><span class="n">text</span><span class="p">}</span><span class="o">&gt;</span><span class="n">Texto</span> <span class="n">normal</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+            <span class="p">{</span><span class="o">/*</span> <span class="n">cargar</span> <span class="n">varios</span> <span class="n">estilos</span> <span class="n">en</span> <span class="n">componente</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+            <span class="o">&lt;</span><span class="n">Text</span> <span class="n">selectable</span> <span class="n">style</span><span class="o">=</span><span class="p">{[</span><span class="n">styles</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">styles</span><span class="o">.</span><span class="n">textSelect</span><span class="p">]}</span><span class="o">&gt;</span><span class="n">Texto</span> <span class="n">seleccionable</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">View</span><span class="o">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">definición</span> <span class="n">de</span> <span class="n">estilos</span> <span class="p">(</span><span class="n">cambia</span> <span class="n">el</span> <span class="n">metodo</span> <span class="n">de</span> <span class="n">escritura</span> <span class="n">de</span> <span class="n">kebab</span><span class="o">-</span><span class="n">case</span> <span class="n">a</span> <span class="n">camelCase</span><span class="p">):</span>
+<span class="n">const</span> <span class="n">styles</span> <span class="o">=</span> <span class="n">StyleSheet</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+    <span class="n">container</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">backgroundColor</span><span class="p">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">,</span>
+        <span class="n">alignItems</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+        <span class="n">justifyContent</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">text</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">color</span><span class="p">:</span> <span class="s2">&quot;#ff0000&quot;</span><span class="p">,</span>
+        <span class="n">fontSize</span><span class="p">:</span> <span class="mi">30</span>
+    <span class="p">},</span>
+    <span class="n">textSelect</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">backgroundColor</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+        <span class="n">fontSize</span><span class="p">:</span> <span class="mi">15</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tipos-de-componentes-react-native">
+<h2><a class="toc-backref" href="#id13">Tipos de Componentes React Native</a><a class="headerlink" href="#tipos-de-componentes-react-native" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="componente-view-pantalla">
+<h3><a class="toc-backref" href="#id14">Componente View (pantalla)</a><a class="headerlink" href="#componente-view-pantalla" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Es un componente para crear una pantalla:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">{</span> <span class="n">Text</span><span class="p">,</span> <span class="n">View</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="n">function</span> <span class="n">MainScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">todo</span> <span class="n">lo</span> <span class="n">que</span> <span class="n">vaya</span> <span class="n">dentro</span> <span class="n">de</span> <span class="n">View</span> <span class="n">se</span> <span class="n">mostrará</span> <span class="n">en</span> <span class="n">la</span> <span class="n">pantalla</span> <span class="k">del</span> <span class="n">dispositivo</span> <span class="n">de</span> <span class="n">modo</span> <span class="n">similar</span> <span class="n">al</span> <span class="n">componente</span> <span class="n">Template</span> <span class="n">de</span> <span class="n">ReactJS</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="n">View</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">Text</span><span class="o">&gt;</span><span class="n">Texto</span> <span class="n">dentro</span> <span class="n">de</span> <span class="n">pantalla</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">View</span><span class="o">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="componente-text-textos">
+<h3><a class="toc-backref" href="#id15">Componente Text (textos)</a><a class="headerlink" href="#componente-text-textos" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">{</span> <span class="n">StyleSheet</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">View</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="n">function</span> <span class="n">MainScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="n">View</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">styles</span><span class="o">.</span><span class="n">container</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="p">{</span><span class="o">/*</span> <span class="n">Ejemplos</span> <span class="n">de</span> <span class="n">texto</span><span class="p">:</span> <span class="o">*/</span><span class="p">}</span>
+            <span class="o">&lt;</span><span class="n">Text</span><span class="o">&gt;</span><span class="n">Texto</span> <span class="n">normal</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">Text</span> <span class="n">selectable</span><span class="o">&gt;</span><span class="n">Texto</span> <span class="n">seleccionable</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">View</span><span class="o">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">const</span> <span class="n">styles</span> <span class="o">=</span> <span class="n">StyleSheet</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+    <span class="n">container</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">backgroundColor</span><span class="p">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">,</span>
+        <span class="n">alignItems</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+        <span class="n">justifyContent</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="react.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Framework: ReactJS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../typescript/angular.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Framework: Angular</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

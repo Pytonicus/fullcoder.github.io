@@ -1,0 +1,1828 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Framework: Codeigniter 3 &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Sintaxis Python" href="../python/sintaxis.html" />
+    <link rel="prev" title="Framework: Laravel" href="laravel.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Framework: Codeigniter 3
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/php/codeigniter.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-del-proyecto">
+     Creación del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-codeigniter-3">
+     Estructura de Codeigniter 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-en-codeigniter-3">
+   Rutas en Codeigniter 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas-en-codeigniter-3">
+   Vistas en CodeIgniter 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-variables">
+     Uso de variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controladores-en-codeigntier-3">
+   Controladores en CodeIgntier 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejar-parametros-en-el-controlador">
+     Manejar parámetros en el controlador
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redireccion-a-otra-ruta">
+     Redirección a otra ruta
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-formulario-con-codeigniter-3">
+     Crear un formulario con Codeigniter 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bases-de-datos">
+   Bases de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-base-de-datos">
+     Crear base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conectar-a-la-base-de-datos">
+     Conectar a la base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-modelo-de-datos-y-read">
+     Crear modelo de datos y READ
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-datos">
+     Insertar datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#borrar-registros">
+     Borrar registros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-registros">
+     Actualizar registros
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Framework: Codeigniter 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-del-proyecto">
+     Creación del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-de-codeigniter-3">
+     Estructura de Codeigniter 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-en-codeigniter-3">
+   Rutas en Codeigniter 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas-en-codeigniter-3">
+   Vistas en CodeIgniter 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-variables">
+     Uso de variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controladores-en-codeigntier-3">
+   Controladores en CodeIgntier 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejar-parametros-en-el-controlador">
+     Manejar parámetros en el controlador
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redireccion-a-otra-ruta">
+     Redirección a otra ruta
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-formulario-con-codeigniter-3">
+     Crear un formulario con Codeigniter 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bases-de-datos">
+   Bases de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-base-de-datos">
+     Crear base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conectar-a-la-base-de-datos">
+     Conectar a la base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-modelo-de-datos-y-read">
+     Crear modelo de datos y READ
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-datos">
+     Insertar datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#borrar-registros">
+     Borrar registros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-registros">
+     Actualizar registros
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="framework-codeigniter-3">
+<h1><a class="toc-backref" href="#id3">Framework: Codeigniter 3</a><a class="headerlink" href="#framework-codeigniter-3" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-codeigniter.png"><img alt="Logo Codeigniter" class="align-center" src="../_images/logo-codeigniter.png" style="width: 300.0px; height: 300.0px;" /></a>
+<p>Documentación básica para trabajar con Codeigniter 3</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#framework-codeigniter-3" id="id3">Framework: Codeigniter 3</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuraciones" id="id4">Configuraciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creacion-del-proyecto" id="id5">Creación del proyecto</a></p></li>
+<li><p><a class="reference internal" href="#estructura-de-codeigniter-3" id="id6">Estructura de Codeigniter 3</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rutas-en-codeigniter-3" id="id7">Rutas en Codeigniter 3</a></p></li>
+<li><p><a class="reference internal" href="#vistas-en-codeigniter-3" id="id8">Vistas en CodeIgniter 3</a></p>
+<ul>
+<li><p><a class="reference internal" href="#uso-de-variables" id="id9">Uso de variables</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#controladores-en-codeigntier-3" id="id10">Controladores en CodeIgntier 3</a></p>
+<ul>
+<li><p><a class="reference internal" href="#manejar-parametros-en-el-controlador" id="id11">Manejar parámetros en el controlador</a></p></li>
+<li><p><a class="reference internal" href="#redireccion-a-otra-ruta" id="id12">Redirección a otra ruta</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#formularios" id="id13">Formularios</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-formulario-con-codeigniter-3" id="id14">Crear un formulario con Codeigniter 3</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bases-de-datos" id="id15">Bases de datos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-base-de-datos" id="id16">Crear base de datos</a></p></li>
+<li><p><a class="reference internal" href="#conectar-a-la-base-de-datos" id="id17">Conectar a la base de datos</a></p></li>
+<li><p><a class="reference internal" href="#crear-modelo-de-datos-y-read" id="id18">Crear modelo de datos y READ</a></p></li>
+<li><p><a class="reference internal" href="#insertar-datos" id="id19">Insertar datos</a></p></li>
+<li><p><a class="reference internal" href="#borrar-registros" id="id20">Borrar registros</a></p></li>
+<li><p><a class="reference internal" href="#actualizar-registros" id="id21">Actualizar registros</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="configuraciones">
+<h2><a class="toc-backref" href="#id4">Configuraciones</a><a class="headerlink" href="#configuraciones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="creacion-del-proyecto">
+<h3><a class="toc-backref" href="#id5">Creación del proyecto</a><a class="headerlink" href="#creacion-del-proyecto" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Descargar Codeigniter 3: <code class="docutils literal notranslate"><span class="pre">https://www.codeigniter.com/download</span></code></p></li>
+<li><p>Probar que está funcionando en la misma raiz desde consola: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">localhost:8000</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Este manual es para la versión 3, la versión 4 tiene cambios en su estructura entre otros.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>La versión 3 de Codeigniter funciona mínimo bajo la versión de PHP 5.6 mientras que la 4 como mínimo la 7.1</p>
+</div>
+</section>
+<section id="estructura-de-codeigniter-3">
+<h3><a class="toc-backref" href="#id6">Estructura de Codeigniter 3</a><a class="headerlink" href="#estructura-de-codeigniter-3" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En la estructura de un proyecto Codeigniter 3 estas son las partes más importantes:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>application</strong>: directorio donde se encuentra la aplicación. Dentro de ella se encuentran las siguientes carpetas:</dt><dd><ul>
+<li><p><strong>config</strong>: carpeta de configuración con diversos archivos los cuales se destacan <strong>config.php</strong>, <strong>constants.php</strong>, <strong>database.php</strong> y <strong>routes.php</strong>.</p></li>
+<li><p><strong>controllers</strong>: carpeta donde se irán añadiendo los controladores del proyecto.</p></li>
+<li><p><strong>models</strong>: carpeta donde se crearán los modelos de datos (en el caso de codeigniter 3 serán queries).</p></li>
+<li><p><strong>views</strong>: carpeta donde se crearán las vistas del proyecto.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>index.php</strong>: archivo principal del proyecto, es desde donde se ejecuta la aplicación en el servidor.</p></li>
+</ul>
+</section>
+</section>
+<section id="rutas-en-codeigniter-3">
+<h2><a class="toc-backref" href="#id7">Rutas en Codeigniter 3</a><a class="headerlink" href="#rutas-en-codeigniter-3" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Las rutas en codeigniter se irán creando automáticamente a medida que vayamos añadiendo controladores y métodos siguiendo esta estructura:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://localhost:8000/controlador/metodo/parametro_1/parametro_2/">http://localhost:8000/controlador/metodo/parametro_1/parametro_2/</a></p></li>
+</ul>
+</section>
+<section id="vistas-en-codeigniter-3">
+<h2><a class="toc-backref" href="#id8">Vistas en CodeIgniter 3</a><a class="headerlink" href="#vistas-en-codeigniter-3" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para crear una vista en Codeigniter 3 vamos a <strong>application/views</strong> y creamos un archivo por ejemplo <strong>consolas_list.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="x">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="linenos"> 3</span><span class="x">&lt;head&gt;</span>
+<span class="linenos"> 4</span><span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;title&gt;Listado de consolas&lt;/title&gt;</span>
+<span class="linenos"> 8</span><span class="x">&lt;/head&gt;</span>
+<span class="linenos"> 9</span><span class="x">&lt;body&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;h1&gt;Listado de consolas&lt;/h1&gt;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="x">    &lt;ul&gt;</span>
+<span class="linenos">13</span><span class="x">        &lt;li&gt;Sony PlayStation&lt;/li&gt;</span>
+<span class="linenos">14</span><span class="x">        &lt;li&gt;Sega Megadrive&lt;/li&gt;</span>
+<span class="linenos">15</span><span class="x">        &lt;li&gt;Nintendo DS&lt;/li&gt;</span>
+<span class="linenos">16</span><span class="x">    &lt;/ul&gt;</span>
+<span class="linenos">17</span><span class="x">&lt;/body&gt;</span>
+<span class="linenos">18</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>Para cargar la vista en el controlador hacemos lo siguiente en <strong>Consolas.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="c1">// cargar vista html:</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">);</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span><span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<section id="uso-de-variables">
+<h3><a class="toc-backref" href="#id9">Uso de variables</a><a class="headerlink" href="#uso-de-variables" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las variables se pueden cargar desde el controlador del siguiente modo (Consolas.php):</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="c1">// creamos una variable data con la información de una consola:</span>
+<span class="linenos"> 7</span>        <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consola&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Sony Playstation&#39;</span><span class="p">;</span>
+<span class="linenos"> 8</span>        <span class="c1">// se la pasamos a la vista:</span>
+<span class="linenos"> 9</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="p">}</span>
+<span class="linenos">11</span><span class="p">}</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<p>En la vista la mostramos del siguiente modo (consolas_list.php):</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="x">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="linenos"> 3</span><span class="x">&lt;head&gt;</span>
+<span class="linenos"> 4</span><span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;title&gt;Listado de consolas&lt;/title&gt;</span>
+<span class="linenos"> 8</span><span class="x">&lt;/head&gt;</span>
+<span class="linenos"> 9</span><span class="x">&lt;body&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;h1&gt;Listado de consolas&lt;/h1&gt;</span>
+<span class="linenos">11</span><span class="x">    &lt;!-- El contenido de la variable data se pasa como si fueran variables sueltas: --&gt;</span>
+<span class="linenos">12</span><span class="x">    &lt;p&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$consola</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<span class="linenos">13</span><span class="x">&lt;/body&gt;</span>
+<span class="linenos">14</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="controladores-en-codeigntier-3">
+<h2><a class="toc-backref" href="#id10">Controladores en CodeIgntier 3</a><a class="headerlink" href="#controladores-en-codeigntier-3" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Para crear un controlador accedemos a la carpeta <strong>application</strong> y dentro a la carpeta <strong>controllers</strong>, ahí creamos un controlador al que llamamos por ejemplo <strong>Consolas.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="c1">// copiamos este código de welcome.php para evitar accesos no autorizados:</span>
+<span class="linenos"> 3</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 4</span><span class="c1">// creamos la clase que estiende de CI_Controller:</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 6</span>    <span class="c1">// creamos la función para controlar la primera vista index:</span>
+<span class="linenos"> 7</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos"> 8</span>        <span class="k">echo</span> <span class="s2">&quot;Página de consolas&quot;</span><span class="p">;</span>
+<span class="linenos"> 9</span>    <span class="p">}</span>
+<span class="linenos">10</span><span class="p">}</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">// en lugar de cerrar el código php comentamos el final del archivo:</span>
+<span class="linenos">13</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Las ruta se genera automáticamente en base al nombre del controlador, para la vista principal tendríamos la ruta: <a class="reference external" href="http://localhost:8000/index.php/consolas/">http://localhost:8000/index.php/consolas/</a></p></li>
+<li><p>Para cada vista individual tenemos por ejemplo en este caso: <a class="reference external" href="http://localhost:8000/index.php/consolas/index">http://localhost:8000/index.php/consolas/index</a></p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Asegúrate siempre de que el nombre del archivo y la clase sean exactamente el mismo o las rutas podrían no funcionar.</p>
+</div>
+<section id="manejar-parametros-en-el-controlador">
+<h3><a class="toc-backref" href="#id11">Manejar parámetros en el controlador</a><a class="headerlink" href="#manejar-parametros-en-el-controlador" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Para añadir parámetros al controlador basta con pasarle los parámetros al método que se vaya a ejecutar:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="c1">// parámetros get por el método:</span>
+<span class="linenos"> 7</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(</span><span class="nv">$consola</span> <span class="o">=</span> <span class="k">null</span><span class="p">){</span>
+<span class="linenos"> 8</span>        <span class="k">echo</span> <span class="nv">$consola</span><span class="p">;</span>
+<span class="linenos"> 9</span>    <span class="p">}</span>
+<span class="linenos">10</span><span class="p">}</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ojo! ahora como estamos recibiendo parametros en el index debemos indicar el método que se esta utilizando en la ruta, de este modo: <a class="reference external" href="http://localhost:8000/consolas/index/Switch">http://localhost:8000/consolas/index/Switch</a></p></li>
+</ul>
+</section>
+<section id="redireccion-a-otra-ruta">
+<h3><a class="toc-backref" href="#id12">Redirección a otra ruta</a><a class="headerlink" href="#redireccion-a-otra-ruta" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Para cargar el redireccionador lo recomendado es importar en el constructor el helper url:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="c1">// cargar el constructor:</span>
+<span class="linenos"> 6</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 7</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 8</span>        <span class="c1">// se carga el helper url:</span>
+<span class="linenos"> 9</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="p">}</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(</span><span class="nv">$consola</span> <span class="o">=</span> <span class="k">null</span><span class="p">){</span>
+<span class="linenos">13</span>        <span class="k">echo</span> <span class="s2">&quot;Estás en el índice&quot;</span><span class="p">;</span>
+<span class="linenos">14</span>    <span class="p">}</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1">// creamos un método que nos redirija al indice:</span>
+<span class="linenos">17</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">redirigir</span><span class="p">(){</span>
+<span class="linenos">18</span>        <span class="c1">// ejecutamos la función redirect y le decimos a que metodo tiene que viajar:</span>
+<span class="linenos">19</span>        <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/consolas/index/&#39;</span><span class="p">,</span> <span class="s1">&#39;refresh&#39;</span><span class="p">);</span>
+<span class="linenos">20</span>    <span class="p">}</span>
+<span class="linenos">21</span><span class="p">}</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si ejecutamos localhost:8000/consolas/redirigir nos llevará al index de consolas via redireccionamiento.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos viajar al index de un controlador basta con escribir el nombre del mismo: <a href="#id1"><span class="problematic" id="id2">``</span></a>redirect(“consolas”)``que en el caso expuesto sería lo mas adecuado.</p>
+</div>
+</section>
+</section>
+<section id="formularios">
+<h2><a class="toc-backref" href="#id13">Formularios</a><a class="headerlink" href="#formularios" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="crear-un-formulario-con-codeigniter-3">
+<h3><a class="toc-backref" href="#id14">Crear un formulario con Codeigniter 3</a><a class="headerlink" href="#crear-un-formulario-con-codeigniter-3" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Desde el controlador llamar al helper form (consolas.php):</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">class Consolas extends CI_Controller{</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="x">    function __construct(){</span>
+<span class="linenos"> 4</span><span class="x">        parent::__construct();</span>
+<span class="linenos"> 5</span><span class="x">        $this-&gt;load-&gt;model(&#39;Consolas_model&#39;);</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="x">        // utilizamos el helper form:</span>
+<span class="linenos"> 8</span><span class="x">        $this-&gt;load-&gt;helper(&#39;form&#39;);</span>
+<span class="linenos"> 9</span><span class="x">    }</span>
+<span class="linenos">10</span><span class="x">    public function index(){</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="x">        $consolas_list = $this-&gt;Consolas_model-&gt;get_all();</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="x">        if(empty($consolas_list)){</span>
+<span class="linenos">15</span><span class="x">            $data[&#39;consolas_list&#39;] = &quot;No existen consolas&quot;;</span>
+<span class="linenos">16</span><span class="x">        }</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="x">        $data[&#39;consolas_list&#39;] = $consolas_list;</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="x">        $this-&gt;load-&gt;view(&#39;consolas_list&#39;, $data);</span>
+<span class="linenos">21</span><span class="x">    }</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="x">    // crear un controlador para el create:</span>
+<span class="linenos">24</span><span class="x">    public function add(){</span>
+<span class="linenos">25</span><span class="x">        // recibir información por POST:</span>
+<span class="linenos">26</span><span class="x">        if($this-&gt;input-&gt;post()){</span>
+<span class="linenos">27</span><span class="x">            $data[&#39;new_console&#39;] = $this-&gt;input-&gt;post();</span>
+<span class="linenos">28</span><span class="x">        }else{</span>
+<span class="linenos">29</span><span class="x">            $data[&#39;new_console&#39;] = &quot;pendiente de resultados&quot;;</span>
+<span class="linenos">30</span><span class="x">        }</span>
+<span class="linenos">31</span><span class="x">        // cargamos la vista:</span>
+<span class="linenos">32</span><span class="x">        $this-&gt;load-&gt;view(&#39;add_consola&#39;, $data);</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="x">    }</span>
+<span class="linenos">35</span><span class="x">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>en una nueva vista a la que llamamos <strong>add_consola.php</strong> le cargamos el formulario:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="x">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="linenos"> 3</span><span class="x">&lt;head&gt;</span>
+<span class="linenos"> 4</span><span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;title&gt;Añadir consola&lt;/title&gt;</span>
+<span class="linenos"> 8</span><span class="x">&lt;/head&gt;</span>
+<span class="linenos"> 9</span><span class="x">&lt;body&gt;</span>
+<span class="linenos">10</span><span class="x">&lt;h1&gt;Añadir consola&lt;/h1&gt;</span>
+<span class="linenos">11</span><span class="x">&lt;hr/&gt;</span>
+<span class="linenos">12</span><span class="x">&lt;br/&gt;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="x">&lt;!-- creamos una variable para construir la estructura de cada campo: --&gt;</span>
+<span class="linenos">15</span><span class="cp">&lt;?php</span>
+<span class="linenos">16</span>    <span class="nv">$input_marca</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">17</span>        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">18</span>        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">19</span>        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;input_marca&#39;</span>
+<span class="linenos">20</span>    <span class="p">);</span>
+<span class="linenos">21</span>    <span class="nv">$input_modelo</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">22</span>        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">23</span>        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">24</span>        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;input_modelo&#39;</span>
+<span class="linenos">25</span>    <span class="p">);</span>
+<span class="linenos">26</span>    <span class="c1">// en caso de ser un desplegable tendremos dos arrays:</span>
+<span class="linenos">27</span>    <span class="nv">$input_en_coleccion</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">28</span>        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;en_coleccion&#39;</span><span class="p">,</span>
+<span class="linenos">29</span>        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;en_coleccion&#39;</span><span class="p">,</span>
+<span class="linenos">30</span>        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;input_en_coleccion&#39;</span>
+<span class="linenos">31</span>    <span class="p">);</span>
+<span class="linenos">32</span>    <span class="nv">$en_coleccion</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">33</span>        <span class="s1">&#39;0&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span>
+<span class="linenos">34</span>        <span class="s1">&#39;1&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Si&#39;</span>
+<span class="linenos">35</span>    <span class="p">);</span>
+<span class="linenos">36</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="x">&lt;!-- Al construir el formulario con el helper el action se construye a partir de la ruta del controlador --&gt;</span>
+<span class="linenos">39</span><span class="cp">&lt;?php</span>
+<span class="linenos">40</span>    <span class="k">echo</span> <span class="nx">form_open</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span>    <span class="k">echo</span> <span class="nx">form_label</span><span class="p">(</span><span class="s1">&#39;Marca&#39;</span><span class="p">,</span> <span class="s1">&#39;marca&#39;</span><span class="p">);</span>
+<span class="linenos">43</span>    <span class="k">echo</span> <span class="nx">form_input</span><span class="p">(</span><span class="nv">$input_marca</span><span class="p">);</span>
+<span class="linenos">44</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">45</span>    <span class="k">echo</span> <span class="nx">form_label</span><span class="p">(</span><span class="s1">&#39;Modelo&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">);</span>
+<span class="linenos">46</span>    <span class="k">echo</span> <span class="nx">form_input</span><span class="p">(</span><span class="nv">$input_modelo</span><span class="p">);</span>
+<span class="linenos">47</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">48</span>    <span class="k">echo</span> <span class="nx">form_label</span><span class="p">(</span><span class="s1">&#39;En posesión&#39;</span><span class="p">,</span> <span class="s1">&#39;en_posesion&#39;</span><span class="p">);</span>
+<span class="linenos">49</span>    <span class="k">echo</span> <span class="nx">form_dropdown</span><span class="p">(</span><span class="nv">$input_en_coleccion</span><span class="p">,</span><span class="nv">$en_coleccion</span><span class="p">);</span>
+<span class="linenos">50</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">51</span>    <span class="k">echo</span> <span class="nx">form_submit</span><span class="p">(</span><span class="s1">&#39;btn_consola&#39;</span><span class="p">,</span> <span class="s1">&#39;añadir consola&#39;</span><span class="p">);</span>
+<span class="linenos">52</span>    <span class="k">echo</span> <span class="nx">form_close</span><span class="p">();</span>
+<span class="linenos">53</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="linenos">54</span>
+<span class="linenos">55</span><span class="x">&lt;hr /&gt;</span>
+<span class="linenos">56</span><span class="x">&lt;!-- aquí mostramos el resultado: --&gt;</span>
+<span class="linenos">57</span><span class="x">&lt;pre&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$new_console</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/pre&gt;</span>
+<span class="linenos">58</span><span class="x">&lt;/body&gt;</span>
+<span class="linenos">59</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora tenemos el formulario para añadir consolas en <a class="reference external" href="http://localhost:8000/consolas/add">http://localhost:8000/consolas/add</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si estamos usando un puerto de salida distinto al 80 deberemos modificar el parámetro <strong>base_url</strong> en la ruta <strong>config/config.php</strong>, modificamos el valor del array
+con un valor por ejemplo: <code class="docutils literal notranslate"><span class="pre">$config['base_url']</span> <span class="pre">=</span> <span class="pre">'http://localhost:8000';</span></code></p>
+</div>
+</section>
+</section>
+<section id="bases-de-datos">
+<h2><a class="toc-backref" href="#id15">Bases de datos</a><a class="headerlink" href="#bases-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="crear-base-de-datos">
+<h3><a class="toc-backref" href="#id16">Crear base de datos</a><a class="headerlink" href="#crear-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Instala MariaDB si estas usando linux o busca y servidor Wamp o xamp que soporte Mysql 5, con la versión de Mysql 8 tendrás problemas.</p></li>
+<li><p>Ejecutamos en el terminal <strong>sudo mysql</strong> y creamos una base de datos llamada <strong>curso_codeigniter</strong>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">DATABASE</span> <span class="n">curso_codeigniter</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creamos un nuevo usuario:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;guillermo&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Le otorgamos privilegios en la base de datos nueva:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">curso_codeigniter</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;guillermo&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Desplegar los privilegios para que se puedan usar ya:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Seleccionamos la base de datos:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">USE</span><span class="w"> </span><span class="n">curso_codeigniter</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>creamos la tabla consolas:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">consolas</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">auto_increment</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="n">marca</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">modelo</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">6</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">7</span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Creamos unos registros para tener datos que listar a continuación:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">consolas</span><span class="w"> </span><span class="k">VALUES</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;playstation&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;nintendo&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;switch&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;sega&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;mega drive&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;microsoft&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;xbox&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Con esto ya tenemos todo lo necesario para trabajar.</p>
+</section>
+<section id="conectar-a-la-base-de-datos">
+<h3><a class="toc-backref" href="#id17">Conectar a la base de datos</a><a class="headerlink" href="#conectar-a-la-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>En el proyecto nos vamos a <strong>application/config/database.php</strong> y al final editamos el array <strong>$db[“default”]</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">$db[&#39;default&#39;] = array(</span>
+<span class="linenos"> 2</span><span class="x">    &#39;dsn&#39;   =&gt; &#39;&#39;,</span>
+<span class="linenos"> 3</span><span class="x">    &#39;hostname&#39; =&gt; &#39;localhost&#39;, // localhost el servidor</span>
+<span class="linenos"> 4</span><span class="x">    &#39;username&#39; =&gt; &#39;guillermo&#39;, // este es el usuario para conectar</span>
+<span class="linenos"> 5</span><span class="x">    &#39;password&#39; =&gt; &#39;1234&#39;, // la contraseña en blanco si no definimos una</span>
+<span class="linenos"> 6</span><span class="x">    &#39;database&#39; =&gt; &#39;curso_codeigniter&#39;, // el nombre de la base de datos</span>
+<span class="linenos"> 7</span><span class="x">    &#39;dbdriver&#39; =&gt; &#39;mysqli&#39;,</span>
+<span class="linenos"> 8</span><span class="x">    &#39;dbprefix&#39; =&gt; &#39;&#39;,</span>
+<span class="linenos"> 9</span><span class="x">    &#39;pconnect&#39; =&gt; FALSE,</span>
+<span class="linenos">10</span><span class="x">    &#39;db_debug&#39; =&gt; (ENVIRONMENT !== &#39;production&#39;),</span>
+<span class="linenos">11</span><span class="x">    &#39;cache_on&#39; =&gt; FALSE,</span>
+<span class="linenos">12</span><span class="x">    &#39;cachedir&#39; =&gt; &#39;&#39;,</span>
+<span class="linenos">13</span><span class="x">    &#39;char_set&#39; =&gt; &#39;utf8&#39;,</span>
+<span class="linenos">14</span><span class="x">    &#39;dbcollat&#39; =&gt; &#39;utf8_general_ci&#39;,</span>
+<span class="linenos">15</span><span class="x">    &#39;swap_pre&#39; =&gt; &#39;&#39;,</span>
+<span class="linenos">16</span><span class="x">    &#39;encrypt&#39; =&gt; FALSE,</span>
+<span class="linenos">17</span><span class="x">    &#39;compress&#39; =&gt; FALSE,</span>
+<span class="linenos">18</span><span class="x">    &#39;stricton&#39; =&gt; FALSE,</span>
+<span class="linenos">19</span><span class="x">    &#39;failover&#39; =&gt; array(),</span>
+<span class="linenos">20</span><span class="x">    &#39;save_queries&#39; =&gt; TRUE</span>
+<span class="linenos">21</span><span class="x">);</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-modelo-de-datos-y-read">
+<h3><a class="toc-backref" href="#id18">Crear modelo de datos y READ</a><a class="headerlink" href="#crear-modelo-de-datos-y-read" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para crear un modelo de datos nos vamos a <strong>application/models</strong> y creamos un archivo por ejemplo <strong>Consolas_model.php</strong>:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="c1">// creamos una clase para el modelo:</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">Consolas_model</span> <span class="k">extends</span> <span class="nx">CI_Model</span> <span class="p">{</span>
+<span class="linenos"> 4</span>    <span class="c1">// preparamos el constructor:</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="c1">// cargamos la base de datos:</span>
+<span class="linenos"> 8</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
+<span class="linenos"> 9</span>    <span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="c1">// creamos una función para traer del modelo todos los registros:</span>
+<span class="linenos">12</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_all</span><span class="p">(){</span>
+<span class="linenos">13</span>        <span class="c1">// recuperar datos de la tabla:</span>
+<span class="linenos">14</span>        <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">15</span>        <span class="c1">// devolvemos la información:</span>
+<span class="linenos">16</span>        <span class="k">return</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
+<span class="linenos">17</span>    <span class="p">}</span>
+<span class="linenos">18</span><span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="cm">/* Fin del archivo Consolas_model.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En el controlador realizamos la consulta <strong>Consolas.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 7</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 8</span>        <span class="c1">// cargamos el modelo en el constructor:</span>
+<span class="linenos"> 9</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;Consolas_model&#39;</span><span class="p">);</span>
+<span class="linenos">10</span>    <span class="p">}</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>        <span class="c1">// utilizamos el método para recuperar los datos del la tabla:</span>
+<span class="linenos">15</span>        <span class="nv">$consolas_list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">get_all</span><span class="p">();</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="c1">// comprobamos si está vacío:</span>
+<span class="linenos">18</span>        <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$consolas_list</span><span class="p">)){</span>
+<span class="linenos">19</span>            <span class="c1">// pasamos al data que no existen consolas:</span>
+<span class="linenos">20</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;No existen consolas&quot;</span><span class="p">;</span>
+<span class="linenos">21</span>        <span class="p">}</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="c1">// asignamos a la data la lista:</span>
+<span class="linenos">24</span>        <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$consolas_list</span><span class="p">;</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>        <span class="c1">// se la pasamos a la vista:</span>
+<span class="linenos">27</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">28</span>    <span class="p">}</span>
+<span class="linenos">29</span><span class="p">}</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Por úlitmo en el template lo mostramos <strong>consolas_list.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="x">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="linenos"> 3</span><span class="x">&lt;head&gt;</span>
+<span class="linenos"> 4</span><span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;title&gt;Listado de consolas&lt;/title&gt;</span>
+<span class="linenos"> 8</span><span class="x">&lt;/head&gt;</span>
+<span class="linenos"> 9</span><span class="x">&lt;body&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;h1&gt;Listado de consolas&lt;/h1&gt;</span>
+<span class="linenos">11</span><span class="x">    &lt;!-- El contenido de la variable data se pasa como si fueran variables sueltas: --&gt;</span>
+<span class="linenos">12</span><span class="x">    &lt;ul&gt;</span>
+<span class="linenos">13</span><span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">foreach</span><span class="p">(</span><span class="nv">$consolas_list</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$consola</span><span class="p">){</span>
+<span class="linenos">14</span>            <span class="k">echo</span> <span class="s2">&quot;&lt;li&gt;&quot;</span> <span class="o">.</span> <span class="nv">$consola</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$consola</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">.</span> <span class="s2">&quot;&lt;/li&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">15</span>        <span class="p">}</span>
+<span class="linenos">16</span>        <span class="cp">?&gt;</span><span class="x"></span>
+<span class="linenos">17</span><span class="x">    &lt;/ul&gt;</span>
+<span class="linenos">18</span><span class="x">&lt;/body&gt;</span>
+<span class="linenos">19</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora si vamos a la ruta <a class="reference external" href="http://localhost:8000/consolas">http://localhost:8000/consolas</a> veremos la lista creada en la base de datos.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Es posible que tengamos que habilitar la extensión <strong>mysqli.dll</strong> quitando el ; de la línea correspondiente en el archivo <strong>php.ini</strong></p>
+</div>
+</section>
+<section id="insertar-datos">
+<h3><a class="toc-backref" href="#id19">Insertar datos</a><a class="headerlink" href="#insertar-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>En el modelo añadimos una nueva función en <strong>Consolas_model.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">Consolas_model</span> <span class="k">extends</span> <span class="nx">CI_Model</span> <span class="p">{</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_all</span><span class="p">(){</span>
+<span class="linenos">11</span>        <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">12</span>        <span class="k">return</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
+<span class="linenos">13</span>    <span class="p">}</span>
+<span class="linenos">14</span>    <span class="c1">// creamos una función para insertar datos:</span>
+<span class="linenos">15</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">(){</span>
+<span class="linenos">16</span>        <span class="c1">// recuperamos los datos recibidos por post:</span>
+<span class="linenos">17</span>        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">();</span>
+<span class="linenos">18</span>        <span class="c1">// quitamos el botón submit que se reconoce como un input mas y da error (tambien quitamos el campo en_coleccion que tampoco existe en la tabla):</span>
+<span class="linenos">19</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;btn_consola&#39;</span><span class="p">]);</span>
+<span class="linenos">20</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;en_coleccion&#39;</span><span class="p">]);</span>
+<span class="linenos">21</span>        <span class="c1">// insertamos los datos recibidos por post pasandole a insert la tabla y la operación post:</span>
+<span class="linenos">22</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>        <span class="c1">// retornamos el resultado:</span>
+<span class="linenos">25</span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert_id</span><span class="p">();</span>
+<span class="linenos">26</span>    <span class="p">}</span>
+<span class="linenos">27</span><span class="p">}</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="cm">/* Fin del archivo Consolas_model.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A continuación editamos el controlador <strong>Consolas.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;Consolas_model&#39;</span><span class="p">);</span>
+<span class="linenos"> 8</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">);</span>
+<span class="linenos"> 9</span>    <span class="p">}</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>        <span class="nv">$consolas_list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">get_all</span><span class="p">();</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>        <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$consolas_list</span><span class="p">)){</span>
+<span class="linenos">16</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;No existen consolas&quot;</span><span class="p">;</span>
+<span class="linenos">17</span>        <span class="p">}</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>        <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$consolas_list</span><span class="p">;</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">22</span>    <span class="p">}</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">(){</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">()){</span>
+<span class="linenos">27</span>            <span class="c1">// si llegan valores por post vamos a insertarlos:</span>
+<span class="linenos">28</span>            <span class="nv">$id_result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+<span class="linenos">29</span>            <span class="c1">// para hacer pruebas le pasamos a new_console el id resultante:</span>
+<span class="linenos">30</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;new_console&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$id_result</span><span class="p">;</span>
+<span class="linenos">31</span>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">32</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;new_console&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pendiente de resultados&quot;</span><span class="p">;</span>
+<span class="linenos">33</span>        <span class="p">}</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;add_consola&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="p">}</span>
+<span class="linenos">39</span><span class="p">}</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Y ya solo falta nuestro formulario que lo hemos podido crear en la sección <strong>Formularios</strong>.</p></li>
+</ul>
+</section>
+<section id="borrar-registros">
+<h3><a class="toc-backref" href="#id20">Borrar registros</a><a class="headerlink" href="#borrar-registros" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Creamos una nueva función en el modelo <strong>Consolas_model.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">Consolas_model</span> <span class="k">extends</span> <span class="nx">CI_Model</span> <span class="p">{</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_all</span><span class="p">(){</span>
+<span class="linenos">11</span>        <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">12</span>        <span class="k">return</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
+<span class="linenos">13</span>    <span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">(){</span>
+<span class="linenos">16</span>        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">();</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;btn_consola&#39;</span><span class="p">]);</span>
+<span class="linenos">19</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;en_coleccion&#39;</span><span class="p">]);</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert_id</span><span class="p">();</span>
+<span class="linenos">24</span>    <span class="p">}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="c1">// para eliminar creamos una nueva función delete que recibirá un id:</span>
+<span class="linenos">27</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">28</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">29</span>            <span class="c1">// buscamos el id del elemento a eliminar en la tabla:</span>
+<span class="linenos">30</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">31</span>            <span class="c1">// decimos que se debe borrar de la tabla correspondiente:</span>
+<span class="linenos">32</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">33</span>        <span class="p">}</span>
+<span class="linenos">34</span>    <span class="p">}</span>
+<span class="linenos">35</span><span class="p">}</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="cm">/* Fin del archivo Consolas_model.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora pasamos al controlador <strong>Consolas.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;Consolas_model&#39;</span><span class="p">);</span>
+<span class="linenos"> 8</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">);</span>
+<span class="linenos"> 9</span>        <span class="c1">// cargamos el helper url para poder hacer redirecciones:</span>
+<span class="linenos">10</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>        <span class="nv">$consolas_list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">get_all</span><span class="p">();</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$consolas_list</span><span class="p">)){</span>
+<span class="linenos">18</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;No existen consolas&quot;</span><span class="p">;</span>
+<span class="linenos">19</span>        <span class="p">}</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$consolas_list</span><span class="p">;</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">24</span>    <span class="p">}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">(){</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">()){</span>
+<span class="linenos">29</span>            <span class="nv">$id_result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+<span class="linenos">30</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;new_console&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$id_result</span><span class="p">;</span>
+<span class="linenos">31</span>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">32</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;new_console&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pendiente de resultados&quot;</span><span class="p">;</span>
+<span class="linenos">33</span>        <span class="p">}</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;add_consola&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">37</span>    <span class="p">}</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>    <span class="c1">// creamos una nueva función para eliminar un contacto:</span>
+<span class="linenos">40</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">$id</span> <span class="o">=</span> <span class="k">null</span><span class="p">){</span>
+<span class="linenos">41</span>        <span class="c1">// comprobamos que recibimos un id:</span>
+<span class="linenos">42</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">43</span>            <span class="c1">// realizamos la eliminación del elemento:</span>
+<span class="linenos">44</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">45</span>        <span class="p">}</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span>        <span class="c1">// redirigimos a la lista:</span>
+<span class="linenos">48</span>        <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">49</span>    <span class="p">}</span>
+<span class="linenos">50</span><span class="p">}</span>
+<span class="linenos">51</span>
+<span class="linenos">52</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si vamos a la ruta siguiente y vamos cambiando el numero id se borraran los registros que tengan dicho id: localhost:8000/index.php/consolas/delete/1</p></li>
+</ul>
+</section>
+<section id="actualizar-registros">
+<h3><a class="toc-backref" href="#id21">Actualizar registros</a><a class="headerlink" href="#actualizar-registros" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Como en los  otros casos comenzamos con el modelo que estabamos usando <strong>Consolas_model.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">Consolas_model</span> <span class="k">extends</span> <span class="nx">CI_Model</span> <span class="p">{</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
+<span class="linenos"> 8</span>    <span class="p">}</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_all</span><span class="p">(){</span>
+<span class="linenos">11</span>        <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">12</span>        <span class="k">return</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
+<span class="linenos">13</span>    <span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">(){</span>
+<span class="linenos">16</span>        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">();</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;btn_consola&#39;</span><span class="p">]);</span>
+<span class="linenos">19</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;en_coleccion&#39;</span><span class="p">]);</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert_id</span><span class="p">();</span>
+<span class="linenos">24</span>    <span class="p">}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">27</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">28</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">29</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">30</span>        <span class="p">}</span>
+<span class="linenos">31</span>    <span class="p">}</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>    <span class="c1">// creamos una metodo para traer una consola:</span>
+<span class="linenos">34</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">35</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">36</span>            <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">37</span>            <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>            <span class="c1">// retornamos el resultado:</span>
+<span class="linenos">40</span>            <span class="k">return</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
+<span class="linenos">41</span>        <span class="p">}</span>
+<span class="linenos">42</span>    <span class="p">}</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span>    <span class="c1">// creamos un método para actualizar un registro:</span>
+<span class="linenos">45</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">46</span>        <span class="c1">// recuperamos los datos de post y quitamos el botón:</span>
+<span class="linenos">47</span>        <span class="nv">$update_data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">();</span>
+<span class="linenos">48</span>        <span class="nb">unset</span><span class="p">(</span><span class="nv">$update_data</span><span class="p">[</span><span class="s1">&#39;btn_consola&#39;</span><span class="p">]);</span>
+<span class="linenos">49</span>
+<span class="linenos">50</span>        <span class="c1">// buscamos el registro que queremos modificar:</span>
+<span class="linenos">51</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">52</span>        <span class="c1">// registramos los cambios:</span>
+<span class="linenos">53</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">,</span> <span class="nv">$update_data</span><span class="p">);</span>
+<span class="linenos">54</span>
+<span class="linenos">55</span>    <span class="p">}</span>
+<span class="linenos">56</span><span class="p">}</span>
+<span class="linenos">57</span>
+<span class="linenos">58</span><span class="cm">/* Fin del archivo Consolas_model.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Continuamos por el controlador <strong>Consolas.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">Consolas</span> <span class="k">extends</span> <span class="nx">CI_Controller</span><span class="p">{</span>
+<span class="linenos"> 5</span>    <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos"> 6</span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="linenos"> 7</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;Consolas_model&#39;</span><span class="p">);</span>
+<span class="linenos"> 8</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">);</span>
+<span class="linenos"> 9</span>        <span class="c1">// recuerda tener el helper de redirecciones cargado:</span>
+<span class="linenos">10</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>        <span class="nv">$consolas_list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">get_all</span><span class="p">();</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$consolas_list</span><span class="p">)){</span>
+<span class="linenos">18</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;No existen consolas&quot;</span><span class="p">;</span>
+<span class="linenos">19</span>        <span class="p">}</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$consolas_list</span><span class="p">;</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;consolas_list&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">24</span>    <span class="p">}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">(){</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">()){</span>
+<span class="linenos">29</span>            <span class="nv">$id_result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+<span class="linenos">30</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;new_console&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$id_result</span><span class="p">;</span>
+<span class="linenos">31</span>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">32</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;new_console&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pendiente de resultados&quot;</span><span class="p">;</span>
+<span class="linenos">33</span>        <span class="p">}</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;add_consola&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">37</span>    <span class="p">}</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">$id</span> <span class="o">=</span> <span class="k">null</span><span class="p">){</span>
+<span class="linenos">40</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+<span class="linenos">41</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">42</span>        <span class="p">}</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span>        <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">45</span>    <span class="p">}</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span>    <span class="c1">// crear un nuevo metodo para actualizar registros:</span>
+<span class="linenos">48</span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span><span class="p">(</span><span class="nv">$id</span> <span class="o">=</span> <span class="k">null</span><span class="p">){</span>
+<span class="linenos">49</span>        <span class="c1">// vamos a redireccionar si no nos llega un id:</span>
+<span class="linenos">50</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$id</span> <span class="o">==</span> <span class="k">null</span><span class="p">){</span>
+<span class="linenos">51</span>            <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">52</span>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">53</span>            <span class="c1">// si nos llega algo cargamos los datos haciendo una consulta:</span>
+<span class="linenos">54</span>            <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consola&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">55</span>            <span class="c1">// si no recuperamos nada (no existe el registro) regresamos a la lista:</span>
+<span class="linenos">56</span>            <span class="k">if</span><span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;consola&#39;</span><span class="p">])){</span>
+<span class="linenos">57</span>                <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">58</span>            <span class="p">}</span>
+<span class="linenos">59</span>        <span class="p">}</span>
+<span class="linenos">60</span>
+<span class="linenos">61</span>        <span class="c1">// verificamos si recibimos valores vía post:</span>
+<span class="linenos">62</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">()){</span>
+<span class="linenos">63</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Consolas_model</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+<span class="linenos">64</span>            <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;consolas&#39;</span><span class="p">);</span>
+<span class="linenos">65</span>        <span class="p">}</span>
+<span class="linenos">66</span>
+<span class="linenos">67</span>        <span class="c1">// cargamos la vista para actualizar consolas:</span>
+<span class="linenos">68</span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;update_consola&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="linenos">69</span>    <span class="p">}</span>
+<span class="linenos">70</span><span class="p">}</span>
+<span class="linenos">71</span>
+<span class="linenos">72</span><span class="cm">/* Fin del archivo Consolas.php */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Finalmente creamos una vista similar a la que tenemos  para crear registros y la llamamos <strong>update_consola.php</strong>:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="x">&lt;html lang=&quot;en&quot;&gt;</span>
+<span class="linenos"> 3</span><span class="x">&lt;head&gt;</span>
+<span class="linenos"> 4</span><span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="linenos"> 5</span><span class="x">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;title&gt;Actualizar consola&lt;/title&gt;</span>
+<span class="linenos"> 8</span><span class="x">&lt;/head&gt;</span>
+<span class="linenos"> 9</span><span class="x">&lt;body&gt;</span>
+<span class="linenos">10</span><span class="x">&lt;h1&gt;Actualizar consola&lt;/h1&gt;</span>
+<span class="linenos">11</span><span class="x">&lt;hr/&gt;</span>
+<span class="linenos">12</span><span class="x">&lt;br/&gt;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="x">&lt;!-- pasamos el resultado del data por el atributo value: --&gt;</span>
+<span class="linenos">15</span><span class="cp">&lt;?php</span>
+<span class="linenos">16</span>    <span class="nv">$input_marca</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">17</span>        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">18</span>        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;marca&#39;</span><span class="p">,</span>
+<span class="linenos">19</span>        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;input_marca&#39;</span><span class="p">,</span>
+<span class="linenos">20</span>        <span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="nx">set_value</span><span class="p">(</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="nv">$consola</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">marca</span><span class="p">)</span> <span class="c1">// para establecer un valor en el formulario se usa set_value()</span>
+<span class="linenos">21</span>    <span class="p">);</span>
+<span class="linenos">22</span>    <span class="nv">$input_modelo</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">23</span>        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">24</span>        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;modelo&#39;</span><span class="p">,</span>
+<span class="linenos">25</span>        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;input_modelo&#39;</span><span class="p">,</span>
+<span class="linenos">26</span>        <span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="nx">set_value</span><span class="p">(</span><span class="s1">&#39;modelo&#39;</span><span class="p">,</span> <span class="nv">$consola</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">)</span>
+<span class="linenos">27</span>    <span class="p">);</span>
+<span class="linenos">28</span>    <span class="nv">$en_coleccion</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">29</span>        <span class="s1">&#39;0&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span>
+<span class="linenos">30</span>        <span class="s1">&#39;1&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Si&#39;</span>
+<span class="linenos">31</span>    <span class="p">);</span>
+<span class="linenos">32</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="x">&lt;!-- Hemos quitado el selector porque no lo vamos a usar --&gt;</span>
+<span class="linenos">35</span><span class="cp">&lt;?php</span>
+<span class="linenos">36</span>    <span class="k">echo</span> <span class="nx">form_open</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="k">echo</span> <span class="nx">form_label</span><span class="p">(</span><span class="s1">&#39;Marca&#39;</span><span class="p">,</span> <span class="s1">&#39;marca&#39;</span><span class="p">);</span>
+<span class="linenos">39</span>    <span class="k">echo</span> <span class="nx">form_input</span><span class="p">(</span><span class="nv">$input_marca</span><span class="p">);</span>
+<span class="linenos">40</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">41</span>    <span class="k">echo</span> <span class="nx">form_label</span><span class="p">(</span><span class="s1">&#39;Modelo&#39;</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">);</span>
+<span class="linenos">42</span>    <span class="k">echo</span> <span class="nx">form_input</span><span class="p">(</span><span class="nv">$input_modelo</span><span class="p">);</span>
+<span class="linenos">43</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">44</span>    <span class="k">echo</span> <span class="nx">form_submit</span><span class="p">(</span><span class="s1">&#39;btn_consola&#39;</span><span class="p">,</span> <span class="s1">&#39;actualizar consola&#39;</span><span class="p">);</span>
+<span class="linenos">45</span>    <span class="k">echo</span> <span class="nx">form_close</span><span class="p">();</span>
+<span class="linenos">46</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="linenos">47</span>
+<span class="linenos">48</span><span class="x">&lt;hr /&gt;</span>
+<span class="linenos">49</span><span class="x">&lt;/body&gt;</span>
+<span class="linenos">50</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si vamos por ejemplo a la ruta: <a class="reference external" href="http://localhost:8000/index.php/consolas/update/2">http://localhost:8000/index.php/consolas/update/2</a> podremos actualizar el registro si existe. Si dicho registro no existe establecimos que hiciera un redireccionamiento a la lista.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="laravel.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Framework: Laravel</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../python/sintaxis.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Sintaxis Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

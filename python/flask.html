@@ -1,0 +1,1942 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Microframework: Flask &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Framework: Django Rest Framework" href="drf.html" />
+    <link rel="prev" title="Framework: Django" href="django.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/python/flask.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-del-proyecto">
+     Creación del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archivo-principal">
+     Archivo principal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas">
+   Rutas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-principales-main-py">
+     Rutas principales (main.py)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-con-parametros">
+     rutas con parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-por-uno-o-mas-metodos">
+     Rutas por uno o más métodos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redirecciones">
+     Redirecciones
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#error-404">
+       Error 404
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas">
+   Vistas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#templates-jinja2">
+   Templates (Jinja2)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#template-tags">
+     Template Tags
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-base">
+       Template tag base
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-static">
+       Template tag static
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-de-datos">
+       Template tag de datos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-for">
+       Template tag for
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-if">
+       Template tag if
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formularios-via-post">
+     Formularios via POST
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-archivos-en-flask">
+     Recuperar archivos en Flask
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bases-de-datos-con-sqlalchemy">
+   Bases de datos con SqlAlchemy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-libreria">
+     Instalar librería
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-paquete-del-proyecto">
+     Crear paquete del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configurar-base-de-datos">
+     Configurar base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-modelo-de-datos">
+     Crear modelo de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-base-de-datos">
+     Crear base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#migrar-datos-modificados-en-el-modelo">
+     Migrar datos modificados en el modelo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crud-desde-consola-python">
+     CRUD desde consola python
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-registro">
+       Crear registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#leer-registro">
+       Leer registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#editar-registro">
+       Editar registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-registro">
+       Eliminar registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#trabajar-con-relaciones">
+       Trabajar con relaciones
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-del-orm-en-archivos-py">
+     Uso del ORM en archivos py
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistema-de-usuarios-y-sesiones">
+   Sistema de usuarios y sesiones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-de-usuarios">
+     Modelo de usuarios
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Microframework: Flask</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuraciones">
+   Configuraciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-del-proyecto">
+     Creación del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archivo-principal">
+     Archivo principal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas">
+   Rutas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-principales-main-py">
+     Rutas principales (main.py)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-con-parametros">
+     rutas con parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-por-uno-o-mas-metodos">
+     Rutas por uno o más métodos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redirecciones">
+     Redirecciones
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#error-404">
+       Error 404
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas">
+   Vistas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#templates-jinja2">
+   Templates (Jinja2)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#template-tags">
+     Template Tags
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-base">
+       Template tag base
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-static">
+       Template tag static
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-de-datos">
+       Template tag de datos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-for">
+       Template tag for
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#template-tag-if">
+       Template tag if
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formularios-via-post">
+     Formularios via POST
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperar-archivos-en-flask">
+     Recuperar archivos en Flask
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bases-de-datos-con-sqlalchemy">
+   Bases de datos con SqlAlchemy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-libreria">
+     Instalar librería
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-paquete-del-proyecto">
+     Crear paquete del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configurar-base-de-datos">
+     Configurar base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-modelo-de-datos">
+     Crear modelo de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-base-de-datos">
+     Crear base de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#migrar-datos-modificados-en-el-modelo">
+     Migrar datos modificados en el modelo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crud-desde-consola-python">
+     CRUD desde consola python
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-registro">
+       Crear registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#leer-registro">
+       Leer registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#editar-registro">
+       Editar registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-registro">
+       Eliminar registro
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#trabajar-con-relaciones">
+       Trabajar con relaciones
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-del-orm-en-archivos-py">
+     Uso del ORM en archivos py
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistema-de-usuarios-y-sesiones">
+   Sistema de usuarios y sesiones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-de-usuarios">
+     Modelo de usuarios
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="microframework-flask">
+<h1><a class="toc-backref" href="#id1">Microframework: Flask</a><a class="headerlink" href="#microframework-flask" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-flask.png"><img alt="Logo Flask" class="align-center" src="../_images/logo-flask.png" style="width: 240.0px; height: 308.5px;" /></a>
+<p>Documentación básica para trabajar con el Microframework Flask</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#microframework-flask" id="id1">Microframework: Flask</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuraciones" id="id2">Configuraciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creacion-del-proyecto" id="id3">Creación del proyecto</a></p></li>
+<li><p><a class="reference internal" href="#archivo-principal" id="id4">Archivo principal</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rutas" id="id5">Rutas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#rutas-principales-main-py" id="id6">Rutas principales (main.py)</a></p></li>
+<li><p><a class="reference internal" href="#rutas-con-parametros" id="id7">rutas con parámetros</a></p></li>
+<li><p><a class="reference internal" href="#rutas-por-uno-o-mas-metodos" id="id8">Rutas por uno o más métodos</a></p></li>
+<li><p><a class="reference internal" href="#redirecciones" id="id9">Redirecciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#error-404" id="id10">Error 404</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vistas" id="id11">Vistas</a></p></li>
+<li><p><a class="reference internal" href="#templates-jinja2" id="id12">Templates (Jinja2)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#template-tags" id="id13">Template Tags</a></p>
+<ul>
+<li><p><a class="reference internal" href="#template-tag-base" id="id14">Template tag base</a></p></li>
+<li><p><a class="reference internal" href="#template-tag-static" id="id15">Template tag static</a></p></li>
+<li><p><a class="reference internal" href="#template-tag-de-datos" id="id16">Template tag de datos</a></p></li>
+<li><p><a class="reference internal" href="#template-tag-for" id="id17">Template tag for</a></p></li>
+<li><p><a class="reference internal" href="#template-tag-if" id="id18">Template tag if</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#formularios" id="id19">Formularios</a></p>
+<ul>
+<li><p><a class="reference internal" href="#formularios-via-post" id="id20">Formularios via POST</a></p></li>
+<li><p><a class="reference internal" href="#recuperar-archivos-en-flask" id="id21">Recuperar archivos en Flask</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bases-de-datos-con-sqlalchemy" id="id22">Bases de datos con SqlAlchemy</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalar-libreria" id="id23">Instalar librería</a></p></li>
+<li><p><a class="reference internal" href="#crear-paquete-del-proyecto" id="id24">Crear paquete del proyecto</a></p></li>
+<li><p><a class="reference internal" href="#configurar-base-de-datos" id="id25">Configurar base de datos</a></p></li>
+<li><p><a class="reference internal" href="#crear-modelo-de-datos" id="id26">Crear modelo de datos</a></p></li>
+<li><p><a class="reference internal" href="#crear-base-de-datos" id="id27">Crear base de datos</a></p></li>
+<li><p><a class="reference internal" href="#migrar-datos-modificados-en-el-modelo" id="id28">Migrar datos modificados en el modelo</a></p></li>
+<li><p><a class="reference internal" href="#crud-desde-consola-python" id="id29">CRUD desde consola python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-registro" id="id30">Crear registro</a></p></li>
+<li><p><a class="reference internal" href="#leer-registro" id="id31">Leer registro</a></p></li>
+<li><p><a class="reference internal" href="#editar-registro" id="id32">Editar registro</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-registro" id="id33">Eliminar registro</a></p></li>
+<li><p><a class="reference internal" href="#trabajar-con-relaciones" id="id34">Trabajar con relaciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#uso-del-orm-en-archivos-py" id="id35">Uso del ORM en archivos py</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sistema-de-usuarios-y-sesiones" id="id36">Sistema de usuarios y sesiones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modelo-de-usuarios" id="id37">Modelo de usuarios</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="configuraciones">
+<h2><a class="toc-backref" href="#id2">Configuraciones</a><a class="headerlink" href="#configuraciones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="creacion-del-proyecto">
+<h3><a class="toc-backref" href="#id3">Creación del proyecto</a><a class="headerlink" href="#creacion-del-proyecto" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear un Directorio para el proyecto y acceder al mismo.</p></li>
+<li><p>Crear un entorno virtual.</p></li>
+<li><p>Instalar flask: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">flask</span></code>.</p></li>
+<li><p>Dentro del directorio creamos un directorio llamado templates y un archivo llamado main.py</p></li>
+</ul>
+</section>
+<section id="archivo-principal">
+<h3><a class="toc-backref" href="#id4">Archivo principal</a><a class="headerlink" href="#archivo-principal" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El archivo principal básico:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># importamos flask y creamos el objeto con flask:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># Con un decorador definimos la ruta raiz y dentro una función que devuelve un mensaje.</span>
+<span class="linenos"> 6</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 8</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># creamos la condición para arrancar la aplicación flask:</span>
+<span class="linenos">11</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">12</span>    <span class="c1"># le pasamos la ejecución de la app y por parámetros la ruta del host y si esta en modo depuración o no.</span>
+<span class="linenos">13</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Arrancar el servidor: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">main.py</span></code></p></li>
+<li><p>Abrir en navegador: <a class="reference external" href="http://localhost:5000">http://localhost:5000</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Al tener habilitado el flag debug en la función run nos dará un pin al arrancar el servidor,
+dicho pin se usará para abrir el depurador en el navegador cuando tengamos algún error de manera que
+se pulsará sobre el icono de la consola en cualquier línea y se introduce el pin.</p>
+</div>
+</section>
+</section>
+<section id="rutas">
+<h2><a class="toc-backref" href="#id5">Rutas</a><a class="headerlink" href="#rutas" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="rutas-principales-main-py">
+<h3><a class="toc-backref" href="#id6">Rutas principales (main.py)</a><a class="headerlink" href="#rutas-principales-main-py" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las rutas se suelen añadir en el archivo principal del proyecto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="linenos"> 2</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 6</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># despues de la / creamos otra ruta:</span>
+<span class="linenos"> 9</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/otra_ruta&#39;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="k">def</span> <span class="nf">hola</span><span class="p">():</span>
+<span class="linenos">11</span>    <span class="k">return</span> <span class="s1">&#39;Acceso a otra ruta!&#39;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En el navegador abrir: <a class="reference external" href="http://localhost:5000/otra_ruta">http://localhost:5000/otra_ruta</a></p></li>
+</ul>
+</section>
+<section id="rutas-con-parametros">
+<h3><a class="toc-backref" href="#id7">rutas con parámetros</a><a class="headerlink" href="#rutas-con-parametros" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Las rutas con parámetros:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="linenos"> 2</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 6</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># con los símbolos mayor-menor podemos capturar un parámetro por defecto tipo cadena:</span>
+<span class="linenos"> 9</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/nombre/&lt;persona&gt;&#39;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="n">persona</span><span class="p">):</span>
+<span class="linenos">11</span>    <span class="k">return</span> <span class="s1">&#39;Te llamas </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">persona</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Podemos definir que sea un entero o coma flotante:</span>
+<span class="linenos">14</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/edad/&lt;int:edad&gt;&#39;</span><span class="p">)</span>
+<span class="linenos">15</span><span class="k">def</span> <span class="nf">edad</span><span class="p">(</span><span class="n">edad</span><span class="p">):</span>
+<span class="linenos">16</span>    <span class="k">return</span> <span class="s1">&#39;Tienes: </span><span class="si">{}</span><span class="s1"> años&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">19</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>La ruta que recibe parámetros por ejemplo sería: <a class="reference external" href="http://localhost:5000/nombre/Guillermo">http://localhost:5000/nombre/Guillermo</a></p></li>
+</ul>
+</section>
+<section id="rutas-por-uno-o-mas-metodos">
+<h3><a class="toc-backref" href="#id8">Rutas por uno o más métodos</a><a class="headerlink" href="#rutas-por-uno-o-mas-metodos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Es posible estipular uno o varios métodos permitidos en una ruta:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="linenos"> 2</span><span class="c1"># importamos la librería request que funciona igual que en django:</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">request</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 9</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># el decorador recibe una lista de métodos permitidos:</span>
+<span class="linenos">12</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/metodos&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="linenos">13</span><span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+<span class="linenos">14</span>    <span class="c1"># preguntamos si el método es GET que nos abra sesion y si no que nos mande de vuelta al formulario:</span>
+<span class="linenos">15</span>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+<span class="linenos">16</span>        <span class="k">return</span> <span class="s1">&#39;Recibido &#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span>
+<span class="linenos">17</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">18</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es otro método&quot;</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">21</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>aunque en este ejemplo se usa GET para validar el metodo de entrada, es más común y más cómodo validar el método POST,
+ya que este último podría presentar más iteracciones en el código que el método GET.</p>
+</div>
+</section>
+<section id="redirecciones">
+<h3><a class="toc-backref" href="#id9">Redirecciones</a><a class="headerlink" href="#redirecciones" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># cargar librerías redirect y url_for:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 9</span>    <span class="c1"># Redireccionar a otra ruta usando el nombre de su función:</span>
+<span class="linenos">10</span>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;saludar&#39;</span><span class="p">))</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/saludar&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="linenos">14</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">15</span>    <span class="k">return</span> <span class="s1">&#39;Hola desde otra ruta&#39;</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">19</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="error-404">
+<h4><a class="toc-backref" href="#id10">Error 404</a><a class="headerlink" href="#error-404" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Procedimiento común para redirección 404:</p>
+<ul class="simple">
+<li><p>Crear en <strong>templates</strong> archivo <strong>error.html</strong>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>ERROR 404<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>ERROR 404<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>La página solicitada no existe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">13</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Crear error 404 cuando introducimos rutas incorrectas:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 7</span>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;saludar&#39;</span><span class="p">))</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/saludar&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="k">return</span> <span class="s1">&#39;Hola desde otra ruta&#39;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># cargamos la ruta de error cuando no se encuentre página:</span>
+<span class="linenos">15</span><span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+<span class="linenos">16</span><span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="n">error</span><span class="p">):</span> <span class="c1"># este recibe un parámetro</span>
+<span class="linenos">17</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;error.html&#39;</span><span class="p">),</span> <span class="mi">404</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">20</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="vistas">
+<h2><a class="toc-backref" href="#id11">Vistas</a><a class="headerlink" href="#vistas" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Las vistas en Flask no suelen usarse, en su lugar se visualizan los templates con Jinja</p>
+</section>
+<section id="templates-jinja2">
+<h2><a class="toc-backref" href="#id12">Templates (Jinja2)</a><a class="headerlink" href="#templates-jinja2" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Jinja2 es el motor de plantillas que se utiliza de serie en Flask.</p>
+<ul class="simple">
+<li><p>En la carpeta templates se crea un archivo por ejemplo prueba.html:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Prueba con Flask<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Plantillas Jinja2<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>primera toma de contacto con Flask<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">11</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>De vuelta a main.py se renderiza el template:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># importamos render_template para gestionar plantillas:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 8</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/prueba&#39;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">prueba</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="c1"># Renderizamos el archivo prueba:</span>
+<span class="linenos">13</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;prueba.html&#39;</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">16</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="template-tags">
+<h3><a class="toc-backref" href="#id13">Template Tags</a><a class="headerlink" href="#template-tags" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los Template Tags son un tipo de etiquetas especiales en Jinja2 que se utilizan en las plantillas para ejecutar respuestas backend.</p>
+<p>Estas etiquetas suelen tener dos tipos de estructuras: <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">instrucción</span> <span class="pre">%}</span></code> o <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">datos</span> <span class="pre">}}</span></code> según el tipo de tarea que vayamos a ejecutar.</p>
+<section id="template-tag-base">
+<h4><a class="toc-backref" href="#id14">Template tag base</a><a class="headerlink" href="#template-tag-base" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Una buena práctica para no repetir código en plantillas es coger todo el contenido común y almacenarlo en una plantilla base:</p>
+<ul class="simple">
+<li><p>En <strong>templates</strong> crear un archivo llamado <strong>base.html</strong>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Prueba con Flask<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>    {% block cuerpo %}{% endblock %}
+<span class="linenos">10</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">11</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En el resto de archivos html se elimina todo lo que contemple fuera del body del siguiente modo:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>{% extends &#39;base.html&#39; %}
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>{% block cuerpo %}
+<span class="linenos"> 4</span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/subir&quot;</span> <span class="na">enctype</span><span class="o">=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;documento&quot;</span><span class="p">&gt;</span>Subir archivo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;documento&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<span class="linenos">10</span><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="linenos">11</span>{% endblock %}
+</pre></div>
+</div>
+</section>
+<section id="template-tag-static">
+<h4><a class="toc-backref" href="#id15">Template tag static</a><a class="headerlink" href="#template-tag-static" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>En la raiz del proyecto crear carpeta llamada static.</p></li>
+<li><p>Crear archivo style.css:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">body</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>En el template se vincula:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Prueba con Flask<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="cm">&lt;!-- Para añadir un archivo css utilizamos url for en una etiqueta jinja2 --&gt;</span>
+<span class="linenos"> 8</span>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;static&#39;, filename=&#39;style.css&#39;) }}&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos">10</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Plantillas Jinja2<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">12</span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>primera toma de contacto con Flask<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">13</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">14</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="template-tag-de-datos">
+<h4><a class="toc-backref" href="#id16">Template tag de datos</a><a class="headerlink" href="#template-tag-de-datos" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Los template tags de datos muestran información que enviamos desde la vista al template.</p>
+<ul class="simple">
+<li><p>Si nos vamos a views.py para añadir un dato:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 7</span>    <span class="k">return</span> <span class="s1">&#39;Hola!!!&#39;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/hola&#39;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
+<span class="linenos">12</span>    <span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Guillermo&quot;</span>
+<span class="linenos">13</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hola.html&#39;</span><span class="p">,</span> <span class="n">nombre</span><span class="o">=</span><span class="n">nombre</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">17</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora que tenemos un dato, podemos mostrarlo en cualquier template de nuestra app:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hola {{nombre}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">11</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="template-tag-for">
+<h4><a class="toc-backref" href="#id17">Template tag for</a><a class="headerlink" href="#template-tag-for" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Se crea un listado en <strong>main.py</strong>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 7</span>    <span class="k">return</span> <span class="s1">&#39;Hola!!!&#39;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/hola&#39;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
+<span class="linenos">12</span>    <span class="n">personas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Guillermo&quot;</span><span class="p">,</span> <span class="s2">&quot;Antonio&quot;</span><span class="p">,</span> <span class="s2">&quot;Josefa&quot;</span><span class="p">,</span> <span class="s2">&quot;Adrián&quot;</span><span class="p">]</span>
+<span class="linenos">13</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hola.html&#39;</span><span class="p">,</span> <span class="n">personas</span><span class="o">=</span><span class="n">personas</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">17</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Y ahora podemos recorrer el diccionario en nuestro template con el template tag for:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">11</span>        {% for persona in personas %}
+<span class="linenos">12</span>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ persona }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos">13</span>        {% endfor %}
+<span class="linenos">14</span>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">15</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">16</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="template-tag-if">
+<h4><a class="toc-backref" href="#id18">Template tag if</a><a class="headerlink" href="#template-tag-if" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Con el template tag if podemos establecer condiciones dentro de los templates, retomando el ejemplo de for vamos a pintar de verde uno de los registros:</p>
+<ul class="simple">
+<li><p>Template condicional que recibe un parámetro:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Prueba con Flask<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>    {% if nombre %}
+<span class="linenos">10</span>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola {{ nombre }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    {% else %}
+<span class="linenos">12</span>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola mundo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">13</span>    {% endif %}
+<span class="linenos">14</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">15</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Cargar el template y pasarle parámetro:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 7</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/saludos/&lt;nombre&gt;&#39;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">saludos</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;saludos.html&#39;</span><span class="p">,</span> <span class="n">nombre</span><span class="o">=</span><span class="n">nombre</span><span class="p">)</span> <span class="c1"># le pasamos el template y la variable con la clave nombre</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">15</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="formularios">
+<h2><a class="toc-backref" href="#id19">Formularios</a><a class="headerlink" href="#formularios" title="Enlazar permanentemente con este título">#</a></h2>
+<p>En Django podemos crear formularios individuales y reutilizables.</p>
+<section id="formularios-via-post">
+<h3><a class="toc-backref" href="#id20">Formularios via POST</a><a class="headerlink" href="#formularios-via-post" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Se crea el archivo por ejemplo <strong>form.html</strong>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<span class="linenos">11</span>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Tu nombre&quot;</span><span class="p">&gt;</span>
+<span class="linenos">12</span>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;apellidos&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Tus apellidos&quot;</span><span class="p">&gt;</span>
+<span class="linenos">13</span>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Saludar&quot;</span><span class="p">&gt;</span>
+<span class="linenos">14</span>    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="linenos">15</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">16</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Lo siguiente es registrar las rutas en Flask:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span><span class="p">,</span> <span class="n">request</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 7</span>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;saludar&#39;</span><span class="p">))</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/saludar&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
+<span class="linenos">12</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;form.html&#39;</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/saludar&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="linenos">15</span><span class="k">def</span> <span class="nf">saludo</span><span class="p">():</span>
+<span class="linenos">16</span>    <span class="n">nombre</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span>
+<span class="linenos">17</span>    <span class="n">apellidos</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;apellidos&#39;</span><span class="p">]</span>
+<span class="linenos">18</span>    <span class="k">return</span> <span class="s1">&#39;Te llamas &#39;</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">apellidos</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">22</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="recuperar-archivos-en-flask">
+<h3><a class="toc-backref" href="#id21">Recuperar archivos en Flask</a><a class="headerlink" href="#recuperar-archivos-en-flask" title="Enlazar permanentemente con este título">#</a></h3>
+<p>De este modo se gestionaría la subida de un archivo desde un formulario:</p>
+<ul class="simple">
+<li><p>Crear en la raiz un directorio llamado <strong>subidas</strong></p></li>
+<li><p>Crear en <strong>templates</strong> un archivo llamado <strong>subidas.html</strong>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Prueba con Flask<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/subir&quot;</span> <span class="na">enctype</span><span class="o">=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="p">&gt;</span>
+<span class="linenos">10</span>        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;documento&quot;</span><span class="p">&gt;</span>Subir archivo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="linenos">11</span>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="linenos">12</span>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;documento&quot;</span><span class="p">&gt;</span>
+<span class="linenos">13</span>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="linenos">14</span>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<span class="linenos">15</span>    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="linenos">16</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">17</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Por último registrar dos rutas en <strong>main.py</strong>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="linenos"> 2</span><span class="c1"># añadimos también una utilidad para generar nombres seguros de archivos:</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">werkzeug.utils</span> <span class="kn">import</span> <span class="n">secure_filename</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="k">def</span> <span class="nf">hello_workd</span><span class="p">():</span>
+<span class="linenos"> 9</span>    <span class="k">return</span> <span class="s1">&#39;Hola Mundo!!!&#39;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Ruta del form:</span>
+<span class="linenos">12</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/subir&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="linenos">13</span><span class="k">def</span> <span class="nf">hola</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">14</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;subidas.html&#39;</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Ruta para procesar la petición:</span>
+<span class="linenos">17</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/subir&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="linenos">18</span><span class="k">def</span> <span class="nf">subir</span><span class="p">():</span>
+<span class="linenos">19</span>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+<span class="linenos">20</span>        <span class="c1"># recuperamos el archivo del parametro files:</span>
+<span class="linenos">21</span>        <span class="n">f</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;documento&#39;</span><span class="p">]</span>
+<span class="linenos">22</span>        <span class="c1"># ahora guardamos el archivo con un nombre seguro:</span>
+<span class="linenos">23</span>        <span class="n">f</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;./subidas/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">secure_filename</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">filename</span><span class="p">)))</span>
+<span class="linenos">24</span>        <span class="k">return</span> <span class="s1">&#39;Se ha subido correctamente&#39;</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">27</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bases-de-datos-con-sqlalchemy">
+<h2><a class="toc-backref" href="#id22">Bases de datos con SqlAlchemy</a><a class="headerlink" href="#bases-de-datos-con-sqlalchemy" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalar-libreria">
+<h3><a class="toc-backref" href="#id23">Instalar librería</a><a class="headerlink" href="#instalar-libreria" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Para usar esta librería se instala: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Flask-Sqlalchemy</span></code></p></li>
+</ul>
+</section>
+<section id="crear-paquete-del-proyecto">
+<h3><a class="toc-backref" href="#id24">Crear paquete del proyecto</a><a class="headerlink" href="#crear-paquete-del-proyecto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se crea un paquete llamado <strong>application</strong> y dentro un archivo <strong>__init__.py</strong> para inicializarlo, se mueve aquí el archivo principal de la aplicación.</p>
+</section>
+<section id="configurar-base-de-datos">
+<h3><a class="toc-backref" href="#id25">Configurar base de datos</a><a class="headerlink" href="#configurar-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En el paquete <strong>application</strong> del proyecto se crea un archivo config.py:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;CAB7D2CD6CCDC28113C9A3189DEE647BD945B0903EFEC1E160F2ADB5203CE649&#39;</span>
+<span class="linenos">4</span><span class="n">PWD</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Modo depuración lo pasamos aquí</span>
+<span class="linenos">7</span><span class="c1"># Vinculamos el conector a la base de datos, en este caso sqlite:</span>
+<span class="linenos">8</span><span class="n">SQLALCHEMY_DATABASE_URI</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///</span><span class="si">{}</span><span class="s1">/dbase.db&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">PWD</span><span class="p">)</span>
+<span class="linenos">9</span><span class="n">SQLALCHEMY_TRACK_MODIFICATIONS</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># por rendimiento definimos el track en false</span>
+</pre></div>
+</div>
+<p>ahora editamos el archivo principal para añadir los cambios:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="linenos"> 2</span><span class="c1"># Se carga el sqlalchemy también aqui:</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+<span class="linenos"> 4</span><span class="c1"># se carga el archivo de configuración:</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">application</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># se añade una linea para cargar el archivo config en app:</span>
+<span class="linenos">10</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_object</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="linenos">11</span><span class="c1"># y se carga la base de datos:</span>
+<span class="linenos">12</span><span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos">15</span><span class="k">def</span> <span class="nf">inicio</span><span class="p">():</span>
+<span class="linenos">16</span>    <span class="k">return</span> <span class="s1">&#39;Página principal&#39;</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>  <span class="c1"># establecemos el debug que tenemos en config:</span>
+<span class="linenos">19</span>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-modelo-de-datos">
+<h3><a class="toc-backref" href="#id26">Crear modelo de datos</a><a class="headerlink" href="#crear-modelo-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En el paquete <strong>application</strong> del proyecto se creará un archivo llamado models.py:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Se importan los tipos de datos:</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="c1"># se importa el relacionador:</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">relationship</span>
+<span class="linenos"> 5</span><span class="c1"># se importa la configuración de la base de datos:</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">application.app</span> <span class="kn">import</span> <span class="n">db</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># creamos un primer modelo que será relacionable con el segundo:</span>
+<span class="linenos">10</span><span class="k">class</span> <span class="nc">Categories</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos">11</span>    <span class="sd">&quot;&quot;&quot; Categorías &quot;&quot;&quot;</span>
+<span class="linenos">12</span>    <span class="c1"># se define nombre interno de tabla y los campos:</span>
+<span class="linenos">13</span>    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;categories&#39;</span>
+<span class="linenos">14</span>    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">15</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="c1"># retornar clase y función:</span>
+<span class="linenos">18</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">19</span>        <span class="k">return</span> <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1">: </span><span class="si">{self.id}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">))</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Crear otro modelo relacionado con el primero:</span>
+<span class="linenos">23</span><span class="k">class</span> <span class="nc">Articles</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos">24</span>    <span class="sd">&quot;&quot;&quot; Artículos &quot;&quot;&quot;</span>
+<span class="linenos">25</span>    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;articles&#39;</span>
+<span class="linenos">26</span>    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">27</span>    <span class="n">nombre</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">28</span>    <span class="n">precio</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Float</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="linenos">29</span>    <span class="n">iva</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+<span class="linenos">30</span>    <span class="n">descripcion</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
+<span class="linenos">31</span>    <span class="n">image</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
+<span class="linenos">32</span>    <span class="n">stock</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="linenos">33</span>    <span class="n">CategoriaId</span><span class="o">=</span><span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;categories.id&#39;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">34</span>    <span class="n">categoria</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Categories&quot;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s2">&quot;Articles&quot;</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>    <span class="k">def</span> <span class="nf">precio_final</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">37</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">precio</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">iva</span><span class="o">/</span><span class="mi">100</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">40</span>        <span class="k">return</span> <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1">: </span><span class="si">{self.id}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-base-de-datos">
+<h3><a class="toc-backref" href="#id27">Crear base de datos</a><a class="headerlink" href="#crear-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para crear la base de datos ejecutamos la línea de comandos python y los siguientes comandos:</p>
+<ul class="simple">
+<li><p>importar configuración base de datos: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">application.app</span> <span class="pre">import</span> <span class="pre">db</span></code></p></li>
+<li><p>importar modelos de datos a crear: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">application.models</span> <span class="pre">import</span> <span class="pre">Categories,</span> <span class="pre">Articles</span></code></p></li>
+<li><p>Ejecutar creación de tablas: <code class="docutils literal notranslate"><span class="pre">db.create_all()</span></code></p></li>
+</ul>
+</section>
+<section id="migrar-datos-modificados-en-el-modelo">
+<h3><a class="toc-backref" href="#id28">Migrar datos modificados en el modelo</a><a class="headerlink" href="#migrar-datos-modificados-en-el-modelo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Actualmente Flask no incorpora un modelo de migración de datos como en el caso de Django. Si se añade un nuevo dato hay que ejecutar primero <code class="docutils literal notranslate"><span class="pre">db.drop_all()</span></code> y a continuación
+<code class="docutils literal notranslate"><span class="pre">db.create_all()</span></code></p>
+</section>
+<section id="crud-desde-consola-python">
+<h3><a class="toc-backref" href="#id29">CRUD desde consola python</a><a class="headerlink" href="#crud-desde-consola-python" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>importar configuración base de datos: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">application.app</span> <span class="pre">import</span> <span class="pre">db</span></code></p></li>
+</ul>
+<section id="crear-registro">
+<h4><a class="toc-backref" href="#id30">Crear registro</a><a class="headerlink" href="#crear-registro" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>asignar valor al modelo que se quiere adherir dato: <code class="docutils literal notranslate"><span class="pre">cat=Categories(name=&quot;RPG&quot;)</span></code></p></li>
+<li><p>Cargar en el orm los datos: <code class="docutils literal notranslate"><span class="pre">db.session.add(cat)</span></code></p></li>
+<li><p>Cargar en el orm varios datos: <code class="docutils literal notranslate"><span class="pre">db.session.add_all([cat1,</span> <span class="pre">cat2])</span></code></p></li>
+<li><p>Comitear los datos en la base de datos: <code class="docutils literal notranslate"><span class="pre">db.session.commit()</span></code></p></li>
+</ul>
+</section>
+<section id="leer-registro">
+<h4><a class="toc-backref" href="#id31">Leer registro</a><a class="headerlink" href="#leer-registro" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Cargar una lista completa de registros: <code class="docutils literal notranslate"><span class="pre">cat=Categories.query.all()</span></code> (se tiene que recorrer con un bucle)</p></li>
+<li><p>Cargar primer elemento de la lista: <code class="docutils literal notranslate"><span class="pre">cat=Categories.query.first()</span></code></p></li>
+<li><p>Cargar un elemento de la lista por dato de referencia: <code class="docutils literal notranslate"><span class="pre">cat=Categories.query.get(1)</span></code></p></li>
+<li><p>Filtrar registros: <code class="docutils literal notranslate"><span class="pre">Categories.query.filter_by(name=&quot;RPG&quot;).all()</span></code></p></li>
+<li><p>Filtrar por múltiples campos: <code class="docutils literal notranslate"><span class="pre">Categories.query.filter_by(name=&quot;RPG&quot;).filter_by(subname=&quot;rol&quot;).all()</span></code></p></li>
+<li><p>Ortdenar registros recuperados: <code class="docutils literal notranslate"><span class="pre">Categories.query.order_by(&quot;name&quot;).all()</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Cada registro recuperado es un objeto, por lo que acceder a cada campo es igual al acceder a un atributo de una clase ej: <strong>cat.name</strong></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Al igual que se filtran registros y se obtienen todos los resultados posibles, podemos obtener con first() el primer resultado posible.</p>
+</div>
+</section>
+<section id="editar-registro">
+<h4><a class="toc-backref" href="#id32">Editar registro</a><a class="headerlink" href="#editar-registro" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Cargar un elemento de la lista por dato de referencia: <code class="docutils literal notranslate"><span class="pre">cat=Categories.query.get(1)</span></code></p></li>
+<li><p>Modificar un campo del elemento: <code class="docutils literal notranslate"><span class="pre">cat.name=&quot;Rol&quot;</span></code></p></li>
+<li><p>Cargar en el orm los datos: <code class="docutils literal notranslate"><span class="pre">db.session.add(cat)</span></code></p></li>
+<li><p>Comitear los datos en la base de datos: <code class="docutils literal notranslate"><span class="pre">db.session.commit()</span></code></p></li>
+</ul>
+</section>
+<section id="eliminar-registro">
+<h4><a class="toc-backref" href="#id33">Eliminar registro</a><a class="headerlink" href="#eliminar-registro" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p>Cargar un elemento de la lista por dato de referencia: <code class="docutils literal notranslate"><span class="pre">cat=Categories.query.get(1)</span></code></p></li>
+<li><p>Cargar en el orm los datos con delete: <code class="docutils literal notranslate"><span class="pre">db.session.delete(cat)</span></code></p></li>
+<li><p>Comitear los datos en la base de datos: <code class="docutils literal notranslate"><span class="pre">db.session.commit()</span></code></p></li>
+</ul>
+</section>
+<section id="trabajar-con-relaciones">
+<h4><a class="toc-backref" href="#id34">Trabajar con relaciones</a><a class="headerlink" href="#trabajar-con-relaciones" title="Enlazar permanentemente con este título">#</a></h4>
+<p>A partir de un campo foreign key se pueden obtener los datos de la otra tabla relacionada
+como un objeto:
+* Si recuperamos un registro de la tabla articles: <code class="docutils literal notranslate"><span class="pre">art1=Articles.query.get(1)</span></code>
+* Al estar relacionada con categories se puede recuperar la información de la categoría: <code class="docutils literal notranslate"><span class="pre">art1.categories.nombre</span></code></p>
+</section>
+</section>
+<section id="uso-del-orm-en-archivos-py">
+<h3><a class="toc-backref" href="#id35">Uso del ORM en archivos py</a><a class="headerlink" href="#uso-del-orm-en-archivos-py" title="Enlazar permanentemente con este título">#</a></h3>
+<p>El uso del orm es similar al visto en la consola, ejecutando las operaciones desde scripts python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">aplicacion.models</span> <span class="kn">import</span> <span class="n">Articles</span>
+<span class="linenos">2</span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="linenos">3</span><span class="k">def</span> <span class="nf">inicio</span><span class="p">():</span>
+<span class="linenos">4</span>    <span class="n">articulos</span><span class="o">=</span><span class="n">Articles</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="linenos">5</span>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;inicio.html&quot;</span><span class="p">,</span><span class="n">articulos</span><span class="o">=</span><span class="n">articulos</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Esto en una plantilla se usaría así:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;panel-heading&quot;</span><span class="p">&gt;</span>Videojuegos<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos">2</span>    <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table&quot;</span><span class="p">&gt;</span>
+<span class="linenos">3</span>            {% for art in articulos %}
+<span class="linenos">4</span>                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="linenos">5</span>                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{art.nombre}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="linenos">6</span>                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="linenos">7</span>            {% endfor %}
+<span class="linenos">8</span>    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<span class="linenos">9</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="sistema-de-usuarios-y-sesiones">
+<h2><a class="toc-backref" href="#id36">Sistema de usuarios y sesiones</a><a class="headerlink" href="#sistema-de-usuarios-y-sesiones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="modelo-de-usuarios">
+<h3><a class="toc-backref" href="#id37">Modelo de usuarios</a><a class="headerlink" href="#modelo-de-usuarios" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Antes de nada hay que crear un modelo de usuarios en la base de datos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Usuarios</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos"> 2</span><span class="sd">&quot;&quot;&quot;Usuarios&quot;&quot;&quot;</span>
+<span class="linenos"> 3</span><span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;usuarios&#39;</span>
+<span class="linenos"> 4</span><span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="n">username</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="n">password_hash</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">128</span><span class="p">),</span><span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span><span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="n">email</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span><span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">admin</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="k">return</span> <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;&lt;</span><span class="si">{self.__class__.__name__}</span><span class="s1">: </span><span class="si">{self.id}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">))</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="nd">@property</span>
+<span class="linenos">15</span><span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">16</span>    <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;password is not a readable attribute&#39;</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="nd">@password</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">19</span><span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="linenos">20</span>    <span class="bp">self</span><span class="o">.</span><span class="n">password_hash</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<span class="linenos">21</span><span class="k">def</span> <span class="nf">verify_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="linenos">22</span>    <span class="k">return</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">password_hash</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>…. TODOOOO</p>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="django.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Framework: Django</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="drf.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Framework: Django Rest Framework</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

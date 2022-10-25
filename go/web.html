@@ -1,0 +1,1957 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Desarrollo Web &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Sintaxis C" href="../C/sintaxis.html" />
+    <link rel="prev" title="Testing" href="testing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/go/web.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-servidor">
+   Crear servidor
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-y-arranque-de-main">
+     Creación y arranque de main
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-handle">
+     Crear un handle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodos-request">
+     Métodos Request
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-404">
+     Error 404
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#argumentos-url">
+     Argumentos URL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gorilla-mux">
+   Gorilla Mux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametros-url">
+     Parametros url
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#server-hot-reload">
+   Server Hot Reload
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#templates">
+   Templates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuracion-del-proyecto">
+     Configuración del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-plantilla-en-ruta">
+     Cargar plantilla en ruta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comunicarse-con-el-template">
+     Comunicarse con el template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-variables-en-plantillas">
+     Crear variables en plantillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if-else">
+     Condicional if-else
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operadores-logicos">
+       Operadores Lógicos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operadores-condicionales">
+       Operadores Condicionales
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#uso-de-condicional">
+       Uso de condicional
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucles">
+     Bucles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones-en-plantillas">
+     Funciones en plantillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herencia-de-plantillas">
+     Herencia de plantillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejo-de-errores">
+     Manejo de errores
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-web">
+     Rutas web
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-archivos-estaticos">
+     Cargar archivos estáticos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelos-y-crud">
+   Modelos y CRUD
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-controlador">
+     Crear controlador
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listar-elementos">
+     Listar Elementos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Desarrollo Web</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-servidor">
+   Crear servidor
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-y-arranque-de-main">
+     Creación y arranque de main
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-handle">
+     Crear un handle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodos-request">
+     Métodos Request
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-404">
+     Error 404
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#argumentos-url">
+     Argumentos URL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gorilla-mux">
+   Gorilla Mux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametros-url">
+     Parametros url
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#server-hot-reload">
+   Server Hot Reload
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#templates">
+   Templates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuracion-del-proyecto">
+     Configuración del proyecto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-plantilla-en-ruta">
+     Cargar plantilla en ruta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comunicarse-con-el-template">
+     Comunicarse con el template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-variables-en-plantillas">
+     Crear variables en plantillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if-else">
+     Condicional if-else
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operadores-logicos">
+       Operadores Lógicos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operadores-condicionales">
+       Operadores Condicionales
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#uso-de-condicional">
+       Uso de condicional
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucles">
+     Bucles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones-en-plantillas">
+     Funciones en plantillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herencia-de-plantillas">
+     Herencia de plantillas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejo-de-errores">
+     Manejo de errores
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rutas-web">
+     Rutas web
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cargar-archivos-estaticos">
+     Cargar archivos estáticos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelos-y-crud">
+   Modelos y CRUD
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-controlador">
+     Crear controlador
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listar-elementos">
+     Listar Elementos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="desarrollo-web">
+<h1><a class="toc-backref" href="#id1">Desarrollo Web</a><a class="headerlink" href="#desarrollo-web" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-go.png"><img alt="Logo GO" class="align-center" src="../_images/logo-go.png" style="width: 360.0px; height: 135.29999999999998px;" /></a>
+<p>Trabajar con Go para desarrollo de aplicaciones web.</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#desarrollo-web" id="id1">Desarrollo Web</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-servidor" id="id2">Crear servidor</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creacion-y-arranque-de-main" id="id3">Creación y arranque de main</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-handle" id="id4">Crear un handle</a></p></li>
+<li><p><a class="reference internal" href="#metodos-request" id="id5">Métodos Request</a></p></li>
+<li><p><a class="reference internal" href="#error-404" id="id6">Error 404</a></p></li>
+<li><p><a class="reference internal" href="#argumentos-url" id="id7">Argumentos URL</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gorilla-mux" id="id8">Gorilla Mux</a></p>
+<ul>
+<li><p><a class="reference internal" href="#parametros-url" id="id9">Parametros url</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#server-hot-reload" id="id10">Server Hot Reload</a></p></li>
+<li><p><a class="reference internal" href="#templates" id="id11">Templates</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuracion-del-proyecto" id="id12">Configuración del proyecto</a></p></li>
+<li><p><a class="reference internal" href="#cargar-plantilla-en-ruta" id="id13">Cargar plantilla en ruta</a></p></li>
+<li><p><a class="reference internal" href="#comunicarse-con-el-template" id="id14">Comunicarse con el template</a></p></li>
+<li><p><a class="reference internal" href="#crear-variables-en-plantillas" id="id15">Crear variables en plantillas</a></p></li>
+<li><p><a class="reference internal" href="#condicional-if-else" id="id16">Condicional if-else</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id17">Operadores Lógicos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-condicionales" id="id18">Operadores Condicionales</a></p></li>
+<li><p><a class="reference internal" href="#uso-de-condicional" id="id19">Uso de condicional</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bucles" id="id20">Bucles</a></p></li>
+<li><p><a class="reference internal" href="#funciones-en-plantillas" id="id21">Funciones en plantillas</a></p></li>
+<li><p><a class="reference internal" href="#herencia-de-plantillas" id="id22">Herencia de plantillas</a></p></li>
+<li><p><a class="reference internal" href="#manejo-de-errores" id="id23">Manejo de errores</a></p></li>
+<li><p><a class="reference internal" href="#rutas-web" id="id24">Rutas web</a></p></li>
+<li><p><a class="reference internal" href="#cargar-archivos-estaticos" id="id25">Cargar archivos estáticos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modelos-y-crud" id="id26">Modelos y CRUD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-controlador" id="id27">Crear controlador</a></p></li>
+<li><p><a class="reference internal" href="#listar-elementos" id="id28">Listar Elementos</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="crear-servidor">
+<h2><a class="toc-backref" href="#id2">Crear servidor</a><a class="headerlink" href="#crear-servidor" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="creacion-y-arranque-de-main">
+<h3><a class="toc-backref" href="#id3">Creación y arranque de main</a><a class="headerlink" href="#creacion-y-arranque-de-main" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Paso 1: Crear carpeta para el proyecto <strong>pruebaweb</strong></p></li>
+<li><p>Paso 2: Crear archivo main.go con el código:</p></li>
+</ul>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// crear nuevo servidor:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// analizamos si nos devuelve un error:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Paso 3: Acceder a la carpeta raiz <strong>pruebaweb</strong> desde terminal y ejecutar <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">run</span> <span class="pre">main.go</span></code></p>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>El servidor se ejecutará pero nos dará error 404, eso es debido a que no tenemos rutas o handlers asignados.</p>
+</div>
+</section>
+<section id="crear-un-handle">
+<h3><a class="toc-backref" href="#id4">Crear un handle</a><a class="headerlink" href="#crear-un-handle" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los handlers (manejadores) reciben una ruta y retornan un comportamiento a través del navegador web.</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1">// función handle que recibe un parametro para escribir una respuesta y otro para recibir información:</span><span class="w"></span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// imprimos al navegador un mensaje:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h1&gt;Hola desde GO&lt;/h1&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="c1">// crear una ruta con un handle para llamar una función handle:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Dicho en otro lenguaje o framework, la función HandleFunc sería un router y la función que recibe con el write y el request sería un controlador.</p>
+</div>
+</section>
+<section id="metodos-request">
+<h3><a class="toc-backref" href="#id5">Métodos Request</a><a class="headerlink" href="#metodos-request" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h1&gt;Hola desde GO&lt;/h1&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// el método está guardado en el parámetro r:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h2&gt;Por defecto se trabaja con &quot;</span><span class="o">+</span><span class="nx">r</span><span class="p">.</span><span class="nx">Method</span><span class="o">+</span><span class="s">&quot; &lt;/h2&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>No se ahondará demasiado en los métodos aquí porque más adelante se utilizarán con mux.</p>
+</div>
+</section>
+<section id="error-404">
+<h3><a class="toc-backref" href="#id6">Error 404</a><a class="headerlink" href="#error-404" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Según el sitio de desarrollo de Mozilla los código de estado son:
+1. Respuestas informativas (100-199)
+2. Respuestas satisfactorias (200-299)
+3. Redirecciones (300-399)
+4. Errores de clientes (400-499)
+5. Errores del servidor (500-599)</p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h1&gt;Hola desde GO&lt;/h1&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h2&gt;Por defecto se trabaja con &quot;</span><span class="o">+</span><span class="nx">r</span><span class="p">.</span><span class="nx">Method</span><span class="o">+</span><span class="s">&quot; &lt;/h2&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1">// crear un handle para el 404:</span><span class="w"></span>
+<span class="linenos">15</span><span class="kd">func</span><span class="w"> </span><span class="nx">Error</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="c1">// se utiliza la función notfound para lanzar correctamente el 404:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;La página no se encuentra&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusNotFound</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="c1">// se crea una ruta para el error:</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/error&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Error</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se puede encontrar más información de errores en la documentación de la librería http: <a class="reference external" href="https://pkg.go.dev/net/http#Error">https://pkg.go.dev/net/http#Error</a></p>
+</div>
+</section>
+<section id="argumentos-url">
+<h3><a class="toc-backref" href="#id7">Argumentos URL</a><a class="headerlink" href="#argumentos-url" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Suponiendo que tenemos la siguiente ruta: <a class="reference external" href="http://localhost:8000/saludar?nombre=Guillermo&amp;apellidos=Granados%20G%C3%B3mez">http://localhost:8000/saludar?nombre=Guillermo&amp;apellidos=Granados%20G%C3%B3mez</a></p>
+<div class="highlight-GO notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h1&gt;Hola desde GO&lt;/h1&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;h2&gt;Por defecto se trabaja con &quot;</span><span class="o">+</span><span class="nx">r</span><span class="p">.</span><span class="nx">Method</span><span class="o">+</span><span class="s">&quot; &lt;/h2&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="kd">func</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// recuperar url (/saludar en este caso):</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// separar y mapear argumentos en un array:</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Query</span><span class="p">())</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">// recuperar individualmente los parámetros:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Query</span><span class="p">().</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">apellidos</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Query</span><span class="p">().</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;apellidos&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellidos</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/saludar&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">34</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="gorilla-mux">
+<h2><a class="toc-backref" href="#id8">Gorilla Mux</a><a class="headerlink" href="#gorilla-mux" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Mux es una librería que se utiliza para gestionar rutas en GO:</p>
+<p>Uso de Mux:</p>
+<ol class="arabic simple">
+<li><p>Instalar Gorilla mux: <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">get</span> <span class="pre">-u</span> <span class="pre">github.com/gorilla/mux</span></code></p></li>
+<li><p>Implementar su uso:</p></li>
+</ol>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="s">&quot;github.com/gorilla/mux&quot;</span><span class="w"> </span><span class="c1">// se carga la libreria mux</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// creamos el enrutador:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">router</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">mux</span><span class="p">.</span><span class="nx">NewRouter</span><span class="p">().</span><span class="nx">StrictSlash</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="c1">// con la función strictslash hacemos rutas amigables</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// crear manejadores para rutas:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor ejecutandose en http://localhost:8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">router</span><span class="p">)</span><span class="w"> </span><span class="c1">// cargamos el router donde antes estaba nil</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ejecutando ruta raiz desde Mux&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">27</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>attention::</dt><dd><p>Recuerda inicializar el proyecto con el comando <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">mod</span> <span class="pre">init</span> <span class="pre">nombre_proyecto</span></code></p>
+</dd>
+</dl>
+<section id="parametros-url">
+<h3><a class="toc-backref" href="#id9">Parametros url</a><a class="headerlink" href="#parametros-url" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="s">&quot;github.com/gorilla/mux&quot;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">router</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">mux</span><span class="p">.</span><span class="nx">NewRouter</span><span class="p">().</span><span class="nx">StrictSlash</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// se crea una nueva ruta con un parametro:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/saludar/{nombre}&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor ejecutandose en http://localhost:8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">router</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ejecutando ruta raiz desde Mux&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">27</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="c1">// se crea la función que manejará la respuesta:</span><span class="w"></span>
+<span class="linenos">30</span><span class="kd">func</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">    </span><span class="c1">// recuperar parametros url:</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="nx">params</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">mux</span><span class="p">.</span><span class="nx">Vars</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="c1">// asignar el nombre recuperado a una variable:</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">params</span><span class="p">[</span><span class="s">&quot;nombre&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hola %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">37</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="server-hot-reload">
+<h2><a class="toc-backref" href="#id10">Server Hot Reload</a><a class="headerlink" href="#server-hot-reload" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para realizar hot reload y no tener que estar compilando cada cambio y lanzando el servidor existe
+la librería <strong>fresh</strong>:</p>
+<ul class="simple">
+<li><p>Paso 1: ejecutar en la terminal <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">get</span> <span class="pre">github.com/pilu/fresh</span></code></p></li>
+<li><p>Paso 2: ejecutar el proyecto escribiendo en terminal <code class="docutils literal notranslate"><span class="pre">fresh</span></code></p></li>
+</ul>
+<dl class="simple">
+<dt>attention::</dt><dd><p>Recuerda inicializar el proyecto con el comando <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">mod</span> <span class="pre">init</span> <span class="pre">nombre_proyecto</span></code></p>
+</dd>
+</dl>
+</section>
+<section id="templates">
+<h2><a class="toc-backref" href="#id11">Templates</a><a class="headerlink" href="#templates" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="configuracion-del-proyecto">
+<h3><a class="toc-backref" href="#id12">Configuración del proyecto</a><a class="headerlink" href="#configuracion-del-proyecto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para trabajar con templates tenemos paquetes oficiales como <strong>Text/template</strong> o <strong>HTML/template</strong></p>
+<p>Estas librerías ya vienen instaladas con GO.</p>
+</section>
+<section id="cargar-plantilla-en-ruta">
+<h3><a class="toc-backref" href="#id13">Cargar plantilla en ruta</a><a class="headerlink" href="#cargar-plantilla-en-ruta" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>En la carpeta del proyecto se crea el archivo <strong>main.go</strong>:</p></li>
+</ul>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"> </span><span class="c1">// cargamos la librería template</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// utilizamos la librería template para cargar el archivo index.html:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// ejecutamos el template al que pasamos responsewrite, la data (nil en este caso)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">30</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora se crea un archivo <strong>index.html</strong> en la raiz:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al Game Room<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="comunicarse-con-el-template">
+<h3><a class="toc-backref" href="#id14">Comunicarse con el template</a><a class="headerlink" href="#comunicarse-con-el-template" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para pasar datos al template lo hacemos cargando en el lugar donde pusimos nil:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">// se crea una estructura (siempre mayúsculas):</span><span class="w"></span>
+<span class="linenos">13</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consolas</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">Marca</span><span class="w">  </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">Modelo</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">Lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">    </span><span class="c1">// crear un valor consola:</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="nx">megadrive</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Consolas</span><span class="p">{</span><span class="s">&quot;Sega&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mega Drive&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">    </span><span class="c1">// se carga en el lugar del nil:</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="nx">megadrive</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">31</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">42</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora el template <strong>index.html</strong> puede trabajar con los datos:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al Game Room<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="cm">&lt;!-- Se carga con llaves dobles el valor como un objeto: --&gt;</span>
+<span class="linenos">12</span>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Esta disponible la consola: {{ .Marca }} {{ .Modelo }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos">13</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">14</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-variables-en-plantillas">
+<h3><a class="toc-backref" href="#id15">Crear variables en plantillas</a><a class="headerlink" href="#crear-variables-en-plantillas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para crear variables en templates se usa la palabra reservada with:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al Game Room<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Esta disponible la consola: {{ .Marca }} {{ .Modelo }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="cm">&lt;!-- Crear variables: --&gt;</span>
+<span class="linenos">14</span>    {{ with $cosa := &quot;algo&quot; }}
+<span class="linenos">15</span>    <span class="cm">&lt;!-- Ejecutar variable algo: --&gt;</span>
+<span class="linenos">16</span>    {{ $cosa }}
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="cm">&lt;!-- Definir donde acaba la variable (bloque fijo) --&gt;</span>
+<span class="linenos">20</span>    {{ end }}
+<span class="linenos">21</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">22</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-if-else">
+<h3><a class="toc-backref" href="#id16">Condicional if-else</a><a class="headerlink" href="#condicional-if-else" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las condicionales en los templates se aprovechan de una serie de operadores lógicos y condicionales modificados.</p>
+<section id="operadores-logicos">
+<h4><a class="toc-backref" href="#id17">Operadores Lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p><strong>&amp;&amp;</strong> es sustituido por <strong>and</strong></p></li>
+<li><p><strong>||</strong> es sustituido por <strong>or</strong></p></li>
+<li><p><strong>!</strong> es sustituido por <strong>not</strong></p></li>
+</ul>
+</section>
+<section id="operadores-condicionales">
+<h4><a class="toc-backref" href="#id18">Operadores Condicionales</a><a class="headerlink" href="#operadores-condicionales" title="Enlazar permanentemente con este título">#</a></h4>
+<ul class="simple">
+<li><p><strong>==</strong> es sustituido por <strong>eq</strong></p></li>
+<li><p><strong>!=</strong> es sustituido por <strong>ne</strong></p></li>
+<li><p><strong>&lt;</strong> es sustituido por <strong>lt</strong></p></li>
+<li><p><strong>&lt;=</strong> es sustituido por <strong>le</strong></p></li>
+<li><p><strong>&gt;</strong> es sustituido por <strong>gt</strong></p></li>
+<li><p><strong>&gt;=</strong> es sustituido por <strong>ge</strong></p></li>
+</ul>
+</section>
+<section id="uso-de-condicional">
+<h4><a class="toc-backref" href="#id19">Uso de condicional</a><a class="headerlink" href="#uso-de-condicional" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al Game Room<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Esta disponible la consola: {{ .Marca }} {{ .Modelo }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="cm">&lt;!-- La condición se pone antes del dato a comparar --&gt;</span>
+<span class="linenos">14</span>    {{ if le .Lanzamiento 1990}}
+<span class="linenos">15</span>        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>La consola es de los 80<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="linenos">16</span>    {{ else }}
+<span class="linenos">17</span>        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>La consola es de {{ .Lanzamiento }}<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="linenos">18</span>    {{ end }}
+<span class="linenos">19</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">20</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bucles">
+<h3><a class="toc-backref" href="#id20">Bucles</a><a class="headerlink" href="#bucles" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En primer lugar se va a añadir un nuevo campo al struct de Consolas con un mapa de juegos:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">// se añade un array con juegos:</span><span class="w"></span>
+<span class="linenos">11</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consolas</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">Marca</span><span class="w">       </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">Modelo</span><span class="w">      </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nx">Lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">Juegos</span><span class="w">      </span><span class="p">[]</span><span class="nx">Juego</span><span class="w"></span>
+<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1">// crear la estructura del array:</span><span class="w"></span>
+<span class="linenos">19</span><span class="kd">type</span><span class="w"> </span><span class="nx">Juego</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">Titulo</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="linenos">21</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="w">    </span><span class="c1">// crear juegos:</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="nx">j1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Juego</span><span class="p">{</span><span class="s">&quot;Sonic the Hedgehog&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="nx">j2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Juego</span><span class="p">{</span><span class="s">&quot;Alex Kidd&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">    </span><span class="nx">j3</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Juego</span><span class="p">{</span><span class="s">&quot;Virtua Fighter&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">    </span><span class="c1">// crear lista de juegos:</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="nx">juegos</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">Juego</span><span class="p">{</span><span class="nx">j1</span><span class="p">,</span><span class="w"> </span><span class="nx">j2</span><span class="p">,</span><span class="w"> </span><span class="nx">j3</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="w">    </span><span class="c1">// actualizar el objeto megadrive:</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">    </span><span class="nx">megadrive</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Consolas</span><span class="p">{</span><span class="s">&quot;Sega&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mega Drive&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="nx">juegos</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">        </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">42</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">43</span>
+<span class="linenos">44</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">46</span>
+<span class="linenos">47</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">48</span>
+<span class="linenos">49</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">50</span>
+<span class="linenos">51</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">53</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ahora se va a recorrer el listado en el template:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido al Game Room<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Esta disponible la consola: {{ .Marca }} {{ .Modelo }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="cm">&lt;!-- recorrer y añadir a la lista los juegos: --&gt;</span>
+<span class="linenos">14</span>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">15</span>        {{ range .Juegos}}
+<span class="linenos">16</span>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ .Titulo }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos">17</span>        {{ end }}
+<span class="linenos">18</span>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">19</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">20</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="funciones-en-plantillas">
+<h3><a class="toc-backref" href="#id21">Funciones en plantillas</a><a class="headerlink" href="#funciones-en-plantillas" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>En main.go se crea una función que saluda:</p></li>
+</ul>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">// crear funciones:</span><span class="w"></span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Bienvenid@ &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; al game room&quot;</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="c1">// se crea un mapa de funciones para templates:</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="nx">funciones</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">FuncMap</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="s">&quot;saludar&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="c1">// cambiamos el cargador de template por new y le pasamos la función:</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">).</span><span class="nx">Funcs</span><span class="p">(</span><span class="nx">funciones</span><span class="p">).</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">29</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">40</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora a probar el template:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="cm">&lt;!-- se carga tal cual el nombre de la key del mapa y si lleva parametros se pone su valor entre comillas: --&gt;</span>
+<span class="linenos">11</span>    {{ saludar &quot;Guillermo&quot; }}
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">13</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="herencia-de-plantillas">
+<h3><a class="toc-backref" href="#id22">Herencia de plantillas</a><a class="headerlink" href="#herencia-de-plantillas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Como en otros sistemas de plantillas, las plantillas pueden heredar de otras:</p>
+<ul class="simple">
+<li><p>Se crea una nueva plantilla llamada por ejemplo <strong>base.html</strong>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>{{ define &quot;head&quot; }}
+<span class="linenos"> 2</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Go Main<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos">10</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">11</span>{{ ende }}
+<span class="linenos">12</span>
+<span class="linenos">13</span>{{define &quot;footer&quot;}}
+<span class="linenos">14</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">15</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="linenos">16</span>{{ ende }}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Se añade en <strong>main.go</strong> la carga de la plantilla:</p></li>
+</ul>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Bienvenid@ &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; al game room&quot;</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">funciones</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">FuncMap</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="s">&quot;saludar&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">    </span><span class="c1">// hay que pasar por parsefiles el base.html:</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">).</span><span class="nx">Funcs</span><span class="p">(</span><span class="nx">funciones</span><span class="p">).</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;base.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">38</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Y por último implementamos en el <strong>index.html</strong>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>{{ template &quot;head&quot; }}
+<span class="linenos">2</span><span class="cm">&lt;!-- se carga tal cual el nombre de la key del mapa: --&gt;</span>
+<span class="linenos">3</span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ saludar &quot;Guillermo&quot; }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">4</span>{{ template &quot;footer&quot;}}
+</pre></div>
+</div>
+</section>
+<section id="manejo-de-errores">
+<h3><a class="toc-backref" href="#id23">Manejo de errores</a><a class="headerlink" href="#manejo-de-errores" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Lo ideal cuando falla algo en web es manejar el error con mensajes y códigos de error web:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// vamos a buscar un template que no funciona:</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;fake.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="c1">// para evitar que rompa la funcionalidad controlamos el error con http.error:</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;No es posible cargar la página&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusInternalServerError</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">31</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="rutas-web">
+<h3><a class="toc-backref" href="#id24">Rutas web</a><a class="headerlink" href="#rutas-web" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los enlaces funcionan con rutas relativas que apuntan al handler de Mux:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 8</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">10</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">11</span>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">12</span>        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos">13</span>        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/otra-web&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos">14</span>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">15</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">16</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="cargar-archivos-estaticos">
+<h3><a class="toc-backref" href="#id25">Cargar archivos estáticos</a><a class="headerlink" href="#cargar-archivos-estaticos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>En la raiz del proyecto se crea una carpeta llamada <strong>static</strong></p></li>
+<li><p>En <strong>main.go</strong> preparamos la ruta a la carpeta <strong>static</strong>:</p></li>
+</ul>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;html/template&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">rw</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nx">template</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">template</span><span class="p">.</span><span class="nx">ParseFiles</span><span class="p">(</span><span class="s">&quot;index.html&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;No es posible cargar la página&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusInternalServerError</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nx">template</span><span class="p">.</span><span class="nx">Execute</span><span class="p">(</span><span class="nx">rw</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="c1">// Creamos la ruta a la carpeta de estáticos:</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="nx">staticFile</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">Dir</span><span class="p">(</span><span class="s">&quot;static&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="w">    </span><span class="c1">// creamos un handler para la ruta:</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">Handle</span><span class="p">(</span><span class="s">&quot;/static/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StripPrefix</span><span class="p">(</span><span class="s">&quot;/static/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">staticFile</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;localhost:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mux</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor corriendo en puerto 8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">37</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora se crea dentro de la carpeta <strong>static</strong> la carpeta <strong>css</strong> y dentro un archivo <strong>main.css</strong>:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">body</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Por último vamos a <strong>index.html</strong> y en la cabezera se carga la hoja:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>    <span class="cm">&lt;!-- se utiliza la ruta relativa para recuperar el css: --&gt;</span>
+<span class="linenos"> 8</span>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/css/main.css&quot;</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos">10</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos">11</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">12</span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos">13</span>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">14</span>        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos">15</span>        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/otra-web&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos">16</span>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos">17</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">18</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modelos-y-crud">
+<h2><a class="toc-backref" href="#id26">Modelos y CRUD</a><a class="headerlink" href="#modelos-y-crud" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para comenzar a trabajar con modelos hacemos lo siguiente:</p>
+<p>Paso 1. En la raiz crear la carpeta <strong>models</strong>
+Paso 2. Crear un fichero <strong>consola.go</strong> que tendrá el modelo de consolas:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// asignamos el nombre del paquete (directorio)</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kn">package</span><span class="w"> </span><span class="nx">models</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">// se define un struct para el modelo:</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consola</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// con la sentencia json va a imprimir el nombre que asignemos evitando mayúsculas:</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nx">Id</span><span class="w">          </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;id&quot;`</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nx">Modelo</span><span class="w">      </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;modelo&quot;`</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nx">Marca</span><span class="w">       </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;marca&quot;`</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nx">Lanzamiento</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;lanzamiento&quot;`</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1">// se define también la colección de Consolas:</span><span class="w"></span>
+<span class="linenos">13</span><span class="kd">type</span><span class="w"> </span><span class="nx">Consolas</span><span class="w"> </span><span class="p">[]</span><span class="nx">Consola</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="crear-controlador">
+<h3><a class="toc-backref" href="#id27">Crear controlador</a><a class="headerlink" href="#crear-controlador" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Procedemos a crear un directorio en raiz llamado <strong>controllers</strong> y creamos el primer controlador <strong>consola.go</strong>:</p>
+</section>
+<section id="listar-elementos">
+<h3><a class="toc-backref" href="#id28">Listar Elementos</a><a class="headerlink" href="#listar-elementos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Paso 1. Editar <strong>controllers/consola.go</strong>:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">controllers</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">// se importan las librerías necesarias:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;encoding/json&quot;</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;go_api/models&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">// ahora se crean las funciones que controlarán la respuesta:</span><span class="w"></span>
+<span class="linenos">11</span><span class="kd">func</span><span class="w"> </span><span class="nx">ConsolaList</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// se crea el listado de juegos:</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">consolas</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">models</span><span class="p">.</span><span class="nx">Consolas</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="c1">// se crea cada uno de los juegos con su modelo:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nx">models</span><span class="p">.</span><span class="nx">Consola</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mega Drive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sega&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nx">models</span><span class="p">.</span><span class="nx">Consola</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Playstation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sony&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1995</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nx">models</span><span class="p">.</span><span class="nx">Consola</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;GameBoy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nintendo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1988</span><span class="p">},</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">// retornamos en JSON la lista:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">w</span><span class="p">).</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">consolas</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Paso 2. Crear ruta en <strong>main.go</strong>:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="s">&quot;go_api/controllers&quot;</span><span class="w"> </span><span class="c1">// se importan los controladores</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="s">&quot;github.com/gorilla/mux&quot;</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="nx">router</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">mux</span><span class="p">.</span><span class="nx">NewRouter</span><span class="p">().</span><span class="nx">StrictSlash</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/saludar/{nombre}&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1">// creamos una ruta pora listar peliculas y otra para pelicula por id:</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/consolas&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">controllers</span><span class="p">.</span><span class="nx">ConsolaList</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Servidor ejecutandose en http://localhost:8000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">router</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="kd">func</span><span class="w"> </span><span class="nx">Index</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ejecutando ruta raiz desde Mux&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">29</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="kd">func</span><span class="w"> </span><span class="nx">Saludar</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="nx">params</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">mux</span><span class="p">.</span><span class="nx">Vars</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">params</span><span class="p">[</span><span class="s">&quot;nombre&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hola %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">36</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="testing.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Testing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../C/sintaxis.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Sintaxis C</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

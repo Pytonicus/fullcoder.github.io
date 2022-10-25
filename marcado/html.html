@@ -1,0 +1,1598 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>HTML5 &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="CSS3" href="css.html" />
+    <link rel="prev" title="Bienvenido a FullCoder, un sitio de Manual" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/marcado/html.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sintaxis-html5">
+   Sintaxis HTML5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios-en-html5">
+     Comentarios en HTML5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#realizar-un-salto-de-linea">
+     Realizar un salto de línea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anadir-linea-divisora">
+     Añadir línea divisora
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-contenedor">
+     Crear un contenedor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-html5">
+     Estructura HTML5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#semantica-html5">
+     Semántica HTML5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etiquetas-del-head">
+   Etiquetas del head
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etiquetas-del-body">
+   Etiquetas del body
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cabeceras">
+     Cabeceras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parrafos">
+     Párrafos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enlaces">
+     Enlaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listas">
+     Listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imagenes">
+     Imágenes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cita">
+     Cita
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elementos-expandibles">
+     Elementos expandibles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#letra-pequena">
+     Letra pequeña
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citar-texto">
+     Citar texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resaltar-texto">
+     Resaltar texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tachar-texto">
+     Tachar texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregar-audio">
+     Agregar Audio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregar-videos">
+     Agregar Vídeos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-lienzo">
+     Crear un lienzo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incrustrar-un-sitio-web-externo">
+     Incrustrar un sitio web externo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-boton">
+     Crear un botón
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etiqueta-label">
+     Etiqueta label
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#campos-del-formulario">
+     Campos del formulario
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selector">
+     Selector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caja-de-texto">
+     Caja de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agrupar-apartados-del-formulario">
+     Agrupar apartados del formulario
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo-de-formulario-de-registro">
+     Ejemplo de formulario de registro
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>HTML5</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sintaxis-html5">
+   Sintaxis HTML5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios-en-html5">
+     Comentarios en HTML5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#realizar-un-salto-de-linea">
+     Realizar un salto de línea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anadir-linea-divisora">
+     Añadir línea divisora
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-contenedor">
+     Crear un contenedor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-html5">
+     Estructura HTML5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#semantica-html5">
+     Semántica HTML5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etiquetas-del-head">
+   Etiquetas del head
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etiquetas-del-body">
+   Etiquetas del body
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cabeceras">
+     Cabeceras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parrafos">
+     Párrafos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enlaces">
+     Enlaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listas">
+     Listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imagenes">
+     Imágenes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cita">
+     Cita
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elementos-expandibles">
+     Elementos expandibles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#letra-pequena">
+     Letra pequeña
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citar-texto">
+     Citar texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resaltar-texto">
+     Resaltar texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tachar-texto">
+     Tachar texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregar-audio">
+     Agregar Audio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregar-videos">
+     Agregar Vídeos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-lienzo">
+     Crear un lienzo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incrustrar-un-sitio-web-externo">
+     Incrustrar un sitio web externo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-boton">
+     Crear un botón
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formularios">
+   Formularios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etiqueta-label">
+     Etiqueta label
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#campos-del-formulario">
+     Campos del formulario
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selector">
+     Selector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caja-de-texto">
+     Caja de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agrupar-apartados-del-formulario">
+     Agrupar apartados del formulario
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo-de-formulario-de-registro">
+     Ejemplo de formulario de registro
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="html5">
+<h1><a class="toc-backref" href="#id1">HTML5</a><a class="headerlink" href="#html5" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-html5.png"><img alt="Logo HTML5" class="align-center" src="../_images/logo-html5.png" style="width: 199.5px; height: 270.0px;" /></a>
+<p>Última edición el día 2022-10-26 a las 00:31.</p>
+<p>Esta es la documentación que he recopilado para trabajar con HTML5, HyperText Markup Language que se utiliza para crear la estructura de un sitio web.</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#html5" id="id1">HTML5</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sintaxis-html5" id="id2">Sintaxis HTML5</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comentarios-en-html5" id="id3">Comentarios en HTML5</a></p></li>
+<li><p><a class="reference internal" href="#realizar-un-salto-de-linea" id="id4">Realizar un salto de línea</a></p></li>
+<li><p><a class="reference internal" href="#anadir-linea-divisora" id="id5">Añadir línea divisora</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-contenedor" id="id6">Crear un contenedor</a></p></li>
+<li><p><a class="reference internal" href="#estructura-html5" id="id7">Estructura HTML5</a></p></li>
+<li><p><a class="reference internal" href="#semantica-html5" id="id8">Semántica HTML5</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#etiquetas-del-head" id="id9">Etiquetas del head</a></p></li>
+<li><p><a class="reference internal" href="#etiquetas-del-body" id="id10">Etiquetas del body</a></p>
+<ul>
+<li><p><a class="reference internal" href="#cabeceras" id="id11">Cabeceras</a></p></li>
+<li><p><a class="reference internal" href="#parrafos" id="id12">Párrafos</a></p></li>
+<li><p><a class="reference internal" href="#enlaces" id="id13">Enlaces</a></p></li>
+<li><p><a class="reference internal" href="#listas" id="id14">Listas</a></p></li>
+<li><p><a class="reference internal" href="#imagenes" id="id15">Imágenes</a></p></li>
+<li><p><a class="reference internal" href="#cita" id="id16">Cita</a></p></li>
+<li><p><a class="reference internal" href="#elementos-expandibles" id="id17">Elementos expandibles</a></p></li>
+<li><p><a class="reference internal" href="#letra-pequena" id="id18">Letra pequeña</a></p></li>
+<li><p><a class="reference internal" href="#citar-texto" id="id19">Citar texto</a></p></li>
+<li><p><a class="reference internal" href="#resaltar-texto" id="id20">Resaltar texto</a></p></li>
+<li><p><a class="reference internal" href="#tachar-texto" id="id21">Tachar texto</a></p></li>
+<li><p><a class="reference internal" href="#agregar-audio" id="id22">Agregar Audio</a></p></li>
+<li><p><a class="reference internal" href="#agregar-videos" id="id23">Agregar Vídeos</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-lienzo" id="id24">Crear un lienzo</a></p></li>
+<li><p><a class="reference internal" href="#incrustrar-un-sitio-web-externo" id="id25">Incrustrar un sitio web externo</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-boton" id="id26">Crear un botón</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#formularios" id="id27">Formularios</a></p>
+<ul>
+<li><p><a class="reference internal" href="#etiqueta-label" id="id28">Etiqueta label</a></p></li>
+<li><p><a class="reference internal" href="#campos-del-formulario" id="id29">Campos del formulario</a></p></li>
+<li><p><a class="reference internal" href="#selector" id="id30">Selector</a></p></li>
+<li><p><a class="reference internal" href="#caja-de-texto" id="id31">Caja de texto</a></p></li>
+<li><p><a class="reference internal" href="#agrupar-apartados-del-formulario" id="id32">Agrupar apartados del formulario</a></p></li>
+<li><p><a class="reference internal" href="#ejemplo-de-formulario-de-registro" id="id33">Ejemplo de formulario de registro</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="sintaxis-html5">
+<h2><a class="toc-backref" href="#id2">Sintaxis HTML5</a><a class="headerlink" href="#sintaxis-html5" title="Enlazar permanentemente con este título">#</a></h2>
+<p>HTML5 se basa en el uso de etiquetas definidas para cada función como cabeceras, párrafos, contenedores, imágenes, videos, enlaces…</p>
+<p>La estructura básica de una etiqueta html es la siguiente:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Esto es una etiqueta html completa con contenido y etiqueta de cierre:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>esto es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>También existen etiquetas html que no utilizan etiqueta de cierre:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;foto.jpg&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Cada etiqueta tiene uno o varios atributos disponibles para personalizarla como es el caso de <code class="docutils literal notranslate"><span class="pre">src</span></code> en el ejemplo anterior.</p>
+<p>Existen dos clases de atributos que sirven para todas las etiquetas html:
+Lo que se encuentra entre comillas definido en el atributo se denomina valor.</p>
+<ul class="simple">
+<li><p>id: sirve para establecer un identificador que utilizaremos para personalizar con CSS y JavaScript nuestra etiqueta.</p></li>
+<li><p>class: sirve exactamente para lo mismo que id.</p></li>
+<li><p>data-: el prefijo data- seguido de cualquier palabra sirve para añadir metadatos a nuestros archivos multimedia. Ej: «data-formato», «data-duracion».</p></li>
+<li><p>title: con title podemos definir una frase o palabra que se mostrará cuando situemos el cursor sobre la etiqueta que lo posee.</p></li>
+</ul>
+<p>Generalmente y aunque se puede utilizar tanto uno como el otro para los mismos propósitos, en lo personal yo acostumbro a utilizar id para trabajar con JavaScript y class para trabajar con CSS</p>
+<p>Ejemplo de uso:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;contenedor-uno&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<section id="comentarios-en-html5">
+<h3><a class="toc-backref" href="#id3">Comentarios en HTML5</a><a class="headerlink" href="#comentarios-en-html5" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los comentarios podemos utilizarlos del siguiente modo:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Esto es un comentario --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="realizar-un-salto-de-linea">
+<h3><a class="toc-backref" href="#id4">Realizar un salto de línea</a><a class="headerlink" href="#realizar-un-salto-de-linea" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para realizar un salto de línea utilizamos la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;br&gt;</span></code></p>
+</section>
+<section id="anadir-linea-divisora">
+<h3><a class="toc-backref" href="#id5">Añadir línea divisora</a><a class="headerlink" href="#anadir-linea-divisora" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para añadir una línea divisora horizontal utilizamos la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;hr&gt;</span></code></p>
+</section>
+<section id="crear-un-contenedor">
+<h3><a class="toc-backref" href="#id6">Crear un contenedor</a><a class="headerlink" href="#crear-un-contenedor" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Un contenedor es una estructura donde colocaremos distintas etiquetas html y se utiliza para crear secciones y objetos que tendrán distintos estilos en nuestro código:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Esto es una cabezera<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Esto es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>También existen las etiquetas <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> que tienen un funcionamiento similar a div pero se suelen utilizar para encapsular cosas más pequeñas.</p>
+</section>
+<section id="estructura-html5">
+<h3><a class="toc-backref" href="#id7">Estructura HTML5</a><a class="headerlink" href="#estructura-html5" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La estructura básica de un documento HTML5 se define con las siguientes etiquetas:</p>
+<ul class="simple">
+<li><p>&lt;!DOCTYPE HTML&gt;: Etiqueta con la que se declara la versión de HTML que utilizamos la cual es la versión 5.</p></li>
+<li><p>&lt;html&gt;: Define el tipo de documento que estamos trabajando.</p></li>
+<li><p>&lt;head&gt;: Es la cabecera del documento, aquí se añade la meta información y vinculamos hojas de estilos, fuentes, etc…</p></li>
+<li><p>&lt;body&gt;: Es donde escribimos las etiquetas HTML que comprenderán nuestro código.</p></li>
+</ul>
+<p>Ejemplo de estructura base:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang </span><span class="o">=</span> <span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="semantica-html5">
+<h3><a class="toc-backref" href="#id8">Semántica HTML5</a><a class="headerlink" href="#semantica-html5" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Este tipo de estructura que encontramos dentro del body sirve para que cuando un motor de búsqueda lea nuestro sitio web sepa exactamente que partes de su contenido corresponden a cada una de las partes típicas de un sitio, estas etiquetas funcionan exactamente igual que <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>.</p>
+<p>Existen las siguientes etiquetas:</p>
+<ul class="simple">
+<li><p>&lt;section&gt;: se utiliza para representar una sección general.</p></li>
+<li><p>&lt;article&gt;: Representa un componente de una página tipo documento o página.</p></li>
+<li><p>&lt;aside&gt;: Suele ser un contenido que se dispone en un lateral, como un menú vertical entre otras cosas.</p></li>
+<li><p>&lt;header&gt;: Indica que estamos trabajando con la cabecera del sitio web.</p></li>
+<li><p>&lt;nav&gt;: Sirve para indicar que estamos en la barra de navegación.</p></li>
+<li><p>&lt;footer&gt;: Representa el pie de página.</p></li>
+</ul>
+<p>Estructura común semántica HTML5:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="etiquetas-del-head">
+<h2><a class="toc-backref" href="#id9">Etiquetas del head</a><a class="headerlink" href="#etiquetas-del-head" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Estas son las distintas etiquetas disponibles para configurar nuestro documento con las que podemos:</p>
+<ul class="simple">
+<li><p>Definir la codificación de caracteres, normalmente utilizamos UTF-8:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset </span><span class="o">=</span> <span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Definir el título de la página que aparece en la pestaña del navegador:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Título de mi página<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Definir la descripción del sitio web para los navegadores:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name </span><span class="o">=</span> <span class="s">&quot;description&quot;</span> <span class="na">content </span><span class="o">=</span> <span class="s">&quot;Esta es una descripción del sitio web&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Definir palabras clave para mejorar su indexación:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name </span><span class="o">=</span> <span class="s">&quot;keywords&quot;</span> <span class="na">content </span><span class="o">=</span> <span class="s">&quot;clave, palabra clave, frase mágica, magia&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Definir el autor de la página:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name </span><span class="o">=</span> <span class="s">&quot;author&quot;</span> <span class="na">content </span><span class="o">=</span> <span class="s">&quot;Guillermo Granados Gómez&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Definir la importación de una hoja de estilo:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel </span><span class="o">=</span> <span class="s">&quot;stylesheet&quot;</span> <span class="na">href </span><span class="o">=</span> <span class="s">&quot;style.css&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>O declarar un script que para mejora del rendimiento es preferible hacerlo antes del cierre de body:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src </span><span class="o">=</span> <span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="etiquetas-del-body">
+<h2><a class="toc-backref" href="#id10">Etiquetas del body</a><a class="headerlink" href="#etiquetas-del-body" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="cabeceras">
+<h3><a class="toc-backref" href="#id11">Cabeceras</a><a class="headerlink" href="#cabeceras" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Las cabeceras son los textos iniciales de un documento o subtítulos o bien título de capítulos, estos se generan del siguiente modo de mayor a menor con etiquetas que van desde <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code> hasta <code class="docutils literal notranslate"><span class="pre">&lt;h6&gt;</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Título<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Subtítulo<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Título tercero<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Título cuarto<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Título quinto<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Título sexto<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="parrafos">
+<h3><a class="toc-backref" href="#id12">Párrafos</a><a class="headerlink" href="#parrafos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> podemos añadir párrafos a nuestro documento html del siguiente modo:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Esto es un párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="enlaces">
+<h3><a class="toc-backref" href="#id13">Enlaces</a><a class="headerlink" href="#enlaces" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos enlazar páginas, documentos, imágenes, etc con la ayuda de la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> y sus atributos específicos:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>href: Requerido para establecer la ruta del archivo. Posee rutas especiales como</dt><dd><ul>
+<li><p>Ruta de archivo: «carpeta/archivo.html»</p></li>
+<li><p>Vínculo externo: «<a class="reference external" href="https://www.google.es">https://www.google.es</a>»</p></li>
+<li><p>Vínculo hacia una parte del documento: «#id-etiqueta»</p></li>
+<li><p>Abrir en correo: «<a class="reference external" href="mailto:direccion&#37;&#52;&#48;email&#46;com">mailto:direccion<span>&#64;</span>email<span>&#46;</span>com</a>»</p></li>
+<li><p>Abrir en teléfono: «<a class="reference external" href="tel:600600600">tel:600600600</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>ping: sirve para notificar a otra url que se ha pulsado el Vínculo</p></li>
+<li><p>download: Indica que al hacer clic se descargue el archivo.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;archivo.html&quot;</span><span class="p">&gt;</span>Ir a Archivo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="listas">
+<h3><a class="toc-backref" href="#id14">Listas</a><a class="headerlink" href="#listas" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Tenemos una serie de etiquetas para crear listas que si son numeradas comienzan con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code> y si son viñetas comienza con <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>.
+Para añadir elementos a la lista introduciremos etiquetas <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code> tantas veces como elementos queramos introducir.
+Las listas poseen el siguiente atributo:</p>
+<ul class="simple">
+<li><p>reversed: ordena la lista numérica en orden decreciente.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="imagenes">
+<h3><a class="toc-backref" href="#id15">Imágenes</a><a class="headerlink" href="#imagenes" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para visualizar imágenes en el documento utilizamos la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> con los siguientes atributos:</p>
+<ul class="simple">
+<li><p>src: Requerido para establecer la ruta del archivo.</p></li>
+<li><p>alt: Recomendado, añade un texto alternativo si no se carga la página.</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Mapa del Tesoro&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="cita">
+<h3><a class="toc-backref" href="#id16">Cita</a><a class="headerlink" href="#cita" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Añade un texto un poco desplazado a la derecha con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;blockquote&gt;</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+    &quot;El que no arriesga, no gana&quot;
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="elementos-expandibles">
+<h3><a class="toc-backref" href="#id17">Elementos expandibles</a><a class="headerlink" href="#elementos-expandibles" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Crea un texto desplegable con contenido oculto, se compone de una etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;details&gt;</span></code> la cual llevará dentro una etiqueta inicial llamada <code class="docutils literal notranslate"><span class="pre">&lt;summary&gt;</span></code> y todo lo que siga debajo de esta anterior solo se verá al pinchar en el desplegable:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">summary</span><span class="p">&gt;</span>Texto Visible<span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido coulto de la página<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="letra-pequena">
+<h3><a class="toc-backref" href="#id18">Letra pequeña</a><a class="headerlink" href="#letra-pequena" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Se puede generar una letra específicamente más pequeña con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;small&gt;</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Sitio web creado por Guillermo Granados Gómez<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="citar-texto">
+<h3><a class="toc-backref" href="#id19">Citar texto</a><a class="headerlink" href="#citar-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Al añadir la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;cite&gt;</span></code> en alguna frase o palabra esta se verá en formato cursivo:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>En este <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>párrafo<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span> podemos ver la cita<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="resaltar-texto">
+<h3><a class="toc-backref" href="#id20">Resaltar texto</a><a class="headerlink" href="#resaltar-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Al añadir la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span></code> en alguna frase o palabra esta se verá en formato negrita:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>En este <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>párrafo<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> se puede apreciar una palabra en negrita.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="tachar-texto">
+<h3><a class="toc-backref" href="#id21">Tachar texto</a><a class="headerlink" href="#tachar-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Al añadir la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> en alguna frase o palabra esta se verá tachada:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>En este <span class="p">&lt;</span><span class="nt">s</span><span class="p">&gt;</span>párrafo<span class="p">&lt;/</span><span class="nt">s</span><span class="p">&gt;</span> vemos un texto tachado.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="agregar-audio">
+<h3><a class="toc-backref" href="#id22">Agregar Audio</a><a class="headerlink" href="#agregar-audio" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para añadir un archivo de audio que se reproduzca en el navegador utilizamos la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;audio&gt;</span></code> la cual posee los siguientes atributos:</p>
+<ul class="simple">
+<li><p>src: Requerido para localizar la ruta del archivo de sonido.</p></li>
+<li><p>controls: establece un panel de control.</p></li>
+<li><p>autoplay: ejecutará el archivo de audio tras cargar la página.</p></li>
+<li><p>loop: el archivo de audio se repite siempre cuando finaliza.</p></li>
+<li><p>preload: sirve para establecer que el archivo no sea almacenado en cache, para comprobar si tiene metadatos y para establecer que si se almacene en cache «por defecto»</p></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;sonido.mp3&quot;</span> <span class="na">controls</span><span class="p">&gt;&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="agregar-videos">
+<h3><a class="toc-backref" href="#id23">Agregar Vídeos</a><a class="headerlink" href="#agregar-videos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Podemos insertar archivos de video e incluso tener un sencillo reproductor generado automáticamente con html utilizando la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> y en su interior añadiremos el video en distintos formatos con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;source&gt;</span></code> y poseen los siguientes atributos:</p>
+<ul class="simple">
+<li><p>controls: en video - Establece un panel de control.</p></li>
+<li><p>autoplay: en video - reproducirá el archivo al cargar la página.</p></li>
+<li><p>loop: en video - repetirá indefinidamente el video cada vez que termine</p></li>
+<li><p>preload: sirve para establecer que el archivo no sea almacenado en cache, para comprobar si tiene metadatos y para establecer que si se almacene en cache «por defecto»</p></li>
+<li><p>poster: en video - carga una imagen en el video de espera cuando este no esta reproduciéndose.</p></li>
+<li><p>mute: en video - el video se muestra en silencio.</p></li>
+<li><p>src: en source - vincula el archivo de vídeo a nuestro archivo html.</p></li>
+</ul>
+<p>Ejemplos de uso:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">poster </span><span class="o">=</span> <span class="s">&quot;fotoPoster.png&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;video.mp4&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;video.mkv&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="crear-un-lienzo">
+<h3><a class="toc-backref" href="#id24">Crear un lienzo</a><a class="headerlink" href="#crear-un-lienzo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Un lienzo es un apartado dinámico donde podemos generar animaciones que el usuario tiene la posibilidad de interactuar con ellas. Para ello se utiliza la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;canvas&gt;</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lienzo&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Texto que aparecerá si el navegador no es compatible con canvas<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="incrustrar-un-sitio-web-externo">
+<h3><a class="toc-backref" href="#id25">Incrustrar un sitio web externo</a><a class="headerlink" href="#incrustrar-un-sitio-web-externo" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code> podemos incrustrar una página web en una porción de la nuestra, su uso más habitual es el de cargar videos externos o mapas:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4455419.399511362!2d-4.148695983812638!3d39.545659644016645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1577590100649!5m2!1ses!2ses&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;450&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border:0;&quot;</span> <span class="na">allowfullscreen</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Nota: El motor de búsqueda Google no ve con buenos ojos esta práctica más allá de cargar mapas y videos entre otras cosas.</p>
+</section>
+<section id="crear-un-boton">
+<h3><a class="toc-backref" href="#id26">Crear un botón</a><a class="headerlink" href="#crear-un-boton" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los botones se generan con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;button&gt;</span></code> y pueden tener distintas finalidades y se suelen accionar desde javascript capturandolos a través de su id.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saluda&quot;</span><span class="p">&gt;</span>Pinchame<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;saluda&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Con un script podemos trabajar recuperando elementos HTML e interactuar con la página web.</p>
+</section>
+</section>
+<section id="formularios">
+<h2><a class="toc-backref" href="#id27">Formularios</a><a class="headerlink" href="#formularios" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los formularios conforman una serie de campos donde normalmente transmitiremos información al lado del servidor.
+Estos se generan con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span></code> y posee los siguientes atributos:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>method: Es el método con el que se transmiten los datos que puede ser GET o POST</dt><dd><ul>
+<li><p>GET: Los datos se envían por la url a través de parámetros y se utiliza principalmente para recuperar información.</p></li>
+<li><p>POST: Los datos se envían ocultos para que el usuario no pueda verlos con el propósito de hacer el envío más seguro.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>action: Este atributo sirve para identificar el archivo del lado del servidor que recibirá y procesará la información.</p></li>
+<li><p>enctype: Este atributo se suele utilizar con la opción «multipart/form-data» y sirve para indicar al servidor que va a recibir un archivo en uno de sus campos.</p></li>
+</ul>
+<p>Ejemplo de estructura de un formulario de login:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;login.php&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;username&quot;</span><span class="p">&gt;</span>Usuario: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>Contraseña: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;contraseña&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Iniciar Sesión&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<section id="etiqueta-label">
+<h3><a class="toc-backref" href="#id28">Etiqueta label</a><a class="headerlink" href="#etiqueta-label" title="Enlazar permanentemente con este título">#</a></h3>
+<p>La etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;label&gt;</span></code> sirve para añadir un texto específico para un campo del formulario y lo hacemos utilizando el atributo <code class="docutils literal notranslate"><span class="pre">for</span></code> el cual se vincula al atributo <code class="docutils literal notranslate"><span class="pre">name</span></code> de la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> del siguiente modo:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span><span class="p">&gt;</span>Usuario: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="campos-del-formulario">
+<h3><a class="toc-backref" href="#id29">Campos del formulario</a><a class="headerlink" href="#campos-del-formulario" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Para trabajar con los campos del formulario se utiliza la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;input&gt;</span></code> que va acompañada de los siguientes atributos:</p>
+<ul class="simple">
+<li><p>name: Obligatorio - Sirve para que el servidor pueda identificar y procesar el campo.</p></li>
+<li><dl class="simple">
+<dt>type: Obligatorio - Sirve para definir con que tipo de campo estamos trabajando y posee los siguientes valores</dt><dd><ul>
+<li><p>text: Texto sencillo.</p></li>
+<li><p>password: Contraseña.</p></li>
+<li><p>submit: botón para procesar formulario.</p></li>
+<li><p>reset: botón para vaciar el formulario.</p></li>
+<li><p>email: dirección de correo electrónico.</p></li>
+<li><p>checkbox: casilla de comprobación. Se utiliza el atributo <code class="docutils literal notranslate"><span class="pre">checked</span></code> en el mismo input cuando queremos marcar por defecto una casilla.</p></li>
+<li><p>color: despliega un menu de seleccion de colores.</p></li>
+<li><p>date: despliega un menu de fechas.</p></li>
+<li><p>file: sirve para subir un archivo al servidor. Se utiliza siempre junto al atributo <code class="docutils literal notranslate"><span class="pre">enctype</span></code> en la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span></code>.</p></li>
+<li><p>hidden: campo oculto, envía información oculta.</p></li>
+<li><p>number: campo para introducir números. Recibe también atributos <code class="docutils literal notranslate"><span class="pre">min</span></code> y <code class="docutils literal notranslate"><span class="pre">max</span></code> para indicar el rango de números permitidos.</p></li>
+<li><p>radio: botón de selección. Sirve para seleccionar una sola opción que acompañamos con el atributo <code class="docutils literal notranslate"><span class="pre">value</span></code> siempre para indicar al servidor la opción escogida. Se puede utilizar el atributo <code class="docutils literal notranslate"><span class="pre">checked</span></code> para establecer una opción por defecto.</p></li>
+<li><p>range: Sirve para introducir un número que indicaremos entre un atributo <code class="docutils literal notranslate"><span class="pre">min</span></code> y un atributo <code class="docutils literal notranslate"><span class="pre">max</span></code> de modo que nunca podrá superar ninguno de los dos. Se puede utilizar el atributo <code class="docutils literal notranslate"><span class="pre">step</span></code> para indicar el salto entre números cuando vamos escogiendolos.</p></li>
+<li><p>search: Cuadro de texto específico para realizar búsquedas.</p></li>
+<li><p>tel: Sirve para introducir un número de teléfono.</p></li>
+<li><p>url: campo de URL.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>placeholder: sirve para poner un texto en las casillas que desaparece cuando comenzamos a escribir.</p></li>
+<li><p>autofocus: se selecciona el campo por defecto al arrancar la página.</p></li>
+<li><p>autocomplete: sirve para recordar información en los campos y tiene dos valores <code class="docutils literal notranslate"><span class="pre">on</span></code> por defecto y <code class="docutils literal notranslate"><span class="pre">off</span></code></p></li>
+<li><p>required: campo requerido, el formulario no se envía si está en blanco.</p></li>
+<li><p>pattern: sirve para establecer unas reglas de escritura. Ej de validación código postal: <code class="docutils literal notranslate"><span class="pre">pattern=&quot;[0-9]{5}&quot;</span></code></p></li>
+<li><p>value: introduce un valor por defecto en el campo.</p></li>
+<li><p>maxlength: establece un número máximos de caracteres permitidos</p></li>
+<li><p>minlength: establece un número de caracteres mínimos permitidos.</p></li>
+<li><p>readonly: El campo se mostrará pero no podremos rellenarlo.</p></li>
+</ul>
+<p>Ejemplo de campo input:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;introduce el nombre de usuario&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="selector">
+<h3><a class="toc-backref" href="#id30">Selector</a><a class="headerlink" href="#selector" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En los formularios también contamos con un campo de tipo selector y este se genera con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;select&gt;</span></code> el cual recibirá dentro las distintas opciones con etiquetas <code class="docutils literal notranslate"><span class="pre">&lt;option&gt;</span></code>:</p>
+<ul class="simple">
+<li><p>selected: es un atributo que indica la opción escogida por defecto.</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;lista&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">selected</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="caja-de-texto">
+<h3><a class="toc-backref" href="#id31">Caja de texto</a><a class="headerlink" href="#caja-de-texto" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Existe otro tipo de campo que se genera con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;textarea&gt;</span></code> y este nos presenta una caja de texto que va cambiando de tamaño de forma dinámica. Posee los mismos atributos que input y algunos propios como:</p>
+<ul class="simple">
+<li><p>rows: recibe un valor numérico y establece el número de filas.</p></li>
+<li><p>cols: recibe un valor numérico y establece el número de columnas.</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;texto&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;aparezco si borras el siguiente texto&quot;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&quot;30&quot;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&quot;40&quot;</span><span class="p">&gt;</span>Aquí se muestra un texto de ejemplo<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="agrupar-apartados-del-formulario">
+<h3><a class="toc-backref" href="#id32">Agrupar apartados del formulario</a><a class="headerlink" href="#agrupar-apartados-del-formulario" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Con la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;fieldset&gt;</span></code> podemos agrupar apartados del formulario y este va acompañado normalmente de la etiqueta <code class="docutils literal notranslate"><span class="pre">&lt;legend&gt;</span></code> que nos muestra un texto en el recuadro del apartado:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;datos-personales&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Datos personales<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="ejemplo-de-formulario-de-registro">
+<h3><a class="toc-backref" href="#id33">Ejemplo de formulario de registro</a><a class="headerlink" href="#ejemplo-de-formulario-de-registro" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Este es un ejemplo de un formulario de registro para ver todos los campos disponibles:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;registro.php&quot;</span> <span class="na">enctype</span><span class="o">=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Datos personales<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>Nombre completo:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Nombre y apellidos&quot;</span> <span class="na">autofocus</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;nacimiento&quot;</span><span class="p">&gt;</span>Fecha de nacimiento:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;date&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nacimiento&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Género:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;masculino&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ok&quot;</span><span class="p">&gt;</span>Masculino
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;femenino&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ok&quot;</span><span class="p">&gt;</span>Femenino
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;telefono&quot;</span><span class="p">&gt;</span>Número de teléfono:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;tel&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;telefono&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;[0-9]{9}&quot;</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;9&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;9&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Tu número de teléfono&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;dni&quot;</span><span class="p">&gt;</span>DNI: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;dni&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;color&quot;</span><span class="p">&gt;</span>Color favorito:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;color&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;color&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;favorito&quot;</span><span class="p">&gt;</span>Número favorito:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;favorito&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;debe ser un número del 1 al 10&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;pagina&quot;</span><span class="p">&gt;</span>Sitio web personal: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;url&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pagina&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Si tienes web rellena este campo&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;provincia&quot;</span><span class="p">&gt;</span>Provincia (Andalucía): <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;provnicia&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span><span class="p">&gt;</span>Elige tu provincia<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;malaga&quot;</span><span class="p">&gt;</span>Málaga<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;cadiz&quot;</span><span class="p">&gt;</span>Cádiz<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;huelva&quot;</span><span class="p">&gt;</span>Huelva<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;sevilla&quot;</span><span class="p">&gt;</span>Sevilla<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;jaen&quot;</span><span class="p">&gt;</span>Jaén<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;cordoba&quot;</span><span class="p">&gt;</span>Córdoba<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;almeria&quot;</span><span class="p">&gt;</span>Almería<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;granada&quot;</span><span class="p">&gt;</span>Granada<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ceuta&quot;</span><span class="p">&gt;</span>Ceuta<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;melilla&quot;</span><span class="p">&gt;</span>Melilla<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Tipo de solicitud<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;basico&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ok&quot;</span><span class="p">&gt;</span> Plan básico
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;medio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ok&quot;</span> <span class="na">checked</span><span class="p">&gt;</span> Plan intermedio
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;avanzado&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ok&quot;</span><span class="p">&gt;</span> Plan avanzado
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;observaciones&quot;</span><span class="p">&gt;</span>Observaciones:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;observaciones&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Informanos de todo aquello que necesites&quot;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&quot;40&quot;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Datos de acceso<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;correo&quot;</span><span class="p">&gt;</span>Correo Electrónico:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;correo&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Introduce tu dirección de Email&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>Contraseña:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Introduce tu contraseña&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;La contraseña debe ser fuerte&quot;</span> <span class="na">readonly</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;oculto&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;información secreta&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Darse de alta&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;reset&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;vaciar campos&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../index.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Bienvenido a FullCoder, un sitio de Manual</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="css.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">CSS3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

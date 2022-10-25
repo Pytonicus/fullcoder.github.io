@@ -1,0 +1,2035 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sintaxis PHP &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Funciones predefinidas" href="funciones.html" />
+    <link rel="prev" title="reStructuredText" href="../marcado/restructured.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../marcado/restructured.html">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/php/sintaxis.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-php">
+     Estructura en php
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion">
+     Concatenación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#php-cli-comandos-de-php">
+     PHP-CLI - Comandos de PHP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detener-secuenda-de-script">
+     Detener secuenda de script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays-asociativos">
+     Arrays asociativos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-de-errores">
+   Control de errores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+   Programación orientada a objetos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-y-objetos">
+     Clases y objetos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-abstractas-y-resolucion-de-ambito">
+     Clases abstractas y resolución de ámbito
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interfaces">
+     Interfaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-y-exportar">
+   Importar y exportar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#include-y-require">
+     include y require
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespace">
+     Namespace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sintaxis PHP</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elementos-basicos-del-lenguaje">
+   Elementos básicos del lenguaje
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion">
+     Instalación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comentarios">
+     Comentarios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada-y-salida-estandar">
+     Entrada y salida estandar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-en-php">
+     Estructura en php
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion">
+     Concatenación
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#php-cli-comandos-de-php">
+     PHP-CLI - Comandos de PHP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-y-tipos-de-datos">
+   Variables y tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores">
+   Operadores
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-control">
+   Estructuras de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-if">
+     Condicional if
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicional-switch">
+     Condicional Switch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-for">
+     Bucle for
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucle-while">
+     Bucle while
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detener-secuenda-de-script">
+     Detener secuenda de script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos-avanzados">
+   Tipos de datos avanzados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays-asociativos">
+     Arrays asociativos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-de-errores">
+   Control de errores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-modular">
+   Programación modular
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funciones">
+     Funciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-orientada-a-objetos">
+   Programación orientada a objetos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-y-objetos">
+     Clases y objetos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clases-abstractas-y-resolucion-de-ambito">
+     Clases abstractas y resolución de ámbito
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interfaces">
+     Interfaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importar-y-exportar">
+   Importar y exportar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#include-y-require">
+     include y require
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespace">
+     Namespace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="sintaxis-php">
+<h1><a class="toc-backref" href="#id1">Sintaxis PHP</a><a class="headerlink" href="#sintaxis-php" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-php.png"><img alt="Logo PHP" class="align-center" src="../_images/logo-php.png" style="width: 360.0px; height: 188.54999999999998px;" /></a>
+<p>Sintáxis básica de PHP 7.4</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sintaxis-php" id="id1">Sintaxis PHP</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elementos-basicos-del-lenguaje" id="id2">Elementos básicos del lenguaje</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalacion" id="id3">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#comentarios" id="id4">Comentarios</a></p></li>
+<li><p><a class="reference internal" href="#entrada-y-salida-estandar" id="id5">Entrada y salida estandar</a></p></li>
+<li><p><a class="reference internal" href="#estructura-en-php" id="id6">Estructura en php</a></p></li>
+<li><p><a class="reference internal" href="#concatenacion" id="id7">Concatenación</a></p></li>
+<li><p><a class="reference internal" href="#php-cli-comandos-de-php" id="id8">PHP-CLI - Comandos de PHP</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id9">Variables y tipos de datos</a></p></li>
+<li><p><a class="reference internal" href="#operadores" id="id10">Operadores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id11">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id12">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id13">Operadores lógicos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id14">Estructuras de control</a></p>
+<ul>
+<li><p><a class="reference internal" href="#condicional-if" id="id15">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#condicional-switch" id="id16">Condicional Switch</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for" id="id17">Bucle for</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id18">Bucle while</a></p></li>
+<li><p><a class="reference internal" href="#detener-secuenda-de-script" id="id19">Detener secuenda de script</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id20">Tipos de datos avanzados</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arrays" id="id21">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#arrays-asociativos" id="id22">Arrays asociativos</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-de-errores" id="id23">Control de errores</a></p></li>
+<li><p><a class="reference internal" href="#programacion-modular" id="id24">Programación modular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#funciones" id="id25">Funciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programacion-orientada-a-objetos" id="id26">Programación orientada a objetos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clases-y-objetos" id="id27">Clases y objetos</a></p></li>
+<li><p><a class="reference internal" href="#clases-abstractas-y-resolucion-de-ambito" id="id28">Clases abstractas y resolución de ámbito</a></p></li>
+<li><p><a class="reference internal" href="#interfaces" id="id29">Interfaces</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id30">Importar y exportar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#include-y-require" id="id31">include y require</a></p></li>
+<li><p><a class="reference internal" href="#namespace" id="id32">Namespace</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="elementos-basicos-del-lenguaje">
+<h2><a class="toc-backref" href="#id2">Elementos básicos del lenguaje</a><a class="headerlink" href="#elementos-basicos-del-lenguaje" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="instalacion">
+<h3><a class="toc-backref" href="#id3">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Instalación: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">php7.4</span></code></p></li>
+<li><p>Extensión de archivos: <strong>.php</strong></p></li>
+</ul>
+</section>
+<section id="comentarios">
+<h3><a class="toc-backref" href="#id4">Comentarios</a><a class="headerlink" href="#comentarios" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Comentarios de una sola línea:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">// Comentario de una sola línea</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comentarios multilínea:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">/* Este comentario</span>
+<span class="linenos">2</span><span class="x">tiene más de una línea.</span>
+<span class="linenos">3</span><span class="x">Puede servir para escribir</span>
+<span class="linenos">4</span><span class="x">un manual u otras cosas.</span>
+<span class="linenos">5</span><span class="x">*/</span>
+</pre></div>
+</div>
+</section>
+<section id="entrada-y-salida-estandar">
+<h3><a class="toc-backref" href="#id5">Entrada y salida estandar</a><a class="headerlink" href="#entrada-y-salida-estandar" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Datos de entrada y salida a través de la consola y/o el navegador.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="c1">// echo:</span>
+<span class="linenos">3</span>    <span class="k">echo</span> <span class="s2">&quot;hola mundo&quot;</span><span class="p">;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span>    <span class="c1">// print:</span>
+<span class="linenos">6</span>    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">);</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>No existe una entrada estandar como tal, en todo caso sería mediante métodos GET, POST, etc.</p>
+</div>
+</section>
+<section id="estructura-en-php">
+<h3><a class="toc-backref" href="#id6">Estructura en php</a><a class="headerlink" href="#estructura-en-php" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Código PHP puro:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$variable</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">if</span><span class="p">(</span><span class="nv">$valor</span> <span class="o">==</span> <span class="mi">20</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot;el valor es igual&quot;</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="p">}</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>código php junto a HTML:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$titulo</span> <span class="o">=</span> <span class="s2">&quot;practicando PHP&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="x">&lt;html&gt;</span>
+<span class="linenos"> 6</span><span class="x">    &lt;head&gt;</span>
+<span class="linenos"> 7</span><span class="x">    &lt;/head&gt;</span>
+<span class="linenos"> 8</span><span class="x">    &lt;body&gt;</span>
+<span class="linenos"> 9</span><span class="x">        &lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$titulo</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<span class="linenos">10</span><span class="x">    &lt;/body&gt;</span>
+<span class="linenos">11</span><span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>También podemos cargar etiquetas HTML con PHP:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Etiqueta incrustada desde php&lt;/p&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">3</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Las líneas terminan en ; obligatóriamente.</p>
+</div>
+</section>
+<section id="concatenacion">
+<h3><a class="toc-backref" href="#id7">Concatenación</a><a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Concatenación de variables y cadenas se realiza con <strong>.</strong></p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">echo</span> <span class="s2">&quot;cadena concatenada a &quot;</span> <span class="o">.</span> <span class="s2">&quot;otra cadena&quot;</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="s2">&quot;resultado en variable: &quot;</span> <span class="o">.</span> <span class="nv">$variable</span><span class="p">;</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="php-cli-comandos-de-php">
+<h3><a class="toc-backref" href="#id8">PHP-CLI - Comandos de PHP</a><a class="headerlink" href="#php-cli-comandos-de-php" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Comandos de PHP:</p>
+<ul class="simple">
+<li><p>php -v: versión usada</p></li>
+<li><p>php -m: módulos cargados</p></li>
+<li><p>php -i: configuración de php actual</p></li>
+<li><p>php -r: enviar código a ejecutar ej: <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;hola</span> <span class="pre">mundo&quot;</span></code></p></li>
+<li><p>php archivo.php: ejecutar un archivo php.</p></li>
+<li><p>php -S: ejecutar servidor php <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">localhost:8000</span></code></p></li>
+<li><p>php -S -t: establecer un directorio inicial de arrance del server: <code class="docutils literal notranslate"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">localhost:8000</span> <span class="pre">-t</span> <span class="pre">inicial/</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="variables-y-tipos-de-datos">
+<h2><a class="toc-backref" href="#id9">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Declaración, asignación y tipo:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$cadena</span> <span class="o">=</span> <span class="s2">&quot;Cadena de texto&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>    <span class="nv">$entero</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>
+<span class="linenos"> 4</span>    <span class="nv">$decimal</span> <span class="o">=</span> <span class="mf">23.27</span><span class="p">;</span>
+<span class="linenos"> 5</span>    <span class="nv">$booleano</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span> <span class="c1">// false</span>
+<span class="linenos"> 6</span>    <span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datos&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="k">false</span><span class="p">];</span>
+<span class="linenos"> 7</span>    <span class="nv">$array_asociativo</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 8</span>        <span class="s1">&#39;nombre&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Pepe&#39;</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s1">&#39;telefono&#39;</span> <span class="o">=&gt;</span> <span class="mi">753283723</span>
+<span class="linenos">10</span>    <span class="p">];</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constantes:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="c1">// funcion define:</span>
+<span class="linenos">3</span>    <span class="nb">define</span><span class="p">(</span><span class="s2">&quot;CONSTANTE&quot;</span><span class="p">,</span> <span class="s2">&quot;valor de la misma&quot;</span><span class="p">);</span>
+<span class="linenos">4</span>    <span class="k">echo</span> <span class="nx">CONSTANTE</span><span class="p">;</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>    <span class="c1">// palabra reservada const:</span>
+<span class="linenos">7</span>    <span class="k">const</span> <span class="no">constante</span> <span class="o">=</span> <span class="s2">&quot;valor de la constante&quot;</span><span class="p">;</span>
+<span class="linenos">8</span>    <span class="k">echo</span> <span class="nx">constante</span><span class="p">;</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores">
+<h2><a class="toc-backref" href="#id10">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="operadores-aritmeticos">
+<h3><a class="toc-backref" href="#id11">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Operaciones aritméticas:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$sumar</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="nv">$restar</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">9</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="nv">$multiplicar</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">*</span> <span class="mi">6</span><span class="p">;</span>
+<span class="linenos">5</span>    <span class="nv">$dividir</span> <span class="o">=</span> <span class="mi">13</span> <span class="o">/</span> <span class="mi">20</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="nv">$resto</span> <span class="o">=</span> <span class="mi">54</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Incremento y decremento:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="o">++</span><span class="nv">$i</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="o">--</span><span class="nv">$i</span><span class="p">;</span>
+<span class="linenos">5</span>    <span class="nv">$i</span><span class="o">--</span><span class="p">;</span>
+<span class="linenos">6</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Asignar operación:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="c1">// la variable debe tener un valor asignado:</span>
+<span class="linenos">3</span>    <span class="nv">$resultado</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span>    <span class="nv">$resultado</span> <span class="o">+=</span> <span class="mi">12</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="nv">$resultado</span> <span class="o">-=</span> <span class="mi">16</span><span class="p">;</span>
+<span class="linenos">7</span>    <span class="nv">$resultado</span> <span class="o">*=</span> <span class="mi">19</span><span class="p">;</span>
+<span class="linenos">8</span>    <span class="nv">$resultado</span> <span class="o">/=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-relacionales">
+<h3><a class="toc-backref" href="#id12">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Validación entre dos números.</p>
+<ul class="simple">
+<li><p>Mayor que: <strong>&gt;</strong>.</p></li>
+<li><p>Menor que: <strong>&lt;</strong>.</p></li>
+<li><p>Mayor o igual que: <strong>&gt;=</strong>.</p></li>
+<li><p>Menor o igual que: <strong>&lt;=</strong>.</p></li>
+<li><p>Igual que: <strong>==</strong>.</p></li>
+</ul>
+</section>
+<section id="operadores-logicos">
+<h3><a class="toc-backref" href="#id13">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Expresiones de operaciones lógicas.</p>
+<ul class="simple">
+<li><p>and: <strong>&amp;&amp;</strong>.</p></li>
+<li><p>or: <strong>||</strong>.</p></li>
+<li><p>not: <strong>!</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="estructuras-de-control">
+<h2><a class="toc-backref" href="#id14">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="condicional-if">
+<h3><a class="toc-backref" href="#id15">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>if sencillo:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">if</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="p">}</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if / else:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">if</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">7</span>        <span class="k">echo</span> <span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">;</span>
+<span class="linenos">8</span>    <span class="p">}</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>else-if:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="k">if</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">){</span>
+<span class="linenos"> 5</span>        <span class="k">echo</span> <span class="s2">&quot;Eres un anciano&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>    <span class="p">}</span>
+<span class="linenos"> 7</span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">){</span>
+<span class="linenos"> 8</span>        <span class="k">echo</span> <span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">;</span>
+<span class="linenos"> 9</span>    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">10</span>        <span class="k">echo</span> <span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if alternativo:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">73</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="k">if</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">)</span><span class="o">:</span>
+<span class="linenos"> 5</span>        <span class="k">echo</span> <span class="s2">&quot;Eres un anciano&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span><span class="o">:</span>
+<span class="linenos"> 7</span>        <span class="k">echo</span> <span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">;</span>
+<span class="linenos"> 8</span>    <span class="k">else</span><span class="o">:</span>
+<span class="linenos"> 9</span>        <span class="k">echo</span> <span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">;</span>
+<span class="linenos">10</span>    <span class="k">endif</span><span class="p">;</span>
+<span class="linenos">11</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Aparte de este if, existe for, foreach y while que comparten la misma forma de operar.</p>
+</div>
+<ul class="simple">
+<li><p>Operador ternario:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$edad</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
+<span class="linenos">3</span>    <span class="nv">$comprobarEdad</span> <span class="o">=</span> <span class="nv">$edad</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">?</span> <span class="s2">&quot;Eres mayor de edad&quot;</span> <span class="o">:</span> <span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span>    <span class="k">echo</span> <span class="nv">$comprobarEdad</span><span class="p">;</span>
+<span class="linenos">6</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="condicional-switch">
+<h3><a class="toc-backref" href="#id16">Condicional Switch</a><a class="headerlink" href="#condicional-switch" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Estructura de un switch:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$color</span> <span class="o">=</span> <span class="s2">&quot;verde&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="k">switch</span><span class="p">(</span><span class="nv">$color</span><span class="p">){</span>
+<span class="linenos"> 5</span>        <span class="k">case</span> <span class="p">(</span><span class="s2">&quot;rojo&quot;</span><span class="p">)</span><span class="o">:</span>
+<span class="linenos"> 6</span>            <span class="k">echo</span> <span class="s2">&quot;El color es rojo&quot;</span><span class="p">;</span>
+<span class="linenos"> 7</span>            <span class="k">break</span><span class="p">;</span>
+<span class="linenos"> 8</span>        <span class="k">case</span> <span class="p">(</span><span class="s2">&quot;verde&quot;</span><span class="p">)</span><span class="o">:</span>
+<span class="linenos"> 9</span>            <span class="k">echo</span> <span class="s2">&quot;El color es verde&quot;</span><span class="p">;</span>
+<span class="linenos">10</span>            <span class="k">break</span><span class="p">;</span>
+<span class="linenos">11</span>        <span class="k">case</span> <span class="p">(</span><span class="s2">&quot;azul&quot;</span><span class="p">)</span><span class="o">:</span>
+<span class="linenos">12</span>            <span class="k">echo</span> <span class="s2">&quot;El color es azul&quot;</span><span class="p">;</span>
+<span class="linenos">13</span>            <span class="k">break</span>
+<span class="linenos">14</span>        <span class="k">default</span><span class="o">:</span>
+<span class="linenos">15</span>            <span class="k">echo</span> <span class="s2">&quot;No se reconoce el color&quot;</span><span class="p">;</span>
+<span class="linenos">16</span>    <span class="p">}</span>
+<span class="linenos">17</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-for">
+<h3><a class="toc-backref" href="#id17">Bucle for</a><a class="headerlink" href="#bucle-for" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>for básico:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+<span class="linenos">3</span>        <span class="k">echo</span> <span class="s2">&quot;Repetición nº &quot;</span> <span class="o">.</span> <span class="nv">$i</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="p">}</span>
+<span class="linenos">5</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$electrodomesticos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lavadora&quot;</span><span class="p">,</span><span class="s2">&quot;nevera&quot;</span><span class="p">,</span><span class="s2">&quot;microondas&quot;</span><span class="p">];</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">foreach</span><span class="p">(</span><span class="nv">$elecrodomesticos</span> <span class="k">as</span> <span class="nv">$aparato</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="nv">$aparato</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">6</span>    <span class="p">}</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>foreach clave / valor:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$electrodomesticos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;producto&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Nevera&quot;</span><span class="p">,</span>
+<span class="linenos"> 4</span>        <span class="s2">&quot;modelo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;FX27&quot;</span><span class="p">,</span>
+<span class="linenos"> 5</span>        <span class="s2">&quot;marca&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Fagor&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>        <span class="s2">&quot;precio&quot;</span> <span class="o">=&gt;</span> <span class="mf">783.23</span>
+<span class="linenos"> 7</span>    <span class="p">];</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">foreach</span><span class="p">(</span><span class="nv">$elecrodomesticos</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">){</span>
+<span class="linenos">10</span>        <span class="k">echo</span> <span class="nv">$key</span> <span class="o">.</span> <span class="s2">&quot;: &quot;</span> <span class="o">.</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h3><a class="toc-backref" href="#id18">Bucle while</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>While sencillo:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">while</span><span class="p">(</span><span class="nv">$num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot;código de mensaje - &quot;</span> <span class="o">.</span> <span class="nv">$num</span><span class="p">;</span>
+<span class="linenos">6</span>        <span class="nv">$num</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">7</span>    <span class="p">}</span>
+<span class="linenos">8</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>do-while:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span>    <span class="k">do</span><span class="p">{</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot;código de mensaje - &quot;</span> <span class="o">.</span> <span class="nv">$num</span><span class="p">;</span>
+<span class="linenos">6</span>        <span class="nv">$num</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">7</span>    <span class="p">}</span>
+<span class="linenos">8</span>    <span class="k">while</span><span class="p">(</span><span class="nv">$num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">);</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="detener-secuenda-de-script">
+<h3><a class="toc-backref" href="#id19">Detener secuenda de script</a><a class="headerlink" href="#detener-secuenda-de-script" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+<span class="linenos">3</span>        <span class="k">if</span><span class="p">(</span><span class="nv">$i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">){</span>
+<span class="linenos">4</span>            <span class="k">echo</span> <span class="s2">&quot;Ya has llegado a 5 y no más&quot;</span><span class="p">;</span>
+<span class="linenos">5</span>            <span class="k">die</span><span class="p">;</span>
+<span class="linenos">6</span>        <span class="p">}</span>
+<span class="linenos">7</span>    <span class="p">}</span>
+<span class="linenos">8</span>    <span class="k">echo</span> <span class="s2">&quot;Esta frase no se mostrará&quot;</span><span class="p">;</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tipos-de-datos-avanzados">
+<h2><a class="toc-backref" href="#id20">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="arrays">
+<h3><a class="toc-backref" href="#id21">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$arreglo</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cadena&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">18.27</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;otra cadena&quot;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mf">18.77</span><span class="p">]];</span>
+<span class="linenos">3</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Declaración con función array():</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$arreglo</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&quot;cadena&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">18.27</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+<span class="linenos">3</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$operadores</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos"> 3</span>        <span class="p">[</span><span class="s2">&quot;OPERADOR&quot;</span><span class="p">,</span> <span class="s2">&quot;DENOMINACIÓN&quot;</span><span class="p">],</span>
+<span class="linenos"> 4</span>        <span class="p">[</span><span class="s2">&quot;suma&quot;</span><span class="p">,</span> <span class="s2">&quot;+&quot;</span><span class="p">],</span>
+<span class="linenos"> 5</span>        <span class="p">[</span><span class="s2">&quot;resta&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">],</span>
+<span class="linenos"> 6</span>        <span class="p">[</span><span class="s2">&quot;multiplicación&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">],</span>
+<span class="linenos"> 7</span>        <span class="p">[</span><span class="s2">&quot;división&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">],</span>
+<span class="linenos"> 8</span>        <span class="p">[</span><span class="s2">&quot;resto&quot;</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">]</span>
+<span class="linenos"> 9</span>    <span class="p">);</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="c1">// ejemplo recorrido array multidimensional:</span>
+<span class="linenos">12</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;table border=1&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>    <span class="k">foreach</span><span class="p">(</span><span class="nv">$operadores</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">){</span>
+<span class="linenos">15</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">16</span>        <span class="k">foreach</span><span class="p">(</span><span class="nv">$operadores</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$operador</span><span class="p">){</span>
+<span class="linenos">17</span>            <span class="k">echo</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">.</span> <span class="nv">$operador</span> <span class="o">.</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">18</span>        <span class="p">}</span>
+<span class="linenos">19</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">20</span>    <span class="p">}</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;/table&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">23</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Imprimir y asignar valores:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">echo</span> <span class="nv">$arreglo</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="linenos">3</span>    <span class="nv">$arreglo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Veinte&quot;</span><span class="p">;</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="arrays-asociativos">
+<h3><a class="toc-backref" href="#id22">Arrays asociativos</a><a class="headerlink" href="#arrays-asociativos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Declaración tradicional:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$asociaciones</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos">3</span>        <span class="s2">&quot;clave&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;valor&quot;</span><span class="p">,</span>
+<span class="linenos">4</span>        <span class="s2">&quot;nombre&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Paco&quot;</span><span class="p">,</span>
+<span class="linenos">5</span>        <span class="s2">&quot;edad&quot;</span> <span class="o">=&gt;</span> <span class="mi">27</span><span class="p">,</span>
+<span class="linenos">6</span>        <span class="s2">&quot;peso&quot;</span> <span class="o">=&gt;</span> <span class="mf">77.32</span><span class="p">,</span>
+<span class="linenos">7</span>        <span class="s2">&quot;cuota&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+<span class="linenos">8</span>    <span class="p">];</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Declaración con función array():</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$asociaciones</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<span class="linenos">3</span>        <span class="s2">&quot;clave&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;valor&quot;</span><span class="p">,</span>
+<span class="linenos">4</span>        <span class="s2">&quot;nombre&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Paco&quot;</span><span class="p">,</span>
+<span class="linenos">5</span>        <span class="s2">&quot;edad&quot;</span> <span class="o">=&gt;</span> <span class="mi">27</span><span class="p">,</span>
+<span class="linenos">6</span>        <span class="s2">&quot;peso&quot;</span> <span class="o">=&gt;</span> <span class="mf">77.32</span><span class="p">,</span>
+<span class="linenos">7</span>        <span class="s2">&quot;cuota&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+<span class="linenos">8</span>    <span class="p">);</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Array multidimensional:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$asociaciones</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;clave&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;valor&quot;</span><span class="p">,</span>
+<span class="linenos"> 4</span>        <span class="s2">&quot;nombre&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Paco&quot;</span><span class="p">,</span>
+<span class="linenos"> 5</span>        <span class="s2">&quot;edad&quot;</span> <span class="o">=&gt;</span> <span class="mi">27</span><span class="p">,</span>
+<span class="linenos"> 6</span>        <span class="s2">&quot;peso&quot;</span> <span class="o">=&gt;</span> <span class="mf">77.32</span><span class="p">,</span>
+<span class="linenos"> 7</span>        <span class="s2">&quot;cuota&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;subscripciones&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<span class="linenos"> 9</span>            <span class="s2">&quot;netflix&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<span class="linenos">10</span>            <span class="s2">&quot;hbo&quot;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+<span class="linenos">11</span>            <span class="s2">&quot;prime&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+<span class="linenos">12</span>        <span class="p">]</span>
+<span class="linenos">13</span>    <span class="p">];</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="k">foreach</span><span class="p">(</span><span class="nv">$asociaciones</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">){</span>
+<span class="linenos">16</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;ul&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">17</span>            <span class="k">if</span><span class="p">(</span><span class="nv">$key</span> <span class="o">!=</span> <span class="s2">&quot;subscripciones&quot;</span><span class="p">){</span>
+<span class="linenos">18</span>                <span class="k">echo</span> <span class="s2">&quot;&lt;li&gt;&quot;</span> <span class="o">.</span> <span class="nv">$key</span> <span class="o">.</span> <span class="s2">&quot;: &quot;</span> <span class="o">.</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s2">&quot;&lt;/li&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">19</span>            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">20</span>                <span class="k">echo</span> <span class="s2">&quot;&lt;li&gt;Subscripciones: &quot;</span><span class="p">;</span>
+<span class="linenos">21</span>                <span class="k">foreach</span><span class="p">(</span><span class="nv">$asociaciones</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">){</span>
+<span class="linenos">22</span>                    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">23</span>                    <span class="k">if</span><span class="p">(</span><span class="nv">$value</span><span class="p">){</span>
+<span class="linenos">24</span>                        <span class="k">echo</span> <span class="s2">&quot;- &quot;</span> <span class="o">.</span> <span class="nv">$key</span> <span class="o">.</span> <span class="s2">&quot;: si&quot;</span><span class="p">;</span>
+<span class="linenos">25</span>                    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos">26</span>                        <span class="k">echo</span> <span class="s2">&quot;- &quot;</span> <span class="o">.</span> <span class="nv">$key</span> <span class="o">.</span> <span class="s2">&quot;: no&quot;</span><span class="p">;</span>
+<span class="linenos">27</span>                    <span class="p">}</span>
+<span class="linenos">28</span>                <span class="p">}</span>
+<span class="linenos">29</span>            <span class="p">}</span>
+<span class="linenos">30</span>        <span class="k">echo</span> <span class="s2">&quot;&lt;/ul&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">31</span>    <span class="p">}</span>
+<span class="linenos">32</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Imprimir y asignar valores:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">echo</span> <span class="nv">$asociaciones</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">];</span>
+<span class="linenos">3</span>    <span class="nv">$arreglo</span><span class="p">[</span><span class="s2">&quot;subscripciones&quot;</span><span class="p">][</span><span class="s2">&quot;netflix&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;subscrito&quot;</span><span class="p">;</span>
+<span class="linenos">4</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="control-de-errores">
+<h2><a class="toc-backref" href="#id23">Control de errores</a><a class="headerlink" href="#control-de-errores" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">try</span><span class="p">{</span>
+<span class="linenos">3</span>        <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s2">&quot; No existe archivo de configuracion &quot;</span><span class="p">);</span>
+<span class="linenos">4</span>    <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+<span class="linenos">5</span>        <span class="k">echo</span> <span class="s2">&quot; Hubo un error&quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos">6</span>    <span class="p">}</span><span class="k">finally</span><span class="p">{</span>
+<span class="linenos">7</span>        <span class="k">echo</span> <span class="s2">&quot;Cerrando BD&quot;</span><span class="p">;</span>
+<span class="linenos">8</span>    <span class="p">}</span>
+<span class="linenos">9</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="programacion-modular">
+<h2><a class="toc-backref" href="#id24">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="funciones">
+<h3><a class="toc-backref" href="#id25">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Procedimienos:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">function</span> <span class="nf">saludar</span><span class="p">(){</span>
+<span class="linenos">3</span>        <span class="k">echo</span> <span class="s2">&quot;Hola persona&quot;</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="p">}</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>    <span class="nx">saludar</span><span class="p">();</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funciones:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">function</span> <span class="nf">saludar</span><span class="p">(){</span>
+<span class="linenos">3</span>        <span class="k">return</span> <span class="s2">&quot;Hola persona&quot;</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="p">}</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>    <span class="k">echo</span> <span class="nx">saludar</span><span class="p">();</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uso de parámetros:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="k">function</span> <span class="nf">saludar</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">){</span>
+<span class="linenos">3</span>        <span class="k">return</span> <span class="s2">&quot;Hola &quot;</span> <span class="o">.</span> <span class="nv">$nombre</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="p">}</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>    <span class="k">echo</span> <span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Pepe&quot;</span><span class="p">);</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Funciones anónimas:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">&lt;?php</span>
+<span class="linenos">2</span>    <span class="nv">$tuNombre</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">){</span>
+<span class="linenos">3</span>        <span class="k">return</span> <span class="s2">&quot;Hola &quot;</span><span class="o">.</span> <span class="nv">$nombre</span><span class="p">;</span>
+<span class="linenos">4</span>    <span class="p">};</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>    <span class="k">echo</span> <span class="nv">$tuNombre</span><span class="p">(</span><span class="s2">&quot;Pepe&quot;</span><span class="p">);</span>
+<span class="linenos">7</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ámbito global:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="nv">$nombre</span> <span class="o">=</span> <span class="s2">&quot;alberto&quot;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="nv">$saludar</span> <span class="o">=</span> <span class="k">function</span><span class="p">(){</span>
+<span class="linenos"> 5</span>        <span class="k">global</span> <span class="nv">$nombre</span><span class="p">;</span>
+<span class="linenos"> 6</span>        <span class="k">return</span> <span class="s2">&quot;¿Qué tal &quot;</span> <span class="o">.</span> <span class="nv">$nombre</span> <span class="o">.</span> <span class="s2">&quot;?&quot;</span><span class="p">;</span>
+<span class="linenos"> 7</span>    <span class="p">};</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">echo</span> <span class="nv">$saludar</span><span class="p">();</span>
+<span class="linenos">10</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="programacion-orientada-a-objetos">
+<h2><a class="toc-backref" href="#id26">Programación orientada a objetos</a><a class="headerlink" href="#programacion-orientada-a-objetos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Los elementos de una clase se definen con ámbito <strong>public</strong>, <strong>private</strong> y <strong>protected</strong>.
+Adicionalmente se puede agregar el modificador <strong>static</strong> para poder acceder a los atributos y métodos sin crear un objeto.</p>
+<section id="clases-y-objetos">
+<h3><a class="toc-backref" href="#id27">Clases y objetos</a><a class="headerlink" href="#clases-y-objetos" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Estructura clase:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">class</span> <span class="nc">Videoconsola</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="c1">// atributos con ámbito obligatorio:</span>
+<span class="linenos"> 4</span>        <span class="k">public</span> <span class="nv">$modelo</span> <span class="o">=</span> <span class="s2">&quot;Mega Drive&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span>        <span class="k">public</span> <span class="nv">$marca</span> <span class="o">=</span> <span class="s2">&quot;Sega&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>        <span class="c1">// métodos con ambito public por defecto:</span>
+<span class="linenos"> 8</span>        <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos"> 9</span>            <span class="k">echo</span> <span class="s2">&quot;Es una &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">10</span>        <span class="p">}</span>
+<span class="linenos">11</span>    <span class="p">}</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="c1">// crear objeto:</span>
+<span class="linenos">14</span>    <span class="nv">$megaDrive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Videoconsola</span><span class="p">;</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1">// recuperar atributo:</span>
+<span class="linenos">17</span>    <span class="k">echo</span> <span class="nv">$megaDrive</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="c1">// recuperar métodos:</span>
+<span class="linenos">20</span>    <span class="nv">$megaDrive</span><span class="o">-&gt;</span><span class="na">descripcion</span><span class="p">();</span>
+<span class="linenos">21</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Constructor:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">class</span> <span class="nc">Videoconsola</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="k">public</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 4</span>        <span class="k">public</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>        <span class="c1">// constructor:</span>
+<span class="linenos"> 7</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">,</span> <span class="nv">$marca</span><span class="p">){</span>
+<span class="linenos"> 8</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 9</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>            <span class="k">echo</span> <span class="s2">&quot;Se ha creado el objeto&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">13</span>        <span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>        <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos">16</span>            <span class="k">echo</span> <span class="s2">&quot;Es una &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">17</span>        <span class="p">}</span>
+<span class="linenos">18</span>    <span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>    <span class="c1">// crear objeto con parámetros:</span>
+<span class="linenos">21</span>    <span class="nv">$playStation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Videoconsola</span><span class="p">(</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span> <span class="s2">&quot;Sony&quot;</span><span class="p">);</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>    <span class="nv">$playStation</span><span class="o">-&gt;</span><span class="na">descripcion</span><span class="p">();</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Get y Set:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">class</span> <span class="nc">Videoconsola</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="c1">// métodos privados:</span>
+<span class="linenos"> 4</span>        <span class="k">private</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 5</span>        <span class="k">private</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">,</span> <span class="nv">$marca</span><span class="p">){</span>
+<span class="linenos"> 8</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 9</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>            <span class="k">echo</span> <span class="s2">&quot;Se ha creado el objeto&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">13</span>        <span class="p">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>        <span class="c1">// get:</span>
+<span class="linenos">16</span>        <span class="k">function</span> <span class="nf">getModelo</span><span class="p">(){</span>
+<span class="linenos">17</span>            <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">18</span>        <span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>        <span class="k">function</span> <span class="nf">getMarca</span><span class="p">(){</span>
+<span class="linenos">21</span>            <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span><span class="p">;</span>
+<span class="linenos">22</span>        <span class="p">}</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>        <span class="c1">// set:</span>
+<span class="linenos">25</span>        <span class="k">public</span> <span class="k">function</span> <span class="nf">setModelo</span><span class="p">(</span><span class="nv">$valor</span><span class="p">){</span>
+<span class="linenos">26</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="nv">$valor</span><span class="p">;</span>
+<span class="linenos">27</span>        <span class="p">}</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>        <span class="k">public</span> <span class="k">function</span> <span class="nf">setMarca</span><span class="p">(</span><span class="nv">$valor</span><span class="p">){</span>
+<span class="linenos">30</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="nv">$valor</span><span class="p">;</span>
+<span class="linenos">31</span>        <span class="p">}</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>        <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos">34</span>            <span class="k">echo</span> <span class="s2">&quot;Es una &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">35</span>        <span class="p">}</span>
+<span class="linenos">36</span>    <span class="p">}</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="nv">$playStation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Videoconsola</span><span class="p">(</span><span class="s2">&quot;PlayStation&quot;</span><span class="p">,</span> <span class="s2">&quot;Sony&quot;</span><span class="p">);</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span>    <span class="k">echo</span> <span class="nv">$playStation</span><span class="o">-&gt;</span><span class="na">getMarca</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span>    <span class="nv">$playStation</span><span class="o">-&gt;</span><span class="na">setModelo</span><span class="p">(</span><span class="s2">&quot;PlayStation 5&quot;</span><span class="p">);</span>
+<span class="linenos">43</span>    <span class="k">echo</span> <span class="nv">$playStation</span><span class="o">-&gt;</span><span class="na">getModelo</span><span class="p">();</span>
+<span class="linenos">44</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Herencia:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">class</span> <span class="nc">Videoconsola</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="k">public</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 4</span>        <span class="k">public</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">,</span> <span class="nv">$marca</span><span class="p">){</span>
+<span class="linenos"> 7</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 8</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>            <span class="k">echo</span> <span class="s2">&quot;Se ha creado el objeto&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>        <span class="p">}</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>        <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos">15</span>            <span class="k">echo</span> <span class="s2">&quot;Es una &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">16</span>        <span class="p">}</span>
+<span class="linenos">17</span>    <span class="p">}</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="k">class</span> <span class="nc">SuperNintendo</span> <span class="k">extends</span> <span class="nx">Videoconsola</span><span class="p">{</span>
+<span class="linenos">20</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos">21</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="s2">&quot;SNES&quot;</span><span class="p">;</span>
+<span class="linenos">22</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="s2">&quot;Nintendo&quot;</span><span class="p">;</span>
+<span class="linenos">23</span>        <span class="p">}</span>
+<span class="linenos">24</span>    <span class="p">}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="nv">$superNintendo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SuperNintendo</span><span class="p">;</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>    <span class="nv">$superNintendo</span><span class="o">-&gt;</span><span class="na">descripcion</span><span class="p">();</span>
+<span class="linenos">29</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="clases-abstractas-y-resolucion-de-ambito">
+<h3><a class="toc-backref" href="#id28">Clases abstractas y resolución de ámbito</a><a class="headerlink" href="#clases-abstractas-y-resolucion-de-ambito" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>uso de clases no instanciables:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Videoconsola</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="k">public</span> <span class="k">static</span> <span class="nv">$modelo</span> <span class="o">=</span> <span class="s2">&quot;Super Nintendo&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span>        <span class="k">public</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">,</span> <span class="nv">$marca</span><span class="p">){</span>
+<span class="linenos"> 7</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 8</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>            <span class="k">echo</span> <span class="s2">&quot;Se ha creado el objeto&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>        <span class="p">}</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>        <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">juegos</span><span class="p">(){</span>
+<span class="linenos">15</span>            <span class="k">echo</span> <span class="s2">&quot;La consola dispone de alrededor de 700 títulos&quot;</span><span class="p">;</span>
+<span class="linenos">16</span>        <span class="p">}</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>        <span class="c1">// las funciones abstractas se deben usar obligatoriamente en la clase hija:</span>
+<span class="linenos">19</span>        <span class="k">abstract</span> <span class="k">function</span> <span class="nf">precio</span><span class="p">();</span>
+<span class="linenos">20</span>    <span class="p">}</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>    <span class="c1">// clase a partir de clase abstracta:</span>
+<span class="linenos">23</span>    <span class="k">class</span> <span class="nc">SuperNintendo</span> <span class="k">extends</span> <span class="nx">Videoconsola</span><span class="p">{</span>
+<span class="linenos">24</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(){</span>
+<span class="linenos">25</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="s2">&quot;SNES&quot;</span><span class="p">;</span>
+<span class="linenos">26</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="s2">&quot;Nintendo&quot;</span><span class="p">;</span>
+<span class="linenos">27</span>        <span class="p">}</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>        <span class="k">function</span> <span class="nf">precio</span><span class="p">(){</span>
+<span class="linenos">30</span>            <span class="k">echo</span> <span class="s2">&quot;La consola cuesta 200 €&quot;</span><span class="p">;</span>
+<span class="linenos">31</span>        <span class="p">}</span>
+<span class="linenos">32</span>    <span class="p">}</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span>    <span class="c1">// uso de clase hija:</span>
+<span class="linenos">35</span>    <span class="nv">$superNintendo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SuperNintendo</span><span class="p">;</span>
+<span class="linenos">36</span>    <span class="k">echo</span> <span class="nv">$superNintendo</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">37</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">38</span>    <span class="nv">$superNintendo</span><span class="o">-&gt;</span><span class="na">precio</span><span class="p">();</span>
+<span class="linenos">39</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span>    <span class="c1">// resolución de ámbito:</span>
+<span class="linenos">42</span>    <span class="k">echo</span> <span class="nx">Videoconsola</span><span class="o">::</span><span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos">43</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">44</span>    <span class="nx">Videoconsola</span><span class="o">::</span><span class="na">juegos</span><span class="p">();</span>
+<span class="linenos">45</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="interfaces">
+<h3><a class="toc-backref" href="#id29">Interfaces</a><a class="headerlink" href="#interfaces" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">interface</span> <span class="nx">Videoconsola</span><span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="k">function</span> <span class="nf">descripcion</span><span class="p">();</span>
+<span class="linenos"> 4</span>        <span class="k">function</span> <span class="nf">precio</span><span class="p">();</span>
+<span class="linenos"> 5</span>    <span class="p">}</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="k">class</span> <span class="nc">NeoGeo</span> <span class="k">implements</span> <span class="nx">Videoconsola</span><span class="p">{</span>
+<span class="linenos"> 8</span>        <span class="k">public</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos"> 9</span>        <span class="k">public</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos">10</span>        <span class="k">public</span> <span class="nv">$precio</span><span class="p">;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>        <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$modelo</span><span class="p">,</span> <span class="nv">$marca</span><span class="p">,</span> <span class="nv">$precio</span><span class="p">){</span>
+<span class="linenos">13</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">=</span> <span class="nv">$modelo</span><span class="p">;</span>
+<span class="linenos">14</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">=</span> <span class="nv">$marca</span><span class="p">;</span>
+<span class="linenos">15</span>            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">precio</span> <span class="o">=</span> <span class="nv">$precio</span><span class="p">;</span>
+<span class="linenos">16</span>        <span class="p">}</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>        <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos">19</span>            <span class="k">echo</span> <span class="s2">&quot;Es la consola &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span> <span class="o">.</span> <span class="s2">&quot; de &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">20</span>        <span class="p">}</span>
+<span class="linenos">21</span>        <span class="k">function</span> <span class="nf">precio</span><span class="p">(){</span>
+<span class="linenos">22</span>            <span class="k">echo</span> <span class="s2">&quot;La consola cuesta: &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">precio</span> <span class="o">.</span> <span class="s2">&quot; €&quot;</span><span class="p">;</span>
+<span class="linenos">23</span>        <span class="p">}</span>
+<span class="linenos">24</span>    <span class="p">}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="nv">$neoGeo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NeoGeo</span><span class="p">(</span><span class="s2">&quot;Neo Geo Pocket&quot;</span><span class="p">,</span> <span class="s2">&quot;SNK&quot;</span><span class="p">,</span> <span class="mf">149.99</span><span class="p">);</span>
+<span class="linenos">27</span>    <span class="nv">$neoGeo</span><span class="o">-&gt;</span><span class="na">descripcion</span><span class="p">();</span>
+<span class="linenos">28</span>    <span class="nv">$neoGeo</span><span class="o">-&gt;</span><span class="na">precio</span><span class="p">();</span>
+<span class="linenos">29</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="importar-y-exportar">
+<h2><a class="toc-backref" href="#id30">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="include-y-require">
+<h3><a class="toc-backref" href="#id31">include y require</a><a class="headerlink" href="#include-y-require" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Importar archivos php:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="c1">// incluir archivo php:</span>
+<span class="linenos"> 3</span>    <span class="k">include</span> <span class="s1">&#39;ruta/archivo.php&#39;</span><span class="p">;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>    <span class="c1">// incluir obligatorio:</span>
+<span class="linenos"> 6</span>    <span class="k">require</span><span class="p">(</span><span class="s2">&quot;ruta/archivo.php&quot;</span><span class="p">);</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="c1">// incluir y no repetir:</span>
+<span class="linenos"> 9</span>    <span class="k">include_once</span> <span class="s1">&#39;ruta/archivo.php&#39;</span><span class="p">;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="c1">// incluir obligatorio y no repetir:</span>
+<span class="linenos">12</span>    <span class="k">require_once</span><span class="p">(</span><span class="s2">&quot;ruta/archivo.php&quot;</span><span class="p">);</span>
+<span class="linenos">13</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</section>
+<section id="namespace">
+<h3><a class="toc-backref" href="#id32">Namespace</a><a class="headerlink" href="#namespace" title="Enlazar permanentemente con este título">#</a></h3>
+<ul>
+<li><p>Exportar (videojuegos.php):</p>
+<blockquote>
+<div><div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>    <span class="k">namespace</span> <span class="nx">Videoconsola</span><span class="p">{</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>        <span class="c1">// las constantes solo se pueden definir con const:</span>
+<span class="linenos"> 6</span>        <span class="k">const</span> <span class="no">generacion</span> <span class="o">=</span> <span class="s2">&quot;5ª Generación&quot;</span><span class="p">;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>        <span class="k">class</span> <span class="nc">Sistema</span> <span class="p">{</span>
+<span class="linenos"> 9</span>            <span class="k">public</span> <span class="nv">$modelo</span> <span class="o">=</span> <span class="s2">&quot;Mega Drive&quot;</span><span class="p">;</span>
+<span class="linenos">10</span>            <span class="k">public</span> <span class="nv">$marca</span> <span class="o">=</span> <span class="s2">&quot;Sega&quot;</span><span class="p">;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>            <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos">13</span>                <span class="k">echo</span> <span class="s2">&quot;Es una &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">14</span>            <span class="p">}</span>
+<span class="linenos">15</span>        <span class="p">}</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>        <span class="k">function</span> <span class="nf">tipo</span><span class="p">(){</span>
+<span class="linenos">18</span>            <span class="k">echo</span> <span class="s2">&quot;Es un sistema de tipo Videoconsola doméstica&quot;</span><span class="p">;</span>
+<span class="linenos">19</span>        <span class="p">}</span>
+<span class="linenos">20</span>    <span class="p">}</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>    <span class="k">namespace</span> <span class="nx">Arcade</span><span class="p">{</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>        <span class="c1">// las constantes solo se pueden definir con const:</span>
+<span class="linenos">25</span>        <span class="k">const</span> <span class="no">cabina</span> <span class="o">=</span> <span class="s2">&quot;Bartop&quot;</span><span class="p">;</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>        <span class="k">class</span> <span class="nc">Sistema</span> <span class="p">{</span>
+<span class="linenos">28</span>            <span class="k">public</span> <span class="nv">$modelo</span> <span class="o">=</span> <span class="s2">&quot;Naomi&quot;</span><span class="p">;</span>
+<span class="linenos">29</span>            <span class="k">public</span> <span class="nv">$marca</span> <span class="o">=</span> <span class="s2">&quot;Sega&quot;</span><span class="p">;</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>            <span class="k">function</span> <span class="nf">descripcion</span><span class="p">(){</span>
+<span class="linenos">32</span>                <span class="k">echo</span> <span class="s2">&quot;Es una placa&quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">marca</span> <span class="o">.</span> <span class="s2">&quot; &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelo</span><span class="p">;</span>
+<span class="linenos">33</span>            <span class="p">}</span>
+<span class="linenos">34</span>        <span class="p">}</span>
+<span class="linenos">35</span>    <span class="p">}</span>
+<span class="linenos">36</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Importar namespace (index.php):</p>
+<blockquote>
+<div><div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;?php</span>
+<span class="linenos"> 2</span>    <span class="k">include</span> <span class="s1">&#39;videojuegos.php&#39;</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="c1">// cargar cada namespace:</span>
+<span class="linenos"> 5</span>    <span class="k">use</span> <span class="k">const</span> <span class="no">Videoconsola\generacion</span><span class="p">;</span>
+<span class="linenos"> 6</span>    <span class="k">use</span> <span class="nx">Videoconsola\Sistema</span> <span class="k">as</span> <span class="nx">Videoconsola</span><span class="p">;</span>
+<span class="linenos"> 7</span>    <span class="k">use</span> <span class="k">function</span> <span class="nf">Videoconsola\tipo</span> <span class="k">as</span> <span class="nx">tipo</span><span class="p">;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">use</span> <span class="nx">Arcade\Sistema</span> <span class="k">as</span> <span class="nx">Arcade</span><span class="p">;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>    <span class="k">echo</span> <span class="nx">generacion</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">12</span>    <span class="nv">$megaDrive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Videoconsola</span><span class="p">;</span>
+<span class="linenos">13</span>    <span class="nv">$megaDrive</span><span class="o">-&gt;</span><span class="na">descripcion</span><span class="p">();</span>
+<span class="linenos">14</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">15</span>    <span class="nx">tipo</span><span class="p">();</span>
+<span class="linenos">16</span>    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="nv">$naomi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arcade</span><span class="p">;</span>
+<span class="linenos">19</span>    <span class="nv">$naomi</span><span class="o">-&gt;</span><span class="na">descripcion</span><span class="p">();</span>
+<span class="linenos">20</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los namespace se pueden declarar sin el uso de llave.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../marcado/restructured.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">reStructuredText</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="funciones.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Funciones predefinidas</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

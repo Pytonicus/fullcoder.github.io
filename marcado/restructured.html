@@ -1,0 +1,1623 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>reStructuredText &#8212; Fullcoder Manuales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Sintaxis PHP" href="../php/sintaxis.html" />
+    <link rel="prev" title="CSS3" href="css.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fullcoderlogo.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lenguajes de Marcado:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="html.html">
+   HTML5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="css.html">
+   CSS3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   reStructuredText
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PHP:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/sintaxis.html">
+   Sintaxis PHP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/procesamiento.html">
+   Comunicación Cliente / Servidor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/database.html">
+   Manipulación de base de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/cifrado.html">
+   Codificación y Hash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/laravel.html">
+   Framework: Laravel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/sintaxis.html">
+   Sintaxis Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/otras_librerias.html">
+   Otras Librerías Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/database.html">
+   Bases de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/paquetes.html">
+   Manejo de paquetes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/emails.html">
+   Emails con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/entornos.html">
+   Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/analisis.html">
+   Análisis de datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/django.html">
+   Framework: Django
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/flask.html">
+   Microframework: Flask
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/drf.html">
+   Framework: Django Rest Framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/testing.html">
+   Testing en Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/despliegue.html">
+   Gunicorn: Despliegue web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/monitorizar.html">
+   Monitorización en Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  JavaScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/sintaxis.html">
+   Sintaxis javascript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/entornos.html">
+   NVM: Entornos Virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/nodejs.html">
+   Entornos: Node.JS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/expressjs.html">
+   Framework: ExpressJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react.html">
+   Framework: ReactJS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../javascript/react-native.html">
+   Framework: React Native
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TypeScript:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../typescript/angular.html">
+   Framework: Angular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  GO:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/sintaxis.html">
+   Sintaxis GO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/librerias.html">
+   Librería Estandar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/concurrencia.html">
+   Concurrencia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../go/web.html">
+   Desarrollo Web
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C/librerias.html">
+   Librerías C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C++:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cplus/sintaxis.html">
+   Sintaxis C
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  C#:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/sintaxis.html">
+   Sintaxis C#
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/funciones.html">
+   Funciones predefinidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/librerias.html">
+   Namespace System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/eventos.html">
+   Eventos y Delegados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/hilos.html">
+   Threads (hilos)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../csharp/unity.html">
+   Unity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Java:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/sintaxis.html">
+   Sintaxis Java
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/funciones.html">
+   Funciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../java/documentacion.html">
+   Documentación en Java
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bases de datos:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ddbb/mongodb.html">
+   MongoDB
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sistemas y herramientas:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/nginx.html">
+   Nginx
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/docker-compose.html">
+   Docker-Compose
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sistemas/heroku.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/vscode.html">
+   Visual Studio Code
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Otros Lenguajes:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../otros/basic.html">
+   Basic y Commodore 64
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/marcado/restructured.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estilo-de-fuente">
+   Estilo de fuente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listados">
+   Listados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloque-literal">
+   Bloque Literal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linea-de-codigo">
+   Línea de código
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tablas">
+   Tablas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#links">
+   Links
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encabezados">
+   Encabezados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#campos-destacados">
+   Campos destacados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mensajes">
+   Mensajes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imagenes">
+   Imágenes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrada">
+   Entrada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#barra-lateral">
+   Barra Lateral
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloque-de-texto">
+   Bloque de texto
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloque-de-codigo">
+   Bloque de código
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epigrafe">
+   Epígrafe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Índice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meta-data">
+   Meta data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fecha-y-hora">
+   Fecha y hora
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menu-de-documentos">
+   Menu de documentos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versiones">
+   Versiones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titulo">
+   Título
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-un-glosario">
+   Crear un glosario
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>reStructuredText</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estilo-de-fuente">
+   Estilo de fuente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listados">
+   Listados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloque-literal">
+   Bloque Literal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linea-de-codigo">
+   Línea de código
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tablas">
+   Tablas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#links">
+   Links
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encabezados">
+   Encabezados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#campos-destacados">
+   Campos destacados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mensajes">
+   Mensajes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imagenes">
+   Imágenes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrada">
+   Entrada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#barra-lateral">
+   Barra Lateral
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloque-de-texto">
+   Bloque de texto
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloque-de-codigo">
+   Bloque de código
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epigrafe">
+   Epígrafe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Índice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meta-data">
+   Meta data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fecha-y-hora">
+   Fecha y hora
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menu-de-documentos">
+   Menu de documentos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versiones">
+   Versiones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titulo">
+   Título
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-un-glosario">
+   Crear un glosario
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="restructuredtext">
+<h1><a class="toc-backref" href="#id2">reStructuredText</a><a class="headerlink" href="#restructuredtext" title="Enlazar permanentemente con este título">#</a></h1>
+<a class="reference internal image-reference" href="../_images/logo-restructured.png"><img alt="Logo HTML5" class="align-center" src="../_images/logo-restructured.png" style="width: 512.0px; height: 49.6px;" /></a>
+<p>Última edición el día 2022-10-26 a las 00:31.</p>
+<p>Esta es la documentación que he recopilado para trabajar con Sphinx, un framework que tiene como proposito la creación de sitios web orientados a la documentación como es este mismo sitio.</p>
+<div class="contents topic" id="indice">
+<p class="topic-title">Índice</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#restructuredtext" id="id2">reStructuredText</a></p>
+<ul>
+<li><p><a class="reference internal" href="#estilo-de-fuente" id="id3">Estilo de fuente</a></p></li>
+<li><p><a class="reference internal" href="#listados" id="id4">Listados</a></p></li>
+<li><p><a class="reference internal" href="#bloque-literal" id="id5">Bloque Literal</a></p></li>
+<li><p><a class="reference internal" href="#linea-de-codigo" id="id6">Línea de código</a></p></li>
+<li><p><a class="reference internal" href="#tablas" id="id7">Tablas</a></p></li>
+<li><p><a class="reference internal" href="#links" id="id8">Links</a></p></li>
+<li><p><a class="reference internal" href="#encabezados" id="id9">Encabezados</a></p></li>
+<li><p><a class="reference internal" href="#campos-destacados" id="id10">Campos destacados</a></p></li>
+<li><p><a class="reference internal" href="#mensajes" id="id11">Mensajes</a></p></li>
+<li><p><a class="reference internal" href="#imagenes" id="id12">Imágenes</a></p></li>
+<li><p><a class="reference internal" href="#entrada" id="id13">Entrada</a></p></li>
+<li><p><a class="reference internal" href="#barra-lateral" id="id14">Barra Lateral</a></p></li>
+<li><p><a class="reference internal" href="#bloque-de-texto" id="id15">Bloque de texto</a></p></li>
+<li><p><a class="reference internal" href="#bloque-de-codigo" id="id16">Bloque de código</a></p></li>
+<li><p><a class="reference internal" href="#epigrafe" id="id17">Epígrafe</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id18">Índice</a></p></li>
+<li><p><a class="reference internal" href="#meta-data" id="id19">Meta data</a></p></li>
+<li><p><a class="reference internal" href="#fecha-y-hora" id="id20">Fecha y hora</a></p></li>
+<li><p><a class="reference internal" href="#menu-de-documentos" id="id21">Menu de documentos</a></p></li>
+<li><p><a class="reference internal" href="#versiones" id="id22">Versiones</a></p></li>
+<li><p><a class="reference internal" href="#titulo" id="id23">Título</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-glosario" id="id24">Crear un glosario</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="estilo-de-fuente">
+<h2><a class="toc-backref" href="#id3">Estilo de fuente</a><a class="headerlink" href="#estilo-de-fuente" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para añadir estilo al texto hay que rodearlo con el siguiente formato:</p>
+<ul class="simple">
+<li><p>Texto en negrita: <code class="docutils literal notranslate"><span class="pre">**negrita**</span></code></p></li>
+</ul>
+<p>Ejemplo: <strong>negrita</strong></p>
+<ul class="simple">
+<li><p>Texto remarcado en bloque de código: <code class="docutils literal notranslate"><span class="pre">``print()``</span></code></p></li>
+</ul>
+<p>Ejemplo: <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+</section>
+<section id="listados">
+<h2><a class="toc-backref" href="#id4">Listados</a><a class="headerlink" href="#listados" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Hay dos tipos de listado que podemos definir:</p>
+<ul class="simple">
+<li><p>Listado por puntos:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Elemento</span> <span class="mi">1</span>
+    <span class="o">*</span> <span class="n">subelemento</span>
+<span class="o">*</span> <span class="n">Elemento</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Elemento 1</dt><dd><ul>
+<li><p>subelemento</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Elemento 2</p></li>
+<li><p>Listado numerico:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#. Un elemento</span>
+    <span class="c1">#. Subelemento</span>
+<span class="c1">#. Otro elemento</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Un elemento</dt><dd><ol class="arabic simple">
+<li><p>Subelemento</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<ul class="simple">
+<li><p>Listado vacio:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="n">Un</span> <span class="n">elemento</span>
+<span class="o">|</span> <span class="n">otro</span> <span class="n">elemento</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="line-block">
+<div class="line">Un elemento</div>
+<div class="line">otro elemento</div>
+</div>
+<ul class="simple">
+<li><p>Listado horizontal:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">hlist</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">columns</span><span class="p">:</span> <span class="mi">3</span>
+
+    <span class="o">*</span> <span class="n">A</span> <span class="nb">list</span> <span class="n">of</span>
+    <span class="o">*</span> <span class="n">short</span> <span class="n">items</span>
+    <span class="o">*</span> <span class="n">that</span> <span class="n">should</span> <span class="n">be</span>
+    <span class="o">*</span> <span class="n">displayed</span>
+    <span class="o">*</span> <span class="n">horizontally</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>A list of</p></li>
+<li><p>short items</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>that should be</p></li>
+<li><p>displayed</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>horizontally</p></li>
+</ul>
+</td></tr></table>
+</section>
+<section id="bloque-literal">
+<h2><a class="toc-backref" href="#id5">Bloque Literal</a><a class="headerlink" href="#bloque-literal" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Un bloque literal es un bloque que se encuentra más desplazado a la derecha y se presenta con un título destacado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Esto</span> <span class="n">es</span> <span class="n">un</span> <span class="n">texto</span> <span class="n">normal</span><span class="o">.</span> <span class="n">Lo</span> <span class="n">siguiente</span> <span class="n">es</span> <span class="n">un</span> <span class="n">bloque</span> <span class="n">literal</span><span class="p">::</span>
+    <span class="n">Esto</span> <span class="n">es</span> <span class="n">un</span> <span class="n">texto</span> <span class="n">literal</span><span class="p">,</span>
+    <span class="n">va</span> <span class="n">un</span> <span class="n">poco</span> <span class="n">más</span> <span class="n">desplazado</span> <span class="n">a</span> <span class="n">la</span> <span class="n">derecha</span>
+
+<span class="n">Y</span> <span class="n">listo</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<dl class="simple">
+<dt>Esto es un texto normal. Lo siguiente es un bloque literal::</dt><dd><p>Esto es un texto literal,
+va un poco más desplazado a la derecha</p>
+</dd>
+</dl>
+<p>Y listo</p>
+</section>
+<section id="linea-de-codigo">
+<h2><a class="toc-backref" href="#id6">Línea de código</a><a class="headerlink" href="#linea-de-codigo" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Es un bloque que tiene un prompt de estilo consola de python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="n">aqui</span> <span class="n">tenemos</span> <span class="n">un</span> <span class="n">codigo</span> <span class="n">con</span> <span class="n">prompt</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="n">documents</span>
+</pre></div>
+</div>
+</section>
+<section id="tablas">
+<h2><a class="toc-backref" href="#id7">Tablas</a><a class="headerlink" href="#tablas" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Hay dos formas comunes de crear una tabla:</p>
+<ul class="simple">
+<li><p>Completa:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------------+---------------+----------------+</span>
+<span class="o">|</span> <span class="n">Cabecera</span> <span class="mi">1</span>         <span class="o">|</span> <span class="n">Cabecera</span> <span class="mi">2</span>    <span class="o">|</span> <span class="n">Cabecera</span> <span class="mi">3</span>     <span class="o">|</span>
+<span class="o">|</span> <span class="n">Columna</span> <span class="n">opcional</span>   <span class="o">|</span>               <span class="o">|</span>                <span class="o">|</span>
+<span class="o">+====================+===============+================+</span>
+<span class="o">|</span> <span class="n">Cuerpo</span> <span class="mi">1</span><span class="p">,</span> <span class="n">columna1</span> <span class="o">|</span> <span class="n">columna</span> <span class="mi">2</span>     <span class="o">|</span> <span class="n">columna</span> <span class="mi">3</span>      <span class="o">|</span>
+<span class="o">+--------------------+---------------+----------------+</span>
+<span class="o">|</span> <span class="n">Cuerpo</span> <span class="mi">2</span>           <span class="o">|</span> <span class="o">...</span>           <span class="o">|</span>                <span class="o">|</span>
+<span class="o">+--------------------+---------------+----------------+</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<table class="table">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 29%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cabecera 1
+Columna opcional</p></th>
+<th class="head"><p>Cabecera 2</p></th>
+<th class="head"><p>Cabecera 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cuerpo 1, columna1</p></td>
+<td><p>columna 2</p></td>
+<td><p>columna 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuerpo 2</p></td>
+<td><p>…</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Sencilla:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">=====</span> <span class="o">=====</span>
+<span class="n">A</span>      <span class="n">B</span>
+<span class="o">=====</span> <span class="o">=====</span>
+<span class="n">Falso</span> <span class="n">xdd</span>
+<span class="n">Verda</span> <span class="n">vss</span>
+<span class="n">Falso</span> <span class="n">fas</span>
+<span class="o">=====</span> <span class="o">=====</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Falso</p></td>
+<td><p>xdd</p></td>
+</tr>
+<tr class="row-odd"><td><p>Verda</p></td>
+<td><p>vss</p></td>
+</tr>
+<tr class="row-even"><td><p>Falso</p></td>
+<td><p>fas</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="links">
+<h2><a class="toc-backref" href="#id8">Links</a><a class="headerlink" href="#links" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para crear un enlace podemos utilizar el siguiente código:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Enlaces,</span> <span class="pre">para</span> <span class="pre">ir</span> <span class="pre">a</span> <span class="pre">google</span> <span class="pre">`aquí</span> <span class="pre">&lt;https://google.es&gt;`_.</span></code></p>
+<p>Ejemplo:</p>
+<p>Enlaces, para ir a google <a class="reference external" href="https://google.es">aquí</a>.</p>
+</section>
+<section id="encabezados">
+<h2><a class="toc-backref" href="#id9">Encabezados</a><a class="headerlink" href="#encabezados" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Encabezado sección:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">=======================</span>
+<span class="n">Encabezado</span> <span class="n">para</span> <span class="n">sección</span>
+<span class="o">=======================</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Encabezado</span> <span class="n">para</span> <span class="n">partes</span>
+<span class="c1">######################</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Encabezado</span> <span class="n">para</span> <span class="n">capitulos</span>
+<span class="o">*************************</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Encabezado</span> <span class="n">para</span> <span class="n">subsecciones</span>
+<span class="o">----------------------------</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">para</span> <span class="n">parrafos</span>
+<span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span><span class="s2">&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Cada uno va generando distintos niveles de profundidad en la navegación de la web.</p>
+</section>
+<section id="campos-destacados">
+<h2><a class="toc-backref" href="#id10">Campos destacados</a><a class="headerlink" href="#campos-destacados" title="Enlazar permanentemente con este título">#</a></h2>
+<p>son textos que podemos desctacar con : : y luego añadirles una descripción</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">campo</span><span class="p">:</span> <span class="n">Texto</span> <span class="k">del</span> <span class="n">campo</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<dl class="field-list simple">
+<dt class="field-odd">campo</dt>
+<dd class="field-odd"><p>Texto del campo</p>
+</dd>
+</dl>
+</section>
+<section id="mensajes">
+<h2><a class="toc-backref" href="#id11">Mensajes</a><a class="headerlink" href="#mensajes" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Podemos mostrar distintos mensajes de alerta entre otras cosas para los lectores:</p>
+<ul class="simple">
+<li><p>Atención:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">attention</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">atención</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Texto de atención</p>
+</div>
+<ul class="simple">
+<li><p>Precaución:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">caution</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">cuidado</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition caution">
+<p class="admonition-title">Prudencia</p>
+<p>Texto de cuidado</p>
+</div>
+<ul class="simple">
+<li><p>Peligro:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">danger</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">peligro</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition danger">
+<p class="admonition-title">Peligro</p>
+<p>Texto de peligro</p>
+</div>
+<ul class="simple">
+<li><p>Error:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">error</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">error</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Texto de error</p>
+</div>
+<ul class="simple">
+<li><p>Sugerencia:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">hint</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">sugerencia</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition hint">
+<p class="admonition-title">Consejo</p>
+<p>Texto de sugerencia</p>
+</div>
+<ul class="simple">
+<li><p>Importante:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">important</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">importante</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Texto de importante</p>
+</div>
+<ul class="simple">
+<li><p>Nota:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">note</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">nota</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Texto de nota</p>
+</div>
+<ul class="simple">
+<li><p>Truco:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">tip</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">consejo</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p>Texto de consejo</p>
+</div>
+<ul class="simple">
+<li><p>Peligro:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">warning</span><span class="p">::</span>
+    <span class="n">Texto</span> <span class="n">de</span> <span class="n">alerta</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Texto de alerta</p>
+</div>
+</section>
+<section id="imagenes">
+<h2><a class="toc-backref" href="#id12">Imágenes</a><a class="headerlink" href="#imagenes" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Podemos cargar imágenes y ajustarlas a nuestro gusto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">media</span><span class="o">/</span><span class="n">picture</span><span class="o">.</span><span class="n">jpg</span>
+    <span class="p">:</span><span class="n">height</span><span class="p">:</span> <span class="mi">100</span><span class="n">px</span>
+    <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span> <span class="n">px</span>
+    <span class="p">:</span><span class="n">scale</span><span class="p">:</span> <span class="mi">50</span> <span class="o">%</span>
+    <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">alternate</span> <span class="n">text</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">right</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<a class="reference internal image-reference" href="../_images/picture.jpg"><img alt="alternate text" class="align-center" src="../_images/picture.jpg" style="width: 1000.0px; height: 500.0px;" /></a>
+</section>
+<section id="entrada">
+<h2><a class="toc-backref" href="#id13">Entrada</a><a class="headerlink" href="#entrada" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Similar a la entrada de un blog o una red social</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">topic</span><span class="p">::</span> <span class="n">Topic</span> <span class="n">Title</span>
+
+    <span class="n">Subsequent</span> <span class="n">indented</span> <span class="n">lines</span> <span class="n">comprise</span>
+    <span class="n">the</span> <span class="n">body</span> <span class="n">of</span> <span class="n">the</span> <span class="n">topic</span><span class="p">,</span> <span class="ow">and</span> <span class="n">are</span>
+    <span class="n">interpreted</span> <span class="k">as</span> <span class="n">body</span> <span class="n">elements</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="topic">
+<p class="topic-title">Topic Title</p>
+<p>Subsequent indented lines comprise
+the body of the topic, and are
+interpreted as body elements.</p>
+</div>
+</section>
+<section id="barra-lateral">
+<h2><a class="toc-backref" href="#id14">Barra Lateral</a><a class="headerlink" href="#barra-lateral" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Una barra lateral a la derecha donde poner texto entre otras cosas</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">sidebar</span><span class="p">::</span> <span class="n">Sidebar</span> <span class="n">Title</span>
+    <span class="p">:</span><span class="n">subtitle</span><span class="p">:</span> <span class="n">Optional</span> <span class="n">Sidebar</span> <span class="n">Subtitle</span>
+
+    <span class="n">Subsequent</span> <span class="n">indented</span> <span class="n">lines</span> <span class="n">comprise</span>
+    <span class="n">the</span> <span class="n">body</span> <span class="n">of</span> <span class="n">the</span> <span class="n">sidebar</span><span class="p">,</span> <span class="ow">and</span> <span class="n">are</span>
+    <span class="n">interpreted</span> <span class="k">as</span> <span class="n">body</span> <span class="n">elements</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<aside class="sidebar">
+<p class="sidebar-title">Sidebar Title</p>
+<p class="sidebar-subtitle">Optional Sidebar Subtitle</p>
+<p>Subsequent indented lines comprise
+the body of the sidebar, and are
+interpreted as body elements.</p>
+</aside>
+</section>
+<section id="bloque-de-texto">
+<h2><a class="toc-backref" href="#id15">Bloque de texto</a><a class="headerlink" href="#bloque-de-texto" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Un bloque de texto es un texto que esta más desplazado a la derecha:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">line</span><span class="o">-</span><span class="n">block</span><span class="p">::</span>
+
+    <span class="n">Lend</span> <span class="n">us</span> <span class="n">a</span> <span class="n">couple</span> <span class="n">of</span> <span class="n">bob</span> <span class="n">till</span> <span class="n">Thursday</span><span class="o">.</span>
+    <span class="n">I</span><span class="s1">&#39;m absolutely skint.</span>
+    <span class="n">But</span> <span class="n">I</span><span class="s1">&#39;m expecting a postal order and I can pay you back</span>
+        <span class="k">as</span> <span class="n">soon</span> <span class="k">as</span> <span class="n">it</span> <span class="n">comes</span><span class="o">.</span>
+    <span class="n">Love</span><span class="p">,</span> <span class="n">Ewan</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="line-block">
+<div class="line">Lend us a couple of bob till Thursday.</div>
+<div class="line">I’m absolutely skint.</div>
+<div class="line">But I’m expecting a postal order and I can pay you back</div>
+<div class="line-block">
+<div class="line">as soon as it comes.</div>
+</div>
+<div class="line">Love, Ewan.</div>
+</div>
+</section>
+<section id="bloque-de-codigo">
+<h2><a class="toc-backref" href="#id16">Bloque de código</a><a class="headerlink" href="#bloque-de-codigo" title="Enlazar permanentemente con este título">#</a></h2>
+<p>En un bloque de código podemos escribir el código de nuestros programas y podemos hacerlo de distintas formas:</p>
+<ul class="simple">
+<li><p>De forma sencilla:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+
+    <span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+        <span class="s2">&quot;just a test&quot;</span>
+        <span class="nb">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="s2">&quot;just a test&quot;</span>
+    <span class="nb">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para un lenguaje de programación conocido:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span> <span class="n">python</span>
+
+    <span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+        <span class="s2">&quot;just a test&quot;</span>
+        <span class="nb">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="s2">&quot;just a test&quot;</span>
+    <span class="nb">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Combinado con un texto explicativo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">compound</span><span class="p">::</span>
+
+    <span class="n">The</span> <span class="s1">&#39;rm&#39;</span> <span class="n">command</span> <span class="ow">is</span> <span class="n">very</span> <span class="n">dangerous</span><span class="o">.</span>  <span class="n">If</span> <span class="n">you</span> <span class="n">are</span> <span class="n">logged</span>
+    <span class="ow">in</span> <span class="k">as</span> <span class="n">root</span> <span class="ow">and</span> <span class="n">enter</span> <span class="p">::</span>
+
+        <span class="n">cd</span> <span class="o">/</span>
+        <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">*</span>
+
+    <span class="n">you</span> <span class="n">will</span> <span class="n">erase</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">contents</span> <span class="n">of</span> <span class="n">your</span> <span class="n">file</span> <span class="n">system</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="compound">
+<p class="compound-first">The “rm” command is very dangerous.  If you are logged
+in as root and enter</p>
+<div class="compound-middle highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p class="compound-last">you will erase the entire contents of your file system.</p>
+</div>
+<ul class="simple">
+<li><p>Bloque de código numerado:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">javascript</span>
+    <span class="p">:</span><span class="n">linenos</span><span class="p">:</span>
+
+    <span class="n">function</span> <span class="n">saludar</span><span class="p">(){</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(){</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Comenzar a partir de cierto número definido y poner nombre al archivo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">this</span><span class="o">.</span><span class="n">py</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">this</span><span class="o">-</span><span class="n">py</span>
+
+    <span class="nb">print</span> <span class="s1">&#39;Explicit is better than implicit.&#39;</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="literal-block-wrapper docutils container" id="this-py">
+<div class="code-block-caption"><span class="caption-text">this.py</span><a class="headerlink" href="#this-py" title="Enlace permanente a este código fuente">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Explicit is better than implicit.&#39;</span>
+</pre></div>
+</div>
+</div>
+<p>O subrayar partes del código:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+    <span class="p">:</span><span class="n">emphasize</span><span class="o">-</span><span class="n">lines</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="mi">5</span>
+
+    <span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+        <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="nb">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+    <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="hll">    <span class="nb">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+</span>    <span class="nb">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+<span class="hll">    <span class="nb">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+</span></pre></div>
+</div>
+</section>
+<section id="epigrafe">
+<h2><a class="toc-backref" href="#id17">Epígrafe</a><a class="headerlink" href="#epigrafe" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Introducir epígrafes en la página</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">epigraph</span><span class="p">::</span>
+
+    <span class="n">No</span> <span class="n">matter</span> <span class="n">where</span> <span class="n">you</span> <span class="n">go</span><span class="p">,</span> <span class="n">there</span> <span class="n">you</span> <span class="n">are</span><span class="o">.</span>
+
+    <span class="o">--</span> <span class="n">Buckaroo</span> <span class="n">Banzai</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<blockquote class="epigraph">
+<div><p>No matter where you go, there you are.</p>
+<p class="attribution">—Buckaroo Banzai</p>
+</div></blockquote>
+</section>
+<section id="id1">
+<h2><a class="toc-backref" href="#id18">Índice</a><a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Crea un índice en base a todas las cabeceras de la página en la que se encuentra
+y la va organizando de forma jerárquica</p>
+<ul>
+<li><p>Índice normal:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">contents</span><span class="p">::</span> <span class="n">Tabla</span> <span class="n">de</span> <span class="n">contenidos</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Índice abreviado:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">contents</span><span class="p">::</span> <span class="n">Tabla</span> <span class="n">reducida</span>
+    <span class="p">:</span><span class="n">depth</span><span class="p">:</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Puedes ver un ejemplo de índice con el mismo índice de esta página.</p>
+</section>
+<section id="meta-data">
+<h2><a class="toc-backref" href="#id19">Meta data</a><a class="headerlink" href="#meta-data" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Genera etiquetas de meta data para la cabecera del documento html final:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">meta</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">description</span><span class="p">:</span> <span class="n">The</span> <span class="n">reStructuredText</span> <span class="n">plaintext</span> <span class="n">markup</span> <span class="n">language</span>
+    <span class="p">:</span><span class="n">keywords</span><span class="p">:</span> <span class="n">plaintext</span><span class="p">,</span> <span class="n">markup</span> <span class="n">language</span>
+
+<span class="o">..</span> <span class="n">meta</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">description</span> <span class="n">lang</span><span class="o">=</span><span class="n">en</span><span class="p">:</span> <span class="n">An</span> <span class="n">amusing</span> <span class="n">story</span>
+    <span class="p">:</span><span class="n">description</span> <span class="n">lang</span><span class="o">=</span><span class="n">fr</span><span class="p">:</span> <span class="n">Une</span> <span class="n">histoire</span> <span class="n">amusante</span>
+</pre></div>
+</div>
+</section>
+<section id="fecha-y-hora">
+<h2><a class="toc-backref" href="#id20">Fecha y hora</a><a class="headerlink" href="#fecha-y-hora" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Crea un registro de la fecha y hora a la que se ha guardado el documento:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="o">|</span><span class="n">date</span><span class="o">|</span> <span class="n">date</span><span class="p">::</span>
+<span class="o">..</span> <span class="o">|</span><span class="n">time</span><span class="o">|</span> <span class="n">date</span><span class="p">::</span> <span class="o">%</span><span class="n">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span>
+
+<span class="n">Today</span><span class="s1">&#39;s date is |date|.</span>
+
+<span class="n">This</span> <span class="n">document</span> <span class="n">was</span> <span class="n">generated</span> <span class="n">on</span> <span class="o">|</span><span class="n">date</span><span class="o">|</span> <span class="n">at</span> <span class="o">|</span><span class="n">time</span><span class="o">|.</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<p>Today’s date is 2022-10-26.</p>
+<p>This document was generated on 2022-10-26 at 00:31.</p>
+</section>
+<section id="menu-de-documentos">
+<h2><a class="toc-backref" href="#id21">Menu de documentos</a><a class="headerlink" href="#menu-de-documentos" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Crea un menú que enlaza a otros documentos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contenidos</span><span class="p">:</span>
+
+    <span class="n">documento</span>
+</pre></div>
+</div>
+<p>Es un listado de documentos que tenemos creado para cada manual en nuestro sitio en formato rst. Cada uno de ellos se irá asignando según el nombre del archivo, en este ejemplo sería documento.</p>
+</section>
+<section id="versiones">
+<h2><a class="toc-backref" href="#id22">Versiones</a><a class="headerlink" href="#versiones" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Define las versiones de la documentación expuesta:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionadded</span><span class="p">::</span> <span class="mf">2.5</span>
+
+<span class="o">..</span> <span class="n">versionchanged</span><span class="p">::</span> <span class="mf">3.4</span>
+
+<span class="o">..</span> <span class="n">deprecated</span><span class="p">::</span> <span class="mf">3.2</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Nuevo en la versión 2.5.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Distinto en la versión 3.4.</span></p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Obsoleto desde la versión 3.2.</span></p>
+</div>
+</section>
+<section id="titulo">
+<h2><a class="toc-backref" href="#id23">Título</a><a class="headerlink" href="#titulo" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Crea un simple y sencillo título pequeño:</p>
+<p>..code-block:: python</p>
+<blockquote>
+<div><p class="rubric">title</p>
+</div></blockquote>
+<p>Ejemplo:</p>
+<p class="rubric">title</p>
+<p>También existe la versión algo más centrada y detallada:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">centered</span><span class="p">::</span> <span class="n">LICENSE</span> <span class="n">AGREEMENT</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<p class="centered">
+<strong>LICENSE AGREEMENT</strong></p></section>
+<section id="crear-un-glosario">
+<h2><a class="toc-backref" href="#id24">Crear un glosario</a><a class="headerlink" href="#crear-un-glosario" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Crea tu propio glosario de palabras que se añadirán al index cuando se compile la web:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">glossary</span><span class="p">::</span>
+
+    <span class="n">environment</span>
+        <span class="n">A</span> <span class="n">structure</span> <span class="n">where</span> <span class="n">information</span> <span class="n">about</span> <span class="nb">all</span> <span class="n">documents</span> <span class="n">under</span> <span class="n">the</span> <span class="n">root</span> <span class="ow">is</span>
+        <span class="n">saved</span><span class="p">,</span> <span class="ow">and</span> <span class="n">used</span> <span class="k">for</span> <span class="n">cross</span><span class="o">-</span><span class="n">referencing</span><span class="o">.</span>  <span class="n">The</span> <span class="n">environment</span> <span class="ow">is</span> <span class="n">pickled</span>
+        <span class="n">after</span> <span class="n">the</span> <span class="n">parsing</span> <span class="n">stage</span><span class="p">,</span> <span class="n">so</span> <span class="n">that</span> <span class="n">successive</span> <span class="n">runs</span> <span class="n">only</span> <span class="n">need</span> <span class="n">to</span> <span class="n">read</span>
+        <span class="ow">and</span> <span class="n">parse</span> <span class="n">new</span> <span class="ow">and</span> <span class="n">changed</span> <span class="n">documents</span><span class="o">.</span>
+
+    <span class="n">source</span> <span class="n">directory</span>
+        <span class="n">The</span> <span class="n">directory</span> <span class="n">which</span><span class="p">,</span> <span class="n">including</span> <span class="n">its</span> <span class="n">subdirectories</span><span class="p">,</span> <span class="n">contains</span> <span class="nb">all</span>
+        <span class="n">source</span> <span class="n">files</span> <span class="k">for</span> <span class="n">one</span> <span class="n">Sphinx</span> <span class="n">project</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Ejemplo:</p>
+<dl class="glossary simple">
+<dt id="term-environment">environment<a class="headerlink" href="#term-environment" title="Permalink to this term">#</a></dt><dd><p>A structure where information about all documents under the root is
+saved, and used for cross-referencing.  The environment is pickled
+after the parsing stage, so that successive runs only need to read
+and parse new and changed documents.</p>
+</dd>
+<dt id="term-source-directory">source directory<a class="headerlink" href="#term-source-directory" title="Permalink to this term">#</a></dt><dd><p>The directory which, including its subdirectories, contains all
+source files for one Sphinx project.</p>
+</dd>
+</dl>
+<p>Cada título del glosario se enlaza directamente con el índice.</p>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="css.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">CSS3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../php/sintaxis.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Sintaxis PHP</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guillermo Granados Gomez<br/>
+  
+      &copy; Copyright Creado por Guillermo Granados Gomez bajo Licencia MIT.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
