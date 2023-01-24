@@ -1,6 +1,6 @@
-======
+==============
 Docker-Compose
-======
+==============
 
 .. image:: /logos/docker-logo.png
     :scale: 20%

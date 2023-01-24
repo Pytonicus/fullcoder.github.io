@@ -147,6 +147,11 @@
    Framework: Laravel
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../php/codeigniter.html">
+   Framework: Codeigniter 3
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -616,11 +621,16 @@ title="Print to PDF"
      Seguridad
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceso-a-postgres-desde-terminal">
+     Acceso a Postgres desde terminal
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sentencias-sql">
-   Sentencias SQL
+  <a class="reference internal nav-link" href="#sentencias-sql-crear">
+   Sentencias SQL Crear
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -629,21 +639,426 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eliminar-base-de-datos">
-     Eliminar base de datos
+    <a class="reference internal nav-link" href="#crear-schema">
+     Crear Schema
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crear-rol-tipo-usuario">
-     Crear rol tipo usuario
+    <a class="reference internal nav-link" href="#crear-dominio">
+     Crear dominio
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crear-rol-tipo-grupo">
-     Crear rol tipo grupo
+    <a class="reference internal nav-link" href="#crear-tabla">
+     Crear tabla
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencias-sql-alterar">
+   Sentencias SQL Alterar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alterar-columnas">
+     Alterar columnas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alterar-tablas">
+     Alterar tablas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencia-sql-insertar">
+   Sentencia SQL Insertar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-registro">
+     Insertar registro
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-varios-registros">
+     Insertar varios registros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-registro-con-clave-foranea">
+     Insertar registro con clave foranea
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencias-sql-actualizar">
+   Sentencias SQL Actualizar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-columna-completa">
+     Actualizar columna completa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-columna-de-uno-o-varios-registros-por-condicion">
+     Actualizar columna de uno o varios registros por condición
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-columna-de-uno-o-varios-registros-por-varias-condiciones">
+     Actualizar columna de uno o varios registros por varias condiciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencias-sql-eliminar">
+   Sentencias SQL Eliminar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-schema">
+     Eliminar Schema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-tabla">
+     Eliminar Tabla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columna-completa">
+     Eliminar columna completa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columna-de-uno-o-varios-registros-por-condicion">
+     Eliminar columna de uno o varios registros por condición
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columna-de-uno-o-varios-registros-por-varias-condiciones">
+     Eliminar columna de uno o varios registros por varias condiciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condiciones-sql">
+   Condiciones SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-where">
+     Instrucción WHERE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrucciones-and-y-or">
+     Instrucciones AND y OR
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-as">
+     Instrucción AS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-count">
+     Instrucción COUNT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-sum">
+     Instrucción SUM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-max">
+     Instrucción MAX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-min">
+     Instrucción MIN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-avg">
+     Instrucción AVG
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-order-by">
+     Instrucción ORDER BY
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-having">
+     Instrucción HAVING
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-distinct">
+     Instrucción DISTINCT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-limit">
+     Instrucción LIMIT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consultas-relacionales">
+   Consultas relacionales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-inner-join">
+     Instrucción INNER JOIN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-left-join">
+     Instrucción LEFT JOIN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-right-join">
+     Instrucción RIGHT JOIN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas">
+   Vistas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subconsultas">
+   Subconsultas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones">
+   Funciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#left">
+     LEFT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#right">
+     RIGHT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concat">
+     CONCAT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lenght">
+     LENGHT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replace">
+     REPLACE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cast">
+     CAST
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now">
+     NOW
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-time">
+     CURRENT_TIME
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-date">
+     CURRENT_DATE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timeofday">
+     TIMEOFDAY
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#date-part">
+     DATE_PART
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transacciones">
+   Transacciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit">
+     Commit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rollback">
+     Rollback
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles-de-usuario">
+   Roles de usuario
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-rol">
+     Crear un rol
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-rol-usuario-y-revocar-privilegios">
+     Eliminar rol, usuario y revocar privilegios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pl-sql">
+   PL/SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Funciones
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#declarar-una-funcion">
+       Declarar una función
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejecutar-una-funcion">
+       Ejecutar una función
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-funcion">
+       Eliminar función
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-parametros">
+     Uso de parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicionales">
+     Condicionales
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-else">
+       if / else
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#case">
+       CASE
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucles">
+     Bucles
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-loop">
+       FOR LOOP
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#while">
+       WHILE
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procedimientos">
+     Procedimientos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-procedimiento">
+       Crear un procedimiento
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejecutar-procedimiento">
+       Ejecutar procedimiento
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-procedimiento">
+       Eliminar procedimiento
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#triggers">
+     Triggers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-trigger">
+       Crear un Trigger
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejecutar-un-trigger">
+       Ejecutar un Trigger
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-un-trigger">
+       Eliminar un Trigger
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#administracion-de-base-de-datos">
+   Administración de base de datos
+  </a>
  </li>
 </ul>
 
@@ -684,11 +1099,16 @@ title="Print to PDF"
      Seguridad
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceso-a-postgres-desde-terminal">
+     Acceso a Postgres desde terminal
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sentencias-sql">
-   Sentencias SQL
+  <a class="reference internal nav-link" href="#sentencias-sql-crear">
+   Sentencias SQL Crear
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -697,21 +1117,426 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eliminar-base-de-datos">
-     Eliminar base de datos
+    <a class="reference internal nav-link" href="#crear-schema">
+     Crear Schema
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crear-rol-tipo-usuario">
-     Crear rol tipo usuario
+    <a class="reference internal nav-link" href="#crear-dominio">
+     Crear dominio
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crear-rol-tipo-grupo">
-     Crear rol tipo grupo
+    <a class="reference internal nav-link" href="#crear-tabla">
+     Crear tabla
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencias-sql-alterar">
+   Sentencias SQL Alterar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alterar-columnas">
+     Alterar columnas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alterar-tablas">
+     Alterar tablas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencia-sql-insertar">
+   Sentencia SQL Insertar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-registro">
+     Insertar registro
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-varios-registros">
+     Insertar varios registros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insertar-registro-con-clave-foranea">
+     Insertar registro con clave foranea
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencias-sql-actualizar">
+   Sentencias SQL Actualizar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-columna-completa">
+     Actualizar columna completa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-columna-de-uno-o-varios-registros-por-condicion">
+     Actualizar columna de uno o varios registros por condición
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actualizar-columna-de-uno-o-varios-registros-por-varias-condiciones">
+     Actualizar columna de uno o varios registros por varias condiciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentencias-sql-eliminar">
+   Sentencias SQL Eliminar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-schema">
+     Eliminar Schema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-tabla">
+     Eliminar Tabla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columna-completa">
+     Eliminar columna completa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columna-de-uno-o-varios-registros-por-condicion">
+     Eliminar columna de uno o varios registros por condición
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columna-de-uno-o-varios-registros-por-varias-condiciones">
+     Eliminar columna de uno o varios registros por varias condiciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condiciones-sql">
+   Condiciones SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-where">
+     Instrucción WHERE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrucciones-and-y-or">
+     Instrucciones AND y OR
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-as">
+     Instrucción AS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-count">
+     Instrucción COUNT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-sum">
+     Instrucción SUM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-max">
+     Instrucción MAX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-min">
+     Instrucción MIN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-avg">
+     Instrucción AVG
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-order-by">
+     Instrucción ORDER BY
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-having">
+     Instrucción HAVING
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-distinct">
+     Instrucción DISTINCT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-limit">
+     Instrucción LIMIT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consultas-relacionales">
+   Consultas relacionales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-inner-join">
+     Instrucción INNER JOIN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-left-join">
+     Instrucción LEFT JOIN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruccion-right-join">
+     Instrucción RIGHT JOIN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vistas">
+   Vistas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subconsultas">
+   Subconsultas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones">
+   Funciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#left">
+     LEFT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#right">
+     RIGHT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concat">
+     CONCAT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lenght">
+     LENGHT
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replace">
+     REPLACE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cast">
+     CAST
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now">
+     NOW
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-time">
+     CURRENT_TIME
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-date">
+     CURRENT_DATE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timeofday">
+     TIMEOFDAY
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#date-part">
+     DATE_PART
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transacciones">
+   Transacciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit">
+     Commit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rollback">
+     Rollback
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles-de-usuario">
+   Roles de usuario
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-rol">
+     Crear un rol
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-rol-usuario-y-revocar-privilegios">
+     Eliminar rol, usuario y revocar privilegios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pl-sql">
+   PL/SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Funciones
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#declarar-una-funcion">
+       Declarar una función
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejecutar-una-funcion">
+       Ejecutar una función
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-funcion">
+       Eliminar función
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-parametros">
+     Uso de parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condicionales">
+     Condicionales
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-else">
+       if / else
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#case">
+       CASE
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bucles">
+     Bucles
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-loop">
+       FOR LOOP
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#while">
+       WHILE
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procedimientos">
+     Procedimientos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-procedimiento">
+       Crear un procedimiento
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejecutar-procedimiento">
+       Ejecutar procedimiento
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-procedimiento">
+       Eliminar procedimiento
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#triggers">
+     Triggers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crear-un-trigger">
+       Crear un Trigger
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejecutar-un-trigger">
+       Ejecutar un Trigger
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eliminar-un-trigger">
+       Eliminar un Trigger
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#administracion-de-base-de-datos">
+   Administración de base de datos
+  </a>
  </li>
 </ul>
 
@@ -724,41 +1549,170 @@ title="Print to PDF"
               <div>
                 
   <section id="postgresql">
-<h1><a class="toc-backref" href="#id1">PostgreSQL</a><a class="headerlink" href="#postgresql" title="Enlazar permanentemente con este título">#</a></h1>
+<h1><a class="toc-backref" href="#id2">PostgreSQL</a><a class="headerlink" href="#postgresql" title="Enlazar permanentemente con este título">#</a></h1>
 <a class="reference internal image-reference" href="../_images/basic64-logo.png"><img alt="Logo PostgreSQL" class="align-center" src="../_images/basic64-logo.png" style="width: 512.0px; height: 332.0px;" /></a>
 <p>Funcionamiento de PostgreSQL</p>
 <div class="contents topic" id="indice">
 <p class="topic-title">Índice</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#postgresql" id="id1">PostgreSQL</a></p>
+<li><p><a class="reference internal" href="#postgresql" id="id2">PostgreSQL</a></p>
 <ul>
-<li><p><a class="reference internal" href="#primeros-pasos" id="id2">Primeros pasos</a></p>
+<li><p><a class="reference internal" href="#primeros-pasos" id="id3">Primeros pasos</a></p>
 <ul>
-<li><p><a class="reference internal" href="#instalacion-de-postgresql" id="id3">Instalación de PostgreSQL</a></p></li>
-<li><p><a class="reference internal" href="#conceptos-basicos" id="id4">Conceptos básicos</a></p></li>
-<li><p><a class="reference internal" href="#seguridad" id="id5">Seguridad</a></p></li>
+<li><p><a class="reference internal" href="#instalacion-de-postgresql" id="id4">Instalación de PostgreSQL</a></p></li>
+<li><p><a class="reference internal" href="#conceptos-basicos" id="id5">Conceptos básicos</a></p></li>
+<li><p><a class="reference internal" href="#seguridad" id="id6">Seguridad</a></p></li>
+<li><p><a class="reference internal" href="#acceso-a-postgres-desde-terminal" id="id7">Acceso a Postgres desde terminal</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sentencias-sql" id="id6">Sentencias SQL</a></p>
+<li><p><a class="reference internal" href="#sentencias-sql-crear" id="id8">Sentencias SQL Crear</a></p>
 <ul>
-<li><p><a class="reference internal" href="#crear-base-de-datos" id="id7">Crear base de datos</a></p></li>
-<li><p><a class="reference internal" href="#eliminar-base-de-datos" id="id8">Eliminar base de datos</a></p></li>
-<li><p><a class="reference internal" href="#crear-rol-tipo-usuario" id="id9">Crear rol tipo usuario</a></p></li>
-<li><p><a class="reference internal" href="#crear-rol-tipo-grupo" id="id10">Crear rol tipo grupo</a></p></li>
+<li><p><a class="reference internal" href="#crear-base-de-datos" id="id9">Crear base de datos</a></p></li>
+<li><p><a class="reference internal" href="#crear-schema" id="id10">Crear Schema</a></p></li>
+<li><p><a class="reference internal" href="#crear-dominio" id="id11">Crear dominio</a></p></li>
+<li><p><a class="reference internal" href="#crear-tabla" id="id12">Crear tabla</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#sentencias-sql-alterar" id="id13">Sentencias SQL Alterar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#alterar-columnas" id="id14">Alterar columnas</a></p></li>
+<li><p><a class="reference internal" href="#alterar-tablas" id="id15">Alterar tablas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sentencia-sql-insertar" id="id16">Sentencia SQL Insertar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#insertar-registro" id="id17">Insertar registro</a></p></li>
+<li><p><a class="reference internal" href="#insertar-varios-registros" id="id18">Insertar varios registros</a></p></li>
+<li><p><a class="reference internal" href="#insertar-registro-con-clave-foranea" id="id19">Insertar registro con clave foranea</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sentencias-sql-actualizar" id="id20">Sentencias SQL Actualizar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#actualizar-columna-completa" id="id21">Actualizar columna completa</a></p></li>
+<li><p><a class="reference internal" href="#actualizar-columna-de-uno-o-varios-registros-por-condicion" id="id22">Actualizar columna de uno o varios registros por condición</a></p></li>
+<li><p><a class="reference internal" href="#actualizar-columna-de-uno-o-varios-registros-por-varias-condiciones" id="id23">Actualizar columna de uno o varios registros por varias condiciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sentencias-sql-eliminar" id="id24">Sentencias SQL Eliminar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eliminar-schema" id="id25">Eliminar Schema</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-tabla" id="id26">Eliminar Tabla</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-columna-completa" id="id27">Eliminar columna completa</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-columna-de-uno-o-varios-registros-por-condicion" id="id28">Eliminar columna de uno o varios registros por condición</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-columna-de-uno-o-varios-registros-por-varias-condiciones" id="id29">Eliminar columna de uno o varios registros por varias condiciones</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#condiciones-sql" id="id30">Condiciones SQL</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instruccion-where" id="id31">Instrucción WHERE</a></p></li>
+<li><p><a class="reference internal" href="#instrucciones-and-y-or" id="id32">Instrucciones AND y OR</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-as" id="id33">Instrucción AS</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-count" id="id34">Instrucción COUNT</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-sum" id="id35">Instrucción SUM</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-max" id="id36">Instrucción MAX</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-min" id="id37">Instrucción MIN</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-avg" id="id38">Instrucción AVG</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-order-by" id="id39">Instrucción ORDER BY</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-having" id="id40">Instrucción HAVING</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-distinct" id="id41">Instrucción DISTINCT</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-limit" id="id42">Instrucción LIMIT</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#consultas-relacionales" id="id43">Consultas relacionales</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instruccion-inner-join" id="id44">Instrucción INNER JOIN</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-left-join" id="id45">Instrucción LEFT JOIN</a></p></li>
+<li><p><a class="reference internal" href="#instruccion-right-join" id="id46">Instrucción RIGHT JOIN</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vistas" id="id47">Vistas</a></p></li>
+<li><p><a class="reference internal" href="#subconsultas" id="id48">Subconsultas</a></p></li>
+<li><p><a class="reference internal" href="#funciones" id="id49">Funciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#left" id="id50">LEFT</a></p></li>
+<li><p><a class="reference internal" href="#right" id="id51">RIGHT</a></p></li>
+<li><p><a class="reference internal" href="#concat" id="id52">CONCAT</a></p></li>
+<li><p><a class="reference internal" href="#lenght" id="id53">LENGHT</a></p></li>
+<li><p><a class="reference internal" href="#replace" id="id54">REPLACE</a></p></li>
+<li><p><a class="reference internal" href="#cast" id="id55">CAST</a></p></li>
+<li><p><a class="reference internal" href="#now" id="id56">NOW</a></p></li>
+<li><p><a class="reference internal" href="#current-time" id="id57">CURRENT_TIME</a></p></li>
+<li><p><a class="reference internal" href="#current-date" id="id58">CURRENT_DATE</a></p></li>
+<li><p><a class="reference internal" href="#timeofday" id="id59">TIMEOFDAY</a></p></li>
+<li><p><a class="reference internal" href="#date-part" id="id60">DATE_PART</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#transacciones" id="id61">Transacciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#commit" id="id62">Commit</a></p></li>
+<li><p><a class="reference internal" href="#rollback" id="id63">Rollback</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#roles-de-usuario" id="id64">Roles de usuario</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-rol" id="id65">Crear un rol</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-rol-usuario-y-revocar-privilegios" id="id66">Eliminar rol, usuario y revocar privilegios</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#pl-sql" id="id67">PL/SQL</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id68">Funciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#declarar-una-funcion" id="id69">Declarar una función</a></p></li>
+<li><p><a class="reference internal" href="#ejecutar-una-funcion" id="id70">Ejecutar una función</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-funcion" id="id71">Eliminar función</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#uso-de-parametros" id="id72">Uso de parámetros</a></p></li>
+<li><p><a class="reference internal" href="#condicionales" id="id73">Condicionales</a></p>
+<ul>
+<li><p><a class="reference internal" href="#if-else" id="id74">if / else</a></p></li>
+<li><p><a class="reference internal" href="#case" id="id75">CASE</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bucles" id="id76">Bucles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#for-loop" id="id77">FOR LOOP</a></p></li>
+<li><p><a class="reference internal" href="#while" id="id78">WHILE</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#procedimientos" id="id79">Procedimientos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-procedimiento" id="id80">Crear un procedimiento</a></p></li>
+<li><p><a class="reference internal" href="#ejecutar-procedimiento" id="id81">Ejecutar procedimiento</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-procedimiento" id="id82">Eliminar procedimiento</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#triggers" id="id83">Triggers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#crear-un-trigger" id="id84">Crear un Trigger</a></p></li>
+<li><p><a class="reference internal" href="#ejecutar-un-trigger" id="id85">Ejecutar un Trigger</a></p></li>
+<li><p><a class="reference internal" href="#eliminar-un-trigger" id="id86">Eliminar un Trigger</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#administracion-de-base-de-datos" id="id87">Administración de base de datos</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <section id="primeros-pasos">
-<h2><a class="toc-backref" href="#id2">Primeros pasos</a><a class="headerlink" href="#primeros-pasos" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id3">Primeros pasos</a><a class="headerlink" href="#primeros-pasos" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="instalacion-de-postgresql">
-<h3><a class="toc-backref" href="#id3">Instalación de PostgreSQL</a><a class="headerlink" href="#instalacion-de-postgresql" title="Enlazar permanentemente con este título">#</a></h3>
-<p>Para instalar PostgreSQL desde cualquier sistema operativo es recomendable seguir los pasos de su web oficial: <a class="reference external" href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a></p>
+<h3><a class="toc-backref" href="#id4">Instalación de PostgreSQL</a><a class="headerlink" href="#instalacion-de-postgresql" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Para instalar PostgreSQL desde cualquier sistema operativo es recomendable seguir los pasos de su web oficial: <a class="reference external" href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a></p></li>
+<li><p>En Linux tendrás que descargar Pgadmin 4 desde su sitio web: <a class="reference external" href="https://www.pgadmin.org/download/">https://www.pgadmin.org/download/</a></p></li>
+<li><p>En un terminal podemos comprobar que se ha instalado ejecutando: <code class="docutils literal notranslate"><span class="pre">psql</span> <span class="pre">--version</span></code></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Atención</p>
+<p>Es posible que al instalar PGAdmin4 no este configurada la conexión, es crucial crear una contraseña para configurar la conexión desde la consola <strong>psql</strong> para el usuario <strong>postgres</strong> o sino no podremos configurar la conexión externa.</p>
+</div>
 </section>
 <section id="conceptos-basicos">
-<h3><a class="toc-backref" href="#id4">Conceptos básicos</a><a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id5">Conceptos básicos</a><a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">#</a></h3>
 <ul class="simple">
 <li><p>Cluster: Áreas de almacenamiento con una o más bases de datos.</p></li>
 <li><p>Bases de datos: Colecciones de datos (igual que MySQL)</p></li>
@@ -771,53 +1725,873 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="seguridad">
-<h3><a class="toc-backref" href="#id5">Seguridad</a><a class="headerlink" href="#seguridad" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id6">Seguridad</a><a class="headerlink" href="#seguridad" title="Enlazar permanentemente con este título">#</a></h3>
 <p>PostgreSQL cuenta con opciones para limitar el acceso a diferentes tipos de usuario en cada cluster, el tipo de ip permitida, el host si es local o externo, el método, y las direcciones permitidas.</p>
 </section>
+<section id="acceso-a-postgres-desde-terminal">
+<h3><a class="toc-backref" href="#id7">Acceso a Postgres desde terminal</a><a class="headerlink" href="#acceso-a-postgres-desde-terminal" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En linux:</p>
+<ul class="simple">
+<li><p>Abrir terminal y cambiar al usuario postgres: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">-i</span> <span class="pre">-u</span> <span class="pre">postgres</span></code></p></li>
+<li><p>Con el usuario postgres ya se puede ejecutar en terminal: <code class="docutils literal notranslate"><span class="pre">psql</span></code></p></li>
+<li><p>si queremos listar bases de datos: <code class="docutils literal notranslate"><span class="pre">\l</span></code></p></li>
+<li><p>Para poder usar pgadmin debemos cambiar la contraseña del usuario <strong>postgres</strong>, en el cli <strong>psql</strong> ejecutamos la sentencia:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">postgres</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">ENCRYPTED</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
-<section id="sentencias-sql">
-<h2><a class="toc-backref" href="#id6">Sentencias SQL</a><a class="headerlink" href="#sentencias-sql" title="Enlazar permanentemente con este título">#</a></h2>
+</section>
+<section id="sentencias-sql-crear">
+<h2><a class="toc-backref" href="#id8">Sentencias SQL Crear</a><a class="headerlink" href="#sentencias-sql-crear" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="crear-base-de-datos">
-<h3><a class="toc-backref" href="#id7">Crear base de datos</a><a class="headerlink" href="#crear-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
-<div class="highlight-PostgreSQL notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">prueba_base_datos</span><span class="w"></span>
-<span class="linenos">2</span><span class="k">WITH</span><span class="w"></span>
-<span class="linenos">3</span><span class="k">OWNER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guillermo</span><span class="w"></span>
-<span class="linenos">4</span><span class="k">ENCODING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;UTF8&#39;</span><span class="w"></span>
-<span class="linenos">5</span><span class="n">LC_COLLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Spanish_Spain.1252&#39;</span><span class="w"></span>
-<span class="linenos">6</span><span class="n">LC_CTYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Spanish_Spain.1252&#39;</span><span class="w"></span>
-<span class="linenos">7</span><span class="k">TABLESPACE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pg_default</span><span class="w"></span>
-<span class="linenos">8</span><span class="k">CONNECTION</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"></span>
-<span class="linenos">9</span><span class="n">IS_TEMPLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="p">;</span><span class="w"></span>
+<h3><a class="toc-backref" href="#id9">Crear base de datos</a><a class="headerlink" href="#crear-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-Postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">coleccion</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="k">WITH</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">OWNER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">postgres</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="k">ENCODING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;UTF8&#39;</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="k">CONNECTION</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="n">IS_TEMPLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>el campo CONNECTION LIMIT con -1 está indicando que tiene conexiones ilimitadas.</p>
+</div>
+</section>
+<section id="crear-schema">
+<h3><a class="toc-backref" href="#id10">Crear Schema</a><a class="headerlink" href="#crear-schema" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-Postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">coleccion</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
-<section id="eliminar-base-de-datos">
-<h3><a class="toc-backref" href="#id8">Eliminar base de datos</a><a class="headerlink" href="#eliminar-base-de-datos" title="Enlazar permanentemente con este título">#</a></h3>
-<div class="highlight-PostgreSQL notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">prueba_base_datos</span><span class="p">;</span><span class="w"></span>
+<section id="crear-dominio">
+<h3><a class="toc-backref" href="#id11">Crear dominio</a><a class="headerlink" href="#crear-dominio" title="Enlazar permanentemente con este título">#</a></h3>
+<p>los dominios se utilizan para establecer un diseño de entrada para un dato en particular. En este caso los campos id de la base de datos colección:</p>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">DOMAIN</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mf">6</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">        </span><span class="k">CHECK</span><span class="p">(</span><span class="k">VALUE</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="s1">&#39;^[G]{1}[-]{1}\d{4}$&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- Ejemplo: G-0001</span>
 </pre></div>
 </div>
 </section>
-<section id="crear-rol-tipo-usuario">
-<h3><a class="toc-backref" href="#id9">Crear rol tipo usuario</a><a class="headerlink" href="#crear-rol-tipo-usuario" title="Enlazar permanentemente con este título">#</a></h3>
-<div class="highlight-PostgreSQL notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">guillermo</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">LOGIN</span><span class="w"> </span><span class="n">CREATEROLE</span><span class="w"> </span><span class="k">PASSWORD</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">;</span><span class="w"></span>
+<section id="crear-tabla">
+<h3><a class="toc-backref" href="#id12">Crear tabla</a><a class="headerlink" href="#crear-tabla" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear tabla sencilla:</p></li>
+</ul>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="c1">-- el id le asignamos el dominio creado</span>
+<span class="linenos">3</span><span class="w">    </span><span class="n">marca</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">modelo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="n">lanzamiento</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">7</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">Atención</p>
-<p>El usuario creado en esta sentencia es superusuario, si quisieramos un usuario base habría que quitar la palabra CREATEROLE</p>
-</div>
-</section>
-<section id="crear-rol-tipo-grupo">
-<h3><a class="toc-backref" href="#id10">Crear rol tipo grupo</a><a class="headerlink" href="#crear-rol-tipo-grupo" title="Enlazar permanentemente con este título">#</a></h3>
-<div class="highlight-PostgreSQL notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">grupo_prueba</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">LOGIN</span><span class="w"> </span><span class="n">CREATEDB</span><span class="w"> </span><span class="k">PASSWORD</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">ADMIN</span><span class="w"> </span><span class="n">guillermo</span><span class="p">;</span><span class="w"></span>
+<ul class="simple">
+<li><p>Crear tabla con clave foranea:</p></li>
+</ul>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">videojuego</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="c1">-- el id le asignamos el dominio creado</span>
+<span class="linenos">3</span><span class="w">    </span><span class="n">titulo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">id_sistema</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="c1">-- y a la clave foranea también</span>
+<span class="linenos">5</span><span class="w">    </span><span class="n">lanzamiento</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_sistema</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">8</span><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="w"> </span><span class="c1">-- actualizar datos en forma de cascada</span>
+<span class="linenos">9</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">Atención</p>
-<p>En este ejemplo se asigna como administrador del grupo al usuario creado.</p>
-</div>
-<p>EN PROCESO…</p>
 </section>
+</section>
+<section id="sentencias-sql-alterar">
+<h2><a class="toc-backref" href="#id13">Sentencias SQL Alterar</a><a class="headerlink" href="#sentencias-sql-alterar" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="alterar-columnas">
+<h3><a class="toc-backref" href="#id14">Alterar columnas</a><a class="headerlink" href="#alterar-columnas" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">-- añadir columna:</span>
+<span class="linenos"> 2</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">videojuego</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">formato</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">-- eliminar columna:</span>
+<span class="linenos"> 5</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">videojuego</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">lanzamiento</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">-- cambiar formato de columna:</span>
+<span class="linenos"> 8</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">videojuego</span><span class="w"> </span><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">formato</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">-- renombrar columna:</span>
+<span class="linenos">11</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">videojuego</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">formato</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">soporte</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="alterar-tablas">
+<h3><a class="toc-backref" href="#id15">Alterar tablas</a><a class="headerlink" href="#alterar-tablas" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">videojuego</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">juego</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="sentencia-sql-insertar">
+<h2><a class="toc-backref" href="#id16">Sentencia SQL Insertar</a><a class="headerlink" href="#sentencia-sql-insertar" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="insertar-registro">
+<h3><a class="toc-backref" href="#id17">Insertar registro</a><a class="headerlink" href="#insertar-registro" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;G-0001&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1994-12-03&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="insertar-varios-registros">
+<h3><a class="toc-backref" href="#id18">Insertar varios registros</a><a class="headerlink" href="#insertar-varios-registros" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">VALUES</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">    </span><span class="p">(</span><span class="s1">&#39;G-0002&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2000-03-04&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="p">(</span><span class="s1">&#39;G-0003&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2006-11-11&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="p">(</span><span class="s1">&#39;G-0004&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation 4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2013-11-15&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="insertar-registro-con-clave-foranea">
+<h3><a class="toc-backref" href="#id19">Insertar registro con clave foranea</a><a class="headerlink" href="#insertar-registro-con-clave-foranea" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">                                                                </span><span class="c1">-- se agrega el id que corresponde al dato relacionado con la otra tabla.</span>
+<span class="linenos">2</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;G-0001&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Final Fantasy VIII&#39;</span><span class="p">,</span><span class="s1">&#39;G-0001&#39;</span><span class="p">,</span><span class="s1">&#39;1999-02-11&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="sentencias-sql-actualizar">
+<h2><a class="toc-backref" href="#id20">Sentencias SQL Actualizar</a><a class="headerlink" href="#sentencias-sql-actualizar" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="actualizar-columna-completa">
+<h3><a class="toc-backref" href="#id21">Actualizar columna completa</a><a class="headerlink" href="#actualizar-columna-completa" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- asi se actualizarán todos los datos de la columna lanzamiento:</span>
+<span class="linenos">2</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2022-10-10&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="actualizar-columna-de-uno-o-varios-registros-por-condicion">
+<h3><a class="toc-backref" href="#id22">Actualizar columna de uno o varios registros por condición</a><a class="headerlink" href="#actualizar-columna-de-uno-o-varios-registros-por-condicion" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">titulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Final Fantasy 8&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;G-0001&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="actualizar-columna-de-uno-o-varios-registros-por-varias-condiciones">
+<h3><a class="toc-backref" href="#id23">Actualizar columna de uno o varios registros por varias condiciones</a><a class="headerlink" href="#actualizar-columna-de-uno-o-varios-registros-por-varias-condiciones" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- actualizar aquellos registros que cumplan dos o mas condiciones:</span>
+<span class="linenos">2</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1990-01-01&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">-- actualizar aquellos registros que cumplan al menos una de las siguientes condiciones:</span>
+<span class="linenos">5</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1990-01-01&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="sentencias-sql-eliminar">
+<h2><a class="toc-backref" href="#id24">Sentencias SQL Eliminar</a><a class="headerlink" href="#sentencias-sql-eliminar" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="eliminar-schema">
+<h3><a class="toc-backref" href="#id25">Eliminar Schema</a><a class="headerlink" href="#eliminar-schema" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-Postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">DROP</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">public</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-tabla">
+<h3><a class="toc-backref" href="#id26">Eliminar Tabla</a><a class="headerlink" href="#eliminar-tabla" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-columna-completa">
+<h3><a class="toc-backref" href="#id27">Eliminar columna completa</a><a class="headerlink" href="#eliminar-columna-completa" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- asi se Eliminarán todos los datos:</span>
+<span class="linenos">2</span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-columna-de-uno-o-varios-registros-por-condicion">
+<h3><a class="toc-backref" href="#id28">Eliminar columna de uno o varios registros por condición</a><a class="headerlink" href="#eliminar-columna-de-uno-o-varios-registros-por-condicion" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">titulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Final Fantasy 8&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-columna-de-uno-o-varios-registros-por-varias-condiciones">
+<h3><a class="toc-backref" href="#id29">Eliminar columna de uno o varios registros por varias condiciones</a><a class="headerlink" href="#eliminar-columna-de-uno-o-varios-registros-por-varias-condiciones" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- eliminar aquellos registros que cumplan dos o mas condiciones:</span>
+<span class="linenos">2</span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">lanzamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1990-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">-- eliminar aquellos registros que cumplan al menos una de las siguientes condiciones:</span>
+<span class="linenos">5</span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="condiciones-sql">
+<h2><a class="toc-backref" href="#id30">Condiciones SQL</a><a class="headerlink" href="#condiciones-sql" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Las instrucciones SQL se utilizan para filtrar y organizar las consultas.</p>
+<section id="instruccion-where">
+<h3><a class="toc-backref" href="#id31">Instrucción WHERE</a><a class="headerlink" href="#instruccion-where" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- Seleccionar elementos añadiendo una condición where:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">juego</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">titulo</span><span class="o">=</span><span class="s1">&#39;Final Fantasy VIII&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instrucciones-and-y-or">
+<h3><a class="toc-backref" href="#id32">Instrucciones AND y OR</a><a class="headerlink" href="#instrucciones-and-y-or" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-postgres notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">-- Con AND indicamos que se deben cumplir dos o mas campos para los resultados:</span>
+<span class="linenos"> 2</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">marca</span><span class="o">=</span><span class="s1">&#39;Sony&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">modelo</span><span class="o">=</span><span class="s1">&#39;Playstation&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">-- Con OR indicamos que se debe cumplir al menos uno de los siguientes campos:</span>
+<span class="linenos"> 5</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">marca</span><span class="o">=</span><span class="s1">&#39;Sony&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">modelo</span><span class="o">=</span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">-- Con IN indicamos que se recuperen varios registros que cumplan con una columna:</span>
+<span class="linenos"> 8</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Playstation&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">-- Con NOT IN indicamos que se recuperen todos los registros que no cumplan con una columna:</span>
+<span class="linenos">11</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Playstation&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation 2&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1">-- Con LIKE indicamos que recupere aquellos valores que contengan parte de un registro:</span>
+<span class="linenos">14</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%Playstation%&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1">-- Con BETWEEN indicamos un rango de valores como fechas o registros inclusivos:</span>
+<span class="linenos">17</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;G-0002&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;G-0003&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1">-- Con &lt;, &lt;=, &gt;, &gt;= podemos buscar registros mayores o iguales a fechas o numeros:</span>
+<span class="linenos">20</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;G-0002&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1">-- Con &lt;&gt; podemos buscar registros distintos a un valor concreto al igual que NOT IN:</span>
+<span class="linenos">23</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s1">&#39;G-0002&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-as">
+<h3><a class="toc-backref" href="#id33">Instrucción AS</a><a class="headerlink" href="#instruccion-as" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- AS define un alias para la columna:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">compañia</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">consola</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-count">
+<h3><a class="toc-backref" href="#id34">Instrucción COUNT</a><a class="headerlink" href="#instruccion-count" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- Contar todos registros que hay en la tabla:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">cantidad_consolas</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">-- Contar los resultados que cumplan una condición:</span>
+<span class="linenos">5</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">playstation_3</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Playstation 3&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-sum">
+<h3><a class="toc-backref" href="#id35">Instrucción SUM</a><a class="headerlink" href="#instruccion-sum" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Primero vamos a crear una nueva columna con valores numéricos:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- Añadimos una columnas ventas:</span>
+<span class="linenos">2</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="c1">-- Poblamos la tabla:</span>
+<span class="linenos">4</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1654654</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s1">&#39;G-0001&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1654655</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s1">&#39;G-0002&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1655522</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s1">&#39;G-0003&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span><span class="k">UPDATE</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16546355</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s1">&#39;G-0004&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora hacemos la suma de toda la columna:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- sumar ventas totales:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ventas_totales</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si el valor numerico a sumar es de tipo varchar podemos cambiarlo a entero o decimal haciendo un CAST: <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">SUM(CAST(ventas</span> <span class="pre">AS</span> <span class="pre">INT))</span> <span class="pre">AS</span> <span class="pre">ventas_totales</span> <span class="pre">FROM</span> <span class="pre">coleccion.consola;</span></code></p>
+</div>
+</section>
+<section id="instruccion-max">
+<h3><a class="toc-backref" href="#id36">Instrucción MAX</a><a class="headerlink" href="#instruccion-max" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- sacar el valor máximo:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-min">
+<h3><a class="toc-backref" href="#id37">Instrucción MIN</a><a class="headerlink" href="#instruccion-min" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- sacar el valor minimo:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-avg">
+<h3><a class="toc-backref" href="#id38">Instrucción AVG</a><a class="headerlink" href="#instruccion-avg" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- sacar el promedio:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">ventas</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">promedio</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-order-by">
+<h3><a class="toc-backref" href="#id39">Instrucción ORDER BY</a><a class="headerlink" href="#instruccion-order-by" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- ordenar resultados de forma ascendente (ASC) o descendente (DESC):</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-having">
+<h3><a class="toc-backref" href="#id40">Instrucción HAVING</a><a class="headerlink" href="#instruccion-having" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-distinct">
+<h3><a class="toc-backref" href="#id41">Instrucción DISTINCT</a><a class="headerlink" href="#instruccion-distinct" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- DISTINCT muestra resultados no repetidos de una columna:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-limit">
+<h3><a class="toc-backref" href="#id42">Instrucción LIMIT</a><a class="headerlink" href="#instruccion-limit" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">resultados</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mostrar</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">-- con order by podemos ordenar los resultados y mostrar otros</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="consultas-relacionales">
+<h2><a class="toc-backref" href="#id43">Consultas relacionales</a><a class="headerlink" href="#consultas-relacionales" title="Enlazar permanentemente con este título">#</a></h2>
+<ul class="simple">
+<li><p>Vamos a añadir unos registros:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- insertamos unos registros nuevos con claves foraneas (si no hay valores relacionados entre tablas no se mostrará nada)</span>
+<span class="linenos">2</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"> </span><span class="k">VALUES</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">    </span><span class="p">(</span><span class="s1">&#39;G-0100&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Final Fantasy VIII&#39;</span><span class="p">,</span><span class="s1">&#39;G-0001&#39;</span><span class="p">,</span><span class="s1">&#39;1999-02-11&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="p">(</span><span class="s1">&#39;G-0101&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Final Fantasy IX&#39;</span><span class="p">,</span><span class="s1">&#39;G-0001&#39;</span><span class="p">,</span><span class="s1">&#39;1999-02-11&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="p">(</span><span class="s1">&#39;G-0102&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Final Fantasy X&#39;</span><span class="p">,</span><span class="s1">&#39;G-0002&#39;</span><span class="p">,</span><span class="s1">&#39;1999-02-11&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="instruccion-inner-join">
+<h3><a class="toc-backref" href="#id44">Instrucción INNER JOIN</a><a class="headerlink" href="#instruccion-inner-join" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"></span>
+<span class="linenos">2</span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="c1">-- seleccionamos la tabla a relacionar</span>
+<span class="linenos">3</span><span class="k">ON</span><span class="w"> </span><span class="n">juego</span><span class="p">.</span><span class="n">id_sistema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consola</span><span class="p">.</span><span class="n">id</span><span class="p">;</span><span class="w"> </span><span class="c1">-- relacionamos la clave foranea de nuestra tabla con la clave primaria de la otra tabla</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>se pueden usar instrucciones condicionales como <strong>WHERE</strong> entre otras del anterior apartado.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>también se pueden anidar sentencias <strong>INNER JOIN</strong> relacionando tablas con las ya presentes.</p>
+</div>
+</section>
+<section id="instruccion-left-join">
+<h3><a class="toc-backref" href="#id45">Instrucción LEFT JOIN</a><a class="headerlink" href="#instruccion-left-join" title="Enlazar permanentemente con este título">#</a></h3>
+<p>TODO: REVISAR LEFT JOIN</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"></span>
+<span class="linenos">2</span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="c1">-- MOSTRARÁ los datos de la tabla join aunque tenga algun valor null</span>
+<span class="linenos">3</span><span class="k">ON</span><span class="w"> </span><span class="n">juego</span><span class="p">.</span><span class="n">id_sistema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consola</span><span class="p">.</span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="instruccion-right-join">
+<h3><a class="toc-backref" href="#id46">Instrucción RIGHT JOIN</a><a class="headerlink" href="#instruccion-right-join" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"></span>
+<span class="linenos">2</span><span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="c1">-- MOSTRARÁ los datos de la tabla seleccionada aunque no tenga relación con la tabla join</span>
+<span class="linenos">3</span><span class="k">ON</span><span class="w"> </span><span class="n">juego</span><span class="p">.</span><span class="n">id_sistema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consola</span><span class="p">.</span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="vistas">
+<h2><a class="toc-backref" href="#id47">Vistas</a><a class="headerlink" href="#vistas" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Las vistas sirven para mostrar datos de varias tablas en una especie de tabla virtual.</p>
+<ul class="simple">
+<li><p>Crear vista:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- CREAR UNA VISTA:</span>
+<span class="linenos">2</span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juegos_psone</span><span class="w"> </span><span class="k">AS</span><span class="w"></span>
+<span class="linenos">3</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id_sistema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;G-0001&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Utilizar vista:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- ejecutar consulta:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juegos_psone</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Borrar vista:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- eliminar vista:</span>
+<span class="linenos">2</span><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juegos_psone</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Renombrar vista:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- renombrar una vista:</span>
+<span class="linenos">2</span><span class="k">ALTER</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juegos_psone</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">psone_list</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="subconsultas">
+<h2><a class="toc-backref" href="#id48">Subconsultas</a><a class="headerlink" href="#subconsultas" title="Enlazar permanentemente con este título">#</a></h2>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"></span>
+<span class="linenos">2</span><span class="k">WHERE</span><span class="w"> </span><span class="n">id_sistema</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="c1">-- hacemos una segunda consulta utilizando el campo que coincide con la relación en este caso id_sistema = id:</span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;G-0002&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;G-0004&#39;</span><span class="w"></span>
+<span class="linenos">5</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="funciones">
+<h2><a class="toc-backref" href="#id49">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h2>
+<section id="left">
+<h3><a class="toc-backref" href="#id50">LEFT</a><a class="headerlink" href="#left" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- Con left recuperamos de izquierda a derecha un numero de elementos:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">LEFT</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="right">
+<h3><a class="toc-backref" href="#id51">RIGHT</a><a class="headerlink" href="#right" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- Con left recuperamos de derecha a izquierda un numero de elementos:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">RIGHT</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="concat">
+<h3><a class="toc-backref" href="#id52">CONCAT</a><a class="headerlink" href="#concat" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- concat une mediante comas cadenas de texto:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="lenght">
+<h3><a class="toc-backref" href="#id53">LENGHT</a><a class="headerlink" href="#lenght" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- cuenta los caracteres de celda:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">LENGTH</span><span class="p">(</span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="replace">
+<h3><a class="toc-backref" href="#id54">REPLACE</a><a class="headerlink" href="#replace" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- reemplaza caracteres recibiendo la columna, el o los caracteres a reemplazar y el valor nuevo:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Playstation&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ps&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cast">
+<h3><a class="toc-backref" href="#id55">CAST</a><a class="headerlink" href="#cast" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- convierte un dato a otro tipo:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">CAST</span><span class="p">(</span><span class="k">CURRENT_TIME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="now">
+<h3><a class="toc-backref" href="#id56">NOW</a><a class="headerlink" href="#now" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- muestra la hora actual:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="n">NOW</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>añadir un intervalo de tiempo:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- muestra la hora actual:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">NOW</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1 DAY&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mañana</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>los intervalos podemos manejarlos en minutos, horas, días, semanas y años.</p>
+</div>
+</section>
+<section id="current-time">
+<h3><a class="toc-backref" href="#id57">CURRENT_TIME</a><a class="headerlink" href="#current-time" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- devuelve la hora exacta:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">CURRENT_TIME</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="current-date">
+<h3><a class="toc-backref" href="#id58">CURRENT_DATE</a><a class="headerlink" href="#current-date" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- devuelve la fecha actual:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="timeofday">
+<h3><a class="toc-backref" href="#id59">TIMEOFDAY</a><a class="headerlink" href="#timeofday" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">-- Muestra la fecha en formato completo:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIMEOFDAY</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="date-part">
+<h3><a class="toc-backref" href="#id60">DATE_PART</a><a class="headerlink" href="#date-part" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- CON DATE_PART podemos comparar la diferencia entre dos fechas:</span>
+<span class="linenos">2</span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_PART</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2015-01-06&#39;</span><span class="p">::</span><span class="nb">date</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">DATE_PART</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2002-02-05&#39;</span><span class="p">::</span><span class="nb">date</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">diferencia_año</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>también se puede sacar la diferencia entre días, semanas, meses y años.</p>
+</div>
+</section>
+</section>
+<section id="transacciones">
+<h2><a class="toc-backref" href="#id61">Transacciones</a><a class="headerlink" href="#transacciones" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Para iniciar las transacciones accedemos a la consola de PSQL:</p>
+<ul class="simple">
+<li><p>Seleccionamos la base de datos: <code class="docutils literal notranslate"><span class="pre">\c</span> <span class="pre">coleccion</span></code></p></li>
+<li><p>Seleccionamos el esquema para ver todas las tablas y vistas: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">SEARCH_PATH</span> <span class="pre">TO</span> <span class="pre">coleccion;</span></code></p></li>
+<li><p>Y ahora podemos listar las tablas: <code class="docutils literal notranslate"><span class="pre">\d</span></code></p></li>
+</ul>
+<section id="commit">
+<h3><a class="toc-backref" href="#id62">Commit</a><a class="headerlink" href="#commit" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Comenzar una transacción en SQL: <code class="docutils literal notranslate"><span class="pre">BEGIN</span> <span class="pre">TRANSACTION</span></code></p></li>
+<li><p>Insertar un registro (este se quedará temporalmente guardado para el usuario que esta operando pero no lo verán el resto hasta que se comitee):</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;G-0051&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PSP&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1994-12-03&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>confirmar cambios: <code class="docutils literal notranslate"><span class="pre">COMMIT;</span></code></p></li>
+</ul>
+</section>
+<section id="rollback">
+<h3><a class="toc-backref" href="#id63">Rollback</a><a class="headerlink" href="#rollback" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Comenzar una transacción en SQL: <code class="docutils literal notranslate"><span class="pre">BEGIN</span> <span class="pre">TRANSACTION;</span></code></p></li>
+<li><p>Insertar un registro (este se quedará temporalmente guardado para el usuario que esta operando pero no lo verán el resto hasta que se comitee):</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;G-0052&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sony&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PSVITA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1994-12-03&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comprobamos que esta cargado en la tabla: <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">consola;</span></code></p></li>
+<li><p>eliminar cambios: <code class="docutils literal notranslate"><span class="pre">ROLLBACK;</span></code></p></li>
+<li><p>Confirmamos que el temporal ya se ha eliminado: <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">consola;</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Este tipo de operación es muy útil cuando guardamos datos en tablas relacionadas y una de las operaciones no ha funcionado correctamente. En ese caso podemos hace rollback y borrar todo lo que ya no sirve.</p>
+</div>
+</section>
+</section>
+<section id="roles-de-usuario">
+<h2><a class="toc-backref" href="#id64">Roles de usuario</a><a class="headerlink" href="#roles-de-usuario" title="Enlazar permanentemente con este título">#</a></h2>
+<p>En PostgreSQL se crea por defecto el superusuario postgres. Sin embargo podemos crear diferentes usuarios los cuales acceden y trabajan con la base de datos.
+Por otro lado, los roles agregan a estos usuarios y definene los permisos sobre esquemas y objetos de la estructura.</p>
+<p>De modo que los privilegios se asignan a los roles y los roles se asignan a los usuarios.</p>
+<p>La jerarquía para los permisos es la seguiente: Primero tener permiso para acceder a la base de datos, luego va el permiso a los esquemas y por último a los objetos de la base de datos.</p>
+<p>Luego existen dos tipos de privilegios:</p>
+<ul class="simple">
+<li><p>privilegios del sistema: los superusuarios (por defecto «postgres»). (CREATEDB, CREATEROLE, CREATEUSER, INHERIT, LOGIN)</p></li>
+<li><p>privilegios de objeto: los privilegios sobre objetos como la base de datos o los esquemas. (SELECT, INSERT, DELETE, UPDATE, TRUNCATE, USAGE, EXECUTE, CREATE ON)</p></li>
+</ul>
+<section id="crear-un-rol">
+<h3><a class="toc-backref" href="#id65">Crear un rol</a><a class="headerlink" href="#crear-un-rol" title="Enlazar permanentemente con este título">#</a></h3>
+<ul class="simple">
+<li><p>Crear un rol de superusuario:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">-- crear rol de superusuario:</span>
+<span class="linenos"> 2</span><span class="k">CREATE</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">super</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">SUPERUSER</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">-- otorgar permiso de uso a un esquema:</span>
+<span class="linenos"> 5</span><span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">coleccion</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">super</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">-- otorgar todos los privilegios a todas las tablas:</span>
+<span class="linenos"> 8</span><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="n">TABLES</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">coleccion</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">super</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">-- crear usuario administrador con el rol superusuario:</span>
+<span class="linenos">11</span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="k">admin</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">super</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Crear un rol para un usuario limitado:</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">-- crear rol de usuario básico:</span>
+<span class="linenos"> 2</span><span class="k">CREATE</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">regular_user</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">SUPERUSER</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">-- otorgar permiso de uso a un esquema:</span>
+<span class="linenos"> 5</span><span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">coleccion</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">regular_user</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">-- otorgar ciertos privilegios al rol usuario regular:</span>
+<span class="linenos"> 8</span><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="p">,</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">regular_user</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">-- crear usuario con el rol nuevo:</span>
+<span class="linenos">11</span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">regular_user</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="eliminar-rol-usuario-y-revocar-privilegios">
+<h3><a class="toc-backref" href="#id66">Eliminar rol, usuario y revocar privilegios</a><a class="headerlink" href="#eliminar-rol-usuario-y-revocar-privilegios" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">-- Borrar usuario:</span>
+<span class="linenos">2</span><span class="k">DROP</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">regular</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">-- Revocar permisos:</span>
+<span class="linenos">5</span><span class="k">REVOKE</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">juego</span><span class="p">,</span><span class="w"> </span><span class="n">coleccion</span><span class="p">.</span><span class="n">consola</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">regular_user</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="c1">-- Eliminar rol (no pueden existir usuarios o permisos en tablas vinculados a este rol):</span>
+<span class="linenos">8</span><span class="k">DROP</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">regular_user</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>TODO: REVISAR ESTA PARTE…</p>
+</section>
+</section>
+<section id="pl-sql">
+<h2><a class="toc-backref" href="#id67">PL/SQL</a><a class="headerlink" href="#pl-sql" title="Enlazar permanentemente con este título">#</a></h2>
+<p>Es un lenguaje de programación similar a python o java el cual puede crear nuevos tipos de datos o calculos complejos.</p>
+<section id="id1">
+<h3><a class="toc-backref" href="#id68">Funciones</a><a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="declarar-una-funcion">
+<h4><a class="toc-backref" href="#id69">Declarar una función</a><a class="headerlink" href="#declarar-una-funcion" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>-- Creamos una función que retornará un tipo de dato y añadimos los símbolos de dolar:
+<span class="linenos">2</span>CREATE FUNCTION coleccion.HolaMundo() RETURNS VARCHAR(50) AS $$
+<span class="linenos">3</span>-- justo después se declaran las variables:
+<span class="linenos">4</span>DECLARE
+<span class="linenos">5</span>    mensaje VARCHAR(50) := &#39;Hola mundo&#39;;
+<span class="linenos">6</span>BEGIN -- aquí comienza el contenido de ejecución de la función
+<span class="linenos">7</span>RETURN mensaje; -- retornamos el mensaje
+<span class="linenos">8</span>END; -- aquí finaliza la ejecución de la función
+<span class="linenos">9</span>$$ LANGUAGE plpgsql; -- definimos el lenguaje que es plpgsql
+</pre></div>
+</div>
+</section>
+<section id="ejecutar-una-funcion">
+<h4><a class="toc-backref" href="#id70">Ejecutar una función</a><a class="headerlink" href="#ejecutar-una-funcion" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>-- usamos select para ejecutar la función:
+<span class="linenos">2</span>SELECT coleccion.HolaMundo();
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos crear una función ya existente usamos <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">OR</span> <span class="pre">REPLACE</span></code></p>
+</div>
+</section>
+<section id="eliminar-funcion">
+<h4><a class="toc-backref" href="#id71">Eliminar función</a><a class="headerlink" href="#eliminar-funcion" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>DROP FUNCTION coleccion.holamundo();
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En PGAdmin podemos desplegar Schema y si desplegamos functions veremos las funciones declaradas.</p>
+</div>
+</section>
+</section>
+<section id="uso-de-parametros">
+<h3><a class="toc-backref" href="#id72">Uso de parámetros</a><a class="headerlink" href="#uso-de-parametros" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>CREATE FUNCTION coleccion.Sumar(num1 INT, num2 INT) -- pasamos los datos con su tipo
+<span class="linenos">2</span>RETURNS INT AS $$ -- retornaremos un tipo entero
+<span class="linenos">3</span>BEGIN
+<span class="linenos">4</span>    RETURN num1 + num2;
+<span class="linenos">5</span>END;
+<span class="linenos">6</span>$$ LANGUAGE plpgsql;
+<span class="linenos">7</span>
+<span class="linenos">8</span>-- ejecutamos la función:
+<span class="linenos">9</span>SELECT coleccion.Sumar(20, 58);
+</pre></div>
+</div>
+</section>
+<section id="condicionales">
+<h3><a class="toc-backref" href="#id73">Condicionales</a><a class="headerlink" href="#condicionales" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="if-else">
+<h4><a class="toc-backref" href="#id74">if / else</a><a class="headerlink" href="#if-else" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>CREATE FUNCTION coleccion.ComprobarEdad(edad INT)
+<span class="linenos"> 2</span>RETURNS VARCHAR(50) AS $$
+<span class="linenos"> 3</span>BEGIN
+<span class="linenos"> 4</span>    -- comprobamos un numero:
+<span class="linenos"> 5</span>    IF edad &gt; 65 THEN
+<span class="linenos"> 6</span>        RETURN &#39;Con &#39; || edad || &#39; has llegado a la tercera edad&#39;;
+<span class="linenos"> 7</span>    ELSIF edad &lt; 18 THEN
+<span class="linenos"> 8</span>        RETURN &#39;Con &#39; || edad || &#39; eres menor de edad&#39;;
+<span class="linenos"> 9</span>    ELSE
+<span class="linenos">10</span>        RETURN &#39;Con &#39; || edad || &#39; eres mayor de edad&#39;;
+<span class="linenos">11</span>    END IF;
+<span class="linenos">12</span>END;
+<span class="linenos">13</span>$$ LANGUAGE plpgsql;
+<span class="linenos">14</span>
+<span class="linenos">15</span>SELECT coleccion.ComprobarEdad(14);
+</pre></div>
+</div>
+</section>
+<section id="case">
+<h4><a class="toc-backref" href="#id75">CASE</a><a class="headerlink" href="#case" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>CREATE FUNCTION coleccion.Opciones(opcion INT)
+<span class="linenos"> 2</span>RETURNS VARCHAR(50) AS $$
+<span class="linenos"> 3</span>DECLARE
+<span class="linenos"> 4</span>    mensaje VARCHAR(50) := &#39;Opción &#39;;
+<span class="linenos"> 5</span>BEGIN
+<span class="linenos"> 6</span>    -- esta sentencia funciona igual que switch:
+<span class="linenos"> 7</span>    CASE
+<span class="linenos"> 8</span>        WHEN opcion = 1 THEN
+<span class="linenos"> 9</span>            RETURN mensaje || opcion || &#39;: Ejecutar limpieza del sistema&#39;;
+<span class="linenos">10</span>        WHEN opcion = 2 THEN
+<span class="linenos">11</span>            RETURN mensaje || opcion || &#39;: Ejecutar reparación de archivos&#39;;
+<span class="linenos">12</span>        WHEN opcion = 3 THEN
+<span class="linenos">13</span>            RETURN mensaje || opcion || &#39;: Ejecutar creación de copia de respaldo&#39;;
+<span class="linenos">14</span>        WHEN opcion = 4 THEN
+<span class="linenos">15</span>            RETURN mensaje || opcion || &#39;: Ejecutar análisis del sistema&#39;;
+<span class="linenos">16</span>        ELSE
+<span class="linenos">17</span>            RETURN &#39;No se reconoce la opción&#39;;
+<span class="linenos">18</span>    END CASE;
+<span class="linenos">19</span>END;
+<span class="linenos">20</span>$$ LANGUAGE plpgsql;
+<span class="linenos">21</span>
+<span class="linenos">22</span>SELECT coleccion.Opciones(2);
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bucles">
+<h3><a class="toc-backref" href="#id76">Bucles</a><a class="headerlink" href="#bucles" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="for-loop">
+<h4><a class="toc-backref" href="#id77">FOR LOOP</a><a class="headerlink" href="#for-loop" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>CREATE FUNCTION coleccion.Bucle(num INT)
+<span class="linenos"> 2</span>RETURNS INT AS $$
+<span class="linenos"> 3</span>DECLARE
+<span class="linenos"> 4</span>    i INT := 1;
+<span class="linenos"> 5</span>BEGIN
+<span class="linenos"> 6</span>    FOR i IN 1..num LOOP
+<span class="linenos"> 7</span>        RAISE NOTICE &#39;Incrementando %&#39;, i;
+<span class="linenos"> 8</span>    END LOOP;
+<span class="linenos"> 9</span>END;
+<span class="linenos">10</span>$$ LANGUAGE plpgsql;
+<span class="linenos">11</span>
+<span class="linenos">12</span>SELECT coleccion.Bucle(100);
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos invertir el bucle de forma descendiente cambiamos el orden de los números: <code class="docutils literal notranslate"><span class="pre">FOR</span> <span class="pre">i</span> <span class="pre">IN</span> <span class="pre">num..1</span> <span class="pre">LOOP</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos dar saltos mayores usamos by: <code class="docutils literal notranslate"><span class="pre">FOR</span> <span class="pre">i</span> <span class="pre">IN</span> <span class="pre">1..num</span> <span class="pre">BY</span> <span class="pre">2</span> <span class="pre">LOOP</span></code></p>
+</div>
+</section>
+<section id="while">
+<h4><a class="toc-backref" href="#id78">WHILE</a><a class="headerlink" href="#while" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>CREATE FUNCTION coleccion.Mientras(num INT)
+<span class="linenos"> 2</span>RETURNS INT AS $$
+<span class="linenos"> 3</span>DECLARE
+<span class="linenos"> 4</span>    i INT := 0;
+<span class="linenos"> 5</span>BEGIN
+<span class="linenos"> 6</span>    WHILE i &lt; num LOOP
+<span class="linenos"> 7</span>        RAISE NOTICE &#39;Incrementando %&#39;, i;
+<span class="linenos"> 8</span>        i = i + 1;
+<span class="linenos"> 9</span>    END LOOP;
+<span class="linenos">10</span>END;
+<span class="linenos">11</span>$$ LANGUAGE plpgsql;
+<span class="linenos">12</span>
+<span class="linenos">13</span>SELECT coleccion.Mientras(20);
+</pre></div>
+</div>
+</section>
+</section>
+<section id="procedimientos">
+<h3><a class="toc-backref" href="#id79">Procedimientos</a><a class="headerlink" href="#procedimientos" title="Enlazar permanentemente con este título">#</a></h3>
+<section id="crear-un-procedimiento">
+<h4><a class="toc-backref" href="#id80">Crear un procedimiento</a><a class="headerlink" href="#crear-un-procedimiento" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>CREATE PROCEDURE coleccion.InsertarConsola
+<span class="linenos"> 2</span>(marca VARCHAR(50), modelo VARCHAR(50), lanzamiento DATE, ventas INT)
+<span class="linenos"> 3</span>LANGUAGE plpgsql AS $$
+<span class="linenos"> 4</span>DECLARE
+<span class="linenos"> 5</span>    idCode CHAR(6);
+<span class="linenos"> 6</span>    idAux CHAR(6);
+<span class="linenos"> 7</span>BEGIN
+<span class="linenos"> 8</span>    -- Sacamos el id de la última consola y sumamos uno mas:
+<span class="linenos"> 9</span>    idCode := (SELECT id FROM coleccion.consola ORDER BY id DESC LIMIT 1);
+<span class="linenos">10</span>    idAux := (SELECT SUBSTRING(idCode, 3, 6));
+<span class="linenos">11</span>    idAux := CAST(idAux AS INT)+1;
+<span class="linenos">12</span>    IF idAux &lt; &#39;9&#39; THEN
+<span class="linenos">13</span>        idCode = &#39;G-00&#39; || idAux;
+<span class="linenos">14</span>    ELSIF idAux BETWEEN &#39;10&#39; AND &#39;99&#39; THEN
+<span class="linenos">15</span>        idCode = &#39;G-0&#39; || idAux;
+<span class="linenos">16</span>    ELSIF idAux BETWEEN &#39;100&#39; AND &#39;999&#39; THEN
+<span class="linenos">17</span>        idCode = &#39;G-&#39; || idAux;
+<span class="linenos">18</span>    END IF;
+<span class="linenos">19</span>
+<span class="linenos">20</span>    -- Ahora creamos la operación de inserción:
+<span class="linenos">21</span>    INSERT INTO coleccion.consola VALUES
+<span class="linenos">22</span>    (idCode, marca, modelo, lanzamiento, ventas);
+<span class="linenos">23</span>
+<span class="linenos">24</span>    RAISE NOTICE &#39;Se ha añadido el registro % correctamente&#39;, idCode;
+<span class="linenos">25</span>END; $$
+</pre></div>
+</div>
+</section>
+<section id="ejecutar-procedimiento">
+<h4><a class="toc-backref" href="#id81">Ejecutar procedimiento</a><a class="headerlink" href="#ejecutar-procedimiento" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>-- Utilizamos call para llamar procedimientos en lugar de select:
+<span class="linenos">2</span>CALL coleccion.InsertarConsola(&#39;Sega&#39;, &#39;Dreamcast&#39;, &#39;1998-10-10&#39;, 93873);
+</pre></div>
+</div>
+</section>
+<section id="eliminar-procedimiento">
+<h4><a class="toc-backref" href="#id82">Eliminar procedimiento</a><a class="headerlink" href="#eliminar-procedimiento" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>DROP PROCEDURE coleccion.InsertarConsola();
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En PGAdmin podemos desplegar Schema y si desplegamos procedures veremos los procedimientos declaradas.</p>
+</div>
+</section>
+</section>
+<section id="triggers">
+<h3><a class="toc-backref" href="#id83">Triggers</a><a class="headerlink" href="#triggers" title="Enlazar permanentemente con este título">#</a></h3>
+<p>Los triggers se ejecutan después de una operación. Por ejemplo al insertar un registro podemos ejecutar un select para visualizar datos.</p>
+<section id="crear-un-trigger">
+<h4><a class="toc-backref" href="#id84">Crear un Trigger</a><a class="headerlink" href="#crear-un-trigger" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-psql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">-- crear una tabla donde registrar que usuario ejecutó una operación:</span>
+<span class="linenos"> 2</span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">coleccion</span><span class="mf">.</span><span class="n">consola_operaciones</span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="c1">-- CREAMOS UNA PRIMARY KEY AUTOINCREMENTADA CON SERIAL</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="n">accion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">),</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="n">id_consola</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">),</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="n">modelo_consola</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">),</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">nombre_usuario</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">50</span><span class="p">),</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="n">fecha</span><span class="w"> </span><span class="nb">TIMESTAMP</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="go">-- Crear la función que dispara el trigger:</span>
+<span class="linenos">12</span><span class="go">CREATE FUNCTION coleccion.BorradoConsola() RETURNS TRIGGER</span>
+<span class="linenos">13</span><span class="go">AS $$</span>
+<span class="linenos">14</span><span class="go">DECLARE</span>
+<span class="linenos">15</span><span class="go">    usuario VARCHAR(20) := (SELECT CURRENT_USER); -- Averiguar que usuario realizo el borrado.</span>
+<span class="linenos">16</span><span class="go">    fecha TIMESTAMP := (SELECT LEFT(CAST (CURRENT_TIMESTAMP AS CHAR(30)), 19));</span>
+<span class="linenos">17</span><span class="go">BEGIN</span>
+<span class="linenos">18</span><span class="go">    INSERT INTO coleccion.consola_operaciones</span>
+<span class="linenos">19</span><span class="go">    (accion, id_consola, modelo_consola, nombre_usuario, fecha)</span>
+<span class="linenos">20</span><span class="go">    -- OLD recupera los últimos datos borrado:</span>
+<span class="linenos">21</span><span class="go">    VALUES(&#39;Borrado&#39;, OLD.id, OLD.modelo, usuario, fecha);</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="go">    RETURN NEW;</span>
+<span class="linenos">24</span><span class="go">END;</span>
+<span class="linenos">25</span><span class="go">$$ LANGUAGE plpgsql;</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="go">-- crear el trigger que se ejecutará tras el borrado de un registro en consola:</span>
+<span class="linenos">28</span><span class="go">CREATE TRIGGER BorrarConsola AFTER DELETE ON coleccion.consola</span>
+<span class="linenos">29</span><span class="go">FOR EACH ROW</span>
+<span class="linenos">30</span><span class="go">EXECUTE PROCEDURE coleccion.BorradoConsola();</span>
+</pre></div>
+</div>
+</section>
+<section id="ejecutar-un-trigger">
+<h4><a class="toc-backref" href="#id85">Ejecutar un Trigger</a><a class="headerlink" href="#ejecutar-un-trigger" title="Enlazar permanentemente con este título">#</a></h4>
+<p>Para ejecutar un Trigger basta con ejecutar una operación sql relacionada, en este caso el borrado de un registro:</p>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>-- ejecutar operacion:
+<span class="linenos">2</span>DELETE FROM coleccion.consola WHERE id = &#39;G-0053&#39;;
+<span class="linenos">3</span>-- comprobar que se ha registrado:
+<span class="linenos">4</span>SELECT * FROM coleccion.consola_operaciones;
+</pre></div>
+</div>
+</section>
+<section id="eliminar-un-trigger">
+<h4><a class="toc-backref" href="#id86">Eliminar un Trigger</a><a class="headerlink" href="#eliminar-un-trigger" title="Enlazar permanentemente con este título">#</a></h4>
+<div class="highlight-plsql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>DROP TRIGGER BorrarConsola ON coleccion.consola;
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="administracion-de-base-de-datos">
+<h2><a class="toc-backref" href="#id87">Administración de base de datos</a><a class="headerlink" href="#administracion-de-base-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
 </section>
 </section>
 

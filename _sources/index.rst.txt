@@ -114,6 +114,7 @@ Bienvenido a FullCoder, un sitio de Manual
    :caption: Bases de datos:
 
    ddbb/mongodb
+   ddbb/postgresql
 
 .. toctree::
    :maxdepth: 1
@@ -122,6 +123,8 @@ Bienvenido a FullCoder, un sitio de Manual
    sistemas/nginx
    sistemas/docker
    sistemas/docker-compose
+   sistemas/bash
+   sistemas/programacion-bash
    sistemas/heroku
    otros/vscode
 
