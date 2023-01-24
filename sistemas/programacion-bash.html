@@ -36,7 +36,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Heroku" href="heroku.html" />
-    <link rel="prev" title="Docker-Compose" href="docker-compose.html" />
+    <link rel="prev" title="Linux Bash" href="bash.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="es">
     
@@ -454,6 +454,11 @@
    Docker-Compose
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bash.html">
+   Linux Bash
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Programación Bash
@@ -634,6 +639,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recibir-parametros">
+     Recibir parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ejecucion-de-comandos">
      Ejecución de comandos
     </a>
@@ -787,6 +797,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recibir-parametros">
+     Recibir parámetros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ejecucion-de-comandos">
      Ejecución de comandos
     </a>
@@ -913,7 +928,7 @@ title="Print to PDF"
   <section id="programacion-bash">
 <h1><a class="toc-backref" href="#id1">Programación Bash</a><a class="headerlink" href="#programacion-bash" title="Enlazar permanentemente con este título">#</a></h1>
 <a class="reference internal image-reference" href="../_images/programacion-bash-logo.png"><img alt="Logo Programación Bash" class="align-center" src="../_images/programacion-bash-logo.png" style="width: 512.0px; height: 215.8px;" /></a>
-<p>Última edición el día 2023-01-24 a las 16:51.</p>
+<p>Última edición el día 2023-01-24 a las 22:49.</p>
 <p>Esta es la documentación que he recopilado para programar en bash.</p>
 <div class="contents topic" id="indice">
 <p class="topic-title">Índice</p>
@@ -925,44 +940,45 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#crear-un-script" id="id3">Crear un script</a></p></li>
 <li><p><a class="reference internal" href="#entrada-y-salida" id="id4">Entrada y salida</a></p></li>
 <li><p><a class="reference internal" href="#pausar-ejecucion-por-tiempo" id="id5">Pausar ejecución por tiempo</a></p></li>
-<li><p><a class="reference internal" href="#ejecucion-de-comandos" id="id6">Ejecución de comandos</a></p></li>
+<li><p><a class="reference internal" href="#recibir-parametros" id="id6">Recibir parámetros</a></p></li>
+<li><p><a class="reference internal" href="#ejecucion-de-comandos" id="id7">Ejecución de comandos</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id7">Variables y tipos de datos</a></p>
+<li><p><a class="reference internal" href="#variables-y-tipos-de-datos" id="id8">Variables y tipos de datos</a></p>
 <ul>
-<li><p><a class="reference internal" href="#variables" id="id8">Variables</a></p></li>
-<li><p><a class="reference internal" href="#variables-de-entorno" id="id9">Variables de entorno</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id9">Variables</a></p></li>
+<li><p><a class="reference internal" href="#variables-de-entorno" id="id10">Variables de entorno</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#operadores" id="id10">Operadores</a></p>
+<li><p><a class="reference internal" href="#operadores" id="id11">Operadores</a></p>
 <ul>
-<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id11">Operadores aritméticos</a></p></li>
-<li><p><a class="reference internal" href="#operadores-relacionales" id="id12">Operadores relacionales</a></p></li>
-<li><p><a class="reference internal" href="#operadores-logicos" id="id13">Operadores lógicos</a></p></li>
-<li><p><a class="reference internal" href="#comparacion-de-archivos" id="id14">Comparacion de archivos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id12">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-relacionales" id="id13">Operadores relacionales</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos" id="id14">Operadores lógicos</a></p></li>
+<li><p><a class="reference internal" href="#comparacion-de-archivos" id="id15">Comparacion de archivos</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#estructuras-de-control" id="id15">Estructuras de control</a></p>
+<li><p><a class="reference internal" href="#estructuras-de-control" id="id16">Estructuras de control</a></p>
 <ul>
-<li><p><a class="reference internal" href="#condicional-if" id="id16">Condicional if</a></p></li>
-<li><p><a class="reference internal" href="#bucle-for-basico" id="id17">Bucle for básico</a></p></li>
-<li><p><a class="reference internal" href="#bucle-while" id="id18">Bucle While</a></p></li>
-<li><p><a class="reference internal" href="#until" id="id19">Until</a></p></li>
+<li><p><a class="reference internal" href="#condicional-if" id="id17">Condicional if</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for-basico" id="id18">Bucle for básico</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id19">Bucle While</a></p></li>
+<li><p><a class="reference internal" href="#until" id="id20">Until</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id20">Tipos de datos avanzados</a></p>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id21">Tipos de datos avanzados</a></p>
 <ul>
-<li><p><a class="reference internal" href="#arrays" id="id21">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#arrays" id="id22">Arrays</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#programacion-modular" id="id22">Programación modular</a></p>
+<li><p><a class="reference internal" href="#programacion-modular" id="id23">Programación modular</a></p>
 <ul>
-<li><p><a class="reference internal" href="#funciones" id="id23">Funciones</a></p></li>
+<li><p><a class="reference internal" href="#funciones" id="id24">Funciones</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#importar-y-exportar" id="id24">Importar y exportar</a></p>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id25">Importar y exportar</a></p>
 <ul>
-<li><p><a class="reference internal" href="#exportar-variables" id="id25">Exportar variables</a></p></li>
+<li><p><a class="reference internal" href="#exportar-variables" id="id26">Exportar variables</a></p></li>
 </ul>
 </li>
 </ul>
@@ -1053,14 +1069,48 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
+<section id="recibir-parametros">
+<h3><a class="toc-backref" href="#id6">Recibir parámetros</a><a class="headerlink" href="#recibir-parametros" title="Enlazar permanentemente con este título">#</a></h3>
+<p>cada parámetro se recibe con el símbolo $ seguido de un número siendo $0 el propio script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># nombre del script:</span>
+<span class="linenos">4</span><span class="nb">echo</span> <span class="s2">&quot;Este es el script ejecutado: </span><span class="nv">$0</span><span class="s2">&quot;</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># parametro capturado:</span>
+<span class="linenos">7</span><span class="nb">echo</span> <span class="s2">&quot;Parametro capturado: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Se ejecuta <code class="docutils literal notranslate"><span class="pre">./script.sh</span> <span class="pre">parametro</span></code> para ver el resultado.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>se pueden añadir mas de un parámetro.</p>
+</div>
+</section>
 <section id="ejecucion-de-comandos">
-<h3><a class="toc-backref" href="#id6">Ejecución de comandos</a><a class="headerlink" href="#ejecucion-de-comandos" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id7">Ejecución de comandos</a><a class="headerlink" href="#ejecucion-de-comandos" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># comprobamos si no recibimos un parametro:</span>
+<span class="linenos"> 4</span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="linenos"> 5</span>        <span class="c1"># creamos un ejemplo de uso:</span>
+<span class="linenos"> 6</span>        <span class="nb">echo</span> <span class="s2">&quot;Uso </span><span class="nv">$0</span><span class="s2"> [IP]&quot;</span>
+<span class="linenos"> 7</span>        <span class="nb">echo</span> <span class="s2">&quot;Ejemplo </span><span class="nv">$0</span><span class="s2"> 192.168.109.1&quot;</span>
+<span class="linenos"> 8</span><span class="k">else</span>
+<span class="linenos"> 9</span>        <span class="c1"># si recibimos un parámetro realizamos un escaner de puertos:</span>
+<span class="linenos">10</span>        <span class="nb">echo</span> <span class="s2">&quot;Se esta realizando el escaneo...&quot;</span>
+<span class="linenos">11</span>        nc -nvz <span class="nv">$1</span> <span class="m">1</span>-65535 &gt; resultado.txt
+<span class="linenos">12</span><span class="k">fi</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="variables-y-tipos-de-datos">
-<h2><a class="toc-backref" href="#id7">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id8">Variables y tipos de datos</a><a class="headerlink" href="#variables-y-tipos-de-datos" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="variables">
-<h3><a class="toc-backref" href="#id8">Variables</a><a class="headerlink" href="#variables" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id9">Variables</a><a class="headerlink" href="#variables" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="c1"># Esto es un comentario</span>
@@ -1082,7 +1132,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="variables-de-entorno">
-<h3><a class="toc-backref" href="#id9">Variables de entorno</a><a class="headerlink" href="#variables-de-entorno" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id10">Variables de entorno</a><a class="headerlink" href="#variables-de-entorno" title="Enlazar permanentemente con este título">#</a></h3>
 <p>Las variables de entorno se establecen en el sistema y para utilizarlas se usa el comando <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <p>Las variables de entornos mas destacadas son:</p>
 <ul class="simple">
@@ -1097,16 +1147,38 @@ title="Print to PDF"
 </section>
 </section>
 <section id="operadores">
-<h2><a class="toc-backref" href="#id10">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id11">Operadores</a><a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="operadores-aritmeticos">
-<h3><a class="toc-backref" href="#id11">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id12">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># PARA OPERACIONES ARITMÉTICAS USAMOS LA ASIGNACIÓN DE VARIABLE CON LET</span>
+<span class="linenos"> 4</span><span class="nb">let</span> <span class="nv">suma</span><span class="o">=</span><span class="m">5</span>+5
+<span class="linenos"> 5</span><span class="nb">echo</span> <span class="s2">&quot;Suma: </span><span class="nv">$suma</span><span class="s2">&quot;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nb">let</span> <span class="nv">resta</span><span class="o">=</span><span class="m">10</span>-2
+<span class="linenos"> 8</span><span class="nb">echo</span> <span class="s2">&quot;Resta: </span><span class="nv">$resta</span><span class="s2">&quot;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nb">let</span> <span class="nv">multiplicacion</span><span class="o">=</span><span class="m">2</span>*8
+<span class="linenos">11</span><span class="nb">echo</span> <span class="s2">&quot;Multiplicación: </span><span class="nv">$multiplicacion</span><span class="s2">&quot;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="nb">let</span> <span class="nv">division</span><span class="o">=</span><span class="m">10</span>/2
+<span class="linenos">14</span><span class="nb">echo</span> <span class="s2">&quot;División: </span><span class="nv">$division</span><span class="s2">&quot;</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nb">let</span> <span class="nv">potencia</span><span class="o">=</span><span class="m">2</span>**3
+<span class="linenos">17</span><span class="nb">echo</span> <span class="s2">&quot;Potencia: </span><span class="nv">$potencia</span><span class="s2">&quot;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="nb">let</span> <span class="nv">modulo</span><span class="o">=</span><span class="m">17</span>%2
+<span class="linenos">20</span><span class="nb">echo</span> <span class="s2">&quot;Módulo o resíduo: </span><span class="nv">$modulo</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">Atención</p>
 <p>Recuerda que la asignación de datos en BASH no debe tener espacios entre el símbolo =</p>
 </div>
 </section>
 <section id="operadores-relacionales">
-<h3><a class="toc-backref" href="#id12">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id13">Operadores relacionales</a><a class="headerlink" href="#operadores-relacionales" title="Enlazar permanentemente con este título">#</a></h3>
 <p>Validación entre dos números.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-eq</span></code> : Igual que.</p></li>
@@ -1118,7 +1190,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="operadores-logicos">
-<h3><a class="toc-backref" href="#id13">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id14">Operadores lógicos</a><a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">#</a></h3>
 <p>Expresiones de operaciones lógicas.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> : Igual que.</p></li>
@@ -1128,7 +1200,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="comparacion-de-archivos">
-<h3><a class="toc-backref" href="#id14">Comparacion de archivos</a><a class="headerlink" href="#comparacion-de-archivos" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id15">Comparacion de archivos</a><a class="headerlink" href="#comparacion-de-archivos" title="Enlazar permanentemente con este título">#</a></h3>
 <p>Expresiones para comparar archivos.</p>
 <p>Cuando recuperamos un path mediante una cadena:</p>
 <ul class="simple">
@@ -1144,9 +1216,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="estructuras-de-control">
-<h2><a class="toc-backref" href="#id15">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id16">Estructuras de control</a><a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="condicional-if">
-<h3><a class="toc-backref" href="#id16">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id17">Condicional if</a><a class="headerlink" href="#condicional-if" title="Enlazar permanentemente con este título">#</a></h3>
 <ul class="simple">
 <li><p>If sencillo:</p></li>
 </ul>
@@ -1231,7 +1303,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="bucle-for-basico">
-<h3><a class="toc-backref" href="#id17">Bucle for básico</a><a class="headerlink" href="#bucle-for-basico" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id18">Bucle for básico</a><a class="headerlink" href="#bucle-for-basico" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="c1"># hacemos el bucle con unos números por defecto:</span>
@@ -1243,7 +1315,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="bucle-while">
-<h3><a class="toc-backref" href="#id18">Bucle While</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id19">Bucle While</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="nb">echo</span> -n <span class="s2">&quot;Introduce la contraseña: &quot;</span>
@@ -1259,7 +1331,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="until">
-<h3><a class="toc-backref" href="#id19">Until</a><a class="headerlink" href="#until" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id20">Until</a><a class="headerlink" href="#until" title="Enlazar permanentemente con este título">#</a></h3>
 <ul class="simple">
 <li><p>Funciona exactamente igual que <strong>while</strong> salvo porque se ejecuta hasta que la condición sea false:</p></li>
 </ul>
@@ -1279,9 +1351,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="tipos-de-datos-avanzados">
-<h2><a class="toc-backref" href="#id20">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id21">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="arrays">
-<h3><a class="toc-backref" href="#id21">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id22">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># Asignación individual de valores:</span>
@@ -1322,9 +1394,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="programacion-modular">
-<h2><a class="toc-backref" href="#id22">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id23">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="funciones">
-<h3><a class="toc-backref" href="#id23">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id24">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># crear una función:</span>
@@ -1343,23 +1415,23 @@ title="Print to PDF"
 </section>
 </section>
 <section id="importar-y-exportar">
-<h2><a class="toc-backref" href="#id24">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id25">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="exportar-variables">
-<h3><a class="toc-backref" href="#id25">Exportar variables</a><a class="headerlink" href="#exportar-variables" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id26">Exportar variables</a><a class="headerlink" href="#exportar-variables" title="Enlazar permanentemente con este título">#</a></h3>
 <p>Se puede exportar una variable cuando sea necesario utilizar fuera de su ámbito, por ejemplo en otro interpretre dentro del archivo:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>#!/bin/bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span># variables normales y exportadas:
-<span class="linenos"> 4</span>var_basica=&quot;Variable normal&quot;
-<span class="linenos"> 5</span>export var_exportada=&quot;Variable exportada&quot;
+<span class="linenos"> 3</span><span class="c1"># variables normales y exportadas:</span>
+<span class="linenos"> 4</span><span class="nv">var_basica</span><span class="o">=</span><span class="s2">&quot;Variable normal&quot;</span>
+<span class="linenos"> 5</span><span class="nb">export</span> <span class="nv">var_exportada</span><span class="o">=</span><span class="s2">&quot;Variable exportada&quot;</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span># si ejecutamos un nuevo interpretre y llamamos a ambas solo mostrará el resultado de la exportada:
-<span class="linenos"> 8</span>bash -c &#39;
-<span class="linenos"> 9</span>echo &quot;valor de var_basica: $var_basica&quot;
-<span class="linenos">10</span>echo &quot;valor de var_exportada: $var_exportada&quot;
+<span class="linenos"> 7</span><span class="c1"># si ejecutamos un nuevo interpretre y llamamos a ambas solo mostrará el resultado de la exportada:</span>
+<span class="linenos"> 8</span>bash -c <span class="s1">&#39;</span>
+<span class="linenos"> 9</span><span class="s1">echo &quot;valor de var_basica: $var_basica&quot;</span>
+<span class="linenos">10</span><span class="s1">echo &quot;valor de var_exportada: $var_exportada&quot;</span>
+<span class="linenos">11</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
-<p>“</p>
 </section>
 </section>
 </section>
@@ -1372,11 +1444,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="docker-compose.html" title="anterior página">
+    <a class='left-prev' id="prev-link" href="bash.html" title="anterior página">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Docker-Compose</p>
+            <p class="prev-next-title">Linux Bash</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="heroku.html" title="siguiente página">

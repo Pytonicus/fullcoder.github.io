@@ -99,8 +99,47 @@ Pausar ejecución por tiempo
     sleep 2
     echo "LISTO PARA DESPEGAR!"
 
+Recibir parámetros
+******************
+
+cada parámetro se recibe con el símbolo $ seguido de un número siendo $0 el propio script:
+
+.. code-block:: bash 
+    :linenos:
+
+    #!/bin/bash
+
+    # nombre del script:
+    echo "Este es el script ejecutado: $0"
+
+    # parametro capturado:
+    echo "Parametro capturado: $1"
+
+- Se ejecuta ``./script.sh parametro`` para ver el resultado.
+
+.. note::
+    se pueden añadir mas de un parámetro.
+
+
 Ejecución de comandos 
 *********************
+
+.. code-block:: bash 
+    :linenos:
+
+    #!/bin/bash
+
+    # comprobamos si no recibimos un parametro:
+    if [ "$1" = "" ]; then
+            # creamos un ejemplo de uso:
+            echo "Uso $0 [IP]"
+            echo "Ejemplo $0 192.168.109.1"
+    else
+            # si recibimos un parámetro realizamos un escaner de puertos:
+            echo "Se esta realizando el escaneo..."
+            nc -nvz $1 1-65535 > resultado.txt
+    fi
+
 
 Variables y tipos de datos 
 ##########################
@@ -152,7 +191,7 @@ Operadores aritméticos
 
 .. code-block:: bash 
     :linenos:
-                                                                                                    prueba.sh                                                                                                                
+
     #!/bin/bash
 
     # PARA OPERACIONES ARITMÉTICAS USAMOS LA ASIGNACIÓN DE VARIABLE CON LET
@@ -438,7 +477,7 @@ Exportar variables
 
 Se puede exportar una variable cuando sea necesario utilizar fuera de su ámbito, por ejemplo en otro interpretre dentro del archivo:
 
-.. code-block:: bash 
+.. code-block:: bash
     :linenos:
                
     #!/bin/bash
@@ -451,5 +490,5 @@ Se puede exportar una variable cuando sea necesario utilizar fuera de su ámbito
     bash -c '
     echo "valor de var_basica: $var_basica"
     echo "valor de var_exportada: $var_exportada"
-'
+    '
 
