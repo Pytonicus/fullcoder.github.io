@@ -158,13 +158,13 @@ Variables
     nombre="Guillermo"
 
     # Imprimir variables, para usar variables hay que añadir $ al principio:
-    echo "Me llamo $nombre" # la concatenación es automática
+    echo "Me llamo $nombre" # la interpolación es automática
 
 .. attention::
     El casting de variables no es un problema, ya que las variables son mutables. Por buena practica es importante que cuando se asigne un tipo de dato a una variable no se cambie.
 
 .. note::
-    La concatenación con comillas dobles permite añadir las variables en cualquier de la cadena de texto.
+    La interpolación con comillas dobles permite añadir las variables en cualquier de la cadena de texto.
 
 
 Variables de entorno 
@@ -346,6 +346,42 @@ Condicional if
     if [ -x $path ]; then
             echo "  - el $file tiene permisos de ejecución"
     fi
+
+Switch / Case 
+*************
+
+En el caso de switch tenemos una estructura similar llamada **case**:
+
+.. code-block:: bash 
+    :linenos:
+
+    #!/bin/bash
+
+    echo "¿cuál es tu consola favorita?"
+    echo "
+            1. Nintendo Switch
+            2. Playstation 4
+            3. Playstation 5
+            4. Xbox Series X/Y
+    "
+    echo -n "Introduce un número del 1 al 4: "; read consola
+
+    case $consola in
+
+            1)
+                    echo "Eres fan de Nintendo!"
+                    ;;
+            2|3)
+                    echo "Eres fan de Playstation!"
+                    ;;
+            4)
+                    echo "Eres fan de XBOX!"
+                    ;;
+            *)
+                    echo "Número introducido no válido"
+                    ;;
+    esac
+
 
 
 Bucle for básico 

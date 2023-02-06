@@ -705,6 +705,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#switch-case">
+     Switch / Case
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bucle-for-basico">
      Bucle for básico
     </a>
@@ -863,6 +868,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#switch-case">
+     Switch / Case
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bucle-for-basico">
      Bucle for básico
     </a>
@@ -928,7 +938,7 @@ title="Print to PDF"
   <section id="programacion-bash">
 <h1><a class="toc-backref" href="#id1">Programación Bash</a><a class="headerlink" href="#programacion-bash" title="Enlazar permanentemente con este título">#</a></h1>
 <a class="reference internal image-reference" href="../_images/programacion-bash-logo.png"><img alt="Logo Programación Bash" class="align-center" src="../_images/programacion-bash-logo.png" style="width: 512.0px; height: 215.8px;" /></a>
-<p>Última edición el día 2023-01-24 a las 22:49.</p>
+<p>Última edición el día 2023-02-06 a las 12:26.</p>
 <p>Esta es la documentación que he recopilado para programar en bash.</p>
 <div class="contents topic" id="indice">
 <p class="topic-title">Índice</p>
@@ -961,24 +971,25 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#estructuras-de-control" id="id16">Estructuras de control</a></p>
 <ul>
 <li><p><a class="reference internal" href="#condicional-if" id="id17">Condicional if</a></p></li>
-<li><p><a class="reference internal" href="#bucle-for-basico" id="id18">Bucle for básico</a></p></li>
-<li><p><a class="reference internal" href="#bucle-while" id="id19">Bucle While</a></p></li>
-<li><p><a class="reference internal" href="#until" id="id20">Until</a></p></li>
+<li><p><a class="reference internal" href="#switch-case" id="id18">Switch / Case</a></p></li>
+<li><p><a class="reference internal" href="#bucle-for-basico" id="id19">Bucle for básico</a></p></li>
+<li><p><a class="reference internal" href="#bucle-while" id="id20">Bucle While</a></p></li>
+<li><p><a class="reference internal" href="#until" id="id21">Until</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id21">Tipos de datos avanzados</a></p>
+<li><p><a class="reference internal" href="#tipos-de-datos-avanzados" id="id22">Tipos de datos avanzados</a></p>
 <ul>
-<li><p><a class="reference internal" href="#arrays" id="id22">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#arrays" id="id23">Arrays</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#programacion-modular" id="id23">Programación modular</a></p>
+<li><p><a class="reference internal" href="#programacion-modular" id="id24">Programación modular</a></p>
 <ul>
-<li><p><a class="reference internal" href="#funciones" id="id24">Funciones</a></p></li>
+<li><p><a class="reference internal" href="#funciones" id="id25">Funciones</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#importar-y-exportar" id="id25">Importar y exportar</a></p>
+<li><p><a class="reference internal" href="#importar-y-exportar" id="id26">Importar y exportar</a></p>
 <ul>
-<li><p><a class="reference internal" href="#exportar-variables" id="id26">Exportar variables</a></p></li>
+<li><p><a class="reference internal" href="#exportar-variables" id="id27">Exportar variables</a></p></li>
 </ul>
 </li>
 </ul>
@@ -1119,7 +1130,7 @@ title="Print to PDF"
 <span class="linenos">6</span><span class="nv">nombre</span><span class="o">=</span><span class="s2">&quot;Guillermo&quot;</span>
 <span class="linenos">7</span>
 <span class="linenos">8</span><span class="c1"># Imprimir variables, para usar variables hay que añadir $ al principio:</span>
-<span class="linenos">9</span><span class="nb">echo</span> <span class="s2">&quot;Me llamo </span><span class="nv">$nombre</span><span class="s2">&quot;</span> <span class="c1"># la concatenación es automática</span>
+<span class="linenos">9</span><span class="nb">echo</span> <span class="s2">&quot;Me llamo </span><span class="nv">$nombre</span><span class="s2">&quot;</span> <span class="c1"># la interpolación es automática</span>
 </pre></div>
 </div>
 <div class="admonition attention">
@@ -1128,7 +1139,7 @@ title="Print to PDF"
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>La concatenación con comillas dobles permite añadir las variables en cualquier de la cadena de texto.</p>
+<p>La interpolación con comillas dobles permite añadir las variables en cualquier de la cadena de texto.</p>
 </div>
 </section>
 <section id="variables-de-entorno">
@@ -1302,8 +1313,40 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
+<section id="switch-case">
+<h3><a class="toc-backref" href="#id18">Switch / Case</a><a class="headerlink" href="#switch-case" title="Enlazar permanentemente con este título">#</a></h3>
+<p>En el caso de switch tenemos una estructura similar llamada <strong>case</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="nb">echo</span> <span class="s2">&quot;¿cuál es tu consola favorita?&quot;</span>
+<span class="linenos"> 4</span><span class="nb">echo</span> <span class="s2">&quot;</span>
+<span class="linenos"> 5</span><span class="s2">        1. Nintendo Switch</span>
+<span class="linenos"> 6</span><span class="s2">        2. Playstation 4</span>
+<span class="linenos"> 7</span><span class="s2">        3. Playstation 5</span>
+<span class="linenos"> 8</span><span class="s2">        4. Xbox Series X/Y</span>
+<span class="linenos"> 9</span><span class="s2">&quot;</span>
+<span class="linenos">10</span><span class="nb">echo</span> -n <span class="s2">&quot;Introduce un número del 1 al 4: &quot;</span><span class="p">;</span> <span class="nb">read</span> consola
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="k">case</span> <span class="nv">$consola</span> <span class="k">in</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>        <span class="m">1</span><span class="o">)</span>
+<span class="linenos">15</span>                <span class="nb">echo</span> <span class="s2">&quot;Eres fan de Nintendo!&quot;</span>
+<span class="linenos">16</span>                <span class="p">;;</span>
+<span class="linenos">17</span>        <span class="m">2</span><span class="p">|</span><span class="m">3</span><span class="o">)</span>
+<span class="linenos">18</span>                <span class="nb">echo</span> <span class="s2">&quot;Eres fan de Playstation!&quot;</span>
+<span class="linenos">19</span>                <span class="p">;;</span>
+<span class="linenos">20</span>        <span class="m">4</span><span class="o">)</span>
+<span class="linenos">21</span>                <span class="nb">echo</span> <span class="s2">&quot;Eres fan de XBOX!&quot;</span>
+<span class="linenos">22</span>                <span class="p">;;</span>
+<span class="linenos">23</span>        *<span class="o">)</span>
+<span class="linenos">24</span>                <span class="nb">echo</span> <span class="s2">&quot;Número introducido no válido&quot;</span>
+<span class="linenos">25</span>                <span class="p">;;</span>
+<span class="linenos">26</span><span class="k">esac</span>
+</pre></div>
+</div>
+</section>
 <section id="bucle-for-basico">
-<h3><a class="toc-backref" href="#id18">Bucle for básico</a><a class="headerlink" href="#bucle-for-basico" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id19">Bucle for básico</a><a class="headerlink" href="#bucle-for-basico" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="c1"># hacemos el bucle con unos números por defecto:</span>
@@ -1315,7 +1358,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="bucle-while">
-<h3><a class="toc-backref" href="#id19">Bucle While</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id20">Bucle While</a><a class="headerlink" href="#bucle-while" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="nb">echo</span> -n <span class="s2">&quot;Introduce la contraseña: &quot;</span>
@@ -1331,7 +1374,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="until">
-<h3><a class="toc-backref" href="#id20">Until</a><a class="headerlink" href="#until" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id21">Until</a><a class="headerlink" href="#until" title="Enlazar permanentemente con este título">#</a></h3>
 <ul class="simple">
 <li><p>Funciona exactamente igual que <strong>while</strong> salvo porque se ejecuta hasta que la condición sea false:</p></li>
 </ul>
@@ -1351,9 +1394,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="tipos-de-datos-avanzados">
-<h2><a class="toc-backref" href="#id21">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id22">Tipos de datos avanzados</a><a class="headerlink" href="#tipos-de-datos-avanzados" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="arrays">
-<h3><a class="toc-backref" href="#id22">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id23">Arrays</a><a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># Asignación individual de valores:</span>
@@ -1394,9 +1437,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="programacion-modular">
-<h2><a class="toc-backref" href="#id23">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id24">Programación modular</a><a class="headerlink" href="#programacion-modular" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="funciones">
-<h3><a class="toc-backref" href="#id24">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id25">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># crear una función:</span>
@@ -1415,9 +1458,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="importar-y-exportar">
-<h2><a class="toc-backref" href="#id25">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
+<h2><a class="toc-backref" href="#id26">Importar y exportar</a><a class="headerlink" href="#importar-y-exportar" title="Enlazar permanentemente con este título">#</a></h2>
 <section id="exportar-variables">
-<h3><a class="toc-backref" href="#id26">Exportar variables</a><a class="headerlink" href="#exportar-variables" title="Enlazar permanentemente con este título">#</a></h3>
+<h3><a class="toc-backref" href="#id27">Exportar variables</a><a class="headerlink" href="#exportar-variables" title="Enlazar permanentemente con este título">#</a></h3>
 <p>Se puede exportar una variable cuando sea necesario utilizar fuera de su ámbito, por ejemplo en otro interpretre dentro del archivo:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
